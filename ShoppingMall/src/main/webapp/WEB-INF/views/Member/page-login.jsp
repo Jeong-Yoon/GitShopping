@@ -15,7 +15,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-
+	
+	
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
@@ -1092,7 +1093,7 @@
       <section class="container g-pt-100 g-pb-20">
         <div class="row justify-content-between">
           <div class="col-md-6 col-lg-5 flex-md-unordered g-mb-80">
-            <div class="g-brd-around g-brd-gray-light-v3 g-bg-white rounded g-px-30 g-py-50 mb-4">
+            <div id="nanum" class="g-brd-around g-brd-gray-light-v3 g-bg-white rounded g-px-30 g-py-50 mb-4">
               <header class="text-center mb-4">
                 <h1 class="h4 g-color-black g-font-weight-400">로그인 하기</h1>
               </header>
@@ -1162,7 +1163,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 flex-md-first g-mb-80">
+          <div id="nanum" class="col-md-6 flex-md-first g-mb-80">
             <div class="mb-5">
               <h2 class="h1 g-font-weight-400 mb-3">Welcome to Always Wearing</h2>
               <p class="g-color-gray-dark-v4">회원가입 혜택</p>
@@ -1179,7 +1180,7 @@
                   </div>
                   <div class="media-body align-self-center">
                     <h3 class="h5 g-font-weight-400">New Member</h3>
-                    <p class="g-color-gray-dark-v5 mb-0">회원가입 시 적립금 2,000point를 드립니다.</p>
+                    <p class="g-color-gray-dark-v5 mb-0" font-family:'Nanum Gothic', sans-serif;>회원가입 시 적립금 2,000point를 드립니다.</p>
                   </div>
                 </div>
                 <!-- End Icon Blocks -->
@@ -1192,8 +1193,8 @@
                     </span>
                   </div>
                   <div class="media-body align-self-center">
-                    <h3 class="h5 g-font-weight-400">멤버십 등급에 따라</h3>
-                    <p class="g-color-gray-dark-v5 mb-0">즉시 할인 적용</p>
+                    <h3 class="h5 g-font-weight-400" font-family:'Nanum Gothic', sans-serif;>멤버십 등급에 따라</h3>
+                    <p class="g-color-gray-dark-v5 mb-0" font-family:'Nanum Gothic', sans-serif;>즉시 할인 적용</p>
                   </div>
                 </div>
                 <!-- End Icon Blocks -->
@@ -1206,8 +1207,8 @@
                     </span>
                   </div>
                   <div class="media-body align-self-center">
-                    <h3 class="h5 g-font-weight-400">무료 배송</h3>
-                    <p class="g-color-gray-dark-v5 mb-0">5만원 이상 구입 시 무료배송 쿠폰</p>
+                    <h3 class="h5 g-font-weight-400" font-family:'Nanum Gothic', sans-serif;>무료 배송</h3>
+                    <p class="g-color-gray-dark-v5 mb-0" font-family:'Nanum Gothic', sans-serif;>5만원 이상 구입 시 무료배송 쿠폰</p>
                   </div>
                 </div>
                 <!-- End Icon Blocks -->
