@@ -1,10 +1,13 @@
 package com.ac.shopping.member.controller;
 
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Date;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
@@ -48,9 +51,17 @@ public class MemberController {
 	
 	//회원가입
 	@RequestMapping("/sign_Up_OK")
-	public String signUP_OK(@ModelAttribute SignUpDTO sdto){
-		memberService.signUp(sdto);
-		return "shoppingindex";
+	public String signUP_OK(@ModelAttribute SignUpDTO sdto,HttpServletResponse response) throws IOException{
+		if(sdto.getPwd().equals(sdto.getPwd_confirm())){
+			memberService.signUp(sdto);
+			return "shoppingindex";
+		}else{
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('입력하신 비밀번호와 비밀번호 확인 값이 다릅니다!'); history.go(-1);</script>");
+			out.close();
+			return "/page-login";
+		}
 	}
 	
 //	@RequestMapping("login.do")
