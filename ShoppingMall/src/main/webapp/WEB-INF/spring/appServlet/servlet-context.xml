@@ -25,7 +25,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.ac.shopping" />
+	
 		
 			<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	   <beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
@@ -52,6 +52,7 @@
 <beans:constructor-arg index="0" ref="sqlSessionFactory"></beans:constructor-arg>
 </beans:bean>	
 
+	<context:component-scan base-package="com.ac.shopping" />
 	
 	 <mvc:default-servlet-handler />
 
