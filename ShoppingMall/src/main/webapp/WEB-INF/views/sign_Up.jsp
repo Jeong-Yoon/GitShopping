@@ -1154,9 +1154,10 @@
                   <div class="col g-mb-20">
                     <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" required>
                   </div>
-                  <div>
-                  <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="button" onclick="">중복확인</button>
+                  <div>                 
+                  <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="button" onclick="document.getElementById('sign_Up').submit();">중복확인</button>
                   </div>
+                  </form>
                 </div>
  
                 <div class="g-mb-20">

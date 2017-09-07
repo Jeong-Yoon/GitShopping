@@ -53,7 +53,8 @@ public class MemberController {
 	//회원가입
 	@RequestMapping("/sign_Up_OK")
 	public String signUP_OK(HttpServletRequest request,HttpServletResponse response,Model model) throws IOException{
-		MemberDTO mdto = new MemberDTO();
+				
+		MemberDTO mdto = new MemberDTO();		
 		if(request.getParameter("pwd").equals(request.getParameter("pwd_confirm"))){
 			mdto.setM_id(request.getParameter("m_id"));
 			mdto.setPwd(request.getParameter("pwd"));

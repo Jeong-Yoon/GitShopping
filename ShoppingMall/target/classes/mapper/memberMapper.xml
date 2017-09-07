@@ -11,7 +11,7 @@
         WHERE M_ID = #{m_id} AND PWD = #{pwd}
 <!--         ]]> -->
     </select>
-    
+              
     <select id="viewMember" resultType="com.ac.shopping.member.dto.MemberDTO">
 <!--        <![CDATA[ -->
         SELECT 
