@@ -41,7 +41,8 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="resources/WB0412697/html/assets/css/custom.css">
   
-  
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+
   
   
   </head>
@@ -1165,46 +1166,17 @@
                 </div>
 
                  <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="name" placeholder="Name" required>
+                 
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" id="testDatepicker"  required>
                 </div>
-
-      			<div class="row">
-                  <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text"  name="birth1" placeholder="Year" required>
-                  </div>
-                  <div class="col-sm-6 col-md-12 col-lg-6 g-mb-20">
-                    <select class="js-custom-select u-select-v1 g-brd-gray-light-v3 g-color-gray-dark-v5 rounded g-py-12" style="width: 100%;"  name="birth2"
-                            data-placeholder="Month"
-                            data-open-icon="fa fa-angle-down"
-                            data-close-icon="fa fa-angle-up"
-                            >
-                      <option></option>
-                      <option value="1">January</option>
-                      <option value="2">February</option>
-                      <option value="3">March</option>
-                      <option value="4">April</option>
-                      <option value="5">May</option>
-                      <option value="6">June</option>
-                      <option value="7">July</option>
-                      <option value="8">August</option>
-                      <option value="9">September</option>
-                      <option value="10">October</option>
-                      <option value="11">November</option>
-                      <option value="12">December</option>
-                    </select>
-                  </div>
-
-                  <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text"  name="birth3" placeholder="Day" required>
-                  </div>
-
-                </div>
-
+                
                 <div class="g-mb-20">
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="address" placeholder="address" required> 
                 </div>
-
-               
+                
+                 <div class="g-mb-20">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="name" placeholder="Name" required>
+                </div>               
 
                 <div class="g-mb-20">
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="phone" placeholder="PhoneNumber는 -를 제외하고 입력해주세요." required>
@@ -1478,6 +1450,26 @@
 
     <!-- JS Customization -->
     <script src="resources/WB0412697/html/assets/js/custom.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+
+<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+   
+<script>
+$(function() {
+    $( "#testDatepicker" ).datepicker({
+    	dateFormat: "yy-mm-dd",
+    	 changeYear: true, 
+    	 changeMonth: true,
+    	 minDate: '-100y',
+    	 yearRange : 'c-65:c+10',
+         dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
+         dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+         monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+         monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+    });
+});
+</script> 
 
     <!-- JS Plugins Init. -->
     <script>
