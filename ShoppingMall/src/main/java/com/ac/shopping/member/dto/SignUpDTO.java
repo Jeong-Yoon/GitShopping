@@ -2,21 +2,19 @@ package com.ac.shopping.member.dto;
 
 public class SignUpDTO {
 	
-	//¸â¹ö id
+	//ï¿½ï¿½ï¿½ id
 	String m_id;
-	//ºñ¹Ð¹øÈ£
+	//ï¿½ï¿½Ð¹ï¿½È£
 	String pwd;
-	//ºñ¹Ð¹øÈ£ È®ÀÎ
+	//ï¿½ï¿½Ð¹ï¿½È£ È®ï¿½ï¿½
 	String pwd_confirm;
-	//ÀÌ¸§
+	//ï¿½Ì¸ï¿½
 	String name;
-	//»ý³â¿ùÀÏ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	String birth1;
-	String birth2;
-	String birth3;
-	//ÁÖ¼Ò
+	//ï¿½Ö¼ï¿½
 	String address;
-	//ÀüÈ­¹øÈ£
+	//ï¿½ï¿½È­ï¿½ï¿½È£
 	int phone;
 	//email
 	String email;
@@ -49,18 +47,6 @@ public class SignUpDTO {
 	}
 	public void setBirth1(String birth1) {
 		this.birth1 = birth1;
-	}
-	public String getBirth2() {
-		return birth2;
-	}
-	public void setBirth2(String birth2) {
-		this.birth2 = birth2;
-	}
-	public String getBirth3() {
-		return birth3;
-	}
-	public void setBirth3(String birth3) {
-		this.birth3 = birth3;
 	}
 	public String getAddress() {
 		return address;

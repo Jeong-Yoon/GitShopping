@@ -28,23 +28,15 @@ public class MemberServiceImpl implements MemberService {
 
 		MemberDTO mdto = new MemberDTO();
 
-		//비밀번호-비밀번호 확인 일치 여부
-		if (!sdto.getPwd().equals(sdto.getPwd_confirm())) {
-
-		} else { //일치할 때
-
-			String abirth = sdto.getBirth1() + "-" + sdto.getBirth2() + "-" + sdto.getBirth3(); // 생년월일을 하나로 합침
-			Date birth = Date.valueOf(abirth); // Date형으로 형변환
 			mdto.setM_id(sdto.getM_id());
 			mdto.setPwd(sdto.getPwd());
 			mdto.setName(sdto.getName());
-			mdto.setBirth(birth);
+			mdto.setBirth(Date.valueOf(sdto.getBirth1()));
 			mdto.setAddress(sdto.getAddress());
 			mdto.setPhone(sdto.getPhone());
 			mdto.setEmail(sdto.getEmail());
 
 			memberDao.signUp(mdto);
-		}
 
 	}
 
