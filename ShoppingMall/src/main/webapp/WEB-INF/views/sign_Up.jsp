@@ -41,6 +41,9 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="resources/WB0412697/html/assets/css/custom.css">
   
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+
+  
   
   </head>
 
@@ -1146,70 +1149,43 @@
 
               <!-- Form -->
               <form class="g-py-15" id="sign_Up" action="sign_Up_OK" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
-<!--                <form id="sign_Up" action="sign_Up_OK" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';"> -->
 
                 <div class="row">
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" required>
+                  </div>
+                  <div>
+                  <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="button" onclick="">중복확인</button>
                   </div>
                 </div>
  
                 <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password"  name="pwd"placeholder="Password">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password"  name="pwd"placeholder="Password" required>
                 </div>
 
                 <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password" name="pwd_confirm" placeholder="Confirm password">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password" name="pwd_confirm" placeholder="Confirm password" required>
                 </div>
 
                  <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="name" placeholder="Name">
-                </div>
-
-      			<div class="row">
-                  <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text"  name="birth1" placeholder="Year">
-                  </div>
-                  <div class="col-sm-6 col-md-12 col-lg-6 g-mb-20">
-                    <select class="js-custom-select u-select-v1 g-brd-gray-light-v3 g-color-gray-dark-v5 rounded g-py-12" style="width: 100%;"  name="birth2"
-                            data-placeholder="Month"
-                            data-open-icon="fa fa-angle-down"
-                            data-close-icon="fa fa-angle-up"
-                            >
-                      <option></option>
-                      <option value="1">January</option>
-                      <option value="2">February</option>
-                      <option value="3">March</option>
-                      <option value="4">April</option>
-                      <option value="5">May</option>
-                      <option value="6">June</option>
-                      <option value="7">July</option>
-                      <option value="8">August</option>
-                      <option value="9">September</option>
-                      <option value="10">October</option>
-                      <option value="11">November</option>
-                      <option value="12">December</option>
-                    </select>
-                  </div>
-
-                  <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text"  name="birth3" placeholder="Day">
-                  </div>
-
-                </div>
-
-                <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="address" placeholder="address">
-                </div>
-
-               
-
-                <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="phone" placeholder="PhoneNumber">
+                 
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" id="testDatepicker" name="birth" required>
                 </div>
                 
                 <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="email" name="email" placeholder="Email address">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="address" placeholder="address" required> 
+                </div>
+                
+                 <div class="g-mb-20">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="name" placeholder="Name" required>
+                </div>               
+
+                <div class="g-mb-20">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="phone" placeholder="PhoneNumber는 -를 제외하고 입력해주세요." required>
+                </div>
+                
+                <div class="g-mb-20">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="email" name="email" placeholder="Email address" required>
                 </div>
 
                 <div class="mb-1">
@@ -1225,7 +1201,6 @@
                
 
                 <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="submit">Signup</button>
-<!--                 <input type="submit" value="가입"/> -->
                </form>
               <!-- End Form -->
             </div>
@@ -1476,6 +1451,26 @@
 
     <!-- JS Customization -->
     <script src="resources/WB0412697/html/assets/js/custom.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+
+<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+   
+<script>
+$(function() {
+    $( "#testDatepicker" ).datepicker({
+    	dateFormat: "yy-mm-dd",
+    	 changeYear: true, 
+    	 changeMonth: true,
+    	 minDate: '-100y',
+    	 yearRange : 'c-65:c+10',
+         dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
+         dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+         monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+         monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+    });
+});
+</script> 
 
     <!-- JS Plugins Init. -->
     <script>

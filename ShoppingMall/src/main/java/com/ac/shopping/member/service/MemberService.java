@@ -7,7 +7,7 @@ import com.ac.shopping.member.dto.SignUpDTO;
 
 public interface MemberService {
 	
-	public void signUp(SignUpDTO sdto);
+	public void signUp(MemberDTO mdto);
 	
 	public void logout(HttpSession session);
 	public boolean loginCheck(MemberDTO mdto, HttpSession session);
