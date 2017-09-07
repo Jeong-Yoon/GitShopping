@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -51,16 +52,28 @@ public class MemberController {
 	
 	//회원가입
 	@RequestMapping("/sign_Up_OK")
-	public String signUP_OK(@ModelAttribute SignUpDTO sdto,HttpServletResponse response) throws IOException{
-		if(sdto.getPwd().equals(sdto.getPwd_confirm())){
-			memberService.signUp(sdto);
+	public String signUP_OK(HttpServletRequest request,HttpServletResponse response,Model model) throws IOException{
+		MemberDTO mdto = new MemberDTO();
+		if(request.getParameter("pwd").equals(request.getParameter("pwd_confirm"))){
+			mdto.setM_id(request.getParameter("m_id"));
+			mdto.setPwd(request.getParameter("pwd"));
+			mdto.setName(request.getParameter("name"));
+//			Date birth = Date.valueOf(request.getParameter("birth"));
+			mdto.setBirth(Date.valueOf(request.getParameter("birth")));
+			mdto.setAddress(request.getParameter("address"));
+			mdto.setPhone(Integer.parseInt(request.getParameter("phone")));
+			mdto.setEmail(request.getParameter("email"));
+			
+			memberService.signUp(mdto);
 			return "shoppingindex";
 		}else{
+		
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('입력하신 비밀번호와 비밀번호 확인 값이 다릅니다!'); history.go(-1);</script>");
-			out.close();
-			return "/page-login";
+
+			out.println("<script>alert('비밀번호가 일치하지 않습니다.'); history.go(-1);</script>"); 
+			out.flush();
+			return "sign_Up";
 		}
 	}
 	
@@ -81,7 +94,7 @@ public class MemberController {
     
     // 02. 로그인 처리
     @RequestMapping("loginCheck.do")
-    public ModelAndView loginCheck(@ModelAttribute MemberDTO mdto, HttpSession session){
+    public ModelAndView loginCheck(@ModelAttribute MemberDTO mdto, HttpSession session, HttpServletResponse response) throws IOException{
         boolean result = memberService.loginCheck(mdto, session);
         ModelAndView mav = new ModelAndView();
         if (result == true) { // 로그인 성공
@@ -90,8 +103,11 @@ public class MemberController {
             mav.addObject("msg", "success");
         } else {     // 로그인 실패
         	// login.jsp로 이동
+        	response.setContentType("text/html; charset=UTF-8");
+        	PrintWriter out = response.getWriter();
+        	out.println("<script>alert('입력하신 아이디 혹은 비밀번호가 다릅니다.'); history.go(-1);</script>");
+        	out.close();
             mav.setViewName("Member/page-login");
-            mav.addObject("msg", "failure");
         }
         return mav;
     }
