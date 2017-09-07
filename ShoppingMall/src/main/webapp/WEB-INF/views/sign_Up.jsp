@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="resources/WB0412697/html/assets/css/custom.css">
   
   
+  
+  
   </head>
 
   <body>
@@ -1150,25 +1152,25 @@
 
                 <div class="row">
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" required>
                   </div>
                 </div>
  
                 <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password"  name="pwd"placeholder="Password">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password"  name="pwd"placeholder="Password" required>
                 </div>
 
                 <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password" name="pwd_confirm" placeholder="Confirm password">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password" name="pwd_confirm" placeholder="Confirm password" required>
                 </div>
 
                  <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="name" placeholder="Name">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="name" placeholder="Name" required>
                 </div>
 
       			<div class="row">
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text"  name="birth1" placeholder="Year">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text"  name="birth1" placeholder="Year" required>
                   </div>
                   <div class="col-sm-6 col-md-12 col-lg-6 g-mb-20">
                     <select class="js-custom-select u-select-v1 g-brd-gray-light-v3 g-color-gray-dark-v5 rounded g-py-12" style="width: 100%;"  name="birth2"
@@ -1193,23 +1195,23 @@
                   </div>
 
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text"  name="birth3" placeholder="Day">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text"  name="birth3" placeholder="Day" required>
                   </div>
 
                 </div>
 
                 <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="address" placeholder="address">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="address" placeholder="address" required> 
                 </div>
 
                
 
                 <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="phone" placeholder="PhoneNumber">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="phone" placeholder="PhoneNumber는 -를 제외하고 입력해주세요." required>
                 </div>
                 
                 <div class="g-mb-20">
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="email" name="email" placeholder="Email address">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="email" name="email" placeholder="Email address" required>
                 </div>
 
                 <div class="mb-1">

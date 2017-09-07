@@ -1159,7 +1159,7 @@
 
             <div class="text-center">
               <p class="g-color-gray-dark-v5 mb-0">Don't have an account?
-                <a class="g-font-weight-600" href="page-signup-1.html">signup</a></p>
+                <a class="g-font-weight-600" href="sign_Up">signup</a></p>
             </div>
           </div>
 
