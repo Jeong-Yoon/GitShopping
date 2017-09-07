@@ -24,17 +24,17 @@ public class MemberServiceImpl implements MemberService {
 
 	// 회원가입
 	@Override
-	public void signUp(SignUpDTO sdto) {
+	public void signUp(MemberDTO mdto) {
 
-		MemberDTO mdto = new MemberDTO();
-
-			mdto.setM_id(sdto.getM_id());
-			mdto.setPwd(sdto.getPwd());
-			mdto.setName(sdto.getName());
-			mdto.setBirth(Date.valueOf(sdto.getBirth1()));
-			mdto.setAddress(sdto.getAddress());
-			mdto.setPhone(sdto.getPhone());
-			mdto.setEmail(sdto.getEmail());
+//		MemberDTO mdto = new MemberDTO();
+//
+//			mdto.setM_id(sdto.getM_id());
+//			mdto.setPwd(sdto.getPwd());
+//			mdto.setName(sdto.getName());
+//			mdto.setBirth(Date.valueOf(sdto.getBirth1()));
+//			mdto.setAddress(sdto.getAddress());
+//			mdto.setPhone(sdto.getPhone());
+//			mdto.setEmail(sdto.getEmail());
 
 			memberDao.signUp(mdto);
 

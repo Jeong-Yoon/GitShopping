@@ -52,9 +52,19 @@ public class MemberController {
 	
 	//회원가입
 	@RequestMapping("/sign_Up_OK")
-	public String signUP_OK(@ModelAttribute SignUpDTO sdto,HttpServletResponse response,Model model) throws IOException{
-		if(sdto.getPwd().equals(sdto.getPwd_confirm())){
-			memberService.signUp(sdto);
+	public String signUP_OK(HttpServletRequest request,HttpServletResponse response,Model model) throws IOException{
+		MemberDTO mdto = new MemberDTO();
+		if(request.getParameter("pwd").equals(request.getParameter("pwd_confirm"))){
+			mdto.setM_id(request.getParameter("m_id"));
+			mdto.setPwd(request.getParameter("pwd"));
+			mdto.setName(request.getParameter("name"));
+//			Date birth = Date.valueOf(request.getParameter("birth"));
+			mdto.setBirth(Date.valueOf(request.getParameter("birth")));
+			mdto.setAddress(request.getParameter("address"));
+			mdto.setPhone(Integer.parseInt(request.getParameter("phone")));
+			mdto.setEmail(request.getParameter("email"));
+			
+			memberService.signUp(mdto);
 			return "shoppingindex";
 		}else{
 		

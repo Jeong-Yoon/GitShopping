@@ -2,19 +2,19 @@ package com.ac.shopping.member.dto;
 
 public class SignUpDTO {
 	
-	//��� id
+	//ID
 	String m_id;
-	//��й�ȣ
+	//비밀번호
 	String pwd;
-	//��й�ȣ Ȯ��
+	//비밀번호 확인
 	String pwd_confirm;
-	//�̸�
+	//이름
 	String name;
-	//�������
+	//생년월일
 	String birth1;
-	//�ּ�
+	//주소
 	String address;
-	//��ȭ��ȣ
+	//전화번호
 	int phone;
 	//email
 	String email;

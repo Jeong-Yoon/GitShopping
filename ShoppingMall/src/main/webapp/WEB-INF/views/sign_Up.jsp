@@ -1169,7 +1169,7 @@
 
                  <div class="g-mb-20">
                  
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" id="testDatepicker"  required>
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" id="testDatepicker" name="birth" required>
                 </div>
                 
                 <div class="g-mb-20">
