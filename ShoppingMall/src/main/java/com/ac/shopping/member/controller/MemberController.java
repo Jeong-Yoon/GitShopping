@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -51,16 +52,18 @@ public class MemberController {
 	
 	//회원가입
 	@RequestMapping("/sign_Up_OK")
-	public String signUP_OK(@ModelAttribute SignUpDTO sdto,HttpServletResponse response) throws IOException{
+	public String signUP_OK(@ModelAttribute SignUpDTO sdto,HttpServletResponse response,Model model) throws IOException{
 		if(sdto.getPwd().equals(sdto.getPwd_confirm())){
 			memberService.signUp(sdto);
 			return "shoppingindex";
 		}else{
+		
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('입력하신 비밀번호와 비밀번호 확인 값이 다릅니다!'); history.go(-1);</script>");
-			out.close();
-			return "/page-login";
+
+			out.println("<script>alert('비밀번호가 일치하지 않습니다.'); history.go(-1);</script>"); 
+			out.flush(); 
+			return "sign_Up";
 		}
 	}
 	
