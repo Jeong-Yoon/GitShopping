@@ -53,7 +53,8 @@ public class MemberController {
 	//회원가입
 	@RequestMapping("/sign_Up_OK")
 	public String signUP_OK(HttpServletRequest request,HttpServletResponse response,Model model) throws IOException{
-				
+		
+		
 		MemberDTO mdto = new MemberDTO();		
 		if(request.getParameter("pwd").equals(request.getParameter("pwd_confirm"))){
 			mdto.setM_id(request.getParameter("m_id"));
@@ -78,6 +79,29 @@ public class MemberController {
 		}
 	}
 	
+	@RequestMapping("/id_check")
+	public String ID_CHECK(HttpServletRequest request,HttpServletResponse response) throws IOException{
+		
+		String id = request.getParameter("m_id");
+		System.out.println(id);
+		int check =memberService.id_check(id);
+		
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		
+		if(check==0){
+			out.println("<script>alert('사용 가능한 아이디입니다.'); history.go(-1);</script>"); 
+			out.flush();
+			return "sign_Up";
+		}
+		else{
+			out.println("<script>alert('이미 가입되어 있는 아이디입니다'); history.go(-1);</script>"); 
+			out.flush();
+			return "sign_Up";
+		}
+		
+	}
+	
 //	@RequestMapping("login.do")
 //    public String login(){
 //        return "member/login";    // views/member/login.jsp�� ������
@@ -95,7 +119,7 @@ public class MemberController {
     
     // 02. 로그인 처리
     @RequestMapping("loginCheck.do")
-    public ModelAndView loginCheck(@ModelAttribute MemberDTO mdto, HttpSession session){
+    public ModelAndView loginCheck(@ModelAttribute MemberDTO mdto, HttpSession session, HttpServletResponse response) throws IOException{
         boolean result = memberService.loginCheck(mdto, session);
         ModelAndView mav = new ModelAndView();
         if (result == true) { // 로그인 성공
@@ -104,8 +128,11 @@ public class MemberController {
             mav.addObject("msg", "success");
         } else {     // 로그인 실패
         	// login.jsp로 이동
+        	response.setContentType("text/html; charset=UTF-8");
+        	PrintWriter out = response.getWriter();
+        	out.println("<script>alert('입력하신 아이디 혹은 비밀번호가 다릅니다.'); history.go(-1);</script>");
+        	out.close();
             mav.setViewName("Member/page-login");
-            mav.addObject("msg", "failure");
         }
         return mav;
     }

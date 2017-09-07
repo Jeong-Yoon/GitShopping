@@ -1,5 +1,10 @@
 package com.ac.shopping.member.dao;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
@@ -36,5 +41,19 @@ public class MemberDAOImpl implements MemberDAO{
     @Override
     public void logout(HttpSession sessin) {
     }
-	
+
+	public int id_check(String id) {
+		
+		HashMap<String,Object> param = new HashMap<String,Object>();
+		param.put("PARM1", id);
+		
+		System.out.println(id);
+		sqlSession.selectOne("member.ID_CHECK", param);		
+		
+		System.out.println(param.get("PARM2"));
+		int check = Integer.valueOf((String)param.get("PARM2"));
+		// TODO Auto-generated method stub
+		
+		return check;
+	}	
 }
