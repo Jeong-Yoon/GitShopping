@@ -96,14 +96,14 @@ public class MemberController {
 		mav.addObject("id", id);
 		
 		if(id==null || id==""){
-			out.println("<script>alert('아이디를 입력해주세요.'); history.go(-1);</script>");	
+			out.println("<script>alert('아이디를 입력해주세요.');  location.replace('sign_Up');</script>");	
 			out.close();
 		}		
 		if(check==0){
 			out.println("<script>alert('사용 가능한 아이디입니다.'); </script>"); 				
 		}
 		else{
-			out.println("<script>alert('이미 가입되어 있는 아이디입니다'); history.go(-1);</script>");
+			out.println("<script>alert('이미 가입되어 있는 아이디입니다');  location.replace('sign_Up');</script>");
 			out.close();			
 		}		
 		out.flush();
