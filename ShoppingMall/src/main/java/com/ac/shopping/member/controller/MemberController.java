@@ -45,6 +45,7 @@ public class MemberController {
 	
 	@RequestMapping("/sign_Up")
 	public String signUP(){
+		
 		return "/sign_Up";
 	}
 //	@RequestMapping("/idChk")
@@ -80,26 +81,33 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/id_check")
-	public String ID_CHECK(HttpServletRequest request,HttpServletResponse response) throws IOException{
+	public ModelAndView ID_CHECK(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		
 		String id = request.getParameter("m_id");
 		System.out.println(id);
 		int check =memberService.id_check(id);
 		
 		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter out = response.getWriter();
+		PrintWriter out = response.getWriter();		
 		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("sign_Up");
+		mav.addObject("id", id);
+		
+		if(id==null || id==""){
+			out.println("<script>alert('아이디를 입력해주세요.'); history.go(-1);</script>");	
+			out.close();
+		}		
 		if(check==0){
-			out.println("<script>alert('사용 가능한 아이디입니다.'); history.go(-1);</script>"); 
-			out.flush();
-			return "sign_Up";
+			out.println("<script>alert('사용 가능한 아이디입니다.'); </script>"); 				
 		}
 		else{
-			out.println("<script>alert('이미 가입되어 있는 아이디입니다'); history.go(-1);</script>"); 
-			out.flush();
-			return "sign_Up";
-		}
-		
+			out.println("<script>alert('이미 가입되어 있는 아이디입니다'); history.go(-1);</script>");
+			out.close();			
+		}		
+		out.flush();
+		return mav;
 	}
 	
 //	@RequestMapping("login.do")

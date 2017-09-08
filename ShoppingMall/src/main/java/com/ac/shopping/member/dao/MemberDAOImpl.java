@@ -44,15 +44,16 @@ public class MemberDAOImpl implements MemberDAO{
 
 	public int id_check(String id) {
 		
+		// 프로시저에 넣기 위한 변수를 담을 공간 생성
 		HashMap<String,Object> param = new HashMap<String,Object>();
-		param.put("PARM1", id);
+		// 프로시저 변수 PARM1에 id를 할당
+		param.put("PARM1", id);		
 		
-		System.out.println(id);
+		// 프로시저를 실행
 		sqlSession.selectOne("member.ID_CHECK", param);		
-		
-		System.out.println(param.get("PARM2"));
-		int check = Integer.valueOf((String)param.get("PARM2"));
-		// TODO Auto-generated method stub
+	
+		//프로시저의 출력값을 int형으로 변환
+		int check = Integer.valueOf((String)param.get("PARM2"));	
 		
 		return check;
 	}	

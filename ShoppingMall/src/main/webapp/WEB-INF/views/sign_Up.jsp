@@ -53,6 +53,7 @@ function goto_url(act) {
   </head>
 
   <body>
+  
     <main>
       <!-- Header -->
       <header id="js-header" class="u-header u-header--static">
@@ -1158,7 +1159,7 @@ function goto_url(act) {
 				
                 <div class="row">
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" required>
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" value="${id}"  required>
                   </div>
                   <div>                 
                   <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="button" onclick="goto_url('id_check');">중복확인</button>
