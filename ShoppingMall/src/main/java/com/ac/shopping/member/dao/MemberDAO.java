@@ -16,4 +16,6 @@ public interface MemberDAO {
     public MemberDTO viewMember(MemberDTO mdto);
     // 02. 회원 로그아웃
     public void logout(HttpSession session);
+    // id 체크
+    public int id_check(String id);
 }
