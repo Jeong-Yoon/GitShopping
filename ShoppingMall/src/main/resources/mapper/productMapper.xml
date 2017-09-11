@@ -4,5 +4,19 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="product">
+	
+	<select id="shoesList" resultType="com.ac.shopping.product.dto.ShoesDTO">
+	SELECT pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
+	FROM PRODUCT pro, SHOES shoe, PRO_IMG_URL img
+	WHERE pro.product_no = shoe.product_no AND pro.product_no = img.product_no
+	</select>
+	
+	<select id="out_oneList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
+	SELECT pro.product_no, pro.pro_name, pro.pro_price, colr.pro_color, img.pro_img_url
+	FROM PRODUCT pro, PRODUCT_COLOR colr, PRO_IMG_URL img
+	WHERE pro.product_no = clor.product_no AND pro.product_no = img.product_no
+	AND pro.product_no = #{OUT_ONE}*
+	</select>
+	
 
 </mapper>
