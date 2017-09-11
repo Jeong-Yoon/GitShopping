@@ -23,7 +23,14 @@ public class HomeController {
 	public String home(Model model) {		
 		return "shoppingindex";
 	}
-	
+	@RequestMapping("/product-list")
+	public String productlist(){
+		return "/product-list";
+	}
+	@RequestMapping("/shoppingindex")
+	public String shoppingindex(){
+		return "/shoppingindex";
+	}
 	
 //	@RequestMapping(value = "/page-login", method = RequestMethod.GET)
 //	public String pageLogin() {		

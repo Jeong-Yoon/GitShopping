@@ -67,4 +67,7 @@ public class MemberServiceImpl implements MemberService {
 		session.invalidate();
 	}
 
+	public int id_check(String id) {
+		return memberDao.id_check(id);		
+	}
 }

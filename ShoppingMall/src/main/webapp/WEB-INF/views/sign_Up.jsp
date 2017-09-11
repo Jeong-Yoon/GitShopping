@@ -43,11 +43,17 @@
   
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
 
-  
+   <script >
+function goto_url(act) {
+  document.sign_Up.action = act;
+  document.sign_Up.submit();
+}
+</script>  
   
   </head>
 
   <body>
+  
     <main>
       <!-- Header -->
       <header id="js-header" class="u-header u-header--static">
@@ -1148,17 +1154,19 @@
               </header>
 
               <!-- Form -->
-              <form class="g-py-15" id="sign_Up" action="sign_Up_OK" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+              <form class="g-py-15" id="sign_Up" name="sign_Up"  method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
 
+				
                 <div class="row">
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" required>
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" value="${id}"  required>
                   </div>
-                  <div>
-                  <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="button" onclick="">중복확인</button>
+                  <div>                 
+                  <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="button" onclick="goto_url('id_check');">중복확인</button>
                   </div>
+                 
                 </div>
- 
+ 			
                 <div class="g-mb-20">
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password"  name="pwd"placeholder="Password" required>
                 </div>
@@ -1200,7 +1208,7 @@
 
                
 
-                <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="submit">Signup</button>
+                <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" onclick="goto_url('sign_Up_OK');">Signup</button>
                </form>
               <!-- End Form -->
             </div>
@@ -1456,7 +1464,16 @@
 
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
    
+ <script >
+function goto_url(act) {
+  document.sign_Up.action = act;
+  document.sign_Up.submit();
+}
+</script>  
+   
+   
 <script>
+
 $(function() {
     $( "#testDatepicker" ).datepicker({
     	dateFormat: "yy-mm-dd",

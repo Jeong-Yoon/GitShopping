@@ -53,6 +53,7 @@
 </beans:bean>	
 
 	<context:component-scan base-package="com.ac.shopping" />
+	<context:component-scan base-package="com.ac.shopping.member.controller" />
 	
 	 <mvc:default-servlet-handler />
 

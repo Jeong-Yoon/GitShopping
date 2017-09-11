@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="qa">
+
+	<select id="listAll" resultType="com.ac.shopping.qa.dto.qa_dto">
+	<include refid="pagingHeader"></include>
+    SELECT M_ID as BOARD_WRITER, BOARD_INDEX, BOARD_CONTENT, BOARD_DATE, BOARD_QUERY_TYPE, BOARD_TITLE, BOARD_REPLY 
+    FROM Q_A 
+    <!-- WHERE절을 include 태그로 삽입 -->
+    <include refid="search"></include>  
+    <include refid="pagingFooter"></include>  
+	</select>
+
+ 	<select id="qa_count_option" resultType="int" >
+     
+     SELECT COUNT(*) FROM Q_A 
+     <include refid="search"></include>
+     
+    </select>
+    
+    <sql id="search">
+    <choose>
+      <!-- 검색옵션이 전체 검색일 경우 -->
+        <when test="query_case == 1">  
+        </when>
+        <when test="query_case == 2">  
+         WHERE BOARD_QUERY_TYPE= ${query} 
+        </when>
+         <when test="query_case == 3">  
+         WHERE BOARD_TITLE like '%'||#{keyword}||'%'
+         OR BOARD_CONTENT like '%'||#{keyword}||'%'
+         OR M_ID like '%'||#{keyword}||'%'
+        </when>
+         <when test="query_case == 4"> 
+          WHERE ${type} like '%'||#{keyword}||'%'
+         </when>
+         <when test="query_case == 5"> 
+         WHERE BOARD_QUERY_TYPE = ${query} 
+         AND ( BOARD_TITLE like '%'||#{keyword}||'%'
+         OR BOARD_CONTENT like '%'||#{keyword}||'%'
+         OR M_ID like '%'||#{keyword}||'%' )
+         </when>
+          <when test="query_case == 6"> 
+          WHERE BOARD_QUERY_TYPE = ${query} AND ${type} like '%'||#{keyword}||'%'
+          </when>
+          <when test="query_case == 10"> 
+            WHERE BOARD_INDEX = #{keyword}
+          </when>
+          <when test="query_case == 11"> 
+           WHERE BOARD_QUERY_TYPE = ${query} AND BOARD_INDEX = #{keyword}
+          </when>          
+             
+          <otherwise>
+          </otherwise> 
+    </choose>
+	</sql>
+	
+	<!-- 페이징 sql -->
+	<sql id="pagingHeader">
+   	 SELECT * FROM (
+        SELECT ROWNUM AS rn, A.* FROM (
+	</sql>
+	<sql id="pagingFooter">
+        ) A
+    ) WHERE rn BETWEEN #{start} AND #{end}
+	</sql>
+	
+
+
+</mapper>
