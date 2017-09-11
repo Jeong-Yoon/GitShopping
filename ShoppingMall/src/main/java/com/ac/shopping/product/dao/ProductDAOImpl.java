@@ -24,4 +24,9 @@ public class ProductDAOImpl implements ProductDAO {
 		return sqlSession.selectList("product.topListProduct");
 	}
 
+	@Override
+	public List<TBADTO> bottomListProduct() {
+		return sqlSession.selectList("product.bottomListProduct");
+	}
+
 }

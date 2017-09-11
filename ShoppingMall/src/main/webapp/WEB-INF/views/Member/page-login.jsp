@@ -59,7 +59,8 @@
 </head>
 
 <body>
-	<main> <!-- Header --> <header id="js-header"
+	<main> 
+	<!-- Header --> <header id="js-header"
 		class="u-header u-header--static">
 		<!-- Top Bar -->
 		<div
@@ -249,8 +250,8 @@
 								data-dropdown-target="#searchform-1"
 								data-dropdown-type="css-animation" data-dropdown-duration="300"
 								data-dropdown-animation-in="fadeInUp"
-								data-dropdown-animation-out="fadeOutDown">
-								<i class="fa fa-search"></i>
+								data-dropdown-animation-out="fadeOutDown"> <i
+								class="fa fa-search"></i>
 							</a>
 
 							<!-- Search Form -->
@@ -311,9 +312,7 @@
 							<li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
 								<a id="nav-link--pages" class="nav-link g-px-0" href="#"
 								aria-haspopup="true" aria-expanded="false"
-								aria-controls="nav-submenu--pages">Pages</a>
-
-								<!-- Submenu -->
+								aria-controls="nav-submenu--pages">Pages</a> <!-- Submenu -->
 								<ul
 									class="hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-py-7 g-mt-22 g-mt-12--lg--scrolling"
 									id="nav-submenu--pages" aria-labelledby="nav-link--pages">
@@ -1371,7 +1370,7 @@
 							</div>
 							<div class="media-body align-self-center">
 								<h3 class="h5 g-font-weight-400">New Member</h3>
-								<p class="g-color-gray-dark-v5 mb-0" font-family:'NanumGothic', sans-serif;>회원가입
+								<p class="g-color-gray-dark-v5 mb-0"font-family:'NanumGothic', sans-serif;>회원가입
 									시 적립금 2,000point를 드립니다.</p>
 							</div>
 						</div>
@@ -1386,9 +1385,9 @@
 								</span>
 							</div>
 							<div class="media-body align-self-center">
-								<h3 class="h5 g-font-weight-400" font-family:'NanumGothic', sans-serif;>멤버십
+								<h3 class="h5 g-font-weight-400"font-family:'NanumGothic', sans-serif;>멤버십
 									등급에 따라</h3>
-								<p class="g-color-gray-dark-v5 mb-0" font-family:'NanumGothic', sans-serif;>즉시
+								<p class="g-color-gray-dark-v5 mb-0"font-family:'NanumGothic', sans-serif;>즉시
 									할인 적용</p>
 							</div>
 						</div>
@@ -1403,9 +1402,9 @@
 								</span>
 							</div>
 							<div class="media-body align-self-center">
-								<h3 class="h5 g-font-weight-400" font-family:'NanumGothic', sans-serif;>무료
+								<h3 class="h5 g-font-weight-400"font-family:'NanumGothic', sans-serif;>무료
 									배송</h3>
-								<p class="g-color-gray-dark-v5 mb-0" font-family:'NanumGothic', sans-serif;>5만원
+								<p class="g-color-gray-dark-v5 mb-0"font-family:'NanumGothic', sans-serif;>5만원
 									이상 구입 시 무료배송 쿠폰</p>
 							</div>
 						</div>

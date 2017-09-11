@@ -8,6 +8,6 @@ import com.ac.shopping.product.dto.TBADTO;
 public interface ProductDAO {
    public List<ShoesDTO> listShoes();
    public List<TBADTO> topListProduct();
-	
+   public List<TBADTO> bottomListProduct();
 
 }

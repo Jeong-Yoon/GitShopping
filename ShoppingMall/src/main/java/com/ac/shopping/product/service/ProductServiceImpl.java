@@ -25,4 +25,9 @@ public class ProductServiceImpl implements ProductService {
 	public List<TBADTO> topListProduct() {
 		return productDao.topListProduct();
 	}
+
+	@Override
+	public List<TBADTO> bottomListProduct() {
+		return productDao.bottomListProduct();
+	}
 }

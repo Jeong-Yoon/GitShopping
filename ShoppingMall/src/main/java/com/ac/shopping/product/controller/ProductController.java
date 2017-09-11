@@ -44,6 +44,15 @@ public class ProductController {
       mav.addObject("toplist", productService.topListProduct());
       return mav;
    }
+   
+ //==================BOTTOM===================
+   // BOTTOM 목록
+   @RequestMapping("/bottom-list")
+   public ModelAndView bottomList(ModelAndView mav) {
+      mav.setViewName("/bottom-list");
+      mav.addObject("bottomlist", productService.bottomListProduct());
+      return mav;
+   }
 	
 
 }
