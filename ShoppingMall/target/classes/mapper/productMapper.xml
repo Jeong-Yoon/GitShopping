@@ -50,6 +50,10 @@
 	img.pro_img_url as pro_img_url
 	FROM product pro JOIN pro_img_url img
 	ON pro.product_no = img.product_no
+	JOIN outer_onepiece otop
+	ON pro.product_no = otop.product_no
+	WHERE otop.category LIKE '%[]%'
+	ORDER BY pro.product_no
 	
 	
 	</select>
@@ -63,6 +67,10 @@
 	img.pro_img_url as pro_img_url
 	FROM product pro JOIN pro_img_url img
 	ON pro.product_no = img.product_no
+	JOIN outer_onepiece otop
+	ON pro.product_no = otop.product_no
+	WHERE otop.category LIKE '%[]%'
+	ORDER BY pro.product_no
 	
 	</select>
 </mapper>
