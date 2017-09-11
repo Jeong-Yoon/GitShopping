@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -55,21 +55,7 @@
             <div class="row flex-column flex-sm-row justify-content-between align-items-center text-uppercase g-font-weight-600 g-color-white g-font-size-12 g-mx-0--lg">
               <div class="col-auto hidden-sm-down">
                 <ul class="list-inline mb-0">
-                  <li class="list-inline-item">
-                    <a href="#" class="g-color-white g-color-primary--hover g-pa-3"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="g-color-white g-color-primary--hover g-pa-3"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="g-color-white g-color-primary--hover g-pa-3"><i class="fa fa-tumblr"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="g-color-white g-color-primary--hover g-pa-3"><i class="fa fa-pinterest-p"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="g-color-white g-color-primary--hover g-pa-3"><i class="fa fa-google"></i></a>
-                  </li>
+                  
                 </ul>
               </div>
 
@@ -83,44 +69,22 @@
 
               <div class="col-auto g-pos-rel g-pb-10 g-pb-0--sm">
                 <ul class="list-inline g-overflow-hidden g-pt-1 g-mx-minus-4 mb-0">
+                  
+                  
                   <li class="list-inline-item g-mx-4">
-                    <i class="icon-globe-alt g-font-size-18 g-valign-middle g-color-primary g-pos-rel g-top-minus-2 g-mr-10"></i>
-                    <a href="#" id="languages-dropdown-invoker-2" class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-                       aria-controls="languages-dropdown-2"
-                       aria-haspopup="true"
-                       aria-expanded="false"
-                       data-dropdown-event="click"
-                       data-dropdown-target="#languages-dropdown-2"
-                       data-dropdown-type="css-animation"
-                       data-dropdown-duration="300"
-                       data-dropdown-hide-on-scroll="false"
-                       data-dropdown-animation-in="fadeIn"
-                       data-dropdown-animation-out="fadeOut">
-                      English
-                    </a>
-                    <ul id="languages-dropdown-2" class="list-unstyled g-pos-abs g-left-0 g-bg-black g-width-160 g-pb-5 g-mt-10 g-z-index-2"
-                        aria-labelledby="languages-dropdown-invoker-2">
-                      <li>
-                        <a class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#">English</a>
-                      </li>
-                      <li>
-                        <a class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#">Spanish</a>
-                      </li>
-                      <li>
-                        <a class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#">Russian</a>
-                      </li>
-                      <li>
-                        <a class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#">German</a>
-                      </li>
-                    </ul>
+                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">LOGIN</a>
                   </li>
                   <li class="list-inline-item g-mx-4">|</li>
                   <li class="list-inline-item g-mx-4">
-                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">FAQ</a>
+                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">JOIN</a>
                   </li>
                   <li class="list-inline-item g-mx-4">|</li>
                   <li class="list-inline-item g-mx-4">
-                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="page-login">Login</a>
+                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">CART</a>
+                  </li>
+                   <li class="list-inline-item g-mx-4">|</li>
+                  <li class="list-inline-item g-mx-4">
+                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">MY PAGE</a>
                   </li>
                 </ul>
               </div>
@@ -222,13 +186,13 @@
 
                     <div class="g-brd-top g-brd-white-opacity-0_1 g-pa-15 g-pb-20">
                       <div class="d-flex flex-row align-items-center justify-content-between g-letter-spacing-1 g-font-size-16 g-mb-15">
-                        <strong class="text-uppercase g-font-weight-600 g-color-white">Subtotal</strong>
+                        <strong class="text-uppercase g-font-weight-600 g-color-white">총 합계</strong>
                         <strong class="g-color-primary g-font-weight-600">$1200.00</strong>
                       </div>
 
                       <div class="d-flex flex-row align-items-center justify-content-between g-font-size-18">
-                        <a href="#" class="btn u-btn-outline-primary rounded-0 g-width-120">View Cart</a>
-                        <a href="#" class="btn u-btn-primary rounded-0 g-width-120">Checkout</a>
+                        <a href="#" class="btn u-btn-outline-primary rounded-0 g-width-120">카트가기</a>
+                        <a href="#" class="btn u-btn-primary rounded-0 g-width-120">결제하기</a>
                       </div>
                     </div>
                   </div>
@@ -288,7 +252,7 @@
 
               <!-- Logo -->
               <a href="index.html" class="navbar-brand">
-                <img src="resources/WB0412697/html/e-commerce/assets/img/logo/logo-1.png" alt="Image Description">
+                <img src="resources/WB0412697/html/assets/img/logo/로고1.PNG" alt="Image Description">
               </a>
               <!-- End Logo -->
 
@@ -573,11 +537,11 @@
                       data-animation-in="fadeIn"
                       data-animation-out="fadeOut"
                       data-position="right">
-                    <a id="mega-menu-label-6" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Promo
+                    <a id="mega-menu-label-4" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Promo
                       <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
 
                     <!-- Mega Menu -->
-                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-6">
+                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-4">
                       <div class="row align-items-center no-gutters">
                         <div class="col-sm-7 col-lg-8 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered" data-bg-img-src="resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg" style="background-image: url(resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg);">
                           <div class="g-flex-centered-item text-right g-pa-50">
@@ -609,104 +573,64 @@
                       data-animation-in="fadeIn"
                       data-animation-out="fadeOut"
                       data-position="right">
-                    <a id="mega-menu-label-4" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Catalogue
+                    <a id="mega-menu-label-5" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Catalogue
                       <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
 
                     <!-- Mega Menu -->
-                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-4">
+                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-5">
                       <div class="row">
                         <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">Clothes</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">New in</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Coats &amp; Jackets</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Jeans</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Dresses</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Shorts</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Skirts</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">T-Shirts</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Shoes</h4>
-                          <ul class="list-unstyled">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Boots</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">FLats</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Heels</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Sandals</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Sports</a></li>
-                          </ul>
+                        
+                        <div>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">NEW</span></h4>
+                        
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">BEST 100</span></h4>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">REVIEW 30</span></h4>
+                       </div>
                         </div>
                         <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">Accessories</h4>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Top</span></h4>
+                          <ul class="list-unstyled g-mb-25">
+                            <li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">T-shirt &amp; Jackets</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">맨투맨/후드</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">니트</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">블라우스</a>
+                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
+                          </ul>
+
+                          <h4 class="h5 text-uppercase g-font-weight-600">Bottom</h4>
+                          <ul class="list-unstyled">
+                            <li class="g-mb-5"><a class="g-color-main" href="#">short pants</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">long pants</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">traing</a></li>
+                          </ul>
+                        </div>
+                      
+                       <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Outer</span></a></h4>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">OPS</span></a></h4>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Shoes</span></a></h4>
+                       </div>
+                      
+                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+                          <h4 class="h5 text-uppercase g-font-weight-600">ACC</h4>
                           <ul class="list-unstyled g-mb-25">
                             <li class="g-mb-5"><a class="g-color-main" href="#">All accessories</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Bags &amp; Purses</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Scarvs &amp; Hats</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Jewellery</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Fragrance &amp; Beauty</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Lingerie</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Linger</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Slippers</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Nightwear</h4>
-                          <ul class="list-unstyled">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Nightwear</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">귀걸이</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">목걸이</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">팔찌 </a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">양말 </a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">벨트</a></li>
                           </ul>
                         </div>
-                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">Mixed</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">New in</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Coats &amp; Jackets</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Jeans</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Dresses</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Shorts</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Skirts</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">T-shirts</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Boots</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Flats</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Heels</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Sandals</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Sports</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">Accessories</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">All accessories</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Bags &amp; Purses</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Scarvs &amp; Hats</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Jewellery</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Fragrance &amp; Beauty</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Lingerie</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Linger</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Slippers</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Nightwear</h4>
-                          <ul class="list-unstyled">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Nightwear</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
-                          </ul>
-                        </div>
+                        
+                        
+                     
+					
                       </div>
                     </div>
+                    
                     <!-- End Mega Menu -->
                   </li>
                   <!-- End Mega Menu Item -->
@@ -716,11 +640,11 @@
                       data-animation-in="fadeIn"
                       data-animation-out="fadeOut"
                       data-position="right">
-                    <a id="mega-menu-label-5" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Sales
+                    <a id="mega-menu-label-6" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Sales
                       <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
 
                     <!-- Mega Menu -->
-                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-5">
+                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-6">
                       <div class="row">
                         <div class="col-md-6 col-lg-4 g-px-10">
                           <!-- Article -->
@@ -2471,151 +2395,9 @@
       <!-- End Categories -->
 
       <!-- News -->
-      <div class="container g-pt-100 g-pb-70">
-        <div class="text-center mx-auto g-max-width-600 g-mb-50">
-          <h2 class="g-color-black mb-4">Blog News</h2>
-          <p class="lead">Keep in touch with the latest blogs &amp; news.</p>
-        </div>
-
-        <div class="row g-mx-minus-10">
-          <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-            <!-- Blog Background Overlay Blocks -->
-            <article class="u-block-hover">
-              <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-                <img class="d-flex align-items-end u-block-hover__main--mover-down" src="resources/WB0412697/html/e-commerce/assets/img-temp/650x650/img1.jpg" alt="Image Description">
-              </div>
-              <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-                <div class="u-block-hover__visible g-pa-25">
-                  <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">sport</span>
-                  <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-                    <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">24 Hours in Shopping</a>
-                  </h2>
-                  <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-                    By,
-                    <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
-                  </h4>
-                  <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-                  <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
-                </div>
-
-                <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
-              </div>
-            </article>
-            <!-- End Blog Background Overlay Blocks -->
-          </div>
-
-          <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-            <!-- Blog Background Overlay Blocks -->
-            <article class="u-block-hover">
-              <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-                <img class="d-flex align-items-end u-block-hover__main--mover-down" src="resources/WB0412697/html/e-commerce/assets/img-temp/650x650/img2.jpg" alt="Image Description">
-              </div>
-              <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-                <div class="u-block-hover__visible g-pa-25">
-                  <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">design</span>
-                  <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-                    <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">How to Design with Colors</a>
-                  </h2>
-                  <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-                    By,
-                    <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
-                  </h4>
-                  <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-                  <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
-                </div>
-
-                <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
-              </div>
-            </article>
-            <!-- End Blog Background Overlay Blocks -->
-          </div>
-
-          <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-            <!-- Blog Background Overlay Blocks -->
-            <article class="u-block-hover">
-              <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-                <img class="d-flex align-items-end u-block-hover__main--mover-down" src="resources/WB0412697/html/e-commerce/assets/img-temp/650x650/img3.jpg" alt="Image Description">
-              </div>
-              <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-                <div class="u-block-hover__visible g-pa-25">
-                  <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">photography</span>
-                  <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-                    <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">Stunning Woman's Capture</a>
-                  </h2>
-                  <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-                    By,
-                    <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
-                  </h4>
-                  <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-                  <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
-                </div>
-
-                <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
-              </div>
-            </article>
-            <!-- End Blog Background Overlay Blocks -->
-          </div>
-        </div>
-      </div>
-      <!-- End News -->
-
-      <!-- Subscribe -->
-      <div class="text-center g-max-width-600 mx-auto g-pb-30">
-        <div class="g-px-30 g-px-50--md">
-          <div class="mb-3">
-            <span class="d-inline-block g-width-3 g-height-10 g-bg-gray-light-v1 g-mb-4"></span><br>
-            <span class="d-inline-block g-width-3 g-height-16 g-bg-gray-dark-v5"></span><br>
-            <span class="d-inline-block g-color-gray-dark-v4 fa fa-arrow-down"></span>
-          </div>
-
-          <h2 class="h3 g-mb-30">Subscribe</h2>
-
-          <form class="input-group u-shadow-v21 rounded g-mb-50">
-            <input class="form-control g-brd-gray-light-v4 g-brd-right-none g-color-gray-dark-v4 g-placeholder-gray-dark-v3 rounded g-px-25 g-py-17" type="email" placeholder="Enter your email">
-            <span class="input-group-addon u-shadow-v19 g-brd-gray-light-v4 g-bg-white">
-              <button class="btn u-btn-primary g-font-size-12 rounded text-uppercase g-py-12 g-px-25" type="submit">Submit</button>
-            </span>
-          </form>
-        </div>
-      </div>
-      <!-- End Subscribe -->
-
-      <!-- Social Icons -->
-      <div class="container g-mb-30">
-        <ul class="list-inline text-center mb-0">
-          <li class="list-inline-item g-mx-2">
-            <a class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-facebook--hover" href="#">
-              <i class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-facebook"></i>
-              <i class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-facebook"></i>
-            </a>
-          </li>
-          <li class="list-inline-item g-mx-2">
-            <a class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-twitter--hover" href="#">
-              <i class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-twitter"></i>
-              <i class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item g-mx-2">
-            <a class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-instagram--hover" href="#">
-              <i class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-instagram"></i>
-              <i class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-instagram"></i>
-            </a>
-          </li>
-          <li class="list-inline-item g-mx-2">
-            <a class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-google-plus--hover" href="#">
-              <i class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-google-plus"></i>
-              <i class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-google-plus"></i>
-            </a>
-          </li>
-          <li class="list-inline-item g-mx-2">
-            <a class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-linkedin--hover" href="#">
-              <i class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-linkedin"></i>
-              <i class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-linkedin"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- End Social Icons -->
+     
+     
+      
 
       <!-- Footer -->
       <footer>
