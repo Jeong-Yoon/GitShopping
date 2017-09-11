@@ -36,4 +36,9 @@ public class ProductDAOImpl implements ProductDAO {
 		return sqlSession.selectList("product.onepieceList");
 	}
 
+	@Override
+	public List<Outer_OnepieceDTO> outerListProduct() {
+		return sqlSession.selectList("product.onepieceList");
+	}
+
 }

@@ -63,4 +63,13 @@ public class ProductController {
 	   return mav;
    }
 
+   //===================OUTER=================================
+   // OUTER 목록
+   @RequestMapping("/outer-list")
+   public ModelAndView outerList(ModelAndView mav){
+	   mav.setViewName("/outer-list");
+	   mav.addObject("outerlist", productService.outerListProduct());
+	   return mav;
+   }
+   
 }

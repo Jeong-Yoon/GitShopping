@@ -9,8 +9,7 @@
 		SELECT 
 		pro.product_no as product_no, 
 		pro.pro_name as pro_name, 
-		pro.pro_price
-		as pro_price, 
+		pro.pro_price as pro_price, 
 		img.pro_img_url as pro_img_url
 		FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no 
 		join PRO_IMG_URL img on pro.product_no = img.product_no
@@ -45,6 +44,25 @@
 	<select id="onepieceList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
 	
 	SELECT
+	pro.product_no as product_no,
+	pro.pro_name as pro_name,
+	pro.pro_price as pro_price,
+	img.pro_img_url as pro_img_url
+	FROM product pro JOIN pro_img_url img
+	ON pro.product_no = img.product_no
+	
+	
+	</select>
+	
+	<select id="outerList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
+	
+	SELECT
+	pro.product_no as product_no,
+	pro.pro_name as pro_name,
+	pro.pro_price as pro_price,
+	img.pro_img_url as pro_img_url
+	FROM product pro JOIN pro_img_url img
+	ON pro.product_no = img.product_no
 	
 	</select>
 </mapper>

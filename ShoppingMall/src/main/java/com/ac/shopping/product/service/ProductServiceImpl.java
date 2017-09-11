@@ -32,7 +32,13 @@ public class ProductServiceImpl implements ProductService {
 		return productDao.bottomListProduct();
 	}
 
+	@Override
 	public List<Outer_OnepieceDTO> onepieceListProduct() {
 		return productDao.onepieceListProduct();
+	}
+
+	@Override
+	public List<Outer_OnepieceDTO> outerListProduct() {
+		return productDao.outerListProduct();
 	}
 }
