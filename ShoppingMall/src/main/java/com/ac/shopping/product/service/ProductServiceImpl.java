@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.ac.shopping.product.dao.ProductDAOImpl;
+import com.ac.shopping.product.dto.Outer_OnepieceDTO;
 import com.ac.shopping.product.dto.ShoesDTO;
 import com.ac.shopping.product.dto.TBADTO;
 
@@ -29,5 +30,9 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<TBADTO> bottomListProduct() {
 		return productDao.bottomListProduct();
+	}
+
+	public List<Outer_OnepieceDTO> onepieceListProduct() {
+		return productDao.onepieceListProduct();
 	}
 }

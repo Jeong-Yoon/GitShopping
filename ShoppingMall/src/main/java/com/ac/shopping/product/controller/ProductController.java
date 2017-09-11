@@ -36,8 +36,8 @@ public class ProductController {
    // @RequestMapping("shoes-detail")
    // public
 
-   //==================탑===================
-   // Top 목록
+   //==================TOP===================
+   // TOP 목록
    @RequestMapping("/top-list")
    public ModelAndView topList(ModelAndView mav) {
       mav.setViewName("/top-list");
@@ -54,5 +54,13 @@ public class ProductController {
       return mav;
    }
 	
+   //=====================ONEPIECE========================
+   // ONEPIECE 목록
+   @RequestMapping("/onepiece-list")
+   public ModelAndView onepieceList(ModelAndView mav){
+	   mav.setViewName("/onepiece-list");
+	   mav.addObject("onepiecelist", productService.onepieceListProduct());
+	   return mav;
+   }
 
 }

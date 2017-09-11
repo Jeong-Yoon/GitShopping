@@ -5,37 +5,46 @@
 
 <mapper namespace="product">
 
-   <select id="shoesList" resultType="com.ac.shopping.product.dto.ShoesDTO">
-      SELECT pro.product_no as product_no, pro.pro_name as pro_name, pro.pro_price
-      as pro_price, img.pro_img_url as pro_img_url
-      FROM PRODUCT pro join SHOES shoe on pro.product_no = shoe.product_no join
-      PRO_IMG_URL img on pro.product_no = img.product_no
-      WHERE img.PRO_IMG_URL LIKE '%_1'
-      GROUP BY pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
-   </select>
+	<select id="shoesList" resultType="com.ac.shopping.product.dto.ShoesDTO">
+		SELECT 
+		pro.product_no as product_no, 
+		pro.pro_name as pro_name, 
+		pro.pro_price
+		as pro_price, 
+		img.pro_img_url as pro_img_url
+		FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no 
+		join PRO_IMG_URL img on pro.product_no = img.product_no
+		WHERE img.PRO_IMG_URL LIKE '%_1'
+		GROUP BY pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
+	</select>
 
-   <select id="topListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
-      SELECT
-      p.product_no as product_no,
-      p.pro_name as pro_name,
-      p.pro_price as pro_price,
-      tba.category as category
-      FROM product p JOIN top_bottom_acc tba
-      ON p.product_no = tba.product_no
-      WHERE tba.category like '%[T]%'
-      ORDER BY p.pro_name
-   </select>
-   
-   <select id="bottomListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
-      SELECT
-      p.product_no as product_no,
-      p.pro_name as pro_name,
-      p.pro_price as pro_price,
-      tba.category as category
-      FROM product p JOIN top_bottom_acc tba
-      ON p.product_no = tba.product_no
-      WHERE tba.category like '%[B]%'
-      ORDER BY p.pro_name
-   </select>
+	<select id="topListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
+		SELECT
+		p.product_no as product_no,
+		p.pro_name as pro_name,
+		p.pro_price as pro_price,
+		tba.category as category
+		FROM product p JOIN top_bottom_acc tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[T]%'
+		ORDER BY p.pro_name
+	</select>
 
+	<select id="bottomListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
+		SELECT
+		p.product_no as product_no,
+		p.pro_name as pro_name,
+		p.pro_price as pro_price,
+		tba.category as category
+		FROM product p JOIN top_bottom_acc tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[B]%'
+		ORDER BY p.pro_name
+	</select>
+
+	<select id="onepieceList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
+	
+	SELECT
+	
+	</select>
 </mapper>
