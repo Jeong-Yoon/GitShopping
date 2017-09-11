@@ -23,8 +23,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public List<TBADTO> topListProduct() {
-		return productDao.topListProduct();
+	public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword) {
+		return productDao.topListProduct(start,end,search_option,search_keyword);
 	}
 
 	@Override
@@ -40,5 +40,10 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<Outer_OnepieceDTO> outerListProduct() {
 		return productDao.outerListProduct();
+	}
+
+	public int all_count_tba(String search_option, String search_keyword) {
+		// TODO Auto-generated method stub
+		return productDao.all_count_tba();
 	}
 }

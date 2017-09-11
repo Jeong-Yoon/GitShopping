@@ -1,5 +1,6 @@
 package com.ac.shopping.product.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -22,8 +23,15 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
-	public List<TBADTO> topListProduct() {
-		return sqlSession.selectList("product.topListProduct");
+	public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword) {
+		
+		HashMap<String,Object> param = new HashMap<String,Object>();		
+		param.put("type",search_option);
+		param.put("keyword", search_keyword);		
+		param.put("start", start);
+		param.put("end", end);
+		
+		return sqlSession.selectList("product.topListProduct",param);
 	}
 
 	@Override
@@ -39,6 +47,11 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public List<Outer_OnepieceDTO> outerListProduct() {
 		return sqlSession.selectList("product.onepieceList");
+	}
+
+	public int all_count_tba() {
+		
+		return sqlSession.selectOne("product.topListProduct_count");
 	}
 
 }

@@ -18,11 +18,21 @@
 	</select>
 
 	<select id="topListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
+	<include refid="pagingHeader"></include>
 		SELECT
 		p.product_no as product_no,
 		p.pro_name as pro_name,
 		p.pro_price as pro_price,
 		tba.category as category
+		FROM product p JOIN top_bottom_acc tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[T]%'
+		ORDER BY p.pro_name
+	<include refid="pagingFooter"></include>  
+	</select>
+	
+	<select id="topListProduct_count" resultType="int">
+		SELECT count(*)		
 		FROM product p JOIN top_bottom_acc tba
 		ON p.product_no = tba.product_no
 		WHERE tba.category like '%[T]%'
@@ -73,4 +83,17 @@
 	ORDER BY pro.product_no
 	
 	</select>
+	
+	
+	<!-- 페이징 sql -->
+	<sql id="pagingHeader">
+   	 SELECT * FROM (
+        SELECT ROWNUM AS rn, A.* FROM (
+	</sql>
+	<sql id="pagingFooter">
+        ) A
+    ) WHERE rn BETWEEN #{start} AND #{end}
+	</sql>
+	
+	
 </mapper>

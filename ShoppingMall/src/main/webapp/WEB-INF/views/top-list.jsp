@@ -55,6 +55,16 @@
 <!-- CSS Customization -->
 <link rel="stylesheet"
 	href="resources/WB0412697/html/assets/css/custom.css">
+	
+	<script>
+	 function list(page){
+	        location.href="./top-list.do?cur_page="+page+"&search_option=${map.searchOption}"+"&search_keyword=${map.keyword}";
+	 }
+	
+	</script>	
+	
+	
+	
 </head>
 
 <body>
@@ -192,408 +202,62 @@
 							</div>
 						</c:forEach>
 
-						<div class="col-6 col-lg-4 g-mb-30">
-							<!-- Product -->
-							<figure>
-								<div class="g-pos-rel g-mb-20">
-									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img2.jpg"
-										alt="Image Description">
-								</div>
-
-								<div class="media">
-									<!-- Product Info -->
-									<div class="d-flex flex-column">
-										<h4 class="h6 g-color-black mb-1">
-											<a class="u-link-v5 g-color-black g-color-primary--hover"
-												href="#"> Stylish shirt </a>
-										</h4>
-										<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-											href="#">Woman</a> <s
-											class="d-block g-color-lightred g-font-weight-500 g-font-size-13">$101.00</s>
-										<span class="d-block g-color-black g-font-size-17">$99.00</span>
-									</div>
-									<!-- End Product Info -->
-
-									<!-- Products Icons -->
-									<ul class="list-inline media-body text-right">
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Cart"> <i
-												class="icon-finance-100 u-line-icon-pro"></i>
-										</a></li>
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Wishlist"> <i
-												class="icon-medical-022 u-line-icon-pro"></i>
-										</a></li>
-									</ul>
-									<!-- End Products Icons -->
-								</div>
-							</figure>
-							<!-- End Product -->
-						</div>
-
-						<div class="col-6 col-lg-4 g-mb-30">
-							<!-- Product -->
-							<figure>
-								<div class="g-pos-rel g-mb-20">
-									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img3.jpg"
-										alt="Image Description">
-
-									<!-- Ribbon -->
-									<figcaption>
-										<span
-											class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-lightred g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">Sold</span>
-									</figcaption>
-									<!-- End Ribbon -->
-								</div>
-
-								<div class="media">
-									<!-- Product Info -->
-									<div class="d-flex flex-column">
-										<h4 class="h6 g-color-black mb-1">
-											<a class="u-link-v5 g-color-black g-color-primary--hover"
-												href="#"> Classic jacket </a>
-										</h4>
-										<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-											href="#">Man</a> <span
-											class="d-block g-color-black g-font-size-17">$49.99</span>
-									</div>
-									<!-- End Product Info -->
-
-									<!-- Products Icons -->
-									<ul class="list-inline media-body text-right">
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Cart"> <i
-												class="icon-finance-100 u-line-icon-pro"></i>
-										</a></li>
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Wishlist"> <i
-												class="icon-medical-022 u-line-icon-pro"></i>
-										</a></li>
-									</ul>
-									<!-- End Products Icons -->
-								</div>
-							</figure>
-							<!-- End Product -->
-						</div>
-
-						<div class="col-6 col-lg-4 g-mb-30">
-							<!-- Product -->
-							<figure>
-								<div class="g-pos-rel g-mb-20">
-									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img4.jpg"
-										alt="Image Description">
-								</div>
-
-								<div class="media">
-									<!-- Product Info -->
-									<div class="d-flex flex-column">
-										<h4 class="h6 g-color-black mb-1">
-											<a class="u-link-v5 g-color-black g-color-primary--hover"
-												href="#"> Wool lined parka </a>
-										</h4>
-										<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-											href="#">Woman</a> <span
-											class="d-block g-color-black g-font-size-17">$82.37</span>
-									</div>
-									<!-- End Product Info -->
-
-									<!-- Products Icons -->
-									<ul class="list-inline media-body text-right">
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Cart"> <i
-												class="icon-finance-100 u-line-icon-pro"></i>
-										</a></li>
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Wishlist"> <i
-												class="icon-medical-022 u-line-icon-pro"></i>
-										</a></li>
-									</ul>
-									<!-- End Products Icons -->
-								</div>
-							</figure>
-							<!-- End Product -->
-						</div>
-
-						<div class="col-6 col-lg-4 g-mb-30">
-							<!-- Product -->
-							<figure>
-								<div class="g-pos-rel g-mb-20">
-									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img5.jpg"
-										alt="Image Description">
-
-									<!-- Ribbon -->
-									<figcaption>
-										<span
-											class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-lightred g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">Sold</span>
-									</figcaption>
-									<!-- End Ribbon -->
-								</div>
-
-								<div class="media">
-									<!-- Product Info -->
-									<div class="d-flex flex-column">
-										<h4 class="h6 g-color-black mb-1">
-											<a class="u-link-v5 g-color-black g-color-primary--hover"
-												href="#"> Hooded jeans </a>
-										</h4>
-										<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-											href="#">Man</a> <s
-											class="d-block g-color-lightred g-font-weight-500 g-font-size-13">$55.00</s>
-										<span class="d-block g-color-black g-font-size-17">$35.99</span>
-									</div>
-									<!-- End Product Info -->
-
-									<!-- Products Icons -->
-									<ul class="list-inline media-body text-right">
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Cart"> <i
-												class="icon-finance-100 u-line-icon-pro"></i>
-										</a></li>
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Wishlist"> <i
-												class="icon-medical-022 u-line-icon-pro"></i>
-										</a></li>
-									</ul>
-									<!-- End Products Icons -->
-								</div>
-							</figure>
-							<!-- End Product -->
-						</div>
-
-						<div class="col-6 col-lg-4 g-mb-30">
-							<!-- Product -->
-							<figure>
-								<div class="g-pos-rel g-mb-20">
-									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img6.jpg"
-										alt="Image Description">
-								</div>
-
-								<div class="media">
-									<!-- Product Info -->
-									<div class="d-flex flex-column">
-										<h4 class="h6 g-color-black mb-1">
-											<a class="u-link-v5 g-color-black g-color-primary--hover"
-												href="#"> Waterproof jacket </a>
-										</h4>
-										<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-											href="#">Woman</a> <span
-											class="d-block g-color-black g-font-size-17">$105.99</span>
-									</div>
-									<!-- End Product Info -->
-
-									<!-- Products Icons -->
-									<ul class="list-inline media-body text-right">
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Cart"> <i
-												class="icon-finance-100 u-line-icon-pro"></i>
-										</a></li>
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Wishlist"> <i
-												class="icon-medical-022 u-line-icon-pro"></i>
-										</a></li>
-									</ul>
-									<!-- End Products Icons -->
-								</div>
-							</figure>
-							<!-- End Product -->
-						</div>
-
-						<div class="col-6 col-lg-4 g-mb-30">
-							<!-- Product -->
-							<figure>
-								<div class="g-pos-rel g-mb-20">
-									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img7.jpg"
-										alt="Image Description">
-
-									<!-- Ribbon -->
-									<figcaption>
-										<span
-											class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
-									</figcaption>
-									<!-- End Ribbon -->
-								</div>
-
-								<div class="media">
-									<!-- Product Info -->
-									<div class="d-flex flex-column">
-										<h4 class="h6 g-color-black mb-1">
-											<a class="u-link-v5 g-color-black g-color-primary--hover"
-												href="#"> Classic T-shirt </a>
-										</h4>
-										<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-											href="#">Man</a> <span
-											class="d-block g-color-black g-font-size-17">$11.00</span>
-									</div>
-									<!-- End Product Info -->
-
-									<!-- Products Icons -->
-									<ul class="list-inline media-body text-right">
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Cart"> <i
-												class="icon-finance-100 u-line-icon-pro"></i>
-										</a></li>
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Wishlist"> <i
-												class="icon-medical-022 u-line-icon-pro"></i>
-										</a></li>
-									</ul>
-									<!-- End Products Icons -->
-								</div>
-							</figure>
-							<!-- End Product -->
-						</div>
-
-						<div class="col-6 col-lg-4 g-mb-30">
-							<!-- Product -->
-							<figure>
-								<div class="g-pos-rel g-mb-20">
-									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img8.jpg"
-										alt="Image Description">
-								</div>
-
-								<div class="media">
-									<!-- Product Info -->
-									<div class="d-flex flex-column">
-										<h4 class="h6 g-color-black mb-1">
-											<a class="u-link-v5 g-color-black g-color-primary--hover"
-												href="#"> Blue skirt </a>
-										</h4>
-										<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-											href="#">Woman</a> <span
-											class="d-block g-color-black g-font-size-17">$34.00</span>
-									</div>
-									<!-- End Product Info -->
-
-									<!-- Products Icons -->
-									<ul class="list-inline media-body text-right">
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Cart"> <i
-												class="icon-finance-100 u-line-icon-pro"></i>
-										</a></li>
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Wishlist"> <i
-												class="icon-medical-022 u-line-icon-pro"></i>
-										</a></li>
-									</ul>
-									<!-- End Products Icons -->
-								</div>
-							</figure>
-							<!-- End Product -->
-						</div>
-
-						<div class="col-6 col-lg-4 g-mb-30">
-							<!-- Product -->
-							<figure>
-								<div class="g-pos-rel g-mb-20">
-									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img9.jpg"
-										alt="Image Description">
-								</div>
-
-								<div class="media">
-									<!-- Product Info -->
-									<div class="d-flex flex-column">
-										<h4 class="h6 g-color-black mb-1">
-											<a class="u-link-v5 g-color-black g-color-primary--hover"
-												href="#"> Cotton workwear </a>
-										</h4>
-										<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-											href="#">Man</a> <span
-											class="d-block g-color-black g-font-size-17">$11.00</span>
-									</div>
-									<!-- End Product Info -->
-
-									<!-- Products Icons -->
-									<ul class="list-inline media-body text-right">
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Cart"> <i
-												class="icon-finance-100 u-line-icon-pro"></i>
-										</a></li>
-										<li class="list-inline-item align-middle mx-0"><a
-											class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-											href="#" data-toggle="tooltip" data-placement="top"
-											title="Add to Wishlist"> <i
-												class="icon-medical-022 u-line-icon-pro"></i>
-										</a></li>
-									</ul>
-									<!-- End Products Icons -->
-								</div>
-							</figure>
-							<!-- End Product -->
-						</div>
 					</div>
 
-
-
-
 					<!-- End Products -->
-
+					
 					<hr class="g-mb-60">
 
 					<!-- Pagination -->
 					<nav class="g-mb-60" aria-label="Page Navigation">
 						<ul class="list-inline">
-							<li class="list-inline-item hidden-down"><a
+						
+						 <c:if test="${map.boardPager.curBlock > 1}">
+						<li class="list-inline-item hidden-down"><a
+								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+								href="javascript:list('1')">[처음]</a></li>
+                		</c:if>
+                		
+                		<c:if test="${map.boardPager.curBlock > 1}">
+                		<li class="list-inline-item hidden-down"><a
+								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+								href="javascript:list('${map.boardPager.prevPage}')">[이전]</a></li>
+                		</c:if>
+                	
+                		
+                		 <!-- **하나의 블럭에서 반복문 수행 시작페이지부터 끝페이지까지 -->
+                		<c:forEach var="num" begin="${map.boardPager.blockBegin}" end="${map.boardPager.blockEnd}">
+                   		 <!-- **현재페이지이면 하이퍼링크 제거 -->
+                    	<c:choose>
+                        <c:when test="${num == map.boardPager.curPage}">
+                        
+                        <li class="list-inline-item hidden-down"><a
 								class="active u-pagination-v1__item g-width-30 g-height-30 g-brd-gray-light-v3 g-brd-primary--active g-color-white g-bg-primary--active g-font-size-12 rounded-circle g-pa-5"
-								href="#">1</a></li>
-							<li class="list-inline-item hidden-down"><a
+								>${num}</a></li>                          
+                        </c:when>
+                        <c:otherwise>
+                        <li class="list-inline-item hidden-down"><a
 								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-								href="#">2</a></li>
-							<li class="list-inline-item hidden-xs-down"><a
+								href="javascript:list('${num}')">${num}</a></li>                            
+                        </c:otherwise>
+                    	</c:choose>
+               			</c:forEach>
+                		
+                		
+                		 <!-- **다음페이지 블록으로 이동 : 현재 페이지 블럭이 전체 페이지 블럭보다 작거나 같으면 [다음]하이퍼링크를 화면에 출력 -->
+                		<c:if test="${map.boardPager.curBlock <= map.boardPager.totBlock}">
+                		<li class="list-inline-item hidden-xs-down"><a
 								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-								href="#">3</a></li>
-							<li class="list-inline-item hidden-down"><span
-								class="g-width-30 g-height-30 g-color-gray-dark-v5 g-font-size-12 rounded-circle g-pa-5">...</span>
-							</li>
-							<li class="list-inline-item hidden-xs-down"><a
+								href="javascript:list('${map.boardPager.nextPage}')">[다음]</a></li>                   		
+                		</c:if>
+                
+               			 <!-- **끝페이지로 이동 : 현재 페이지가 전체 페이지보다 작거나 같으면 [끝]하이퍼링크를 화면에 출력 -->
+               			<c:if test="${map.boardPager.curPage <= map.boardPager.totPage}">
+               			<li class="list-inline-item hidden-down"><a
 								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-								href="#">15</a></li>
-							<li class="list-inline-item"><a
-								class="u-pagination-v1__item g-width-30 g-height-30 g-brd-gray-light-v3 g-brd-primary--hover g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5 g-ml-15"
-								href="#" aria-label="Next"> <span aria-hidden="true">
-										<i class="fa fa-angle-right"></i>
-								</span> <span class="sr-only">Next</span>
-							</a></li>
-							<li class="list-inline-item float-right"><span
-								class="u-pagination-v1__item-info g-color-gray-dark-v4 g-font-size-12 g-pa-5">Page
-									1 of 15</span></li>
+								href="javascript:list('${map.boardPager.totPage}')">[끝]</a></li>                   		
+                		</c:if> 		
+						
 						</ul>
 					</nav>
 					<!-- End Pagination -->
