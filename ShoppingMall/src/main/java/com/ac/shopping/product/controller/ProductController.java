@@ -13,22 +13,36 @@ public class ProductController {
 
 	@Inject
 	ProductServiceImpl productService;
-	
+
 	@RequestMapping("/product-list.do")
-	public String productlist(){
+	public String productlist() {
 		return "/product-list";
 	}
-	
-	//=================신발===================
-	//신발 목록
+
+	// =================신발===================
+	// 신발 목록
 	@RequestMapping("/shoes-list")
-	public ModelAndView shoeslist(ModelAndView mav){
+	public ModelAndView shoeslist(ModelAndView mav) {
 		mav.setViewName("/shoes-list");
-		mav.addObject("list",productService.listShoes());
+		mav.addObject("shoeslist", productService.listShoes());
 		return mav;
 	}
-	
-	//신발 상세페이지
-	//@RequestMapping("shoes-detail")
-	//public 
+
+	// @RequestMapping("/shoes")
+	// public String shoes(){
+	// return "/shoes";
+	// }
+	// 신발 상세페이지
+	// @RequestMapping("shoes-detail")
+	// public
+
+	//==================탑===================
+	// Top 목록
+	@RequestMapping("/top-list")
+	public ModelAndView topList(ModelAndView mav) {
+		mav.setViewName("/top-list");
+		mav.addObject("toplist", productService.topListProduct());
+		return mav;
+	}
+
 }
