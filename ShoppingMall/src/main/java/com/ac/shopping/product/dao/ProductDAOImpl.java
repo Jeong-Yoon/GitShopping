@@ -12,16 +12,16 @@ import com.ac.shopping.product.dto.TBADTO;
 @Repository
 public class ProductDAOImpl implements ProductDAO {
 
-   @Autowired
-   SqlSession sqlSession;
+	@Autowired
+	SqlSession sqlSession;
 
-   public List<ShoesDTO> listShoes() {
-      return sqlSession.selectList("product.shoesList");
-   }
+	public List<ShoesDTO> listShoes() {
+		return sqlSession.selectList("product.shoesList");
+	}
 
-   @Override
-   public List<TBADTO> topListProduct() {
-      return sqlSession.selectList("product.topListProduct");
-   }
+	@Override
+	public List<TBADTO> topListProduct() {
+		return sqlSession.selectList("product.topListProduct");
+	}
 
 }

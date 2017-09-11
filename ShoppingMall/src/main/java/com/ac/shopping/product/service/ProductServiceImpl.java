@@ -13,17 +13,16 @@ import com.ac.shopping.product.dto.TBADTO;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-   @Inject
-   ProductDAOImpl productDao;
+	@Inject
+	ProductDAOImpl productDao;
 
-   public List<ShoesDTO> listShoes() {
-      System.out.println("----------------------------1");
-      return productDao.listShoes();
-   }
+	public List<ShoesDTO> listShoes() {
+		System.out.println("----------------------------1");
+		return productDao.listShoes();
+	}
 
-   @Override
-   public List<TBADTO> topListProduct() {
-      return productDao.topListProduct();
-   }
-
+	@Override
+	public List<TBADTO> topListProduct() {
+		return productDao.topListProduct();
+	}
 }

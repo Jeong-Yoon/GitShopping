@@ -8,8 +8,6 @@ public class ShoesDTO {
 	String pro_name;
 	//가격
 	int pro_price;
-	//사이즈
-	String shoes_size;
 	//이미지
 	String pro_img_url;
 	
@@ -30,12 +28,6 @@ public class ShoesDTO {
 	}
 	public void setPro_price(int pro_price) {
 		this.pro_price = pro_price;
-	}
-	public String getShoes_size() {
-		return shoes_size;
-	}
-	public void setShoes_size(String shoes_size) {
-		this.shoes_size = shoes_size;
 	}
 	public String getPro_img_url() {
 		return pro_img_url;
