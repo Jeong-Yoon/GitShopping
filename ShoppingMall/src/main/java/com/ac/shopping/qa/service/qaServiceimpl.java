@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.ac.shopping.qa.dao.*;
-import com.ac.shopping.qa.dto.qa_dto;;
+import com.ac.shopping.qa.dto.qa_dto;
 
 
 
@@ -17,6 +17,7 @@ public class qaServiceimpl implements qaService{
 	@Inject
 	qaDAOImpl qaDao;
 	
+	//게시판 리스트
 	public int query_case(String search_query_option, String search_type, String search_keyword){
 		
 		int query_case=0;
@@ -75,5 +76,50 @@ public class qaServiceimpl implements qaService{
 		int query_case = query_case(search_query_option,search_type,search_keyword);	
 		return qaDao.alllist(start, end, search_query_option, search_type, search_keyword, query_case);
 	}
+	
+	// 게시글 쓰기
+    @Override
+    public void create(qa_dto vo) throws Exception {
+        String title = vo.getBOARD_TITLE();
+        String content = vo.getBOARD_CONTENT();
+        String writer = vo.getBOARD_WRITER();
+        String query_type = vo.getBOARD_QUERY_TYPE();
+        
+        // *태그문자 처리 (< ==> &lt; > ==> &gt;)
+        // replace(A, B) A를 B로 변경
+        title = title.replace("<", "&lt;");
+        title = title.replace("<", "&gt;");
+        writer = writer.replace("<", "&lt;");
+        writer = writer.replace("<", "&gt;");
+        // *공백문자 처리
+        title = title.replace("  ",    "&nbsp;&nbsp;");
+        writer = writer.replace("  ",    "&nbsp;&nbsp;");
+        // *줄바꿈 문자처리
+        content = content.replace("\n", "<br>");
+        vo.setBOARD_TITLE(title);
+        vo.setBOARD_CONTENT(content);
+        vo.setBOARD_WRITER(writer);
+        vo.setBOARD_QUERY_TYPE(query_type);
+        qaDao.create(vo);
+    }
+
+    //게시글 수정
+    @Override
+	public void update(qa_dto vo) throws Exception {
+		qaDao.update(vo);
+	}
+    
+    //게시글 읽기
+    @Override
+    public qa_dto read(int BOARD_INDEX) throws Exception {
+        return qaDao.read(BOARD_INDEX);
+    }
+    
+	
+    //게시글 삭제
+    @Override
+    public void delete(int BOARD_INDEX) throws Exception {
+    	qaDao.delete(BOARD_INDEX);
+    }
 	
 }

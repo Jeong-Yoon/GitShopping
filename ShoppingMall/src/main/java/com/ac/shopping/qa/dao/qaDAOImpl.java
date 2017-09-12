@@ -45,4 +45,37 @@ public class qaDAOImpl implements qaDAO{
 		
 		return sqlSession.selectList("qa.listAll",param);
 	}
+
+	// 게시글 작성
+    @Override
+    public void create(qa_dto vo) throws Exception {
+    	
+    	System.out.println("DAO");
+    	System.out.println(vo);
+    	
+    	
+        sqlSession.insert("qa.insert", vo);
+        
+    }
+    
+    //게시글 읽기
+    @Override
+    public qa_dto read(int BOARD_INDEX) throws Exception {
+        return sqlSession.selectOne("qa.view", BOARD_INDEX);
+    }
+    
+    //게시글 수정
+    @Override
+    public void update(qa_dto vo) throws Exception {
+        sqlSession.update("qa.updateArticle", vo);
+ 
+    }
+    
+    //게시글 삭제
+    @Override
+    public void delete(int BOARD_INDEX) throws Exception {
+        sqlSession.delete("qa.deleteArticle",BOARD_INDEX);
+ 
+    }
+	
 }
