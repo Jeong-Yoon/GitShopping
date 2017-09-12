@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -64,21 +64,6 @@
 	href="resources/WB0412697/html/assets/css/custom.css">
 </head>
 
-<<<<<<< HEAD
-  <body>
-    <main>
-      <!-- Header -->
-      <header id="js-header" class="u-header u-header--static">
-        <!-- Top Bar -->
-        <div class="u-header__section u-header__section--dark g-bg-black g-transition-0_3 g-py-10">
-          <div class="container">
-            <div class="row flex-column flex-sm-row justify-content-between align-items-center text-uppercase g-font-weight-600 g-color-white g-font-size-12 g-mx-0--lg">
-              <div class="col-auto hidden-sm-down">
-                <ul class="list-inline mb-0">
-                  
-                </ul>
-              </div>
-=======
 <body>
 	<main> <!-- Header --> <header id="js-header"
 		class="u-header u-header--static">
@@ -90,24 +75,9 @@
 					class="row flex-column flex-sm-row justify-content-between align-items-center text-uppercase g-font-weight-600 g-color-white g-font-size-12 g-mx-0--lg">
 					<div class="col-auto hidden-sm-down">
 						<ul class="list-inline mb-0">
-							<li class="list-inline-item"><a href="#"
-								class="g-color-white g-color-primary--hover g-pa-3"><i
-									class="fa fa-facebook"></i></a></li>
-							<li class="list-inline-item"><a href="#"
-								class="g-color-white g-color-primary--hover g-pa-3"><i
-									class="fa fa-twitter"></i></a></li>
-							<li class="list-inline-item"><a href="#"
-								class="g-color-white g-color-primary--hover g-pa-3"><i
-									class="fa fa-tumblr"></i></a></li>
-							<li class="list-inline-item"><a href="#"
-								class="g-color-white g-color-primary--hover g-pa-3"><i
-									class="fa fa-pinterest-p"></i></a></li>
-							<li class="list-inline-item"><a href="#"
-								class="g-color-white g-color-primary--hover g-pa-3"><i
-									class="fa fa-google"></i></a></li>
+
 						</ul>
 					</div>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
 					<div class="col-auto g-pb-10 g-pb-0--sm">
 						<i
@@ -121,84 +91,43 @@
 						Mon-Fri: 9 AM - 5 PM
 					</div>
 
-<<<<<<< HEAD
-              <div class="col-auto g-pos-rel g-pb-10 g-pb-0--sm">
-                <ul class="list-inline g-overflow-hidden g-pt-1 g-mx-minus-4 mb-0">
-                  
-                  
-                  <li class="list-inline-item g-mx-4">
-                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">LOGIN</a>
-                  </li>
-                  <li class="list-inline-item g-mx-4">|</li>
-                  <li class="list-inline-item g-mx-4">
-                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">JOIN</a>
-                  </li>
-                  <li class="list-inline-item g-mx-4">|</li>
-                  <li class="list-inline-item g-mx-4">
-                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">CART</a>
-                  </li>
-                   <li class="list-inline-item g-mx-4">|</li>
-                  <li class="list-inline-item g-mx-4">
-                    <a class="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">MY PAGE</a>
-                  </li>
-                </ul>
-              </div>
-=======
 					<div class="col-auto g-pos-rel g-pb-10 g-pb-0--sm">
 						<ul class="list-inline g-overflow-hidden g-pt-1 g-mx-minus-4 mb-0">
-							<li class="list-inline-item g-mx-4"><i
-								class="icon-globe-alt g-font-size-18 g-valign-middle g-color-primary g-pos-rel g-top-minus-2 g-mr-10"></i>
-								<a href="#" id="languages-dropdown-invoker-2"
-								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								aria-controls="languages-dropdown-2" aria-haspopup="true"
-								aria-expanded="false" data-dropdown-event="click"
-								data-dropdown-target="#languages-dropdown-2"
-								data-dropdown-type="css-animation" data-dropdown-duration="300"
-								data-dropdown-hide-on-scroll="false"
-								data-dropdown-animation-in="fadeIn"
-								data-dropdown-animation-out="fadeOut"> English </a>
-								<ul id="languages-dropdown-2"
-									class="list-unstyled g-pos-abs g-left-0 g-bg-black g-width-160 g-pb-5 g-mt-10 g-z-index-2"
-									aria-labelledby="languages-dropdown-invoker-2">
-									<li><a
-										class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-										href="#">English</a></li>
-									<li><a
-										class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-										href="#">Spanish</a></li>
-									<li><a
-										class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-										href="#">Russian</a></li>
-									<li><a
-										class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-										href="#">German</a></li>
-								</ul></li>
-							<li class="list-inline-item g-mx-4">|</li>
-							<li class="list-inline-item g-mx-4"><a
-								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="#">FAQ</a></li>
-							<li class="list-inline-item g-mx-4">|</li>
-							<c:if test="${empty sessionScope.m_id}">
-								<li class="list-inline-item g-mx-4"><a
-									class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-									href="page-login">Login</a></li>
-							</c:if>
-							<c:if test="${not empty sessionScope.m_id}">
-								<li class="list-inline-item g-mx-4"><a
-									class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-									href="page-login">Logout</a></li>
-							</c:if>
-							<li class="list-inline-item g-mx-4"><a
-								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="#"><c:if test="${msg == 'success'}">
-										<h6>${sessionScope.m_id}</h6>
-									</c:if></a></li>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
+
+							<li class="list-inline-item g-mx-4"><a
+								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+								href="page-login"><c:if test="${empty sessionScope.m_id}">
+										<li class="list-inline-item g-mx-4"><a
+											class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+											href="page-login">Login</a></li>
+									</c:if> <c:if test="${not empty sessionScope.m_id}">
+										<li class="list-inline-item g-mx-4"><a
+											class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+											href="page-login">Logout</a></li>
+									</c:if>
+									<li class="list-inline-item g-mx-4"><a
+										class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+										href="#"><c:if test="${msg == 'success'}">
+												<h6>${sessionScope.m_id}</h6>
+											</c:if></a></li></a></li>
+							<li class="list-inline-item g-mx-4">|</li>
+							<li class="list-inline-item g-mx-4"><a
+								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+								href="#">JOIN</a></li>
+							<li class="list-inline-item g-mx-4">|</li>
+							<li class="list-inline-item g-mx-4"><a
+								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+								href="#">CART</a></li>
+							<li class="list-inline-item g-mx-4">|</li>
+							<li class="list-inline-item g-mx-4"><a
+								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+								href="#">MY PAGE</a></li>
 						</ul>
 					</div>
 
 					<div class="col-auto">
+
 						<!-- Basket -->
 						<div class="u-basket d-inline-block g-valign-middle g-pt-2">
 							<a href="#" id="basket-bar-invoker"
@@ -295,6 +224,7 @@
 													src="resources/WB0412697/html/assets/img-temp/150x150/img4.jpg"
 													alt="Image Description"></a>
 											</div>
+
 											<div class="col-8">
 												<h6 class="g-font-weight-600 g-mb-0">
 													<a href="#"
@@ -313,40 +243,21 @@
 								<div class="g-brd-top g-brd-white-opacity-0_1 g-pa-15 g-pb-20">
 									<div
 										class="d-flex flex-row align-items-center justify-content-between g-letter-spacing-1 g-font-size-16 g-mb-15">
-										<strong class="text-uppercase g-font-weight-600 g-color-white">Subtotal</strong>
-										<strong class="g-color-primary g-font-weight-600">$1200.00</strong>
+										<strong class="text-uppercase g-font-weight-600 g-color-white">총
+											합계</strong> <strong class="g-color-primary g-font-weight-600">$1200.00</strong>
 									</div>
 
-<<<<<<< HEAD
-                    <div class="g-brd-top g-brd-white-opacity-0_1 g-pa-15 g-pb-20">
-                      <div class="d-flex flex-row align-items-center justify-content-between g-letter-spacing-1 g-font-size-16 g-mb-15">
-                        <strong class="text-uppercase g-font-weight-600 g-color-white">총 합계</strong>
-                        <strong class="g-color-primary g-font-weight-600">$1200.00</strong>
-                      </div>
-=======
 									<div
 										class="d-flex flex-row align-items-center justify-content-between g-font-size-18">
 										<a href="#"
-											class="btn u-btn-outline-primary rounded-0 g-width-120">View
-											Cart</a> <a href="#"
-											class="btn u-btn-primary rounded-0 g-width-120">Checkout</a>
+											class="btn u-btn-outline-primary rounded-0 g-width-120">카트가기</a>
+										<a href="#" class="btn u-btn-primary rounded-0 g-width-120">결제하기</a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!-- End Basket -->
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
-<<<<<<< HEAD
-                      <div class="d-flex flex-row align-items-center justify-content-between g-font-size-18">
-                        <a href="#" class="btn u-btn-outline-primary rounded-0 g-width-120">카트가기</a>
-                        <a href="#" class="btn u-btn-primary rounded-0 g-width-120">결제하기</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Basket -->
-=======
 						<!-- Search -->
 						<div
 							class="d-inline-block g-valign-middle g-pos-rel g-top-minus-1">
@@ -360,7 +271,6 @@
 								data-dropdown-animation-out="fadeOutDown"> <i
 								class="fa fa-search"></i>
 							</a>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
 							<!-- Search Form -->
 							<form id="searchform-1"
@@ -404,18 +314,11 @@
 
 					<!-- Logo -->
 					<a href="index.html" class="navbar-brand"> <img
-						src="resources/WB0412697/html/e-commerce/assets/img/logo/logo-1.png"
+						src="resources/WB0412697/html/assets/img/logo/로고1.PNG"
 						alt="Image Description">
 					</a>
 					<!-- End Logo -->
 
-<<<<<<< HEAD
-              <!-- Logo -->
-              <a href="index.html" class="navbar-brand">
-                <img src="resources/WB0412697/html/assets/img/logo/로고1.PNG" alt="Image Description">
-              </a>
-              <!-- End Logo -->
-=======
 					<!-- Navigation -->
 					<div
 						class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg"
@@ -423,7 +326,6 @@
 						<ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
 							<li class="nav-item g-mx-10--lg g-mx-15--xl"><a
 								href="index.html" class="nav-link g-px-0">Home</a></li>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
 							<li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
 								<a id="nav-link--pages" class="nav-link g-px-0" href="#"
@@ -707,7 +609,7 @@
 							<!-- Mega Menu Item -->
 							<li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
 								data-animation-in="fadeIn" data-animation-out="fadeOut"
-								data-position="right"><a id="mega-menu-label-6"
+								data-position="right"><a id="mega-menu-label-4"
 								class="nav-link g-px-0" href="#" aria-haspopup="true"
 								aria-expanded="false">Promo <i
 									class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
@@ -715,7 +617,7 @@
 								<!-- Mega Menu -->
 								<div
 									class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-mt-17 g-mt-7--lg--scrolling"
-									aria-labelledby="mega-menu-label-6">
+									aria-labelledby="mega-menu-label-4">
 									<div class="row align-items-center no-gutters">
 										<div
 											class="col-sm-7 col-lg-8 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered"
@@ -731,30 +633,9 @@
 													Now</span>
 											</div>
 
-<<<<<<< HEAD
-                  <!-- Mega Menu Item -->
-                  <li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
-                      data-animation-in="fadeIn"
-                      data-animation-out="fadeOut"
-                      data-position="right">
-                    <a id="mega-menu-label-4" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Promo
-                      <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
-=======
 											<a class="u-link-v2" href="#"></a>
 										</div>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
-<<<<<<< HEAD
-                    <!-- Mega Menu -->
-                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-4">
-                      <div class="row align-items-center no-gutters">
-                        <div class="col-sm-7 col-lg-8 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered" data-bg-img-src="resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg" style="background-image: url(resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg);">
-                          <div class="g-flex-centered-item text-right g-pa-50">
-                            <h2 class="g-color-white g-font-weight-700 g-font-size-50 text-uppercase g-line-height-1 mb-4">Summer<br>Collection
-                            </h2>
-                            <span class="u-link-v5 g-color-black g-color-primary--hover g-font-size-18">Shop Now</span>
-                          </div>
-=======
 										<div
 											class="col-sm-5 col-lg-4 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered"
 											data-bg-img-src="resources/WB0412697/html/assets/img/bg/secondary.png"
@@ -769,7 +650,6 @@
 												<span
 													class="g-color-primary g-font-weight-700 g-font-size-20">$45.00</span>
 											</div>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
 											<a class="u-link-v2" href="#"></a>
 										</div>
@@ -780,7 +660,7 @@
 							<!-- Mega Menu Item -->
 							<li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
 								data-animation-in="fadeIn" data-animation-out="fadeOut"
-								data-position="right"><a id="mega-menu-label-4"
+								data-position="right"><a id="mega-menu-label-5"
 								class="nav-link g-px-0" href="#" aria-haspopup="true"
 								aria-expanded="false">Catalogue <i
 									class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
@@ -792,82 +672,12 @@
 									<div class="row">
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 
-<<<<<<< HEAD
-                  <!-- Mega Menu Item -->
-                  <li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
-                      data-animation-in="fadeIn"
-                      data-animation-out="fadeOut"
-                      data-position="right">
-                    <a id="mega-menu-label-5" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Catalogue
-                      <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
-=======
 											<div>
 												<h4 class="h5 text-uppercase g-font-weight-600">
 													<a href="#" style="text-decoration: none"><span
 														style="color: #000000;">NEW</span>
 												</h4>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
-<<<<<<< HEAD
-                    <!-- Mega Menu -->
-                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-5">
-                      <div class="row">
-                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                        
-                        <div>
-                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">NEW</span></h4>
-                        
-                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">BEST 100</span></h4>
-                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">REVIEW 30</span></h4>
-                       </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Top</span></h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">T-shirt &amp; Jackets</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">맨투맨/후드</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">니트</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">블라우스</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Bottom</h4>
-                          <ul class="list-unstyled">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">short pants</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">long pants</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">traing</a></li>
-                          </ul>
-                        </div>
-                      
-                       <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Outer</span></a></h4>
-                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">OPS</span></a></h4>
-                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Shoes</span></a></h4>
-                       </div>
-                      
-                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">ACC</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">All accessories</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">귀걸이</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">목걸이</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">팔찌 </a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">양말 </a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">벨트</a></li>
-                          </ul>
-                        </div>
-                        
-                        
-                     
-					
-                      </div>
-                    </div>
-                    
-                    <!-- End Mega Menu -->
-                  </li>
-                  <!-- End Mega Menu Item -->
-=======
 												<h4 class="h5 text-uppercase g-font-weight-600">
 													<a href="#" style="text-decoration: none"><span
 														style="color: #000000;">BEST 100</span>
@@ -880,7 +690,7 @@
 										</div>
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="top-list" style="text-decoration: none"><span
+												<a href="#" style="text-decoration: none"><span
 													style="color: #000000;">Top</span>
 											</h4>
 											<ul class="list-unstyled g-mb-25">
@@ -893,9 +703,7 @@
 													<span class="u-label g-bg-primary g-ml-10">New</span></li>
 											</ul>
 
-											<h4 class="h5 text-uppercase g-font-weight-600">
-											<a href="bottom-list" style="text-decoration: none"><span
-													style="color: #000000;">Bottom</span></h4>
+											<h4 class="h5 text-uppercase g-font-weight-600">Bottom</h4>
 											<ul class="list-unstyled">
 												<li class="g-mb-5"><a class="g-color-main" href="#">short
 														pants</a></li>
@@ -921,8 +729,7 @@
 										</div>
 
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-											<h4 class="h5 text-uppercase g-font-weight-600"><a href="acc-list" style="text-decoration: none"><span
-													style="color: #000000;">ACC</span></h4>
+											<h4 class="h5 text-uppercase g-font-weight-600">ACC</h4>
 											<ul class="list-unstyled g-mb-25">
 												<li class="g-mb-5"><a class="g-color-main" href="#">All
 														accessories</a></li>
@@ -942,7 +749,7 @@
 							<!-- Mega Menu Item -->
 							<li class="hs-has-mega-menu nav-item g-ml-10--lg g-ml-15--xl"
 								data-animation-in="fadeIn" data-animation-out="fadeOut"
-								data-position="right"><a id="mega-menu-label-5"
+								data-position="right"><a id="mega-menu-label-6"
 								class="nav-link g-px-0" href="#" aria-haspopup="true"
 								aria-expanded="false">Sales <i
 									class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
@@ -950,7 +757,7 @@
 								<!-- Mega Menu -->
 								<div
 									class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
-									aria-labelledby="mega-menu-label-5">
+									aria-labelledby="mega-menu-label-6">
 									<div class="row">
 										<div class="col-md-6 col-lg-4 g-px-10">
 											<!-- Article -->
@@ -963,17 +770,7 @@
 														alt="Image Description">
 												</div>
 												<!-- End Article Image -->
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
-<<<<<<< HEAD
-                  <!-- Mega Menu Item -->
-                  <li class="hs-has-mega-menu nav-item g-ml-10--lg g-ml-15--xl"
-                      data-animation-in="fadeIn"
-                      data-animation-out="fadeOut"
-                      data-position="right">
-                    <a id="mega-menu-label-6" class="nav-link g-px-0" href="#" aria-haspopup="true" aria-expanded="false">Sales
-                      <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
-=======
 												<!-- Article Info -->
 												<div class="media-body align-self-center">
 													<h4 class="h5 g-mb-7">
@@ -985,21 +782,7 @@
 														class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 														href="#">Accessories</a>
 													<!-- End Article Info -->
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
-<<<<<<< HEAD
-                    <!-- Mega Menu -->
-                    <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-6">
-                      <div class="row">
-                        <div class="col-md-6 col-lg-4 g-px-10">
-                          <!-- Article -->
-                          <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-                            <!-- Article Image -->
-                            <div class="g-max-width-100 g-mr-15">
-                              <img class="d-flex w-100" src="resources/WB0412697/html/assets/img-temp/150x150/img1.jpg" alt="Image Description">
-                            </div>
-                            <!-- End Article Image -->
-=======
 													<!-- Article Footer -->
 													<footer
 														class="d-flex justify-content-between g-font-size-16">
@@ -1028,7 +811,6 @@
 											</article>
 											<!-- End Article -->
 										</div>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
 										<div class="col-md-6 col-lg-4 g-px-10">
 											<!-- Article -->
@@ -2757,12 +2539,12 @@
 							href="#">Hi-Tech</a>
 						<!-- End Article Info -->
 
-<<<<<<< HEAD
-      <!-- News -->
-     
-     
-      
-=======
+						<<<<<<< HEAD
+						<!-- News -->
+
+
+
+						=======
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -2966,7 +2748,7 @@
 				<span class="d-inline-block g-width-3 g-height-16 g-bg-gray-dark-v5"></span><br>
 				<span class="d-inline-block g-color-gray-dark-v4 fa fa-arrow-down"></span>
 			</div>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
+			>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
 			<h2 class="h3 g-mb-30">Subscribe</h2>
 

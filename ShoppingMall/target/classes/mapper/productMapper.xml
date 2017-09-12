@@ -5,19 +5,20 @@
 
 <mapper namespace="product">
 
-	<select id="shoesList" resultType="com.ac.shopping.product.dto.ShoesDTO">
-		SELECT 
-		pro.product_no as product_no, 
-		pro.pro_name as pro_name, 
-		pro.pro_price as pro_price, 
-		img.pro_img_url as pro_img_url
-		FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no 
-		join PRO_IMG_URL img on pro.product_no = img.product_no
-		WHERE img.PRO_IMG_URL LIKE '%_1'
-		GROUP BY pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
-	</select>
+   <select id="shoesList" resultType="com.ac.shopping.product.dto.ShoesDTO">
+      SELECT 
+      pro.product_no as product_no, 
+      pro.pro_name as pro_name, 
+      pro.pro_price as pro_price, 
+      img.pro_img_url as pro_img_url
+      FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no 
+      join PRO_IMG_URL img on pro.product_no = img.product_no
+      WHERE img.PRO_IMG_URL LIKE '%_1'
+      GROUP BY pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
+   </select>
 
    <select id="topListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
+   <include refid="pagingHeader"></include>
       SELECT
       p.product_no as product_no,
       p.pro_name as pro_name,
@@ -27,8 +28,17 @@
       ON p.product_no = tba.product_no
       WHERE tba.category like '%[T]%'
       ORDER BY p.pro_name
+   <include refid="pagingFooter"></include>  
    </select>
    
+   <select id="topListProduct_count" resultType="int">
+      SELECT count(*)      
+      FROM product p JOIN top_bottom_acc tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[T]%'
+      ORDER BY p.pro_name
+   </select>
+
    <select id="bottomListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
       SELECT
       p.product_no as product_no,
@@ -40,96 +50,50 @@
       WHERE tba.category like '%[B]%'
       ORDER BY p.pro_name
    </select>
+
+   <select id="onepieceList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
    
-    <select id="accListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
-      SELECT
-      p.product_no as product_no,
-      p.pro_name as pro_name,
-      p.pro_price as pro_price,
-      tba.category as category
-      FROM product p JOIN top_bottom_acc tba
-      ON p.product_no = tba.product_no
-      WHERE tba.category like '%[A]%'
-      ORDER BY p.pro_name
+   SELECT
+   pro.product_no as product_no,
+   pro.pro_name as pro_name,
+   pro.pro_price as pro_price,
+   img.pro_img_url as pro_img_url
+   FROM product pro JOIN pro_img_url img
+   ON pro.product_no = img.product_no
+   JOIN outer_onepiece otop
+   ON pro.product_no = otop.product_no
+   WHERE otop.category LIKE '%[]%'
+   ORDER BY pro.product_no
+   
+   
    </select>
    
-	<select id="topListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
-	<include refid="pagingHeader"></include>
-		SELECT
-		p.product_no as product_no,
-		p.pro_name as pro_name,
-		p.pro_price as pro_price,
-		tba.category as category
-		FROM product p JOIN top_bottom_acc tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[T]%'
-		ORDER BY p.pro_name
-	<include refid="pagingFooter"></include>  
-	</select>
-	
-	<select id="topListProduct_count" resultType="int">
-		SELECT count(*)		
-		FROM product p JOIN top_bottom_acc tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[T]%'
-		ORDER BY p.pro_name
-	</select>
-
-	<select id="bottomListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
-		SELECT
-		p.product_no as product_no,
-		p.pro_name as pro_name,
-		p.pro_price as pro_price,
-		tba.category as category
-		FROM product p JOIN top_bottom_acc tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[B]%'
-		ORDER BY p.pro_name
-	</select>
-
-	<select id="onepieceList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
-	
-	SELECT
-	pro.product_no as product_no,
-	pro.pro_name as pro_name,
-	pro.pro_price as pro_price,
-	img.pro_img_url as pro_img_url
-	FROM product pro JOIN pro_img_url img
-	ON pro.product_no = img.product_no
-	JOIN outer_onepiece otop
-	ON pro.product_no = otop.product_no
-	WHERE otop.category LIKE '%[OPS]%'
-	ORDER BY pro.product_no
-	
-	
-	</select>
-	
-	<select id="outerList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
-	
-	SELECT
-	pro.product_no as product_no,
-	pro.pro_name as pro_name,
-	pro.pro_price as pro_price,
-	img.pro_img_url as pro_img_url
-	FROM product pro JOIN pro_img_url img
-	ON pro.product_no = img.product_no
-	JOIN outer_onepiece otop
-	ON pro.product_no = otop.product_no
-	WHERE otop.category LIKE '%[OUT]%'
-	ORDER BY pro.product_no
-	
-	</select>
-	
-	
-	<!-- 페이징 sql -->
-	<sql id="pagingHeader">
-   	 SELECT * FROM (
+   <select id="outerList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
+   
+   SELECT
+   pro.product_no as product_no,
+   pro.pro_name as pro_name,
+   pro.pro_price as pro_price,
+   img.pro_img_url as pro_img_url
+   FROM product pro JOIN pro_img_url img
+   ON pro.product_no = img.product_no
+   JOIN outer_onepiece otop
+   ON pro.product_no = otop.product_no
+   WHERE otop.category LIKE '%[]%'
+   ORDER BY pro.product_no
+   
+   </select>
+   
+   
+   <!-- 페이징 sql -->
+   <sql id="pagingHeader">
+       SELECT * FROM (
         SELECT ROWNUM AS rn, A.* FROM (
-	</sql>
-	<sql id="pagingFooter">
+   </sql>
+   <sql id="pagingFooter">
         ) A
     ) WHERE rn BETWEEN #{start} AND #{end}
-	</sql>
-	
-	
+   </sql>
+   
+   
 </mapper>
