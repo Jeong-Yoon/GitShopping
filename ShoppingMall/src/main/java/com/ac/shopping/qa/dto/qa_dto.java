@@ -13,8 +13,15 @@ public class qa_dto {
 	String BOARD_TITLE;
 	String BOARD_REPLY;
 	String BOARD_WRITER;
+	String BOARD_PWD;
 	
 	
+	public String getBOARD_PWD() {
+		return BOARD_PWD;
+	}
+	public void setBOARD_PWD(String bOARD_PWD) {
+		BOARD_PWD = bOARD_PWD;
+	}
 	public String getBOARD_WRITER() {
 		return BOARD_WRITER;
 	}
@@ -56,6 +63,12 @@ public class qa_dto {
 	}
 	public void setBOARD_REPLY(String bOARD_REPLY) {
 		BOARD_REPLY = bOARD_REPLY;
+	}
+	@Override
+	public String toString() {
+		return "qa_dto [BOARD_INDEX=" + BOARD_INDEX + ", BOARD_CONTENT=" + BOARD_CONTENT + ", BOARD_DATE=" + BOARD_DATE
+				+ ", BOARD_QUERY_TYPE=" + BOARD_QUERY_TYPE + ", BOARD_TITLE=" + BOARD_TITLE + ", BOARD_REPLY="
+				+ BOARD_REPLY + ", BOARD_WRITER=" + BOARD_WRITER + ", BOARD_PWD=" + BOARD_PWD + "]";
 	}
 	
 	

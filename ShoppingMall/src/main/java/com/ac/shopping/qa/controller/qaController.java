@@ -9,10 +9,14 @@ import java.util.Map;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.shopping.qa.service.*;
@@ -27,6 +31,7 @@ public class qaController {
 	
 	String type_change_chk = "";
 	
+	//게시판 리스트
 	@RequestMapping("/Q_A.do")
 	public ModelAndView Q_A_list(Model model,HttpServletRequest request,HttpServletResponse response){
 		
@@ -80,6 +85,47 @@ public class qaController {
 		mav.addObject("map", map); // 맵에 저장된 데이터를 mav에 저장
 		mav.setViewName("Q_A/Q_A"); // 뷰를 list.jsp로 설정
 		return mav; 
-		
 		}
+	
+	//게시글 작성화면
+	@RequestMapping(value="/Q_A/write", method=RequestMethod.GET)
+	public String write(){
+		return "/Q_A/write"; // write.jsp로 이동
+	}
+	
+	//게시판 글쓰기 처리
+	@RequestMapping("Q_A/insert.do")
+	public String writeQnA(@ModelAttribute qa_dto vo) throws Exception{
+		
+		System.out.println(vo);
+		qaService.create(vo);
+		return "redirect:Q_A.do";
+	} 
+	
+	
+	
+	
+	//게시판 수정
+    // 폼에서 입력한 내용들은 @ModelAttribute BoardVO vo로 전달됨
+    @RequestMapping(value="update.do")
+    public String update(@ModelAttribute qa_dto vo) throws Exception{
+    	qaService.update(vo);
+        return "redirect:Q_A.do";
+    }
+    
+  //게시글 읽기
+    @RequestMapping(value="Q_A/view", method=RequestMethod.GET)
+    public ModelAndView viewdo(@RequestParam int BOARD_INDEX, HttpSession session) throws Exception{
+    	ModelAndView mav = new ModelAndView();
+    	mav.setViewName("Q_A/view");
+    	mav.addObject("dto", qaService.read(BOARD_INDEX));
+        return mav; // list.jsp로 List가 전달된다.
+    }
+	
+  //게시글 삭제
+    @RequestMapping("delete.do")
+    public String delete(@RequestParam int board_index) throws Exception{
+    	qaService.delete(board_index);
+        return "redirect:Q_A.do";
+    }
 }

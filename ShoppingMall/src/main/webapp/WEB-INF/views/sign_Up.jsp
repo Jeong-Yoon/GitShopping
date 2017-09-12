@@ -75,6 +75,7 @@ function goto_url(act) {
                 <i class="fa fa-clock-o g-font-size-18 g-valign-middle g-color-primary g-mr-10 g-mt-minus-2"></i> Mon-Fri: 9 AM - 5 PM
               </div>
 
+              
               <div class="col-auto g-pos-rel g-pb-10 g-pb-0--sm">
                 <ul class="list-inline g-overflow-hidden g-pt-1 g-mx-minus-4 mb-0">
                   
@@ -96,7 +97,7 @@ function goto_url(act) {
                   </li>
                 </ul>
               </div>
-
+              
               <div class="col-auto">
 
                 <!-- Basket -->
@@ -302,8 +303,6 @@ function goto_url(act) {
                     <!-- Mega Menu -->
                     <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-3">
                       <div class="row">
-                      
-                      	
                         <div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
                           <figure class="g-px-10">
                             <div class="g-pos-rel g-mb-20">
@@ -351,7 +350,7 @@ function goto_url(act) {
                             </div>
                           </figure>
                         </div>
-						
+
                         <div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
                           <figure class="g-px-10">
                             <div class="g-pos-rel g-mb-20">
@@ -590,97 +589,57 @@ function goto_url(act) {
                     <div class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling" aria-labelledby="mega-menu-label-5">
                       <div class="row">
                         <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">Clothes</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">New in</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Coats &amp; Jackets</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Jeans</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Dresses</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Shorts</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Skirts</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">T-Shirts</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Shoes</h4>
-                          <ul class="list-unstyled">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Boots</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">FLats</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Heels</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Sandals</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Sports</a></li>
-                          </ul>
+                        
+                        <div>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">NEW</span></h4>
+                        
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">BEST 100</span></h4>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">REVIEW 30</span></h4>
+                       </div>
                         </div>
                         <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">Accessories</h4>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Top</span></h4>
+                          <ul class="list-unstyled g-mb-25">
+                            <li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">T-shirt &amp; Jackets</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">맨투맨/후드</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">니트</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">블라우스</a>
+                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
+                          </ul>
+
+                          <h4 class="h5 text-uppercase g-font-weight-600">Bottom</h4>
+                          <ul class="list-unstyled">
+                            <li class="g-mb-5"><a class="g-color-main" href="#">short pants</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">long pants</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">traing</a></li>
+                          </ul>
+                        </div>
+                      
+                       <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Outer</span></a></h4>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">OPS</span></a></h4>
+                          <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Shoes</span></a></h4>
+                       </div>
+                      
+                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+                          <h4 class="h5 text-uppercase g-font-weight-600">ACC</h4>
                           <ul class="list-unstyled g-mb-25">
                             <li class="g-mb-5"><a class="g-color-main" href="#">All accessories</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Bags &amp; Purses</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Scarvs &amp; Hats</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Jewellery</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Fragrance &amp; Beauty</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Lingerie</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Linger</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Slippers</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Nightwear</h4>
-                          <ul class="list-unstyled">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Nightwear</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">귀걸이</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">목걸이</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">팔찌 </a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">양말 </a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">벨트</a></li>
                           </ul>
                         </div>
-                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">Mixed</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">New in</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Coats &amp; Jackets</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Jeans</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Dresses</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Shorts</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Skirts</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">T-shirts</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Boots</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Flats</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Heels</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Sandals</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Sports</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                          <h4 class="h5 text-uppercase g-font-weight-600">Accessories</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">All accessories</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Bags &amp; Purses</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Scarvs &amp; Hats</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Jewellery</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Fragrance &amp; Beauty</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Lingerie</h4>
-                          <ul class="list-unstyled g-mb-25">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Linger</a>
-                              <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Slippers</a></li>
-                          </ul>
-
-                          <h4 class="h5 text-uppercase g-font-weight-600">Nightwear</h4>
-                          <ul class="list-unstyled">
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Nightwear</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
-                          </ul>
-                        </div>
+                        
+                        
+                     
+					
                       </div>
                     </div>
+                    
                     <!-- End Mega Menu -->
                   </li>
                   <!-- End Mega Menu Item -->
@@ -1146,7 +1105,7 @@ function goto_url(act) {
 
       <!-- Signup -->
       <section class="container g-pt-100 g-pb-20" >
-        <div class="row">
+        <div class="row" id="nanum">
           <div class="col-lg-5 flex-lg-unordered g-mb-80" style="margin: 0 auto;">
             <div class="g-brd-around g-brd-gray-light-v3 g-bg-white rounded g-px-30 g-py-50 mb-4">
               <header class="text-center mb-4">
@@ -1156,8 +1115,12 @@ function goto_url(act) {
               <!-- Form -->
               <form class="g-py-15" id="sign_Up" name="sign_Up"  method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
 
+<<<<<<< HEAD
+                <div class="row" id="nanum">
+=======
 				
                 <div class="row">
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
                   <div class="col g-mb-20">
                     <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" value="${id}"  required>
                   </div>
@@ -1166,37 +1129,42 @@ function goto_url(act) {
                   </div>
                  
                 </div>
+<<<<<<< HEAD
+ 
+                <div class="g-mb-20" id="nanum">
+=======
  			
                 <div class="g-mb-20">
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password"  name="pwd"placeholder="Password" required>
                 </div>
 
-                <div class="g-mb-20">
+                <div class="g-mb-20" id="nanum">
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="password" name="pwd_confirm" placeholder="Confirm password" required>
                 </div>
 
-                 <div class="g-mb-20">
+                 <div class="g-mb-20" id="nanum">
                  
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" id="testDatepicker" name="birth" required>
                 </div>
                 
-                <div class="g-mb-20">
+                <div class="g-mb-20" id="nanum">
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="address" placeholder="address" required> 
                 </div>
                 
-                 <div class="g-mb-20">
+                 <div class="g-mb-20" id="nanum">
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="name" placeholder="Name" required>
                 </div>               
 
-                <div class="g-mb-20">
+                <div class="g-mb-20" id="nanum">
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="phone" placeholder="PhoneNumber는 -를 제외하고 입력해주세요." required>
                 </div>
                 
-                <div class="g-mb-20">
+                <div class="g-mb-20" id="nanum">
                   <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="email" name="email" placeholder="Email address" required>
                 </div>
 
-                <div class="mb-1">
+                <div class="mb-1" id="nanum">
                   <label class="form-check-inline u-check g-color-gray-dark-v5 g-font-size-13 g-pl-25 mb-2">
                     <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox">
                     <div class="u-check-icon-checkbox-v6 g-absolute-centered--y g-left-0">
