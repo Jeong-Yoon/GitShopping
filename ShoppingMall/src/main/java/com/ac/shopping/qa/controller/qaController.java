@@ -99,7 +99,7 @@ public class qaController {
 		
 		System.out.println(vo);
 		qaService.create(vo);
-		return "redirect:Q_A.do";
+		return "redirect:/Q_A.do";
 	} 
 	
 	

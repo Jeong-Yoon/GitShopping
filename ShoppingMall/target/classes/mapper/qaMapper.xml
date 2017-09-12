@@ -70,17 +70,9 @@
 	
 	
 	<!-- 게시글 작성 -->
-	<insert id="insert">
-        INSERT INTO Q_A (
-          BOARD_WRITER,
-          BOARD_INDEX,
-          BOARD_CONTENT,
-          BOARD_DATE,
-          BOARD_QUERY_TYPE,
-          BOARD_TITLE,
-          BOARD_REPLY,
-          BOARD_PWD
-        ) VALUES (
+	<insert id="insert" parameterType="com.ac.shopping.qa.dto.qa_dto">
+	<![CDATA[
+        INSERT INTO Q_A VALUES (
           #{BOARD_WRITER},
           Q_A_SEQ.nextval,
           #{BOARD_CONTENT},
@@ -90,6 +82,7 @@
           #{BOARD_REPLY},
           #{BOARD_PWD}
         )
+        ]]>
 	</insert>
 	
 	<!--게시글 읽기 -->
