@@ -1094,11 +1094,12 @@
     <tr>
       <td>${row.BOARD_QUERY_TYPE}</td>
       <td>${row.BOARD_INDEX}</td>
-      <td>${row.BOARD_TITLE}</td>
+      <td><a href="${path}/Q_A/view?BOARD_INDEX=${row.BOARD_INDEX}">${row.BOARD_TITLE}</a></td>
       <td>${row.BOARD_WRITER}</td>
       <td>${row.BOARD_DATE}</td>
     </tr>
   </c:forEach>
+  
   <tr>
             <td colspan="5">
                 <!-- **처음페이지로 이동 : 현재 페이지가 1보다 크면  [처음]하이퍼링크를 화면에 출력-->
