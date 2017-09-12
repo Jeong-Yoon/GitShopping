@@ -62,7 +62,7 @@
 	ON pro.product_no = img.product_no
 	JOIN outer_onepiece otop
 	ON pro.product_no = otop.product_no
-	WHERE otop.category LIKE '%[]%'
+	WHERE otop.category LIKE '%[OPS]%'
 	ORDER BY pro.product_no
 	
 	
@@ -79,7 +79,7 @@
 	ON pro.product_no = img.product_no
 	JOIN outer_onepiece otop
 	ON pro.product_no = otop.product_no
-	WHERE otop.category LIKE '%[]%'
+	WHERE otop.category LIKE '%[OUT]%'
 	ORDER BY pro.product_no
 	
 	</select>
