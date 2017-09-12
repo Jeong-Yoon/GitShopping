@@ -2119,7 +2119,7 @@
 				<div class="container g-pt-50 g-pb-30">
 					<div class="row justify-content-between align-items-center">
 						<div class="col-md-6 g-mb-20">
-							<p class="g-font-size-13 mb-0">2017 © Htmlstream. All Rights
+							<p class="g-font-size-13 mb-0">2017 ⓒ Htmlstream. All Rights
 								Reserved.</p>
 						</div>
 

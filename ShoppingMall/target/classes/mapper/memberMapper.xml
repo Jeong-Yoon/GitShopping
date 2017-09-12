@@ -5,13 +5,15 @@
 
 <mapper namespace="member">
 
+   
+
 <select id="loginCheck" resultType="String">
 <!--     <![CDATA[ -->
         SELECT NAME AS userName FROM MEMBER
         WHERE M_ID = #{m_id} AND PWD = #{pwd}
 <!--         ]]> -->
     </select>
-    
+              
     <select id="viewMember" resultType="com.ac.shopping.member.dto.MemberDTO">
 <!--        <![CDATA[ -->
         SELECT 
@@ -31,8 +33,15 @@
 		(#{m_id}, #{pwd}, #{name}, #{birth}, #{address}, '새싹', 0, #{phone}, #{email})
 	</insert>
 	
-<!-- 	<select id="idChk"> -->
-<!-- 	SELECT M_ID FROM MEMBER WHERE M_ID=#{m_id} -->
-<!-- 	</select> -->
+   
+    <select id="ID_CHECK" statementType="CALLABLE" parameterType="hashmap">
+        {
+            CALL ID_CHECK(
+            	#{PARM1},
+                #{PARM2, mode=OUT, jdbcType=VARCHAR, javaType=String}              
+            )
+        }
+    </select>
+
 
 </mapper>

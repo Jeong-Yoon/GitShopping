@@ -12,4 +12,5 @@ public interface MemberService {
 	public void logout(HttpSession session);
 	public boolean loginCheck(MemberDTO mdto, HttpSession session);
 	public MemberDTO viewMember(MemberDTO mdto);
+	public int id_check(String id);
 }

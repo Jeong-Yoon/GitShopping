@@ -45,6 +45,7 @@ public class MemberController {
 	
 	@RequestMapping("/sign_Up")
 	public String signUP(){
+		
 		return "/sign_Up";
 	}
 //	@RequestMapping("/idChk")
@@ -53,7 +54,9 @@ public class MemberController {
 	//회원가입
 	@RequestMapping("/sign_Up_OK")
 	public String signUP_OK(HttpServletRequest request,HttpServletResponse response,Model model) throws IOException{
-		MemberDTO mdto = new MemberDTO();
+		
+		
+		MemberDTO mdto = new MemberDTO();		
 		if(request.getParameter("pwd").equals(request.getParameter("pwd_confirm"))){
 			mdto.setM_id(request.getParameter("m_id"));
 			mdto.setPwd(request.getParameter("pwd"));
@@ -75,6 +78,36 @@ public class MemberController {
 			out.flush();
 			return "sign_Up";
 		}
+	}
+	
+	@RequestMapping("/id_check")
+	public ModelAndView ID_CHECK(HttpServletRequest request,HttpServletResponse response) throws IOException{
+		
+		String id = request.getParameter("m_id");
+		System.out.println(id);
+		int check =memberService.id_check(id);
+		
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();		
+		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("sign_Up");
+		mav.addObject("id", id);
+		
+		if(id==null || id==""){
+			out.println("<script>alert('아이디를 입력해주세요.');  location.replace('sign_Up');</script>");	
+			out.close();
+		}		
+		if(check==0){
+			out.println("<script>alert('사용 가능한 아이디입니다.'); </script>"); 				
+		}
+		else{
+			out.println("<script>alert('이미 가입되어 있는 아이디입니다');  location.replace('sign_Up');</script>");
+			out.close();			
+		}		
+		out.flush();
+		return mav;
 	}
 	
 //	@RequestMapping("login.do")
