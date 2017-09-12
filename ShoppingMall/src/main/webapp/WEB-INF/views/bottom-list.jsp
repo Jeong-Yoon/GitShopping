@@ -141,7 +141,7 @@
 					<!-- Products -->
 
 					<div class="row g-pt-30 g-mb-50">
-						<c:forEach var="row" items="${toplist}">
+						<c:forEach var="row" items="${bottomlist}">
 							<div class="col-6 col-lg-4 g-mb-30">
 								<!-- Product -->
 								<figure>

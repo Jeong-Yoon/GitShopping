@@ -40,6 +40,11 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
+	public List<TBADTO> accListProduct() {
+		return sqlSession.selectList("product.accListProduct");
+	}
+	
+	@Override
 	public List<Outer_OnepieceDTO> onepieceListProduct() {
 		return sqlSession.selectList("product.onepieceList");
 	}
@@ -49,8 +54,8 @@ public class ProductDAOImpl implements ProductDAO {
 		return sqlSession.selectList("product.onepieceList");
 	}
 
+	@Override
 	public int all_count_tba() {
-		
 		return sqlSession.selectOne("product.topListProduct_count");
 	}
 

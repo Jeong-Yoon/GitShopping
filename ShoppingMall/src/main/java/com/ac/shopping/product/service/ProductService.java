@@ -12,6 +12,8 @@ public interface ProductService {
    
    public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword);
    public List<TBADTO> bottomListProduct();
+
+   public List<TBADTO> accListProduct();
    
    public List<Outer_OnepieceDTO> onepieceListProduct();	
    public List<Outer_OnepieceDTO> outerListProduct();
