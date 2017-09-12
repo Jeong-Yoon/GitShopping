@@ -735,7 +735,8 @@
 											</ul>
 
 											<h4 class="h5 text-uppercase g-font-weight-600">
-											<a href="bottom-list" style="text-decoration: none">Bottom</h4>
+											<a href="bottom-list" style="text-decoration: none"><span
+													style="color: #000000;">Bottom</span></h4>
 											<ul class="list-unstyled">
 												<li class="g-mb-5"><a class="g-color-main" href="#">short
 														pants</a></li>
@@ -761,7 +762,8 @@
 										</div>
 
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-											<h4 class="h5 text-uppercase g-font-weight-600"><a href="acc-list" style="text-decoration: none">ACC</h4>
+											<h4 class="h5 text-uppercase g-font-weight-600"><a href="acc-list" style="text-decoration: none"><span
+													style="color: #000000;">ACC</span></h4>
 											<ul class="list-unstyled g-mb-25">
 												<li class="g-mb-5"><a class="g-color-main" href="#">All
 														accessories</a></li>

@@ -53,6 +53,15 @@ public class ProductController {
       mav.addObject("bottomlist", productService.bottomListProduct());
       return mav;
    }
+   
+ //==================ACC===================
+   // ACC 목록
+   @RequestMapping("/acc-list")
+   public ModelAndView accList(ModelAndView mav) {
+      mav.setViewName("/acc-list");
+      mav.addObject("acclist", productService.accListProduct());
+      return mav;
+   }
 	
 
 }

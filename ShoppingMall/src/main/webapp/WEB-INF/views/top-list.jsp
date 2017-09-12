@@ -95,7 +95,6 @@
 							<!-- End Secondary Button -->
 						</div>
 						<!-- End Show -->
-
 						<!-- Sort By -->
 						<div class="g-mr-60">
 							<h2

@@ -30,4 +30,11 @@ public class ProductServiceImpl implements ProductService {
 	public List<TBADTO> bottomListProduct() {
 		return productDao.bottomListProduct();
 	}
+
+	@Override
+	public List<TBADTO> accListProduct() {
+		return productDao.accListProduct();
+	}
+
+	
 }

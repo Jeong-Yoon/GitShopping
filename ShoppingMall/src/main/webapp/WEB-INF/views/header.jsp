@@ -145,11 +145,12 @@
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 								href="page-login">Logout</a></li>
-						<li class="list-inline-item g-mx-4"><a
-							class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-							href="#"><c:if test="${msg == 'success'}">
-									<h6>${sessionScope.m_id}</h6>
-								</c:if></a></li></c:if>
+							<li class="list-inline-item g-mx-4"><a
+								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+								href="#"><c:if test="${msg == 'success'}">
+										<h6>${sessionScope.m_id}</h6>
+									</c:if></a></li>
+						</c:if>
 					</ul>
 				</div>
 
@@ -294,8 +295,8 @@
 							aria-controls="searchform-1" data-dropdown-target="#searchform-1"
 							data-dropdown-type="css-animation" data-dropdown-duration="300"
 							data-dropdown-animation-in="fadeInUp"
-							data-dropdown-animation-out="fadeOutDown">
-							<i class="fa fa-search"></i>
+							data-dropdown-animation-out="fadeOutDown"> <i
+							class="fa fa-search"></i>
 						</a>
 
 						<!-- Search Form -->
@@ -355,9 +356,7 @@
 					<li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
 						<a id="nav-link--pages" class="nav-link g-px-0" href="#"
 						aria-haspopup="true" aria-expanded="false"
-						aria-controls="nav-submenu--pages">Pages</a>
-
-						<!-- Submenu -->
+						aria-controls="nav-submenu--pages">Pages</a> <!-- Submenu -->
 						<ul
 							class="hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-py-7 g-mt-22 g-mt-12--lg--scrolling"
 							id="nav-submenu--pages" aria-labelledby="nav-link--pages">
@@ -666,118 +665,94 @@
 
 					<!-- Mega Menu Item -->
 					<li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
-						data-animation-in="fadeIn" data-animation-out="fadeOut"
-						data-position="right"><a id="mega-menu-label-4"
-						class="nav-link g-px-0" href="#" aria-haspopup="true"
-						aria-expanded="false">Catalogue <i
-							class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a> <!-- Mega Menu -->
-						<div
-							class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
-							aria-labelledby="mega-menu-label-4">
-							<div class="row">
-								<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-									<h4 class="h5 text-uppercase g-font-weight-600">Clothes</h4>
-									<ul class="list-unstyled g-mb-25">
-										<li class="g-mb-5"><a class="g-color-main" href="#">New
-												in</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Coats
-												&amp; Jackets</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Jeans</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Dresses</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Shorts</a>
-											<span class="u-label g-bg-primary g-ml-10">New</span></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Skirts</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">T-Shirts</a></li>
-									</ul>
+								data-animation-in="fadeIn" data-animation-out="fadeOut"
+								data-position="right"><a id="mega-menu-label-4"
+								class="nav-link g-px-0" href="#" aria-haspopup="true"
+								aria-expanded="false">Catalogue <i
+									class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
 
-									<h4 class="h5 text-uppercase g-font-weight-600">Shoes</h4>
-									<ul class="list-unstyled">
-										<li class="g-mb-5"><a class="g-color-main" href="#">Boots</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">FLats</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Heels</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Sandals</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Sports</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-									<h4 class="h5 text-uppercase g-font-weight-600">Accessories</h4>
-									<ul class="list-unstyled g-mb-25">
-										<li class="g-mb-5"><a class="g-color-main" href="#">All
-												accessories</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Bags
-												&amp; Purses</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Scarvs
-												&amp; Hats</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Jewellery</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Fragrance
-												&amp; Beauty</a></li>
-									</ul>
+								<!-- Mega Menu -->
+								<div
+									class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
+									aria-labelledby="mega-menu-label-5">
+									<div class="row">
+										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 
-									<h4 class="h5 text-uppercase g-font-weight-600">Lingerie</h4>
-									<ul class="list-unstyled g-mb-25">
-										<li class="g-mb-5"><a class="g-color-main" href="#">Linger</a>
-											<span class="u-label g-bg-primary g-ml-10">New</span></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Slippers</a></li>
-									</ul>
+											<div>
+												<h4 class="h5 text-uppercase g-font-weight-600">
+													<a href="#" style="text-decoration: none"><span
+														style="color: #000000;">NEW</span>
+												</h4>
 
-									<h4 class="h5 text-uppercase g-font-weight-600">Nightwear</h4>
-									<ul class="list-unstyled">
-										<li class="g-mb-5"><a class="g-color-main" href="#">Nightwear</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-									<h4 class="h5 text-uppercase g-font-weight-600">Mixed</h4>
-									<ul class="list-unstyled g-mb-25">
-										<li class="g-mb-5"><a class="g-color-main" href="#">New
-												in</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Coats
-												&amp; Jackets</a> <span class="u-label g-bg-primary g-ml-10">New</span></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Jeans</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Dresses</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Shorts</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Skirts</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">T-shirts</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Boots</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Flats</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Heels</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Sandals</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Sports</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-									<h4 class="h5 text-uppercase g-font-weight-600">Accessories</h4>
-									<ul class="list-unstyled g-mb-25">
-										<li class="g-mb-5"><a class="g-color-main" href="#">All
-												accessories</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Bags
-												&amp; Purses</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Scarvs
-												&amp; Hats</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Jewellery</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Fragrance
-												&amp; Beauty</a></li>
-									</ul>
+												<h4 class="h5 text-uppercase g-font-weight-600">
+													<a href="#" style="text-decoration: none"><span
+														style="color: #000000;">BEST 100</span>
+												</h4>
+												<h4 class="h5 text-uppercase g-font-weight-600">
+													<a href="#" style="text-decoration: none"><span
+														style="color: #000000;">REVIEW 30</span>
+												</h4>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="top-list" style="text-decoration: none"><span
+													style="color: #000000;">Top</span>
+											</h4>
+											<ul class="list-unstyled g-mb-25">
+												<li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">T-shirt
+														&amp; Jackets</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">맨투맨/후드</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">니트</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">블라우스</a>
+													<span class="u-label g-bg-primary g-ml-10">New</span></li>
+											</ul>
 
-									<h4 class="h5 text-uppercase g-font-weight-600">Lingerie</h4>
-									<ul class="list-unstyled g-mb-25">
-										<li class="g-mb-5"><a class="g-color-main" href="#">Linger</a>
-											<span class="u-label g-bg-primary g-ml-10">New</span></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Slippers</a></li>
-									</ul>
+											<h4 class="h5 text-uppercase g-font-weight-600">
+											<a href="bottom-list" style="text-decoration: none"><span
+													style="color: #000000;">Bottom</span></h4>
+											<ul class="list-unstyled">
+												<li class="g-mb-5"><a class="g-color-main" href="#">short
+														pants</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">long
+														pants</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">traing</a></li>
+											</ul>
+										</div>
 
-									<h4 class="h5 text-uppercase g-font-weight-600">Nightwear</h4>
-									<ul class="list-unstyled">
-										<li class="g-mb-5"><a class="g-color-main" href="#">Nightwear</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Socks</a></li>
-										<li class="g-mb-5"><a class="g-color-main" href="#">Tights</a></li>
-									</ul>
-								</div>
-							</div>
-						</div> <!-- End Mega Menu --></li>
+										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="#" style="text-decoration: none"><span
+													style="color: #000000;">Outer</span></a>
+											</h4>
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="#" style="text-decoration: none"><span
+													style="color: #000000;">OPS</span></a>
+											</h4>
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="#" style="text-decoration: none"><span
+													style="color: #000000;">Shoes</span></a>
+											</h4>
+										</div>
+
+										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+											<h4 class="h5 text-uppercase g-font-weight-600"><a href="acc-list" style="text-decoration: none">ACC</h4>
+											<ul class="list-unstyled g-mb-25">
+												<li class="g-mb-5"><a class="g-color-main" href="#">All
+														accessories</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">귀걸이</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">목걸이</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">팔찌
+												</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">양말
+												</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="#">벨트</a></li>
+											</ul>
+										</div>
+									</div>
+								</div> <!-- End Mega Menu --></li>
+					
 					<!-- End Mega Menu Item -->
 
 					<!-- Mega Menu Item -->

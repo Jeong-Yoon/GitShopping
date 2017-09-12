@@ -13,6 +13,8 @@ public interface ProductService {
    
    public List<TBADTO> bottomListProduct();
 
+   public List<TBADTO> accListProduct();
+
 	
 	
 }
