@@ -1193,7 +1193,9 @@
             <option value="BOARD_CONTENT" <c:out value="${map.searchOption == 'BOARD_CONTENT'?'selected':''}"/> > 글 내용 </option>
         </select>
         <input name="search_keyword" value="${map.keyword}">
+        
         <input type="submit" value="조회">
+        <input type="button" name="write" value="글쓰기" onclick="location.href='http://localhost:7070/shopping/Q_A/write'";><br />
         ${map.count}개의 게시물이 있습니다.
         
 </form>
