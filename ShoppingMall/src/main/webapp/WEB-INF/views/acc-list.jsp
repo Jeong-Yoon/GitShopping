@@ -603,7 +603,7 @@
                           <h4 class="h5 text-uppercase g-font-weight-600"><a href="#" style="text-decoration:none"><span style="color:#000000;">Top</span></h4>
                           <ul class="list-unstyled g-mb-25">
                             <li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
-                            <li class="g-mb-5"><a class="g-color-main" href="#">T-shirt</a></li>
+                            <li class="g-mb-5"><a class="g-color-main" href="#">T-shirt &amp; Jackets</a></li>
                             <li class="g-mb-5"><a class="g-color-main" href="#">맨투맨/후드</a></li>
                             <li class="g-mb-5"><a class="g-color-main" href="#">니트</a></li>
                             <li class="g-mb-5"><a class="g-color-main" href="#">블라우스</a>
@@ -1668,6 +1668,56 @@
 		<!-- Filters -->
           <div class="col-md-3 flex-md-first g-brd-right--lg g-brd-gray-light-v4 g-pt-40">
             <div class="g-pr-15--lg g-pt-60">
+              <!-- Categories -->
+              <div class="g-mb-30">
+                <h3 class="h5 mb-3">Categories</h3>
+
+                <ul class="list-unstyled">
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Clothes
+                      <span class="float-right g-font-size-12">202</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">T-shirts
+                      <span class="float-right g-font-size-12">44</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Shirts
+                      <span class="float-right g-font-size-12">398</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Shorts
+                      <span class="float-right g-font-size-12">56</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Jackets
+                      <span class="float-right g-font-size-12">71</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Shoes
+                      <span class="float-right g-font-size-12">943</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Glasses
+                      <span class="float-right g-font-size-12">109</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Classic
+                      <span class="float-right g-font-size-12">88</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Trending
+                      <span class="float-right g-font-size-12">111</span></a>
+                  </li>
+                  <li class="my-3">
+                    <a class="d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#">Accessories
+                      <span class="float-right g-font-size-12">5</span></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Categories -->
+
+              <hr>
 
               <!-- Pricing -->
               <div class="g-mb-30">
