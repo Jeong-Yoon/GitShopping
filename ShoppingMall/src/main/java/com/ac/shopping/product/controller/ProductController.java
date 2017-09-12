@@ -40,9 +40,12 @@ public class ProductController {
    // public String shoes(){
    // return "/shoes";
    // }
+   
    // 신발 상세페이지
-   // @RequestMapping("shoes-detail")
-   // public
+    @RequestMapping("shoes-detail")
+    public String shoesdetail(){
+    	return "shoes-detail";
+    }
 
    //==================TOP===================
    // TOP 목록

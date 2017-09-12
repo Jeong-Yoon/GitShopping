@@ -62,22 +62,40 @@
 	<jsp:include page="header.jsp" flush="false" />
 
 
-	s="d-inline-block btn-group">
-	<button type="button"
-		class="btn btn-secondary dropdown-toggle h6 align-middle g-brd-none g-color-gray-dark-v5 g-color-black--hover g-bg-transparent text-uppercase g-font-weight-300 g-font-size-12 g-pa-0 g-pl-10 g-ma-0"
-		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">9</button>
-	<div class="dropdown-menu rounded-0">
-		<a class="dropdown-item g-color-gray-dark-v4 g-font-weight-300"
-			href="#">All</a> <a
-			class="dropdown-item g-color-gray-dark-v4 g-font-weight-300" href="#">5</a>
-		<a class="dropdown-item g-color-gray-dark-v4 g-font-weight-300"
-			href="#">15</a> <a
-			class="dropdown-item g-color-gray-dark-v4 g-font-weight-300" href="#">20</a>
-		<a class="dropdown-item g-color-gray-dark-v4 g-font-weight-300"
-			href="#">25</a>
-	</div>
-	</div>
-	<!-- End Secondary Button -->
+	<main> <!--  Products -->
+	<div class="container">
+		<div class="row">
+			<!-- Content -->
+			<div class="col-md-9 flex-md-unordered">
+				<div class="g-pl-15--lg">
+					<!-- Filters -->
+					<div
+						class="d-flex justify-content-end align-items-center g-brd-bottom g-brd-gray-light-v4 g-pt-40 g-pb-20">
+						<!-- Show -->
+						<div class="g-mr-60">
+							<h2
+								class="h6 align-middle d-inline-block g-font-weight-400 text-uppercase g-pos-rel g-top-1 mb-0">Show:</h2>
+
+							<!-- Secondary Button -->
+							<div class="d-inline-block btn-group">
+								<button type="button"
+									class="btn btn-secondary dropdown-toggle h6 align-middle g-brd-none g-color-gray-dark-v5 g-color-black--hover g-bg-transparent text-uppercase g-font-weight-300 g-font-size-12 g-pa-0 g-pl-10 g-ma-0"
+									data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">9</button>
+								<div class="dropdown-menu rounded-0">
+									<a class="dropdown-item g-color-gray-dark-v4 g-font-weight-300"
+										href="#">All</a> <a
+										class="dropdown-item g-color-gray-dark-v4 g-font-weight-300"
+										href="#">5</a> <a
+										class="dropdown-item g-color-gray-dark-v4 g-font-weight-300"
+										href="#">15</a> <a
+										class="dropdown-item g-color-gray-dark-v4 g-font-weight-300"
+										href="#">20</a> <a
+										class="dropdown-item g-color-gray-dark-v4 g-font-weight-300"
+										href="#">25</a>
+								</div>
+							</div>
+							<!-- End Secondary Button -->
 	</div>
 	<!-- End Show -->
 
