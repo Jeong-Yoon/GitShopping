@@ -162,7 +162,7 @@
 				<button type="button"class="btn btn-md u-btn-primary rounded-0" onclick="location.href='../Q_A/modify?BOARD_INDEX=${view.BOARD_INDEX}&BOARD_WRITER=${view.BOARD_WRITER}&BOARD_TITLE=${view.BOARD_TITLE}&BOARD_CONTENT=${view.BOARD_CONTENT}'">
 				수정</button>
 				<button type="button"
-					class="btn btn-md u-btn-primary rounded-0" onclick="location.href='../Q_A/delete.do?BOARD_INDEX=${view.BOARD_INDEX}'" >
+					class="btn btn-md u-btn-primary rounded-0" onclick="button_event()" >
 					삭제</button>
 		</form>			
 		</div>
@@ -253,6 +253,19 @@
 	<script
 		src="resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
 	<script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+
+	<script type="text/javascript">
+	function button_event(){
+	if (confirm("정말 삭제합니까?") == true){    //확인
+		location.href = "../Q_A/delete.do?BOARD_INDEX=${view.BOARD_INDEX}";
+    }else{   
+     return;
+    }
+	}
+
+</script>
+
+
 
 	<script>
 		$(document).on('ready', function() {
