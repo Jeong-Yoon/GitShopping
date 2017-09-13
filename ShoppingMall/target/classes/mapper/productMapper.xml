@@ -216,11 +216,8 @@
 		img.pro_img_url LIKE '%_1'
 		ORDER BY pro.product_no
 	</select>
-<<<<<<< HEAD
 
-=======
 	
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 	<select id="topDetail" resultType="com.ac.shopping.product.dto.TBADTO">
 		SELECT pro.product_no,
 		pro.pro_name, pro.pro_price
