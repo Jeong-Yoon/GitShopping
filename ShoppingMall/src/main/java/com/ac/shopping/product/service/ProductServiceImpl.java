@@ -21,6 +21,10 @@ public class ProductServiceImpl implements ProductService {
 	public List<ShoesDTO> listShoes() {
 		return productDao.listShoes();
 	}
+	
+	public List<TBADTO> listTba() {
+		return productDao.listTba();
+	}
 
 	@Override
 	public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, String var) {
@@ -86,5 +90,17 @@ public class ProductServiceImpl implements ProductService {
 
 	public HashMap detailshoes(String pro_no) {
 		return productDao.detailshoes(pro_no);
+	}
+
+	public HashMap topDetail(String pro_no) {
+		return productDao.topDetail(pro_no);
+	}
+
+	public HashMap bottomDetail(String pro_no) {
+		return productDao.bottomDetail(pro_no);
+	}
+
+	public HashMap accDetail(String pro_no) {
+		return productDao.accDetail(pro_no);
 	}
 }

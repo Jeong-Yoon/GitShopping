@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextPath" value="<%= request.getContextPath()%>"></c:set>
 
 <head>
 <!-- Title -->
@@ -164,7 +165,7 @@
 										<div class="d-flex flex-column">
 											<h4 class="h6 g-color-black mb-1">
 												<a class="u-link-v5 g-color-black g-color-primary--hover"
-													href="#"> ${row.pro_name} </a>
+													href="${contextPath}/bottom-detail?product_no=${row.product_no}"> ${row.pro_name} </a>
 											</h4>
 											<span class="d-block g-color-black g-font-size-17">${row.pro_price}</span>
 										</div>
@@ -194,6 +195,7 @@
 						</c:forEach>
 
 						<div class="col-6 col-lg-4 g-mb-30">
+						
 							<!-- Product -->
 							<figure>
 								<div class="g-pos-rel g-mb-20">

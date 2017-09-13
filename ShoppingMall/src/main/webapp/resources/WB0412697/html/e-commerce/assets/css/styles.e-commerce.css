@@ -10621,6 +10621,7 @@ input[type="radio"]:checked + * .g-show-check {
   height: 18px;
   font-size: 12px;
   border: solid 1px #ccc;
+  padding-left : 1px;
 }
 
 .u-check-icon-checkbox-v4 i::before, .u-check-icon-radio-v4 i::before {

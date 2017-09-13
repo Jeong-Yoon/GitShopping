@@ -27,6 +27,11 @@ public class ProductController {
 	public String productlist() {
 		return "/product-list";
 	}
+	
+	@RequestMapping("/product-detail")
+	public String productdetail() {
+		return "/product-detail";
+	}
 
 	// =================신발===================
 	// 신발 목록
@@ -51,10 +56,7 @@ public class ProductController {
     	return mav;
     }
 
-	@RequestMapping("/product-detail")
-	public String productdetail() {
-		return "/product-detail";
-	}
+	
 
 	// ==================TOP===================
 	// TOP 목록
@@ -97,6 +99,15 @@ public class ProductController {
 		mav.addObject("toplist", productService.topListProduct(start, end, search_option, search_keyword, var));
 		return mav;
 	}
+	
+	//TOP 상세페이지
+	@RequestMapping("/top-detail")
+	public ModelAndView topDetail(ModelAndView mav, HttpServletRequest request ) {
+		String pro_no = request.getParameter("product_no");
+		mav.setViewName("/top-detail");
+		mav.addObject("topdetail", productService.topDetail(pro_no));
+    	return mav;
+	}
 
 	// ==================BOTTOM===================
 	// BOTTOM 목록
@@ -104,7 +115,15 @@ public class ProductController {
 	public ModelAndView bottomList(ModelAndView mav, @PathVariable String var) {
 		mav.setViewName("/bottom-list");
 		mav.addObject("bottomlist", productService.bottomListProduct(var));
-		
+		return mav;
+	}
+	
+	// BOTTOM 상세페이지
+	@RequestMapping("/bottom-detail")
+	public ModelAndView bottomDetail(ModelAndView mav, HttpServletRequest request) {
+		String pro_no = request.getParameter("product_no");
+		mav.setViewName("/bottom-detail");
+		mav.addObject("bottomdetail", productService.bottomDetail(pro_no));
 		return mav;
 	}
 
@@ -114,6 +133,15 @@ public class ProductController {
 	public ModelAndView accList(ModelAndView mav, @PathVariable String var) {
 		mav.setViewName("/acc-list");
 		mav.addObject("acclist", productService.accListProduct(var));
+		return mav;
+	}
+	
+	// ACC 상세 페이지
+	@RequestMapping("/acc-detail")
+	public ModelAndView accDetail(ModelAndView mav, HttpServletRequest request) {
+		String pro_no = request.getParameter("product_no");
+		mav.setViewName("/acc-detail");
+		mav.addObject("accdetail", productService.accDetail(pro_no));
 		return mav;
 	}
 

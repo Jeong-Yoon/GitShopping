@@ -23,6 +23,11 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
+	public List<TBADTO> listTba() {
+		return sqlSession.selectList("product.topList");
+	}
+	
+	@Override
 	public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, int idf) {
 		
 		HashMap<String,Object> param = new HashMap<String,Object>();		
@@ -75,6 +80,36 @@ public class ProductDAOImpl implements ProductDAO {
 		param.put("color", color);
 		param.put("size", size);
 		
+		return param;
+	}
+
+	public HashMap topDetail(String pro_no) {
+		TBADTO dto = sqlSession.selectOne("product.topDetail", pro_no);
+		List<String> color = sqlSession.selectList("product.topColor", pro_no);
+		
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("dto", dto);
+		param.put("color", color);
+		return param;
+	}
+
+	public HashMap bottomDetail(String pro_no) {
+		TBADTO dto = sqlSession.selectOne("product.bottomDetail", pro_no);
+		List<String> color = sqlSession.selectList("product.bottomColor", pro_no);
+		
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("dto", dto);
+		param.put("color", color);
+		return param;
+	}
+
+	public HashMap accDetail(String pro_no) {
+		TBADTO dto = sqlSession.selectOne("product.accDetail", pro_no);
+		List<String> color = sqlSession.selectList("product.accColor", pro_no);
+		
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("dto", dto);
+		param.put("color", color);
 		return param;
 	}
 

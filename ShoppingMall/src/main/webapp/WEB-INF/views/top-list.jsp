@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextPath" value="<%= request.getContextPath()%>"></c:set>
 <head>
 <!-- Title -->
 <title>E-commerce Grid Filter Page | Unify - Responsive Website
@@ -55,21 +56,22 @@
 <!-- CSS Customization -->
 <link rel="stylesheet"
 	href="../resources/WB0412697/html/assets/css/custom.css">
-	
-	<script>
-	 function list(page){
-	        location.href="./top-list.do?cur_page="+page+"&search_option=${map.searchOption}"+"&search_keyword=${map.keyword}";
-	 }
-	
-	</script>	
-	
-	
-	
+
+<script>
+	function list(page) {
+		location.href = "./top-list.do?cur_page=" + page
+				+ "&search_option=${map.searchOption}"
+				+ "&search_keyword=${map.keyword}";
+	}
+</script>
+
+
+
 </head>
 
 <body>
 	<jsp:include page="header.jsp" flush="false" />
-	
+
 	<main> <!-- Products -->
 	<div class="container">
 		<div class="row">
@@ -149,118 +151,116 @@
 					<!-- End Filters -->
 
 					<!-- Products -->
-
-					<div class="row g-pt-30 g-mb-50">
-						<c:forEach var="row" items="${toplist}">
-							<div class="col-6 col-lg-4 g-mb-30">
-								<!-- Product -->
-								<figure>
-									<div class="g-pos-rel g-mb-20">
-										<img class="img-fluid"
-											src="../resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
-											alt="Image Description">
-
-										<!-- Ribbon -->
-										<figcaption>
-											<span
-												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
-										</figcaption>
-										<!-- End Ribbon -->
-									</div>
-
-									<div class="media">
-										<!-- Product Info -->
-										<div class="d-flex flex-column">
-											<h4 class="h6 g-color-black mb-1">
-												<a class="u-link-v5 g-color-black g-color-primary--hover"
-													href="#"> ${row.pro_name} </a>
-											</h4>
-											<span class="d-block g-color-black g-font-size-17">${row.pro_price}</span>
-										</div>
-
-										<!-- End Product Info -->
-
-										<!-- Products Icons -->
-										<ul class="list-inline media-body text-right">
-											<li class="list-inline-item align-middle mx-0"><a
-												class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-												href="#" data-toggle="tooltip" data-placement="top"
-												title="Add to Cart"> <i
-													class="icon-finance-100 u-line-icon-pro"></i>
-											</a></li>
-											<li class="list-inline-item align-middle mx-0"><a
-												class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-												href="#" data-toggle="tooltip" data-placement="top"
-												title="Add to Wishlist"> <i
-													class="icon-medical-022 u-line-icon-pro"></i>
-											</a></li>
-										</ul>
-										<!-- End Products Icons -->
-									</div>
-								</figure>
-								<!-- End Product -->
-							</div>
-						</c:forEach>
-
-					</div>
-
-					<!-- End Products -->
 					
-					<hr class="g-mb-60">
+						<div class="row g-pt-30 g-mb-50">
+							<c:forEach var="row" items="${toplist}">
+								<div class="col-6 col-lg-4 g-mb-30">
+									<!-- Product -->
+									<figure>
+										<div class="g-pos-rel g-mb-20">
+											<img class="img-fluid" src="../resources/TOP/${row.product_no}_1.jpg"
+												alt="Image Description" witdh="400" height="700"></a>
+											<!-- Ribbon -->
+											<figcaption>
+												<span
+													class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
+											</figcaption>
+											<!-- End Ribbon -->
+										</div>
+										<div class="media">
+											<!-- Product Info -->
+											<div class="d-flex flex-column">
+												<h4 class="h6 g-color-black mb-1">
+													<a class="u-link-v5 g-color-black g-color-primary--hover"
+														href="${contextPath}/top-detail?product_no=${row.product_no}"> ${row.pro_name} </a>
+												</h4>
+												<span class="d-block g-color-black g-font-size-17">${row.pro_price}</span>
+											</div>
 
-					<!-- Pagination -->
-					<nav class="g-mb-60" aria-label="Page Navigation">
-						<ul class="list-inline">
-						
-						 <c:if test="${map.boardPager.curBlock > 1}">
-						<li class="list-inline-item hidden-down"><a
-								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-								href="javascript:list('1')">[처음]</a></li>
-                		</c:if>
-                		
-                		<c:if test="${map.boardPager.curBlock > 1}">
-                		<li class="list-inline-item hidden-down"><a
-								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-								href="javascript:list('${map.boardPager.prevPage}')">[이전]</a></li>
-                		</c:if>
-                	
-                		
-                		 <!-- **하나의 블럭에서 반복문 수행 시작페이지부터 끝페이지까지 -->
-                		<c:forEach var="num" begin="${map.boardPager.blockBegin}" end="${map.boardPager.blockEnd}">
-                   		 <!-- **현재페이지이면 하이퍼링크 제거 -->
-                    	<c:choose>
-                        <c:when test="${num == map.boardPager.curPage}">
-                        
-                        <li class="list-inline-item hidden-down"><a
-								class="active u-pagination-v1__item g-width-30 g-height-30 g-brd-gray-light-v3 g-brd-primary--active g-color-white g-bg-primary--active g-font-size-12 rounded-circle g-pa-5"
-								>${num}</a></li>                          
-                        </c:when>
-                        <c:otherwise>
-                        <li class="list-inline-item hidden-down"><a
-								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-								href="javascript:list('${num}')">${num}</a></li>                            
-                        </c:otherwise>
-                    	</c:choose>
-               			</c:forEach>
-                		
-                		
-                		 <!-- **다음페이지 블록으로 이동 : 현재 페이지 블럭이 전체 페이지 블럭보다 작거나 같으면 [다음]하이퍼링크를 화면에 출력 -->
-                		<c:if test="${map.boardPager.curBlock <= map.boardPager.totBlock}">
-                		<li class="list-inline-item hidden-xs-down"><a
-								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-								href="javascript:list('${map.boardPager.nextPage}')">[다음]</a></li>                   		
-                		</c:if>
-                
-               			 <!-- **끝페이지로 이동 : 현재 페이지가 전체 페이지보다 작거나 같으면 [끝]하이퍼링크를 화면에 출력 -->
-               			<c:if test="${map.boardPager.curPage <= map.boardPager.totPage}">
-               			<li class="list-inline-item hidden-down"><a
-								class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-								href="javascript:list('${map.boardPager.totPage}')">[끝]</a></li>                   		
-                		</c:if> 		
-						
-						</ul>
-					</nav>
-					<!-- End Pagination -->
+											<!-- End Product Info -->
+
+											<!-- Products Icons -->
+											<ul class="list-inline media-body text-right">
+												<li class="list-inline-item align-middle mx-0"><a
+													class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+													href="#" data-toggle="tooltip" data-placement="top"
+													title="Add to Cart"> <i
+														class="icon-finance-100 u-line-icon-pro"></i>
+												</a></li>
+												<li class="list-inline-item align-middle mx-0"><a
+													class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+													href="#" data-toggle="tooltip" data-placement="top"
+													title="Add to Wishlist"> <i
+														class="icon-medical-022 u-line-icon-pro"></i>
+												</a></li>
+											</ul>
+											<!-- End Products Icons -->
+										</div>
+									</figure>
+									<!-- End Product -->
+								</div>
+							</c:forEach>
+
+						</div>
+
+						<!-- End Products -->
+
+						<hr class="g-mb-60">
+
+						<!-- Pagination -->
+						<nav class="g-mb-60" aria-label="Page Navigation">
+							<ul class="list-inline">
+
+								<c:if test="${map.boardPager.curBlock > 1}">
+									<li class="list-inline-item hidden-down"><a
+										class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+										href="javascript:list('1')">[처음]</a></li>
+								</c:if>
+
+								<c:if test="${map.boardPager.curBlock > 1}">
+									<li class="list-inline-item hidden-down"><a
+										class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+										href="javascript:list('${map.boardPager.prevPage}')">[이전]</a></li>
+								</c:if>
+
+
+								<!-- **하나의 블럭에서 반복문 수행 시작페이지부터 끝페이지까지 -->
+								<c:forEach var="num" begin="${map.boardPager.blockBegin}"
+									end="${map.boardPager.blockEnd}">
+									<!-- **현재페이지이면 하이퍼링크 제거 -->
+									<c:choose>
+										<c:when test="${num == map.boardPager.curPage}">
+
+											<li class="list-inline-item hidden-down"><a
+												class="active u-pagination-v1__item g-width-30 g-height-30 g-brd-gray-light-v3 g-brd-primary--active g-color-white g-bg-primary--active g-font-size-12 rounded-circle g-pa-5">${num}</a></li>
+										</c:when>
+										<c:otherwise>
+											<li class="list-inline-item hidden-down"><a
+												class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+												href="javascript:list('${num}')">${num}</a></li>
+										</c:otherwise>
+									</c:choose>
+								</c:forEach>
+
+
+								<!-- **다음페이지 블록으로 이동 : 현재 페이지 블럭이 전체 페이지 블럭보다 작거나 같으면 [다음]하이퍼링크를 화면에 출력 -->
+								<c:if
+									test="${map.boardPager.curBlock <= map.boardPager.totBlock}">
+									<li class="list-inline-item hidden-xs-down"><a
+										class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+										href="javascript:list('${map.boardPager.nextPage}')">[다음]</a></li>
+								</c:if>
+
+								<!-- **끝페이지로 이동 : 현재 페이지가 전체 페이지보다 작거나 같으면 [끝]하이퍼링크를 화면에 출력 -->
+								<c:if test="${map.boardPager.curPage <= map.boardPager.totPage}">
+									<li class="list-inline-item hidden-down"><a
+										class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+										href="javascript:list('${map.boardPager.totPage}')">[끝]</a></li>
+								</c:if>
+
+							</ul>
+						</nav>
+						<!-- End Pagination -->
 				</div>
 			</div>
 			<!-- End Content -->
@@ -581,10 +581,12 @@
 		src="../resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
 	<script
 		src="../resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
-	<script src="../resources/WB0412697/html/assets/js/helpers/hs.rating.js"></script>
+	<script
+		src="../resources/WB0412697/html/assets/js/helpers/hs.rating.js"></script>
 	<script
 		src="../resources/WB0412697/html/assets/js/components/hs.slider.js"></script>
-	<script src="../resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+	<script
+		src="../resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
 
 	<!-- JS Customization -->
 	<script src="../resources/WB0412697/html/assets/js/custom.js"></script>

@@ -10,15 +10,21 @@ import com.ac.shopping.product.dto.TBADTO;
 public interface ProductDAO {
 	
    public List<ShoesDTO> listShoes();
+   public List<TBADTO> listTba();
+   
    public HashMap detailshoes(String pro_no);
+   public HashMap topDetail(String pro_no);
+   public HashMap bottomDetail(String pro_no);
+   public HashMap accDetail(String pro_no);
    
    public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, int idf);
    public List<TBADTO> bottomListProduct(int idf);
    public List<TBADTO> accListProduct(int idf);
-   
    public List<Outer_OnepieceDTO> onepieceListProduct();
    public List<Outer_OnepieceDTO> outerListProduct();
+   
    public int all_count_tba();
+
 
 
 }

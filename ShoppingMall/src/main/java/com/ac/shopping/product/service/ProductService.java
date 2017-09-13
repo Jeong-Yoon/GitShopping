@@ -12,13 +12,17 @@ public interface ProductService {
    public List<ShoesDTO> listShoes();
    public HashMap detailshoes(String pro_no);
    
+   public List<TBADTO> listTba();
+   public HashMap topDetail(String pro_no);
+   public HashMap bottomDetail(String pro_no);
+   public HashMap accDetail(String pro_no);
+   
    public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, String var);
    public List<TBADTO> bottomListProduct(String var);
-
    public List<TBADTO> accListProduct(String var);
-   
    public List<Outer_OnepieceDTO> onepieceListProduct();	
    public List<Outer_OnepieceDTO> outerListProduct();
+   
    public int all_count_tba(String search_option, String search_keyword, String var);
 	
 }
