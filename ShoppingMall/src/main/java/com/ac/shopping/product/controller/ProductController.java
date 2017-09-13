@@ -42,11 +42,14 @@ public class ProductController {
 	// return "/shoes";
 	// }
 
-	// 신발 상세페이지
-	// @RequestMapping("/shoes-detail")
-	// public String shoesdetail(){
-	// return "/shoes-detail";
-	// }
+	//신발 상세페이지
+    @RequestMapping("/shoes-detail")
+    public ModelAndView shoesdetail(ModelAndView mav, HttpServletRequest request){
+    	String pro_no = request.getParameter("product_no");
+    	mav.setViewName("/shoes-detail");
+    	mav.addObject("shoesdetail", productService.detailshoes(pro_no));
+    	return mav;
+    }
 
 	@RequestMapping("/product-detail")
 	public String productdetail() {

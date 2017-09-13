@@ -67,7 +67,6 @@ public class ProductDAOImpl implements ProductDAO {
 	public HashMap detailshoes(String pro_no) {
 		System.out.println(pro_no);
 		ShoesDTO dto = sqlSession.selectOne("product.shoesDetail",pro_no);
-		System.out.println();
 		List<String> color = sqlSession.selectList("product.shoesColor",pro_no);
 		List<String> size = sqlSession.selectList("product.shoesSize",pro_no);
 		
