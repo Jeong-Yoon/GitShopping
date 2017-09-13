@@ -36,5 +36,4 @@ public class ShoesDTO {
 		this.pro_img_url = pro_img_url;
 	}
 	
-	
 }

@@ -6,19 +6,44 @@
 <mapper namespace="product">
 
 	<select id="shoesList" resultType="com.ac.shopping.product.dto.ShoesDTO">
-		SELECT 
-		pro.product_no as product_no, 
-		pro.pro_name as pro_name, 
-		pro.pro_price as pro_price, 
+		SELECT
+		pro.product_no as product_no,
+		pro.pro_name as pro_name,
+		pro.pro_price as pro_price,
 		img.pro_img_url as pro_img_url
-		FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no 
+		FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no
 		join PRO_IMG_URL img on pro.product_no = img.product_no
-		WHERE img.PRO_IMG_URL LIKE '%_1'
+		WHERE img.pro_img_url LIKE '%_1'
+		GROUP BY pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
+		ORDER BY pro.product_no DESC
+	</select>
+
+	<select id="shoesDetail" resultType="com.ac.shopping.product.dto.ShoesDTO">
+		SELECT
+		pro.product_no as product_no,
+		pro.pro_name as pro_name,
+		pro.pro_price as pro_price,
+		img.pro_img_url as pro_img_url
+		FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no
+		join PRO_IMG_URL img on pro.product_no = img.product_no
+		WHERE pro.product_no = #{product_no}
+        AND img.pro_img_url LIKE '%_1'
 		GROUP BY pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
 	</select>
 
+	<select id="shoesSize" resultType="String">
+		SELECT shoes_size
+		FROM shoes
+		WHERE product_no = #{product_no}
+	</select>
+
+	<select id="shoesColor" resultType="String">
+		SELECT pro_color
+		FROM product_color
+		WHERE product_no = #{product_no}
+	</select>
+
 	<select id="topListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
-	<include refid="pagingHeader"></include>
 		SELECT
 		p.product_no as product_no,
 		p.pro_name as pro_name,
@@ -27,17 +52,34 @@
 		FROM product p JOIN top_bottom_acc tba
 		ON p.product_no = tba.product_no
 		WHERE tba.category like '%[T]%'
-		ORDER BY p.pro_name
-	<include refid="pagingFooter"></include>  
+		<include refid="topkind"></include>
 	</select>
-	
+
+	<sql id="topkind">
+		<choose>
+			<when test="idf==2">
+				AND tba.category like '%T-SHIRT%'
+			</when>
+			<when test="idf==3">
+				AND tba.category like '%MANTOMAN/HOODTEE%'
+			</when>
+			<when test="idf==4">
+				AND tba.category like '%BLOUSE%'
+			</when>
+			<when test="idf==5">
+				AND tba.category like '%KNIT%'
+			</when>
+		</choose>
+	</sql>
+
 	<select id="topListProduct_count" resultType="int">
-		SELECT count(*)		
+		SELECT count(*)
 		FROM product p JOIN top_bottom_acc tba
 		ON p.product_no = tba.product_no
 		WHERE tba.category like '%[T]%'
 		ORDER BY p.pro_name
 	</select>
+
 
 	<select id="bottomListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
 		SELECT
@@ -48,52 +90,94 @@
 		FROM product p JOIN top_bottom_acc tba
 		ON p.product_no = tba.product_no
 		WHERE tba.category like '%[B]%'
-		ORDER BY p.pro_name
+		<include refid="bottomkind"></include>
 	</select>
 
+	<sql id="bottomkind">
+		<choose>
+			<when test="idf==2">
+				AND tba.category like '%SHORTPANTS%'
+			</when>
+			<when test="idf==3">
+				AND tba.category like '%STRAIGHT%'
+			</when>
+			<when test="idf==4">
+				AND tba.category like '%TRAINING%'
+			</when>
+		</choose>
+	</sql>
+	
+	<select id="accListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
+		SELECT
+		p.product_no as product_no,
+		p.pro_name as pro_name,
+		p.pro_price as pro_price,
+		tba.category as category
+		FROM product p JOIN top_bottom_acc tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[A]%'
+		<include refid="acckind"></include>
+	</select>
+	
+	<sql id="acckind">
+		<choose>
+			<when test="idf==2">
+				AND tba.category like '%EARRING%'
+			</when>
+			<when test="idf==3">
+				AND tba.category like '%NECK%'
+			</when>
+			<when test="idf==4">
+				AND tba.category like '%BLACELET%'
+			</when>
+			<when test="idf==5">
+				AND tba.category like '%SOCKS%'
+			</when>
+			<when test="idf==6">
+				AND tba.category like '%BELT%'
+			</when>
+		</choose>
+	</sql>
+	
 	<select id="onepieceList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
-	
-	SELECT
-	pro.product_no as product_no,
-	pro.pro_name as pro_name,
-	pro.pro_price as pro_price,
-	img.pro_img_url as pro_img_url
-	FROM product pro JOIN pro_img_url img
-	ON pro.product_no = img.product_no
-	JOIN outer_onepiece otop
-	ON pro.product_no = otop.product_no
-	WHERE otop.category LIKE '%[]%'
-	ORDER BY pro.product_no
-	
-	
+		SELECT
+		pro.product_no as product_no,
+		pro.pro_name as pro_name,
+		pro.pro_price as pro_price,
+		img.pro_img_url as pro_img_url
+		FROM product pro JOIN pro_img_url img
+		ON pro.product_no = img.product_no
+		JOIN outer_onepiece otop
+		ON pro.product_no = otop.product_no
+		WHERE otop.category LIKE '%[OPS]%'
+		ORDER BY pro.product_no
 	</select>
-	
+
 	<select id="outerList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
-	
-	SELECT
-	pro.product_no as product_no,
-	pro.pro_name as pro_name,
-	pro.pro_price as pro_price,
-	img.pro_img_url as pro_img_url
-	FROM product pro JOIN pro_img_url img
-	ON pro.product_no = img.product_no
-	JOIN outer_onepiece otop
-	ON pro.product_no = otop.product_no
-	WHERE otop.category LIKE '%[]%'
-	ORDER BY pro.product_no
-	
+		SELECT
+		pro.product_no as product_no,
+		pro.pro_name as pro_name,
+		pro.pro_price as pro_price,
+		img.pro_img_url as pro_img_url
+		FROM product pro JOIN pro_img_url img
+		ON pro.product_no = img.product_no
+		JOIN outer_onepiece otop
+		ON pro.product_no = otop.product_no
+		WHERE otop.category LIKE '%[OUT]%'
+		ORDER BY pro.product_no
 	</select>
-	
-	
+
+
 	<!-- 페이징 sql -->
 	<sql id="pagingHeader">
-   	 SELECT * FROM (
-        SELECT ROWNUM AS rn, A.* FROM (
+		SELECT * FROM (
+		SELECT ROWNUM AS rn, A.* FROM (
 	</sql>
 	<sql id="pagingFooter">
-        ) A
-    ) WHERE rn BETWEEN #{start} AND #{end}
+		) A
+		) WHERE rn (BETWEEN #{start} AND #{end})
+
 	</sql>
-	
-	
+
+
 </mapper>
