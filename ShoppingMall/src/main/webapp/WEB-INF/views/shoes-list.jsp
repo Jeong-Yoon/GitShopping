@@ -141,7 +141,7 @@
 					<!-- End Filters -->
 
 					<!-- Products -->
-
+                   <form action="shoes-detail" method="post">
 					<div class="row g-pt-30 g-mb-50">
 						<c:forEach var="list" items="${shoeslist}">
 							<div class="col-6 col-lg-4 g-mb-30">
@@ -149,14 +149,17 @@
 								<figure>
 									<div class="g-pos-rel g-mb-20">
 										<img class="img-fluid"
-											src="resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
+											src="${list.pro_img_url}"
 											alt="Image Description">
+<!-- 											<img class="img-fluid" -->
+<!-- 											src="resources/WB0412697/html/assets/img-temp/480x700/img1.jpg" -->
+<!-- 											alt="Image Description"> -->
 
 										<!-- Ribbon -->
-										<figcaption>
-											<span
-												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
-										</figcaption>
+<!-- 										<figcaption> -->
+<!-- 											<span -->
+<!-- 												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span> -->
+<!-- 										</figcaption> -->
 										<!-- End Ribbon -->
 									</div>
 
@@ -165,7 +168,7 @@
 										<div class="d-flex flex-column">
 											<h4 class="h6 g-color-black mb-1">
 												<a class="u-link-v5 g-color-black g-color-primary--hover"
-													href="#"> ${list.pro_name} </a>
+													href="shoes-detail?product_no=${list.product_no}"> ${list.pro_name} </a>
 											</h4>
 											<span class="d-block g-color-black g-font-size-17">${list.pro_price}</span>
 										</div>
@@ -573,6 +576,7 @@
 						<!--                   End Product -->
 						<!--                 </div> -->
 					</div>
+					</form>
 
 
 
@@ -994,30 +998,24 @@
 			// initialization of header
 			$.HSCore.components.HSHeader.init($('#js-header'));
 			$.HSCore.helpers.HSHamburgers.init('.hamburger');
-
 			// initialization of HSMegaMenu component
 			$('.js-mega-menu').HSMegaMenu({
 				event : 'hover',
 				pageContainer : $('.container'),
 				breakpoint : 991
 			});
-
 			// initialization of HSDropdown component
 			$.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
 				afterOpen : function() {
 					$(this).find('input[type="search"]').focus();
 				}
 			});
-
 			// initialization of HSScrollBar component
 			$.HSCore.components.HSScrollBar.init($('.js-scrollbar'));
-
 			// initialization of go to
 			$.HSCore.components.HSGoTo.init('.js-go-to');
-
 			// initialization of rating
 			$.HSCore.helpers.HSRating.init();
-
 			// initialization of range slider
 			$.HSCore.components.HSSlider.init('#rangeSlider1');
 		});

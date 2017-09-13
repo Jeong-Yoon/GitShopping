@@ -122,7 +122,8 @@
             <div class="g-px-40--lg g-py-70">
               <!-- Product Info -->
               <div class="g-mb-30">
-                <h1 class="g-font-weight-300 mb-4">Men's Water<br>Resistant Jacket</h1>
+<!--                 <h1 class="g-font-weight-300 mb-4">Men's Water<br>Resistant Jacket</h1> -->
+                <h1 class="g-font-weight-300 mb-4">${shoesdetail.dto.pro_name}</h1>
                 <p>Dress is the "rain mac" version of our beloved essential the Unify Parka. Crafted from a water resistant fluid memory fabric to create an elegant draped effect when thrown on, this lightweight shell will take you from season to season and protect you from that unexpected shower.</p>
               </div>
               <!-- End Product Info -->
@@ -130,8 +131,8 @@
               <!-- Price -->
               <div class="g-mb-30">
                 <h2 class="g-color-gray-dark-v5 g-font-weight-400 g-font-size-12 text-uppercase mb-2">Price</h2>
-                <span class="g-color-black g-font-weight-500 g-font-size-30 mr-2">$99.00</span>
-                <s class="g-color-gray-dark-v4 g-font-weight-500 g-font-size-16">$101.00</s>
+                <span class="g-color-black g-font-weight-500 g-font-size-30 mr-2">${shoesdetail.dto.pro_price}</span>
+<!--                 <s class="g-color-gray-dark-v4 g-font-weight-500 g-font-size-16">$101.00</s> -->
               </div>
               <!-- End Price -->
 
@@ -203,30 +204,32 @@
 
                 <!-- Checkbox -->
                 <ul class="list-inline mb-0">
+                <c:forEach var="size" items="${shoesdetail.size}">
                   <li class="list-inline-item g-mx-15">
                     <label class="form-check-inline u-check">
                       <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio">
                       <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
-                        S
+                        ${size}
                       </div>
                     </label>
                   </li>
-                  <li class="list-inline-item g-mx-15">
-                    <label class="form-check-inline u-check">
-                      <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio">
-                      <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
-                        M
-                      </div>
-                    </label>
-                  </li>
-                  <li class="list-inline-item g-mx-15">
-                    <label class="form-check-inline u-check">
-                      <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio">
-                      <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
-                        L
-                      </div>
-                    </label>
-                  </li>
+                </c:forEach>
+<!--                   <li class="list-inline-item g-mx-15"> -->
+<!--                     <label class="form-check-inline u-check"> -->
+<!--                       <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio"> -->
+<!--                       <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0"> -->
+<!--                         M -->
+<!--                       </div> -->
+<!--                     </label> -->
+<!--                   </li> -->
+<!--                   <li class="list-inline-item g-mx-15"> -->
+<!--                     <label class="form-check-inline u-check"> -->
+<!--                       <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio"> -->
+<!--                       <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0"> -->
+<!--                         L -->
+<!--                       </div> -->
+<!--                     </label> -->
+<!--                   </li> -->
 <!--                   <li class="list-inline-item g-mx-15"> -->
 <!--                     <label class="form-check-inline u-check"> -->
 <!--                       <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio"> -->
