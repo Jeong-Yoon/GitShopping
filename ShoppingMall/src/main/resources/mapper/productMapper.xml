@@ -209,7 +209,6 @@
 		AND img.pro_img_url LIKE '%_1'
 		ORDER BY pro.product_no
 	</select>
-<<<<<<< HEAD
 	
 	<select id="topDetail" resultType="com.ac.shopping.product.dto.TBADTO">
 		SELECT pro.product_no, pro.pro_name, pro.pro_price
@@ -250,7 +249,8 @@
 	<select id="accColor" resultType="String">
 		SELECT pro_color
 		FROM PRODUCT_COLOR
-=======
+WHERE product_no = #{product_no}
+	</select>
 		<select id="outerDetail" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
 		SELECT
 		pro.product_no as product_no,
@@ -268,7 +268,6 @@
 	<select id="outColor" resultType="String">
 	    SELECT pro_color
 		FROM product_color
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 		WHERE product_no = #{product_no}
 	</select>
 

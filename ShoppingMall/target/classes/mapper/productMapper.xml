@@ -12,7 +12,6 @@
 		pro.pro_name as pro_name,
 		pro.pro_price as pro_price,
 		img.pro_img_url as pro_img_url
-<<<<<<< HEAD
 		FROM PRODUCT pro JOIN SHOES shoe ON
 		pro.product_no = shoe.product_no
 		join PRO_IMG_URL img on pro.product_no
@@ -51,37 +50,6 @@
 		SELECT pro_color
 		FROM
 		product_color
-=======
-		FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no
-		join PRO_IMG_URL img on pro.product_no = img.product_no
-		WHERE img.pro_img_url LIKE '%_1'
-		GROUP BY pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
-		ORDER BY pro.product_no DESC
-	</select>
-
-	<select id="shoesDetail" resultType="com.ac.shopping.product.dto.ShoesDTO">
-		SELECT
-		pro.product_no as product_no,
-		pro.pro_name as pro_name,
-		pro.pro_price as pro_price,
-		img.pro_img_url as pro_img_url
-		FROM PRODUCT pro JOIN SHOES shoe ON pro.product_no = shoe.product_no
-		join PRO_IMG_URL img on pro.product_no = img.product_no
-		WHERE pro.product_no = #{product_no}
-        AND img.pro_img_url LIKE '%_1'
-		GROUP BY pro.product_no, pro.pro_name, pro.pro_price, img.pro_img_url
-	</select>
-
-	<select id="shoesSize" resultType="String">
-		SELECT shoes_size
-		FROM shoes
-		WHERE product_no = #{product_no}
-	</select>
-
-	<select id="shoesColor" resultType="String">
-		SELECT pro_color
-		FROM product_color
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 		WHERE product_no = #{product_no}
 	</select>
 
@@ -241,7 +209,6 @@
 		AND img.pro_img_url LIKE '%_1'
 		ORDER BY pro.product_no
 	</select>
-<<<<<<< HEAD
 	
 	<select id="topDetail" resultType="com.ac.shopping.product.dto.TBADTO">
 		SELECT pro.product_no, pro.pro_name, pro.pro_price
@@ -282,7 +249,8 @@
 	<select id="accColor" resultType="String">
 		SELECT pro_color
 		FROM PRODUCT_COLOR
-=======
+WHERE product_no = #{product_no}
+	</select>
 		<select id="outerDetail" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
 		SELECT
 		pro.product_no as product_no,
@@ -300,7 +268,6 @@
 	<select id="outColor" resultType="String">
 	    SELECT pro_color
 		FROM product_color
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 		WHERE product_no = #{product_no}
 	</select>
 
