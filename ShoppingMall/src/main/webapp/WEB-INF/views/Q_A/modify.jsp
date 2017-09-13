@@ -68,6 +68,38 @@
 <!-- CSS Customization -->
 <link rel="stylesheet" href="resources/WB0412697/html/assets/css/custom.css">
 
+<script> 
+     $(document).ready(function(){
+         $("#btnUpdate").click(function(){
+            //var title = document.form1.title.value; ==> name속성으로 처리할 경우
+             //var content = document.form1.content.value;
+             //var writer = document.form1.writer.value;
+             var board_title = $("#BOARD_TITLE").val();
+            var board_content = $("#BOARD_CONTENT").val();
+            var m_id = $("#BOARD_WRITER").val();
+           if(board_title == ""){
+                alert("제목을 입력하세요");
+                document.form1.BOARD_TITLE.focus();
+                 return;
+             }
+             if(board_content == ""){
+                alert("내용을 입력하세요");
+                 document.form1.BOARD_CONTENT.focus();
+                return;
+             }
+            if(m_id == ""){
+                 alert("이름을 입력하세요");
+                 document.form1.BOARD_WRITER.focus();
+                 return;
+             }
+             document.form1.action="/Q_A/update.do";
+             // 폼에 입력한 데이터를 서버로 전송
+             document.form1.submit();
+         });
+     });
+ </script> 
+
+
 </head>
 
 <body>
@@ -80,19 +112,19 @@
 			<div class="col-sm-8 col-lg-9 col-xl-10 g-py-30 g-pa-30--md">
 
 
-				<h1 class="g-font-weight-300 g-letter-spacing-1 g-pt-30 g-mb-35">Read</h1>
+				<h1 class="g-font-weight-300 g-letter-spacing-1 g-pt-30 g-mb-35">Modify</h1>
 
 
 				
 				<!-- Table #01 -->
 				
 				
-				<form name="form1">
+			<form name="update" action="../Q_A/update.do">
 				<section class="g-pb-100">
 					<div class="container">
 						<div class="text-center g-mb-50">
 							<h2 class="h4">
-								게시글 <span class="g-color-primary g-ml-5">#읽기</span>
+								게시글 <span class="g-color-primary g-ml-5">#수정</span>
 							</h2>
 						</div>
 
@@ -101,33 +133,30 @@
 								<!--Basic Table-->
 								<div class="table-responsive">
 									<table class="table table-bordered u-table--v2">
+										<thead class="text-uppercase g-letter-spacing-1">
 											<tr>
 												<td class="align-middle text-nowrap" style="width:200px;">작성자</td>
 												<td class="align-middle" name="BOARD_WRITER">
-													${view.BOARD_WRITER}</td>
+													${BOARD_WRITER}</td>
 											</tr>
+										</thead>
 
 										<tbody>
-											<tr>
-												<td class="align-middle text-nowrap">
-													<h4 class="h6 g-mb-2">작성날짜</h4>
-												</td>
-												<td class="align-middle" name="BOARD_DATE"> ${view.BOARD_DATE}</td>
-											</tr>
-											
 											<tr>
 												<td class="align-middle text-nowrap">
 													<h4 class="h6 g-mb-2">제목</h4>
 												</td>
 												<td class="align-middle" name="BOARD_TITLE">
-												${view.BOARD_TITLE}</td>
+												<input type="text" style="width:500px;" name="BOARD_TITLE" value="${BOARD_TITLE}"></td>
 											</tr>
 
 											<tr>
 												<td class="align-middle text-nowrap">
 													<h4 class="h6 g-mb-2">내용</h4>
 												</td>
-												<td class="align-middle" name="BOARD_CONTENT"> ${view.BOARD_CONTENT}</td>
+												<td class="align-middle" name="BOARD_CONTENT"> 
+												<input type="textarea" style="width:500px; height:100px;"  name="BOARD_CONTENT" value="${BOARD_CONTENT}"></td>
+												
 											</tr>
 										</tbody>
 									</table>
@@ -158,20 +187,17 @@
 				<hr class="g-brd-gray-light-v4 my-0">
 
 		<div style="width:650px; text-align: center;">
-       	 	 <input type="hidden" name="BOARD_INDEX" value="${view.BOARD_INDEX}">
-				<button type="button"class="btn btn-md u-btn-primary rounded-0" onclick="location.href='../Q_A/modify?BOARD_INDEX=${view.BOARD_INDEX}&BOARD_WRITER=${view.BOARD_WRITER}&BOARD_TITLE=${view.BOARD_TITLE}&BOARD_CONTENT=${view.BOARD_CONTENT}'">
-				수정</button>
+       
+       		
+       	 	 <input type="hidden" name="BOARD_INDEX" value="${BOARD_INDEX}">
+				<button type="sumbit"	class="btn btn-md u-btn-primary rounded-0" >완료</button>
 				<button type="button"
-					class="btn btn-md u-btn-primary rounded-0" onclick="location.href='../Q_A/delete.do?BOARD_INDEX=${view.BOARD_INDEX}'" >
-					삭제</button>
+					class="btn btn-md u-btn-primary rounded-0" onclick="location.href='http://localhost:7070/shopping/Q_A.do'">취소</button>
 		</form>			
-		</div>
+   		 	</div>
 		</div>
 		</div>
 	</section>
-
-
-
 
 	<a class="js-go-to u-go-to-v1" href="#" data-type="fixed"
 		data-position='{

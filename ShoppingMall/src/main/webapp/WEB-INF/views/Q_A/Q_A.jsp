@@ -1094,9 +1094,13 @@
     <tr>
       <td>${row.BOARD_QUERY_TYPE}</td>
       <td>${row.BOARD_INDEX}</td>
-      <td><a href="${path}/Q_A/view?BOARD_INDEX=${row.BOARD_INDEX}">${row.BOARD_TITLE}</a></td>
+      <td><a href="${path}/shopping/Q_A/view?BOARD_INDEX=${row.BOARD_INDEX}">${row.BOARD_TITLE}</a></td>
       <td>${row.BOARD_WRITER}</td>
       <td>${row.BOARD_DATE}</td>
+      
+      <!-- 원하는 날짜형식으로 출력하기 위해 fmt태그 사용 --> 
+<!-- 	<fmt:formatDate -->
+<!-- 	value="${row.BOARD_DATE}" pattern="yyyy-MM-dd HH:mm:ss" /></td> -->
     </tr>
   </c:forEach>
   

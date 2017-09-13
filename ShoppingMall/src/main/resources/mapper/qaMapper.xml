@@ -70,17 +70,9 @@
 	
 	
 	<!-- 게시글 작성 -->
-	<insert id="insert">
-        INSERT INTO Q_A (
-          BOARD_WRITER,
-          BOARD_INDEX,
-          BOARD_CONTENT,
-          BOARD_DATE,
-          BOARD_QUERY_TYPE,
-          BOARD_TITLE,
-          BOARD_REPLY,
-          BOARD_PWD
-        ) VALUES (
+	<insert id="insert" parameterType="com.ac.shopping.qa.dto.qa_dto">
+	<![CDATA[
+        INSERT INTO Q_A VALUES (
           #{BOARD_WRITER},
           Q_A_SEQ.nextval,
           #{BOARD_CONTENT},
@@ -90,32 +82,35 @@
           #{BOARD_REPLY},
           #{BOARD_PWD}
         )
+        ]]>
 	</insert>
 	
 	<!--게시글 읽기 -->
 	<select id="view" resultType="com.ac.shopping.qa.dto.qa_dto">
         <![CDATA[
-        SELECT * FROM Q_A 
+        SELECT M_ID AS BOARD_WRITER,
+         BOARD_INDEX,BOARD_CONTENT,
+         BOARD_DATE,BOARD_QUERY_TYPE,
+         BOARD_TITLE,
+         BOARD_REPLY,
+         BOARD_PWD FROM Q_A 
         WHERE BOARD_INDEX = #{BOARD_INDEX}
         ]]>
 	</select>
 
 
 	<!-- 게시글 수정처리 -->
-	<update id="updateArticle">
+	<update id="updateArticle" parameterType="com.ac.shopping.qa.dto.qa_dto">
 	<![CDATA[
-		UPDATE Q_A SET
-		BOARD_TITLE = #{BOARD_TITLE},
-		BOARD_CONTENT = #{BOARD_CONTENT},
-		BOARD_WRITER = #{BOARD_WRITER},
-		BOARD_QUERY_TYPE = #{BOARD_QUERY_TYPE}
-		
+		UPDATE Q_A 
+		SET BOARD_TITLE = #{BOARD_TITLE},
+		BOARD_CONTENT = #{BOARD_CONTENT}
 		WHERE BOARD_INDEX = #{BOARD_INDEX}
 		]]>
 	</update>
 
 	<!-- 게시글 삭제처리 -->
-	<delete id="deleteArticle">
+	<delete id="deleteArticle" parameterType="com.ac.shopping.qa.dto.qa_dto">
 	<![CDATA[
 		DELETE FROM Q_A
 		WHERE BOARD_INDEX = #{BOARD_INDEX}
