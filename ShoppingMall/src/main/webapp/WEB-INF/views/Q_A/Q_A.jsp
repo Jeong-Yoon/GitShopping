@@ -1094,11 +1094,16 @@
     <tr>
       <td>${row.BOARD_QUERY_TYPE}</td>
       <td>${row.BOARD_INDEX}</td>
-      <td>${row.BOARD_TITLE}</td>
+      <td><a href="${path}/shopping/Q_A/view?BOARD_INDEX=${row.BOARD_INDEX}">${row.BOARD_TITLE}</a></td>
       <td>${row.BOARD_WRITER}</td>
       <td>${row.BOARD_DATE}</td>
+      
+      <!-- 원하는 날짜형식으로 출력하기 위해 fmt태그 사용 --> 
+<!-- 	<fmt:formatDate -->
+<!-- 	value="${row.BOARD_DATE}" pattern="yyyy-MM-dd HH:mm:ss" /></td> -->
     </tr>
   </c:forEach>
+  
   <tr>
             <td colspan="5">
                 <!-- **처음페이지로 이동 : 현재 페이지가 1보다 크면  [처음]하이퍼링크를 화면에 출력-->

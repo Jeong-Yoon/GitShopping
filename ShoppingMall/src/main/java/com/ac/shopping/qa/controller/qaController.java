@@ -34,7 +34,6 @@ public class qaController {
 	//게시판 리스트
 	@RequestMapping("/Q_A.do")
 	public ModelAndView Q_A_list(Model model,HttpServletRequest request,HttpServletResponse response){
-		
 		int cur_page=1;
 		String search_query_option = "";
 		String search_option="";
@@ -96,36 +95,55 @@ public class qaController {
 	//게시판 글쓰기 처리
 	@RequestMapping("Q_A/insert.do")
 	public String writeQnA(@ModelAttribute qa_dto vo) throws Exception{
-		
 		System.out.println(vo);
 		qaService.create(vo);
 		return "redirect:/Q_A.do";
 	} 
 	
-	
-	
+	//게시글 읽기
+	@RequestMapping(value="/Q_A/view",method=RequestMethod.GET)
+	public ModelAndView readd(@RequestParam("BOARD_INDEX") int BOARD_INDEX , HttpSession session)throws Exception{
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("Q_A/view");
+		mav.addObject("view", qaService.read(BOARD_INDEX));
+		System.out.println(qaService.read(BOARD_INDEX));
+		return mav; // list.jsp로 List가 전달된다.
+	}
 	
 	//게시판 수정
     // 폼에서 입력한 내용들은 @ModelAttribute BoardVO vo로 전달됨
-    @RequestMapping(value="update.do")
+    @RequestMapping(value="/Q_A/update.do")
     public String update(@ModelAttribute qa_dto vo) throws Exception{
+    	
+    	System.out.println(vo);    	
+    	
     	qaService.update(vo);
-        return "redirect:Q_A.do";
+        return "redirect:/Q_A.do";
     }
     
-  //게시글 읽기
-    @RequestMapping(value="Q_A/view", method=RequestMethod.GET)
-    public ModelAndView viewdo(@RequestParam int BOARD_INDEX, HttpSession session) throws Exception{
-    	ModelAndView mav = new ModelAndView();
-    	mav.setViewName("Q_A/view");
-    	mav.addObject("dto", qaService.read(BOARD_INDEX));
-        return mav; // list.jsp로 List가 전달된다.
+    //게시판 수정폼 이동
+    @RequestMapping(value="/Q_A/modify")
+    public String modify(HttpServletRequest request,HttpServletResponse response,Model model){
+    	
+    	String BOARD_WRITER = request.getParameter("BOARD_WRITER");
+    	String BOARD_TITLE =  request.getParameter("BOARD_TITLE");
+    	String BOARD_CONTENT =  request.getParameter("BOARD_CONTENT");
+    	String BOARD_INDEX =  request.getParameter("BOARD_INDEX");
+    	String BOARD_DATE=  request.getParameter("BOARD_DATE");
+    	
+    	model.addAttribute("BOARD_WRITER", BOARD_WRITER);
+    	model.addAttribute("BOARD_TITLE", BOARD_TITLE);
+    	model.addAttribute("BOARD_CONTENT", BOARD_CONTENT);
+    	model.addAttribute("BOARD_INDEX", BOARD_INDEX);
+    	model.addAttribute("BOARD_DATE", BOARD_DATE);
+    			
+        return "/Q_A/modify";
     }
 	
   //게시글 삭제
-    @RequestMapping("delete.do")
-    public String delete(@RequestParam int board_index) throws Exception{
-    	qaService.delete(board_index);
-        return "redirect:Q_A.do";
+    @RequestMapping("/Q_A/delete.do")
+    public String delete(@RequestParam int BOARD_INDEX) throws Exception{
+    	qaService.delete(BOARD_INDEX);
+        return "redirect:/Q_A.do";
     }
 }

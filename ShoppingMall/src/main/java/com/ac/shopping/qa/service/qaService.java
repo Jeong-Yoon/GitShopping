@@ -17,6 +17,7 @@ public interface qaService {
 	
 	// 게시글 읽기
 	public qa_dto read(int BOARD_INDEX) throws Exception;
+	
 
 	// 게시글 삭제
 	public void delete(int BOARD_INDEX) throws Exception;
