@@ -23,25 +23,30 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
-	public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword) {
+	public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, int idf) {
 		
 		HashMap<String,Object> param = new HashMap<String,Object>();		
 		param.put("type",search_option);
 		param.put("keyword", search_keyword);		
 		param.put("start", start);
 		param.put("end", end);
+		param.put("idf", idf);
 		
 		return sqlSession.selectList("product.topListProduct",param);
 	}
 
 	@Override
-	public List<TBADTO> bottomListProduct() {
-		return sqlSession.selectList("product.bottomListProduct");
+	public List<TBADTO> bottomListProduct(int idf) {
+		HashMap<String,Object> param = new HashMap<String,Object>();
+		param.put("idf", idf);
+		return sqlSession.selectList("product.bottomListProduct", param);
 	}
 
 	@Override
-	public List<TBADTO> accListProduct() {
-		return sqlSession.selectList("product.accListProduct");
+	public List<TBADTO> accListProduct(int idf) {
+		HashMap<String,Object> param = new HashMap<String,Object>();
+		param.put("idf", idf);
+		return sqlSession.selectList("product.accListProduct", param);
 	}
 	
 	@Override

@@ -10,12 +10,13 @@ public interface ProductDAO {
 	
    public List<ShoesDTO> listShoes();
    
-   public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword);
-   public List<TBADTO> bottomListProduct();
-   public List<TBADTO> accListProduct();
+   public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, int idf);
+   public List<TBADTO> bottomListProduct(int idf);
+   public List<TBADTO> accListProduct(int idf);
    
    public List<Outer_OnepieceDTO> onepieceListProduct();
    public List<Outer_OnepieceDTO> outerListProduct();
    public int all_count_tba();
+
 
 }

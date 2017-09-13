@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <head>
 <!-- Title -->
 <title>E-commerce Grid Filter Page | Unify - Responsive Website
@@ -22,39 +23,39 @@
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
+	href="../resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
+	href="../resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
 
 <!-- CSS Implementing Plugins -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
+	href="../resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
+	href="../resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
+	href="../resources/WB0412697/html/assets/vendor/icon-hs/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+	href="../resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+	href="../resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+	href="../resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/animate.css">
+	href="../resources/WB0412697/html/assets/vendor/animate.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
+	href="../resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+	href="../resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
+	href="../resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
 
 <!-- CSS Unify Theme -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
+	href="../resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
 
 <!-- CSS Customization -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/css/custom.css">
+	href="../resources/WB0412697/html/assets/css/custom.css">
 </head>
 
 <body>
@@ -147,7 +148,7 @@
 								<figure>
 									<div class="g-pos-rel g-mb-20">
 										<img class="img-fluid"
-											src="resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
+											src="../resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
 											alt="Image Description">
 
 										<!-- Ribbon -->
@@ -197,7 +198,7 @@
 							<figure>
 								<div class="g-pos-rel g-mb-20">
 									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img2.jpg"
+										src="../resources/WB0412697/html/assets/img-temp/480x700/img2.jpg"
 										alt="Image Description">
 								</div>
 
@@ -241,7 +242,7 @@
 							<figure>
 								<div class="g-pos-rel g-mb-20">
 									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img3.jpg"
+										src="../resources/WB0412697/html/assets/img-temp/480x700/img3.jpg"
 										alt="Image Description">
 
 									<!-- Ribbon -->
@@ -291,7 +292,7 @@
 							<figure>
 								<div class="g-pos-rel g-mb-20">
 									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img4.jpg"
+										src="../resources/WB0412697/html/assets/img-temp/480x700/img4.jpg"
 										alt="Image Description">
 								</div>
 
@@ -334,7 +335,7 @@
 							<figure>
 								<div class="g-pos-rel g-mb-20">
 									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img5.jpg"
+										src="../resources/WB0412697/html/assets/img-temp/480x700/img5.jpg"
 										alt="Image Description">
 
 									<!-- Ribbon -->
@@ -385,7 +386,7 @@
 							<figure>
 								<div class="g-pos-rel g-mb-20">
 									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img6.jpg"
+										src="../resources/WB0412697/html/assets/img-temp/480x700/img6.jpg"
 										alt="Image Description">
 								</div>
 
@@ -428,7 +429,7 @@
 							<figure>
 								<div class="g-pos-rel g-mb-20">
 									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img7.jpg"
+										src="../resources/WB0412697/html/assets/img-temp/480x700/img7.jpg"
 										alt="Image Description">
 
 									<!-- Ribbon -->
@@ -478,7 +479,7 @@
 							<figure>
 								<div class="g-pos-rel g-mb-20">
 									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img8.jpg"
+										src="../resources/WB0412697/html/assets/img-temp/480x700/img8.jpg"
 										alt="Image Description">
 								</div>
 
@@ -521,7 +522,7 @@
 							<figure>
 								<div class="g-pos-rel g-mb-20">
 									<img class="img-fluid"
-										src="resources/WB0412697/html/assets/img-temp/480x700/img9.jpg"
+										src="../resources/WB0412697/html/assets/img-temp/480x700/img9.jpg"
 										alt="Image Description">
 								</div>
 
@@ -880,50 +881,50 @@
 
 	<!-- JS Global Compulsory -->
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/tether.min.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+	<script src="../resources/WB0412697/html/assets/vendor/tether.min.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
 	<!-- JS Implementing Plugins -->
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/slider.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/slider.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		src="../resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
 	<!-- JS Unify -->
-	<script src="resources/WB0412697/html/assets/js/hs.core.js"></script>
+	<script src="../resources/WB0412697/html/assets/js/hs.core.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.header.js"></script>
+		src="../resources/WB0412697/html/assets/js/components/hs.header.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
+		src="../resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
+		src="../resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
-	<script src="resources/WB0412697/html/assets/js/helpers/hs.rating.js"></script>
+		src="../resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
+	<script src="../resources/WB0412697/html/assets/js/helpers/hs.rating.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.slider.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+		src="../resources/WB0412697/html/assets/js/components/hs.slider.js"></script>
+	<script src="../resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
 
 	<!-- JS Customization -->
-	<script src="resources/WB0412697/html/assets/js/custom.js"></script>
+	<script src="../resources/WB0412697/html/assets/js/custom.js"></script>
 
 	<!-- JS Plugins Init. -->
 	<script>
