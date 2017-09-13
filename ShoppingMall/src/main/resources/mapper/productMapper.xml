@@ -150,7 +150,27 @@
 		JOIN outer_onepiece otop
 		ON pro.product_no = otop.product_no
 		WHERE otop.category LIKE '%[OPS]%'
-		ORDER BY pro.product_no
+		AND img.pro_img_url LIKE '%_1'
+		ORDER BY pro.product_no DESC
+	</select>
+	<select id="onepieceDetail" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
+		SELECT
+		pro.product_no as product_no,
+		pro.pro_name as pro_name, 
+		pro.pro_price as pro_price,
+		img.pro_img_url as pro_img_url
+		FROM product pro JOIN pro_img_url img
+		ON pro.product_no = img.product_no
+		JOIN outer_onepiece otop
+		ON pro.product_no = otop.product_no
+		WHERE otop.category LIKE '%[OPS]%'
+		AND img.pro_img_url LIKE '%_1'
+		AND pro.product_no = #{product_no}
+	</select>
+	<select id="opsColor" resultType="String">
+	    SELECT pro_color
+		FROM product_color
+		WHERE product_no = #{product_no}
 	</select>
 
 	<select id="outerList" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
@@ -164,7 +184,27 @@
 		JOIN outer_onepiece otop
 		ON pro.product_no = otop.product_no
 		WHERE otop.category LIKE '%[OUT]%'
+		AND img.pro_img_url LIKE '%_1'
 		ORDER BY pro.product_no
+	</select>
+		<select id="outerDetail" resultType="com.ac.shopping.product.dto.Outer_OnepieceDTO">
+		SELECT
+		pro.product_no as product_no,
+		pro.pro_name as pro_name, 
+		pro.pro_price as pro_price,
+		img.pro_img_url as pro_img_url
+		FROM product pro JOIN pro_img_url img
+		ON pro.product_no = img.product_no
+		JOIN outer_onepiece otop
+		ON pro.product_no = otop.product_no
+		WHERE otop.category LIKE '%[OUT]%'
+		AND img.pro_img_url LIKE '%_1'
+		AND pro.product_no = #{product_no}
+	</select>
+	<select id="outColor" resultType="String">
+	    SELECT pro_color
+		FROM product_color
+		WHERE product_no = #{product_no}
 	</select>
 
 

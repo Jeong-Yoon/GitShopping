@@ -125,7 +125,16 @@ public class ProductController {
 		mav.addObject("onepiecelist", productService.onepieceListProduct());
 		return mav;
 	}
-
+	
+	//ONEPIECE 상세페이지
+	@RequestMapping("/onepiece-detail")
+	public ModelAndView onepieceDetail(ModelAndView mav, HttpServletRequest request){
+		String pro_no = request.getParameter("product_no");
+		mav.setViewName("/onepiece-detail");
+    	mav.addObject("onepiecedetail", productService.detailshoes(pro_no));
+    	return mav;
+	}
+	
 	// ===================OUTER=================================
 	// OUTER 목록
 	@RequestMapping("/outer-list")

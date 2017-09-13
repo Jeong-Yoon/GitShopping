@@ -340,7 +340,7 @@
 			<!-- End Responsive Toggle Button -->
 
 			<!-- Logo -->
-			<a href="index.html" class="navbar-brand"> <img
+			<a href="shoppingindex" class="navbar-brand"> <img
 				src="resources/WB0412697/html/e-commerce/assets/img/logo/logo-1.png"
 				alt="Image Description">
 			</a>
@@ -352,7 +352,7 @@
 				id="navBar">
 				<ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
 					<li class="nav-item g-mx-10--lg g-mx-15--xl"><a
-						href="index.html" class="nav-link g-px-0">Home</a></li>
+						href="shoppingindex" class="nav-link g-px-0">Home</a></li>
 
 					<li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
 						<a id="nav-link--pages" class="nav-link g-px-0" href="#"
@@ -1246,20 +1246,20 @@
 				2018</p>
 		</div>
 
-		<div class="d-flex justify-content-end">
-			<ul
-				class="u-list-inline g-bg-gray-dark-v1 g-font-weight-300 g-rounded-50 g-py-5 g-px-20">
-				<li class="list-inline-item g-mr-5"><a
-					class="u-link-v5 g-color-white g-color-primary--hover" href="#">Home</a>
-					<i class="g-color-white-opacity-0_5 g-ml-5">/</i></li>
-				<li class="list-inline-item g-mr-5"><a
-					class="u-link-v5 g-color-white g-color-primary--hover" href="#">Pages</a>
-					<i class="g-color-white-opacity-0_5 g-ml-5">/</i></li>
-				<li class="list-inline-item g-color-primary g-font-weight-400">
-					<span>Signup</span>
-				</li>
-			</ul>
-		</div>
+<!-- 		<div class="d-flex justify-content-end"> -->
+<!-- 			<ul -->
+<!-- 				class="u-list-inline g-bg-gray-dark-v1 g-font-weight-300 g-rounded-50 g-py-5 g-px-20"> -->
+<!-- 				<li class="list-inline-item g-mr-5"><a -->
+<!-- 					class="u-link-v5 g-color-white g-color-primary--hover" href="#">Home</a> -->
+<!-- 					<i class="g-color-white-opacity-0_5 g-ml-5">/</i></li> -->
+<!-- 				<li class="list-inline-item g-mr-5"><a -->
+<!-- 					class="u-link-v5 g-color-white g-color-primary--hover" href="#">Pages</a> -->
+<!-- 					<i class="g-color-white-opacity-0_5 g-ml-5">/</i></li> -->
+<!-- 				<li class="list-inline-item g-color-primary g-font-weight-400"> -->
+<!-- 					<span>Signup</span> -->
+<!-- 				</li> -->
+<!-- 			</ul> -->
+<!-- 		</div> -->
 	</div>
 	</section>
 	<!-- End Promo Block -->

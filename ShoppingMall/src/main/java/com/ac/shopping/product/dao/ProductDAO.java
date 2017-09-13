@@ -17,7 +17,11 @@ public interface ProductDAO {
    public List<TBADTO> accListProduct(int idf);
    
    public List<Outer_OnepieceDTO> onepieceListProduct();
+   public HashMap onepieceDetail(String pro_no);
+   
    public List<Outer_OnepieceDTO> outerListProduct();
+   public HashMap outerDetail(String pro_no);
+   
    public int all_count_tba();
 
 
