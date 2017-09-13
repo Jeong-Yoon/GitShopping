@@ -21,7 +21,13 @@ public interface ProductService {
    public List<TBADTO> bottomListProduct(String var);
    public List<TBADTO> accListProduct(String var);
    public List<Outer_OnepieceDTO> onepieceListProduct();	
+   public HashMap onepieceDetail(String pro_no);
+   
    public List<Outer_OnepieceDTO> outerListProduct();
+<<<<<<< HEAD
+=======
+   public HashMap outerDetail(String pro_no);
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
    
    public int all_count_tba(String search_option, String search_keyword, String var);
 	

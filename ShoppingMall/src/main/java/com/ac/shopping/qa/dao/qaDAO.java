@@ -17,6 +17,8 @@ public interface qaDAO {
     
     //게시글 수정
     public void update(qa_dto vo) throws Exception;
+   
+    
     
     //게시글 삭제
     public void delete(int BOARD_INDEX) throws Exception;

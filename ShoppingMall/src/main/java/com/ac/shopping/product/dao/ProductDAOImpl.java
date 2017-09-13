@@ -17,9 +17,24 @@ public class ProductDAOImpl implements ProductDAO {
 	@Autowired
 	SqlSession sqlSession;
 
+	//신발
 	@Override
 	public List<ShoesDTO> listShoes() {
 		return sqlSession.selectList("product.shoesList");
+	}
+	@Override
+	public HashMap detailshoes(String pro_no) {
+		System.out.println(pro_no);
+		ShoesDTO dto = sqlSession.selectOne("product.shoesDetail",pro_no);
+		List<String> color = sqlSession.selectList("product.shoesColor",pro_no);
+		List<String> size = sqlSession.selectList("product.shoesSize",pro_no);
+		
+		HashMap<String,Object> param = new HashMap<String,Object>();
+		param.put("dto", dto);
+		param.put("color", color);
+		param.put("size", size);
+		
+		return param;
 	}
 
 	@Override
@@ -54,14 +69,40 @@ public class ProductDAOImpl implements ProductDAO {
 		return sqlSession.selectList("product.accListProduct", param);
 	}
 	
+	//ONEPIECE
 	@Override
 	public List<Outer_OnepieceDTO> onepieceListProduct() {
 		return sqlSession.selectList("product.onepieceList");
 	}
+	
+	@Override
+	public HashMap onepieceDetail(String pro_no){
+		Outer_OnepieceDTO dto = sqlSession.selectOne("product.onepieceDetail",pro_no);
+		List<String> color = sqlSession.selectList("product.opsColor",pro_no);
+		
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("dto", dto);
+		param.put("color", color);
+		
+		return param;
+	}
 
+	//OUTER
 	@Override
 	public List<Outer_OnepieceDTO> outerListProduct() {
-		return sqlSession.selectList("product.onepieceList");
+		return sqlSession.selectList("product.outerList");
+	}
+	
+	@Override
+	public HashMap outerDetail(String pro_no){
+		Outer_OnepieceDTO dto = sqlSession.selectOne("product.outerDetail",pro_no);
+		List<String> color = sqlSession.selectList("product.outColor",pro_no);
+		
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("dto", dto);
+		param.put("color", color);
+		
+		return param;
 	}
 
 	@Override
@@ -69,19 +110,7 @@ public class ProductDAOImpl implements ProductDAO {
 		return sqlSession.selectOne("product.topListProduct_count");
 	}
 
-	public HashMap detailshoes(String pro_no) {
-		System.out.println(pro_no);
-		ShoesDTO dto = sqlSession.selectOne("product.shoesDetail",pro_no);
-		List<String> color = sqlSession.selectList("product.shoesColor",pro_no);
-		List<String> size = sqlSession.selectList("product.shoesSize",pro_no);
-		
-		HashMap<String,Object> param = new HashMap<String,Object>();
-		param.put("dto", dto);
-		param.put("color", color);
-		param.put("size", size);
-		
-		return param;
-	}
+	
 
 	public HashMap topDetail(String pro_no) {
 		TBADTO dto = sqlSession.selectOne("product.topDetail", pro_no);

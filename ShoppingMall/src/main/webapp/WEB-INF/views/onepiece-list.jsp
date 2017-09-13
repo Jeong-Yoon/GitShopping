@@ -148,24 +148,28 @@
 			<div class="col-6 col-lg-4 g-mb-30">
 				<!-- Product -->
 				<figure>
-				<div class="g-pos-rel g-mb-20">
-					<img class="img-fluid"
-						src="resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
-						alt="Image Description">
+									<div class="g-pos-rel g-mb-20">
+										<a href="onepiece-detail?product_no=${list.product_no}"><img class="img-fluid"
+											src="${list.pro_img_url}"
+											alt="Image Description"></a>
+<!-- 											<img class="img-fluid" -->
+<!-- 											src="resources/WB0412697/html/assets/img-temp/480x700/img1.jpg" -->
+<!-- 											alt="Image Description"> -->
 
-					<!-- Ribbon -->
-					<figcaption> <span
-						class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
-					</figcaption>
-					<!-- End Ribbon -->
-				</div>
+										<!-- Ribbon -->
+<!-- 										<figcaption> -->
+<!-- 											<span -->
+<!-- 												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span> -->
+<!-- 										</figcaption> -->
+										<!-- End Ribbon -->
+									</div>
 
 				<div class="media">
 					<!-- Product Info -->
 					<div class="d-flex flex-column">
 						<h4 class="h6 g-color-black mb-1">
 							<a class="u-link-v5 g-color-black g-color-primary--hover"
-								href="#"> ${list.pro_name} </a>
+								href="onepiece-detail?product_no=${list.product_no}"> ${list.pro_name} </a>
 						</h4>
 						<span class="d-block g-color-black g-font-size-17">${list.pro_price}</span>
 					</div>

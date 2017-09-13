@@ -18,6 +18,7 @@ public class ProductServiceImpl implements ProductService {
 	@Inject
 	ProductDAOImpl productDao;
 
+	@Override
 	public List<ShoesDTO> listShoes() {
 		return productDao.listShoes();
 	}
@@ -77,17 +78,27 @@ public class ProductServiceImpl implements ProductService {
 	public List<Outer_OnepieceDTO> onepieceListProduct() {
 		return productDao.onepieceListProduct();
 	}
+	@Override
+	public HashMap onepieceDetail(String pro_no) {
+		return productDao.onepieceDetail(pro_no);
+	}
 
 	@Override
 	public List<Outer_OnepieceDTO> outerListProduct() {
 		return productDao.outerListProduct();
 	}
+	@Override
+	public HashMap outerDetail(String pro_no) {
+		return productDao.outerDetail(pro_no);
+	}
 
+	@Override
 	public int all_count_tba(String search_option, String search_keyword, String var) {
 		// TODO Auto-generated method stub
 		return productDao.all_count_tba();
 	}
 
+	@Override
 	public HashMap detailshoes(String pro_no) {
 		return productDao.detailshoes(pro_no);
 	}

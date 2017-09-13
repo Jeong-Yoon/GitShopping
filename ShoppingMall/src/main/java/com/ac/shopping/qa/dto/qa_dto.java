@@ -16,6 +16,12 @@ public class qa_dto {
 	public int getBOARD_INDEX() {
 		return BOARD_INDEX;
 	}
+	@Override
+	public String toString() {
+		return "qa_dto [BOARD_INDEX=" + BOARD_INDEX + ", BOARD_CONTENT=" + BOARD_CONTENT + ", BOARD_DATE=" + BOARD_DATE
+				+ ", BOARD_QUERY_TYPE=" + BOARD_QUERY_TYPE + ", BOARD_TITLE=" + BOARD_TITLE + ", BOARD_REPLY="
+				+ BOARD_REPLY + ", BOARD_WRITER=" + BOARD_WRITER + ", BOARD_PWD=" + BOARD_PWD + "]";
+	}
 	public void setBOARD_INDEX(int bOARD_INDEX) {
 		BOARD_INDEX = bOARD_INDEX;
 	}

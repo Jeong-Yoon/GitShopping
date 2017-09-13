@@ -720,7 +720,7 @@
 													style="color: #000000;">Outer</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="onepice-list" style="text-decoration: none"><span
+												<a href="onepiece-list" style="text-decoration: none"><span
 													style="color: #000000;">OPS</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
@@ -2748,7 +2748,6 @@
 				<span class="d-inline-block g-width-3 g-height-16 g-bg-gray-dark-v5"></span><br>
 				<span class="d-inline-block g-color-gray-dark-v4 fa fa-arrow-down"></span>
 			</div>
-			>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping
 
 			<h2 class="h3 g-mb-30">Subscribe</h2>
 

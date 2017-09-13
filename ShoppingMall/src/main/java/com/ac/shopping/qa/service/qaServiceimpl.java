@@ -108,6 +108,10 @@ public class qaServiceimpl implements qaService{
 	public void update(qa_dto vo) throws Exception {
 		qaDao.update(vo);
 	}
+//    
+  
+    
+    
     
     //게시글 읽기
     @Override
@@ -121,5 +125,6 @@ public class qaServiceimpl implements qaService{
     public void delete(int BOARD_INDEX) throws Exception {
     	qaDao.delete(BOARD_INDEX);
     }
-	
+
+ 
 }
