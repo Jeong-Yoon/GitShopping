@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextPath" value="<%= request.getContextPath()%>"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <!-- Required Meta Tags Always Come First -->
 <meta charset="utf-8">
@@ -139,12 +140,12 @@
 						<c:if test="${empty sessionScope.m_id}">
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="page-login">Login</a></li>
+								href="${contextPath}/page-login">Login</a></li>
 						</c:if>
 						<c:if test="${not empty sessionScope.m_id}">
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="page-login">Logout</a></li>
+								href="${contextPath}/page-login">Logout</a></li>
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 								href="#"><c:if test="${msg == 'success'}">
@@ -696,58 +697,57 @@
 										</div>
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="top-list" style="text-decoration: none"><span
+												<a href="${contextPath}/top-list/all" style="text-decoration: none"><span
 													style="color: #000000;">Top</span>
 											</h4>
 											<ul class="list-unstyled g-mb-25">
 												<li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">T-shirt
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/top-list/tshirt">T-shirt
 														&amp; Jackets</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">맨투맨/후드</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">니트</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">블라우스</a>
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/top-list/mtmh">맨투맨/후드</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/top-list/knit">니트</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/top-list/blouse">블라우스</a>
 													<span class="u-label g-bg-primary g-ml-10">New</span></li>
 											</ul>
 
 											<h4 class="h5 text-uppercase g-font-weight-600">
-											<a href="bottom-list" style="text-decoration: none"><span
+											<a href="${contextPath}/bottom-list/all" style="text-decoration: none"><span
 													style="color: #000000;">Bottom</span></h4>
 											<ul class="list-unstyled">
-												<li class="g-mb-5"><a class="g-color-main" href="#">short
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/bottom-list/spants">short
 														pants</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">long
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/bottom-list/lpants">long
 														pants</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">traing</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/bottom-list/training">training</a></li>
 											</ul>
 										</div>
 
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="#" style="text-decoration: none"><span
+												<a href="outer-list" style="text-decoration: none"><span
 													style="color: #000000;">Outer</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="#" style="text-decoration: none"><span
+												<a href="onepiece-list" style="text-decoration: none"><span
 													style="color: #000000;">OPS</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="#" style="text-decoration: none"><span
+												<a href="shoes-list" style="text-decoration: none"><span
 													style="color: #000000;">Shoes</span></a>
 											</h4>
 										</div>
 
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-											<h4 class="h5 text-uppercase g-font-weight-600"><a href="acc-list" style="text-decoration: none">ACC</h4>
+											<h4 class="h5 text-uppercase g-font-weight-600"><a href="${contextPath}/acc-list/all" style="text-decoration: none"><span
+													style="color: #000000;">ACC</span></h4>
 											<ul class="list-unstyled g-mb-25">
-												<li class="g-mb-5"><a class="g-color-main" href="#">All
-														accessories</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">귀걸이</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">목걸이</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">팔찌
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/earings">귀걸이</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/necklaces">목걸이</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/bracelets">팔찌
 												</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">양말
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/socks">양말
 												</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="#">벨트</a></li>
+												<li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/belts">벨트</a></li>
 											</ul>
 										</div>
 									</div>
