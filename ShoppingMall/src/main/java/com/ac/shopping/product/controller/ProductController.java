@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ac.shopping.product.service.ProductService;
 import com.ac.shopping.product.service.ProductServiceImpl;
 import com.ac.shopping.service.BoardPager.ProductPager;
 import com.ac.shopping.service.BoardPager.qaPager;
@@ -21,7 +22,7 @@ import com.ac.shopping.service.BoardPager.qaPager;
 public class ProductController {
 
 	@Inject
-	ProductServiceImpl productService;
+	ProductService productService;
 
 	@RequestMapping("/product-list.do")
 	public String productlist() {
@@ -142,6 +143,14 @@ public class ProductController {
 		mav.setViewName("/outer-list");
 		mav.addObject("outerlist", productService.outerListProduct());
 		return mav;
+	}
+	//ONEPIECE 상세페이지
+	@RequestMapping("/outer-detail")
+	public ModelAndView outerDetail(ModelAndView mav, HttpServletRequest request){
+		String pro_no = request.getParameter("product_no");
+		mav.setViewName("/outer-detail");
+    	mav.addObject("outerdetail", productService.detailshoes(pro_no));
+    	return mav;
 	}
 
 }

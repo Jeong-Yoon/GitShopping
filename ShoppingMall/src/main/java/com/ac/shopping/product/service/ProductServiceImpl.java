@@ -73,10 +73,16 @@ public class ProductServiceImpl implements ProductService {
 	public List<Outer_OnepieceDTO> onepieceListProduct() {
 		return productDao.onepieceListProduct();
 	}
+	public HashMap onepieceDetail(String pro_no) {
+		return productDao.onepieceDetail(pro_no);
+	}
 
 	@Override
 	public List<Outer_OnepieceDTO> outerListProduct() {
 		return productDao.outerListProduct();
+	}
+	public HashMap outerDetail(String pro_no) {
+		return productDao.outerDetail(pro_no);
 	}
 
 	public int all_count_tba(String search_option, String search_keyword, String var) {

@@ -18,7 +18,11 @@ public interface ProductService {
    public List<TBADTO> accListProduct(String var);
    
    public List<Outer_OnepieceDTO> onepieceListProduct();	
+   public HashMap onepieceDetail(String pro_no);
+   
    public List<Outer_OnepieceDTO> outerListProduct();
+   public HashMap outerDetail(String pro_no);
+   
    public int all_count_tba(String search_option, String search_keyword, String var);
 	
 }

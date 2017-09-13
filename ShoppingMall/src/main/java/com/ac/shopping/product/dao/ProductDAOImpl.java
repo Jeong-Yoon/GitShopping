@@ -69,6 +69,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<Outer_OnepieceDTO> onepieceListProduct() {
 		return sqlSession.selectList("product.onepieceList");
 	}
+	
 	@Override
 	public HashMap onepieceDetail(String pro_no){
 		Outer_OnepieceDTO dto = sqlSession.selectOne("product.onepieceDetail",pro_no);
@@ -86,6 +87,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<Outer_OnepieceDTO> outerListProduct() {
 		return sqlSession.selectList("product.outerList");
 	}
+	
 	@Override
 	public HashMap outerDetail(String pro_no){
 		Outer_OnepieceDTO dto = sqlSession.selectOne("product.outerDetail",pro_no);
