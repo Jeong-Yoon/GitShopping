@@ -132,7 +132,7 @@ public class ProductController {
 	public ModelAndView onepieceDetail(ModelAndView mav, HttpServletRequest request){
 		String pro_no = request.getParameter("product_no");
 		mav.setViewName("/onepiece-detail");
-    	mav.addObject("onepiecedetail", productService.detailshoes(pro_no));
+    	mav.addObject("onepiecedetail", productService.onepieceDetail(pro_no));
     	return mav;
 	}
 	
@@ -149,7 +149,7 @@ public class ProductController {
 	public ModelAndView outerDetail(ModelAndView mav, HttpServletRequest request){
 		String pro_no = request.getParameter("product_no");
 		mav.setViewName("/outer-detail");
-    	mav.addObject("outerdetail", productService.detailshoes(pro_no));
+    	mav.addObject("outerdetail", productService.outerDetail(pro_no));
     	return mav;
 	}
 

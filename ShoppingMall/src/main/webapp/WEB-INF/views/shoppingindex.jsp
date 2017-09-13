@@ -720,7 +720,7 @@
 													style="color: #000000;">Outer</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="onepice-list" style="text-decoration: none"><span
+												<a href="onepiece-list" style="text-decoration: none"><span
 													style="color: #000000;">OPS</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
