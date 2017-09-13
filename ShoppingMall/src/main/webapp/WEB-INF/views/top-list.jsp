@@ -58,14 +58,127 @@
 	href="../resources/WB0412697/html/assets/css/custom.css">
 
 <script>
-	function list(page) {
-		location.href = "./top-list.do?cur_page=" + page
-				+ "&search_option=${map.searchOption}"
-				+ "&search_keyword=${map.keyword}";
-	}
+
+var star=0;
+
+function starone(){
+	star = 1;
+}
+function startwo(){
+	star = 2;
+}
+function starthree(){
+	star = 3;
+}
+function starfour(){
+	star = 4;
+}
+function starfive(){
+	star = 5;
+}
+
+ function list(page){
+        location.href="${map.var}?cur_page="+page+"&search_method=${map.search_method}"
+        		+"&pricerange=${map.first_value}"+"+++"+${map.second_value}
+        		+"&board_like=${map.board_like}";
+ }
+
+</script>	
+
+<script>
+body {margin: 10px; font-size: 13px}
+.where {
+  display: block;
+  margin: 25px 15px;
+  font-size: 11px;
+  color: #000;
+  text-decoration: none;
+  font-family: verdana;
+  font-style: italic;
+} 
+
+.checks {position: relative;}
+.checks input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+.checks input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.checks input[type="radio"] + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  background: #fafafa;
+  border: 1px solid #cacece;
+  border-radius: 100%;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+}
+.checks input[type="radio"] + label:active:before,
+.checks input[type="radio"]:checked + label:active:before  {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.checks input[type="radio"]:checked + label:before {
+  background: #E9ECEE;
+  border-color: #adb8c0;
+}
+.checks input[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 13px;
+  height: 13px;
+  background: #99a1a7;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+/* radio size */
+.checks.small input[type="radio"] + label {
+  font-size: 12px;
+  padding-left: 25px;
+}
+.checks.small input[type="radio"] + label:before {
+    top: -2px;
+  width: 17px;
+  height: 17px;
+}
+.checks.small input[type="radio"]:checked + label:after {
+    top: 3px;
+  width: 9px;
+  height: 9px;
+}
 </script>
 
+<script>
+	function lee(){
+		
+	var range = document.getElementById('rangeSliderAmount3').innerText;	
+	
+	document.search.pricerange.value = range; 	
+	document.search.board_like.value = star;
+		
+	document.search.submit();
 
+	}
+</script>
 
 </head>
 
@@ -264,271 +377,96 @@
 				</div>
 			</div>
 			<!-- End Content -->
-
-
+			
 			<!-- Filters -->
+			
+			
 			<div
 				class="col-md-3 flex-md-first g-brd-right--lg g-brd-gray-light-v4 g-pt-40">
 				<div class="g-pr-15--lg g-pt-60">
 					<!-- Pricing -->
+					<input type="hidden" name="pricerange" value="document.getElementById('rangeSliderAmount3').innerText">
 					<div class="g-mb-30">
 						<h3 class="h5 mb-3">Pricing</h3>
 
 						<div class="text-center">
-							<span class="d-block g-color-primary mb-4">$(<span
-								id="rangeSliderAmount3">0</span>)
-							</span>
+							<span class="d-block g-color-primary mb-4">&#8361;<span
+								id="rangeSliderAmount3">20000</span>
+							</span>							
+							
 							<div id="rangeSlider1" class="u-slider-v1-3"
 								data-result-container="rangeSliderAmount3" data-range="true"
-								data-default="180, 320" data-min="0" data-max="500"></div>
+								data-default="${map.first_value}, ${map.second_value}" data-min="10000" data-max="100000"></div>
 						</div>
 					</div>
 					<!-- End Pricing -->
 
-					<hr>
-
-					<!-- Brand -->
-					<div class="g-mb-30">
-						<h3 class="h5 mb-3">Brand</h3>
-
-						<ul class="list-unstyled">
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox">
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> Mango <span class="float-right g-font-size-13">24</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox" checked>
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> Gucci <span class="float-right g-font-size-13">334</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox">
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> Adidas <span class="float-right g-font-size-13">18</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox" checked>
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> Nike <span class="float-right g-font-size-13">6</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox">
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> Puma <span class="float-right g-font-size-13">71</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox">
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> Zara <span class="float-right g-font-size-13">9</span>
-							</label></li>
-						</ul>
-					</div>
-					<!-- End Brand -->
-
-					<hr>
-
-					<!-- Size -->
-					<div class="g-mb-30">
-						<h3 class="h5 mb-3">Size</h3>
-
-						<ul class="list-unstyled">
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox">
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> S <span class="float-right g-font-size-13">24</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox" checked>
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> M <span class="float-right g-font-size-13">334</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox">
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> L <span class="float-right g-font-size-13">18</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox">
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> XL <span class="float-right g-font-size-13">6</span>
-							</label></li>
-							<li class="my-2"><label
-								class="form-check-inline u-check d-block u-link-v5 g-color-gray-dark-v4 g-color-primary--hover g-pl-30">
-									<input class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									type="checkbox">
-									<div
-										class="u-check-icon-checkbox-v4 g-absolute-centered--y g-left-0">
-										<i class="fa" data-check-icon="&#xf00c"></i>
-									</div> XXL <span class="float-right g-font-size-13">71</span>
-							</label></li>
-						</ul>
-					</div>
-					<!-- End Size -->
-
-					<hr>
-
-					<!-- Color -->
-					<div class="g-mb-30">
-						<h3 class="h5 mb-3">Color</h3>
-
-						<!-- Checkbox -->
-						<ul class="list-inline mb-0">
-							<li class="list-inline-item g-mr-10"><label
-								class="form-check-inline u-check"> <input
-									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="radInline1_1" type="radio">
-									<div
-										class="u-check-icon-checkbox-v4 g-brd-transparent g-brd-gray-dark-v4--checked rounded-circle g-absolute-centered--y g-left-0 g-mt-3">
-										<i
-											class="d-block g-absolute-centered g-width-16 g-height-16 g-bg-primary rounded-circle"></i>
-									</div>
-							</label></li>
-							<li class="list-inline-item g-mx-10"><label
-								class="form-check-inline u-check"> <input
-									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="radInline1_1" type="radio">
-									<div
-										class="u-check-icon-checkbox-v4 g-brd-transparent g-brd-gray-dark-v4--checked rounded-circle g-absolute-centered--y g-left-0 g-mt-3">
-										<i
-											class="d-block g-absolute-centered g-width-16 g-height-16 g-bg-beige rounded-circle"></i>
-									</div>
-							</label></li>
-							<li class="list-inline-item g-mx-10"><label
-								class="form-check-inline u-check"> <input
-									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="radInline1_1" type="radio">
-									<div
-										class="u-check-icon-checkbox-v4 g-brd-transparent g-brd-gray-dark-v4--checked rounded-circle g-absolute-centered--y g-left-0 g-mt-3">
-										<i
-											class="d-block g-absolute-centered g-width-16 g-height-16 g-bg-black rounded-circle"></i>
-									</div>
-							</label></li>
-							<li class="list-inline-item g-mx-10"><label
-								class="form-check-inline u-check"> <input
-									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="radInline1_1" type="radio">
-									<div
-										class="u-check-icon-checkbox-v4 g-brd-transparent g-brd-gray-dark-v4--checked rounded-circle g-absolute-centered--y g-left-0 g-mt-3">
-										<i
-											class="d-block g-absolute-centered g-width-16 g-height-16 g-bg-yellow rounded-circle"></i>
-									</div>
-							</label></li>
-							<li class="list-inline-item g-mx-10"><label
-								class="form-check-inline u-check"> <input
-									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="radInline1_1" type="radio">
-									<div
-										class="u-check-icon-checkbox-v4 g-brd-transparent g-brd-gray-dark-v4--checked rounded-circle g-absolute-centered--y g-left-0 g-mt-3">
-										<i
-											class="d-block g-absolute-centered g-width-16 g-height-16 g-bg-blue rounded-circle"></i>
-									</div>
-							</label></li>
-							<li class="list-inline-item g-mx-10"><label
-								class="form-check-inline u-check"> <input
-									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="radInline1_1" type="radio">
-									<div
-										class="u-check-icon-checkbox-v4 g-brd-transparent g-brd-gray-dark-v4--checked rounded-circle g-absolute-centered--y g-left-0 g-mt-3">
-										<i
-											class="d-block g-absolute-centered g-width-16 g-height-16 g-bg-purple rounded-circle"></i>
-									</div>
-							</label></li>
-							<li class="list-inline-item g-mx-10"><label
-								class="form-check-inline u-check"> <input
-									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="radInline1_1" type="radio">
-									<div
-										class="u-check-icon-checkbox-v4 g-brd-transparent g-brd-gray-dark-v4--checked rounded-circle g-absolute-centered--y g-left-0 g-mt-3">
-										<i
-											class="d-block g-absolute-centered g-width-16 g-height-16 g-bg-brown rounded-circle"></i>
-									</div>
-							</label></li>
-							<li class="list-inline-item g-ml-10"><label
-								class="form-check-inline u-check"> <input
-									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="radInline1_1" type="radio">
-									<div
-										class="u-check-icon-checkbox-v4 g-brd-transparent g-brd-gray-dark-v4--checked rounded-circle g-absolute-centered--y g-left-0 g-mt-3">
-										<i
-											class="d-block g-absolute-centered g-width-16 g-height-16 g-bg-gray-dark-v4 rounded-circle"></i>
-									</div>
-							</label></li>
-						</ul>
-						<!-- End Checkbox -->
-					</div>
-					<!-- End Color -->
-
-					<hr>
-
 					<!-- Rating -->
-					<div class="g-mb-30">
+					<div class="g-mb-30" id="rating">
 						<h3 class="h5 mb-3">Rating</h3>
 
 						<ul
 							class="js-rating u-rating-v1 g-font-size-20 g-color-gray-light-v3 mb-0"
 							data-hover-classes="g-color-primary">
-							<li class="g-color-primary click"><i class="fa fa-star"></i>
-							</li>
-							<li class="g-color-primary click"><i class="fa fa-star"></i>
-							</li>
-							<li class="g-color-primary click"><i class="fa fa-star"></i>
-							</li>
-							<li class="g-color-primary click"><i class="fa fa-star"></i>
-							</li>
-							<li><i class="fa fa-star"></i></li>
+					<li id = "first" class="g-color-primary click" onclick="starone()">
+                    <i class="fa fa-star"></i>
+                  </li>
+                  <li id = "second" class="g-color-primary click" onclick="startwo()">
+                    <i class="fa fa-star"></i>
+                  </li>
+                  <li id = "third" class="g-color-primary click" onclick="starthree()">
+                    <i class="fa fa-star"></i>
+                  </li>
+                  <li id = "fourth" class="g-color-primary click" onclick="starfour()" >
+                    <i class="fa fa-star"></i>
+                  </li>
+                  <li id = "five" onclick="starfive()" >
+                    <i class="fa fa-star"></i>
+                  </li>
 						</ul>
 					</div>
 					<!-- End Rating -->
 
 					<hr>
-
+					
+					<form name="search" action="../top-list/${map.var}">
+					<input type="hidden" name="pricerange" value="">		
+					<input type="hidden" name="board_like" value="1">	
+			
+					<div class="checks small">
+					
+					 <c:choose>
+  					<c:when test="${map.search_method=='price'}">
+  					<input type="radio" id="ex_rd2" name="search_method" value="price" checked="checked"> <label for="ex_rd2"> 가격으로 검색 </label>
+                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="ex_rd2" name="search_method" value="star"> <label for="ex_rd2"> 좋아요로 검색 </label>
+     				</c:when>
+     				
+     				<c:when test="${map.search_method=='star'}">
+  					<input type="radio" id="ex_rd2" name="search_method" value="price" > <label for="ex_rd2"> 가격으로 검색 </label>
+                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="ex_rd2" name="search_method" value="star" checked="checked"> <label for="ex_rd2"> 좋아요로 검색 </label>
+     				</c:when>
+     				
+     				<c:otherwise>
+     				<input type="radio" id="ex_rd2" name="search_method" value="price" > <label for="ex_rd2"> 가격으로 검색 </label>
+                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="ex_rd2" name="search_method" value="star" > <label for="ex_rd2"> 좋아요로 검색 </label>        
+       				</c:otherwise> 
+  					
+  					</c:choose> 
+					                    
+                    </div>
+					
 					<button
 						class="btn btn-block u-btn-black g-font-size-default text-uppercase g-py-10"
-						type="button">Reset</button>
+						type="button" onclick="lee()">검색</button>
+					</form>	
+					
 				</div>
+				
 			</div>
-			<!-- End Filters -->
+			<!-- End Filters -->			
 
 			<jsp:include page="footer.jsp" flush="false" />
 

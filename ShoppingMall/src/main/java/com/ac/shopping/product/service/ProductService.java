@@ -17,8 +17,8 @@ public interface ProductService {
    public HashMap bottomDetail(String pro_no);
    public HashMap accDetail(String pro_no);
    
-   public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, String var);
-   public List<TBADTO> bottomListProduct(String var);
+   public List<TBADTO> topListProduct(int first_value,int second_value, int start, int end, String var);
+   public List<TBADTO> bottomListProduct(int first_value, int second_value, int start, int end, String var);
    public List<TBADTO> accListProduct(String var);
    public List<Outer_OnepieceDTO> onepieceListProduct();	
    public HashMap onepieceDetail(String pro_no);
@@ -26,6 +26,7 @@ public interface ProductService {
    public List<Outer_OnepieceDTO> outerListProduct();
    public HashMap outerDetail(String pro_no);
    
-   public int all_count_tba(String search_option, String search_keyword, String var);
-	
+   public int all_count_tba(int first_value, int second_value, String var);
+   public int all_count_bottom(int first_value, int second_value, String var);	
 }
+

@@ -17,8 +17,8 @@ public interface ProductDAO {
    public HashMap bottomDetail(String pro_no);
    public HashMap accDetail(String pro_no);
    
-   public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, int idf);
-   public List<TBADTO> bottomListProduct(int idf);
+   public List<TBADTO> topListProduct(int first_value,int second_value,int start, int end, int idf);
+   public List<TBADTO> bottomListProduct(int first_value,int second_value,int start, int end,int idf);
    public List<TBADTO> accListProduct(int idf);
    public List<Outer_OnepieceDTO> onepieceListProduct();
    public HashMap onepieceDetail(String pro_no);
@@ -26,7 +26,8 @@ public interface ProductDAO {
    public List<Outer_OnepieceDTO> outerListProduct();
    public HashMap outerDetail(String pro_no);
    
-   public int all_count_tba();
+   public int all_count_tba(int first_value, int second_value, int idf) ;
+   public int all_count_bottom(int first_value, int second_value, int idf);
 
 
 

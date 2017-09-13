@@ -43,22 +43,30 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 	
 	@Override
-	public List<TBADTO> topListProduct(int start, int end, String search_option, String search_keyword, int idf) {
+	public List<TBADTO> topListProduct(int first_value, int second_value,int start, int end, int idf) {
 		
 		HashMap<String,Object> param = new HashMap<String,Object>();		
-		param.put("type",search_option);
-		param.put("keyword", search_keyword);		
+		
+		param.put("first_value", first_value);
+		param.put("second_value", second_value);
 		param.put("start", start);
 		param.put("end", end);
-		param.put("idf", idf);
+		param.put("idf", idf);		
 		
 		return sqlSession.selectList("product.topListProduct",param);
 	}
 
 	@Override
-	public List<TBADTO> bottomListProduct(int idf) {
-		HashMap<String,Object> param = new HashMap<String,Object>();
-		param.put("idf", idf);
+	public List<TBADTO> bottomListProduct(int first_value,int second_value,int start, int end,int idf) {
+		
+		HashMap<String,Object> param = new HashMap<String,Object>();		
+		
+		param.put("first_value", first_value);
+		param.put("second_value", second_value);
+		param.put("start", start);
+		param.put("end", end);
+		param.put("idf", idf);		
+		
 		return sqlSession.selectList("product.bottomListProduct", param);
 	}
 
@@ -103,13 +111,7 @@ public class ProductDAOImpl implements ProductDAO {
 		param.put("color", color);
 		
 		return param;
-	}
-
-	@Override
-	public int all_count_tba() {
-		return sqlSession.selectOne("product.topListProduct_count");
-	}
-
+	}	
 	
 
 	public HashMap topDetail(String pro_no) {
@@ -141,5 +143,26 @@ public class ProductDAOImpl implements ProductDAO {
 		param.put("color", color);
 		return param;
 	}
-
+	
+	public int all_count_tba(int first_value, int second_value, int idf) {
+		
+		HashMap<String, Object> param = new HashMap<String, Object>();
+				
+		param.put("first_value", first_value);
+		param.put("second_value", second_value);
+		param.put("idf", idf);	
+		
+		return sqlSession.selectOne("product.topListProduct_count",param);		
+	}
+	public int all_count_bottom(int first_value, int second_value, int idf) {
+		
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		
+		param.put("first_value", first_value);
+		param.put("second_value", second_value);
+		param.put("idf", idf);	
+		
+		return sqlSession.selectOne("product.bottomListProduct_count",param);
+	}
+	
 }

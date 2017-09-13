@@ -54,6 +54,7 @@
 	</select>
 
 	<select id="topListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
+		<include refid="pagingHeader"></include>
 		SELECT
 		p.product_no as product_no,
 		p.pro_name as pro_name,
@@ -65,6 +66,8 @@
 		ON p.product_no = tba.product_no
 		WHERE tba.category like '%[T]%'
 		<include refid="topkind"></include>
+		<include refid="count_price_range"></include>
+		<include refid="pagingFooter"></include>	
 	</select>
 
 	<sql id="topkind">
@@ -84,16 +87,45 @@
 		</choose>
 	</sql>
 
-	<select id="topListProduct_count" resultType="int">
+	<select id="topListProduct_count" resultType="int">		
+		
 		SELECT count(*)
 		FROM product p JOIN top_bottom_acc tba
 		ON p.product_no = tba.product_no
 		WHERE tba.category like '%[T]%'
-		ORDER BY p.pro_name
+		<include refid="topkind"></include>
+		<include refid="count_price_range"></include>
+			
 	</select>
+	
+	
+	<sql id="count_price_range">
+		<choose>
+			<when test="first_value==0">
+			ORDER BY p.pro_name				
+			</when>			
+			<otherwise>
+			AND p.pro_price Between #{first_value} and #{second_value} order by p.pro_price			
+          	</otherwise> 
+		</choose>
+	</sql>
+	
+	
 
 
+	<select id="bottomListProduct_count" resultType="int">
+		
+		SELECT count(*)		
+		FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[B]%'
+		<include refid="bottomkind"></include>
+		<include refid="count_price_range"></include>
+	</select>
+	
 	<select id="bottomListProduct" resultType="com.ac.shopping.product.dto.TBADTO">
+		<include refid="pagingHeader"></include>
 		SELECT
 		p.product_no as product_no,
 		p.pro_name as pro_name,
@@ -105,7 +137,11 @@
 		ON p.product_no = tba.product_no
 		WHERE tba.category like '%[B]%'
 		<include refid="bottomkind"></include>
+		<include refid="count_price_range"></include>
+		<include refid="pagingFooter"></include>
 	</select>
+	
+	
 
 	<sql id="bottomkind">
 		<choose>
@@ -289,7 +325,7 @@ WHERE product_no = #{product_no}
 	</sql>
 	<sql id="pagingFooter">
 		) A
-		) WHERE rn (BETWEEN #{start} AND #{end})
+		) WHERE rn BETWEEN #{start} AND #{end}
 
 	</sql>
 
