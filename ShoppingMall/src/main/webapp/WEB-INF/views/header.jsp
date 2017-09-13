@@ -340,7 +340,7 @@
 			<!-- End Responsive Toggle Button -->
 
 			<!-- Logo -->
-			<a href="shoppingindex" class="navbar-brand"> <img
+			<a href="${contextPath}/shoppingindex" class="navbar-brand"> <img
 				src="resources/WB0412697/html/assets/img/logo/로고1.PNG"
 				alt="Image Description">
 			</a>
@@ -352,7 +352,7 @@
 				id="navBar">
 				<ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
 					<li class="nav-item g-mx-10--lg g-mx-15--xl"><a
-						href="shoppingindex" class="nav-link g-px-0">Home</a></li>
+						href="${contextPath}/shoppingindex" class="nav-link g-px-0">Home</a></li>
 
 					<li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
 						<a id="nav-link--pages" class="nav-link g-px-0" href="#"
