@@ -204,24 +204,22 @@
 
                 <!-- Checkbox -->
                 <ul class="list-inline mb-0">
-                <c:forEach var="size" items="${outerdetail.size}">
+                  <li class="list-inline-item g-mx-15">
+                    <label class="form-check-inline u-check">
+                      <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="text">
+                      <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
+                      FREE
+                      </div>
+                    </label>
+                  </li>
                   <li class="list-inline-item g-mx-15">
                     <label class="form-check-inline u-check">
                       <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio">
                       <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
-                        ${size}
+                      
                       </div>
                     </label>
                   </li>
-                </c:forEach>
-<!--                   <li class="list-inline-item g-mx-15"> -->
-<!--                     <label class="form-check-inline u-check"> -->
-<!--                       <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio"> -->
-<!--                       <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0"> -->
-<!--                         M -->
-<!--                       </div> -->
-<!--                     </label> -->
-<!--                   </li> -->
 <!--                   <li class="list-inline-item g-mx-15"> -->
 <!--                     <label class="form-check-inline u-check"> -->
 <!--                       <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio"> -->

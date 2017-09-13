@@ -341,7 +341,7 @@
 
 			<!-- Logo -->
 			<a href="shoppingindex" class="navbar-brand"> <img
-				src="resources/WB0412697/html/e-commerce/assets/img/logo/logo-1.png"
+				src="resources/WB0412697/html/assets/img/logo/로고1.PNG"
 				alt="Image Description">
 			</a>
 			<!-- End Logo -->
@@ -724,15 +724,15 @@
 
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="outer-list" style="text-decoration: none"><span
+												<a href="${contextPath}/outer-list" style="text-decoration: none"><span
 													style="color: #000000;">Outer</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="onepiece-list" style="text-decoration: none"><span
+												<a href="${contextPath}/onepiece-list" style="text-decoration: none"><span
 													style="color: #000000;">OPS</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="shoes-list" style="text-decoration: none"><span
+												<a href="${contextPath}/shoes-list" style="text-decoration: none"><span
 													style="color: #000000;">Shoes</span></a>
 											</h4>
 										</div>
