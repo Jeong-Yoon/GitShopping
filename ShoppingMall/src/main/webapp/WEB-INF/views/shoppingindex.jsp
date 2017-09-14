@@ -107,18 +107,22 @@
 								href="#"><c:if test="${msg == 'success'}">
 										<h6>${sessionScope.m_id}</h6>
 									</c:if></a></li>
+							<c:if test="${empty sessionScope.m_id }">
 							<li class="list-inline-item g-mx-4">|</li>
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 								href="#">JOIN</a></li>
-							<li class="list-inline-item g-mx-4">|</li>
-							<li class="list-inline-item g-mx-4"><a
-								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="#">CART</a></li>
+							</c:if>
+							<c:if test="${not empty sessionScope.m_id }">
 							<li class="list-inline-item g-mx-4">|</li>
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 								href="#">MY PAGE</a></li>
+							</c:if>
+							<li class="list-inline-item g-mx-4">|</li>
+							<li class="list-inline-item g-mx-4"><a
+								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+								href="#">CART</a></li>
 						</ul>
 					</div>
 
