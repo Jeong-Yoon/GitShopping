@@ -9,8 +9,8 @@
 		SELECT
 		pro.product_no as
 		product_no,
-		pro.pro_name as2 pro_name,
-		pro.pro_price as pro_price,
+		pro.pro_name as pro_name,
+		pro.pro_price as pro_price
 		FROM PRODUCT pro JOIN SHOES shoe ON
 		pro.product_no = shoe.product_no
 		GROUP BY
@@ -24,7 +24,7 @@
 		pro.product_no as
 		product_no,
 		pro.pro_name as pro_name,
-		pro.pro_price as pro_price,
+		pro.pro_price as pro_price
 		FROM PRODUCT pro JOIN SHOES shoe ON
 		pro.product_no = shoe.product_no
 		WHERE pro.product_no = #{product_no}
@@ -188,7 +188,7 @@
 		pro.product_no as
 		product_no,
 		pro.pro_name as pro_name,
-		pro.pro_price as pro_price,
+		pro.pro_price as pro_price
 		FROM product pro JOIN outer_onepiece otop
 		ON pro.product_no = otop.product_no
 		WHERE otop.category LIKE '%[OPS]%'
@@ -198,7 +198,7 @@
 		SELECT
 		pro.product_no as product_no,
 		pro.pro_name as pro_name,
-		pro.pro_price as pro_price,
+		pro.pro_price as pro_price
 		FROM product pro JOIN outer_onepiece otop
 		ON pro.product_no = otop.product_no
 		WHERE otop.category LIKE '%[OPS]%'
@@ -214,7 +214,7 @@
 		SELECT
 		pro.product_no as product_no,
 		pro.pro_name as pro_name,
-		pro.pro_price as pro_price,
+		pro.pro_price as pro_price
 		FROM product pro JOIN outer_onepiece otop
 		ON pro.product_no = otop.product_no
 		WHERE otop.category LIKE '%[OUT]%'
@@ -224,7 +224,7 @@
 		SELECT
 		pro.product_no as product_no,
 		pro.pro_name as pro_name, 
-		pro.pro_price as pro_price,
+		pro.pro_price as pro_price
 		FROM product pro JOIN outer_onepiece otop
 		ON pro.product_no = otop.product_no
 		WHERE otop.category LIKE '%[OUT]%'
