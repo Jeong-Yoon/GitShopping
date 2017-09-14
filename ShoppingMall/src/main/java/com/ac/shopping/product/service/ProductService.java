@@ -27,6 +27,8 @@ public interface ProductService {
    public HashMap outerDetail(String pro_no);
    
    public int all_count_tba(int first_value, int second_value, String var);
-   public int all_count_bottom(int first_value, int second_value, String var);	
+   public int all_count_bottom(int first_value, int second_value, String var);
+   public void addCart(String pro_no, String m_id);
+    
 }
 

@@ -28,6 +28,7 @@ public interface ProductDAO {
    
    public int all_count_tba(int first_value, int second_value, int idf) ;
    public int all_count_bottom(int first_value, int second_value, int idf);
+   public void addCart(String pro_no, String m_id);
 
 
 

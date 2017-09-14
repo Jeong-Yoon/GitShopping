@@ -145,4 +145,13 @@ public class ProductServiceImpl implements ProductService {
 	public HashMap accDetail(String pro_no) {
 		return productDao.accDetail(pro_no);
 	}
+	
+	@Override
+	public void addCart(String pro_no, String m_id) {
+		productDao.addCart(pro_no, m_id);
+	}
+	
+	
+	
+	
 }
