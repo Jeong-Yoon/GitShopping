@@ -92,6 +92,10 @@
 					</div>
 					<div class="col-auto g-pos-rel g-pb-10 g-pb-0--sm">
 						<ul class="list-inline g-overflow-hidden g-pt-1 g-mx-minus-4 mb-0">
+							<li class="list-inline-item g-mx-4">
+								<c:if test="${msg == 'success'}">
+										<h6>${sessionScope.m_id}님&nbsp;&nbsp;</h6>
+									</c:if></li>
 							<c:if test="${empty sessionScope.m_id}">
 								<li class="list-inline-item g-mx-4"><a
 									class="g-color-white g-color-primary--hover g-text-underline--none--hover"
@@ -102,16 +106,11 @@
 									class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 									href="logout.do">Logout</a></li>
 							</c:if>
-							<li class="list-inline-item g-mx-4"><a
-								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="#"><c:if test="${msg == 'success'}">
-										<h6>${sessionScope.m_id}</h6>
-									</c:if></a></li>
 							<c:if test="${empty sessionScope.m_id }">
 							<li class="list-inline-item g-mx-4">|</li>
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="#">JOIN</a></li>
+								href="sign_Up">JOIN</a></li>
 							</c:if>
 							<c:if test="${not empty sessionScope.m_id }">
 							<li class="list-inline-item g-mx-4">|</li>
@@ -123,6 +122,10 @@
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 								href="#">CART</a></li>
+						<li class="list-inline-item g-mx-4">|</li>
+						<li class="list-inline-item g-mx-4"><a
+							class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+							href="#">FAQ</a></li>
 						</ul>
 					</div>
 
@@ -313,7 +316,7 @@
 					<!-- End Responsive Toggle Button -->
 
 					<!-- Logo -->
-					<a href="index.html" class="navbar-brand"> <img
+					<a href="shoppingindex" class="navbar-brand"> <img
 						src="resources/WB0412697/html/assets/img/logo/로고1.PNG"
 						alt="Image Description">
 					</a>
@@ -325,7 +328,7 @@
 						id="navBar">
 						<ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
 							<li class="nav-item g-mx-10--lg g-mx-15--xl"><a
-								href="index.html" class="nav-link g-px-0">Home</a></li>
+								href="shoppingindex" class="nav-link g-px-0">Home</a></li>
 
 							<li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
 								<a id="nav-link--pages" class="nav-link g-px-0" href="#"
