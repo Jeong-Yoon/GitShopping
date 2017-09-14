@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html>
@@ -1080,6 +1080,8 @@
 
 <form name="form1" action="Q_A.do">
 
+
+
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
@@ -1094,7 +1096,18 @@
     <tr>
       <td>${row.BOARD_QUERY_TYPE}</td>
       <td>${row.BOARD_INDEX}</td>
-      <td><a href="${path}/shopping/Q_A/view?BOARD_INDEX=${row.BOARD_INDEX}">${row.BOARD_TITLE}</a></td>
+      
+      <td><a href="${path}/shopping/Q_A/view?BOARD_INDEX=${row.BOARD_INDEX}&BOARD_WRITER=${row.BOARD_WRITER}">
+      <c:choose>
+      	<c:when test="${empty row.BOARD_REPLY}">
+       		${row.BOARD_TITLE}
+      	</c:when>
+      	<c:otherwise>
+      		[답변완료]${row.BOARD_TITLE}
+      	</c:otherwise>
+      </c:choose>
+	</a></td>
+	
       <td>${row.BOARD_WRITER}</td>
       <td>${row.BOARD_DATE}</td>
       

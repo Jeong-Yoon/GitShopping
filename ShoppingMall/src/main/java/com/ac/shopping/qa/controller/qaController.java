@@ -2,6 +2,7 @@ package com.ac.shopping.qa.controller;
 
 
 
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -94,19 +95,39 @@ public class qaController {
 	
 	//게시판 글쓰기 처리
 	@RequestMapping("Q_A/insert.do")
-	public String writeQnA(@ModelAttribute qa_dto vo) throws Exception{
+	public String writeQnA(@ModelAttribute qa_dto vo, HttpSession session) throws Exception{
+		
+		
 		System.out.println(vo);
+		String User_id = (String)session.getAttribute("m_id");
+		vo.setBOARD_WRITER(User_id);
+		
+		
 		qaService.create(vo);
 		return "redirect:/Q_A.do";
 	} 
 	
 	//게시글 읽기
 	@RequestMapping(value="/Q_A/view",method=RequestMethod.GET)
-	public ModelAndView readd(@RequestParam("BOARD_INDEX") int BOARD_INDEX , HttpSession session)throws Exception{
+	public ModelAndView readd( HttpServletResponse response,@RequestParam("BOARD_INDEX") int BOARD_INDEX ,@RequestParam("BOARD_WRITER") String BOARD_WRITER, HttpSession session)throws Exception{
+		
+		String User_id = (String)session.getAttribute("m_id");
 		ModelAndView mav = new ModelAndView();
+		
+		if(User_id.equals(BOARD_WRITER)) {			
+		
 		mav.setViewName("Q_A/view");
 		mav.addObject("view", qaService.read(BOARD_INDEX));
 		System.out.println(qaService.read(BOARD_INDEX));
+		
+		}		
+		else {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+
+			out.println("<script>alert('다른 회원이 작성한 문의글입니다.'); history.go(-1);</script>"); 
+			out.flush();			
+		}
 		return mav; // list.jsp로 List가 전달된다.
 	}
 	
