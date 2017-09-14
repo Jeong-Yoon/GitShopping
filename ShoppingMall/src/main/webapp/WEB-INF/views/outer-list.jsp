@@ -182,12 +182,12 @@
 							title="Add to Cart"> <i
 								class="icon-finance-100 u-line-icon-pro"></i>
 						</a></li>
-						<li class="list-inline-item align-middle mx-0"><a
-							class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-							href="#" data-toggle="tooltip" data-placement="top"
-							title="Add to Wishlist"> <i
-								class="icon-medical-022 u-line-icon-pro"></i>
-						</a></li>
+<!-- 						<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 							class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 							href="#" data-toggle="tooltip" data-placement="top" -->
+<!-- 							title="Add to Wishlist"> <i -->
+<!-- 								class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 						</a></li> -->
 					</ul>
 					<!-- End Products Icons -->
 				</div>

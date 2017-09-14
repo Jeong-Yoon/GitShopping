@@ -90,27 +90,23 @@
 							class="fa fa-clock-o g-font-size-18 g-valign-middle g-color-primary g-mr-10 g-mt-minus-2"></i>
 						Mon-Fri: 9 AM - 5 PM
 					</div>
-
 					<div class="col-auto g-pos-rel g-pb-10 g-pb-0--sm">
 						<ul class="list-inline g-overflow-hidden g-pt-1 g-mx-minus-4 mb-0">
-
-
+							<c:if test="${empty sessionScope.m_id}">
+								<li class="list-inline-item g-mx-4"><a
+									class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+									href="page-login">Login</a></li>
+							</c:if>
+							<c:if test="${not empty sessionScope.m_id}">
+								<li class="list-inline-item g-mx-4"><a
+									class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+									href="logout.do">Logout</a></li>
+							</c:if>
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="page-login"><c:if test="${empty sessionScope.m_id}">
-										<li class="list-inline-item g-mx-4"><a
-											class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-											href="page-login">Login</a></li>
-									</c:if> <c:if test="${not empty sessionScope.m_id}">
-										<li class="list-inline-item g-mx-4"><a
-											class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-											href="page-login">Logout</a></li>
-									</c:if>
-									<li class="list-inline-item g-mx-4"><a
-										class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-										href="#"><c:if test="${msg == 'success'}">
-												<h6>${sessionScope.m_id}</h6>
-											</c:if></a></li></a></li>
+								href="#"><c:if test="${msg == 'success'}">
+										<h6>${sessionScope.m_id}</h6>
+									</c:if></a></li>
 							<li class="list-inline-item g-mx-4">|</li>
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
@@ -695,22 +691,28 @@
 											</h4>
 											<ul class="list-unstyled g-mb-25">
 												<li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="top-list/tshirt">T-shirt
-														&amp; Jackets</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="top-list/mtmh">맨투맨/후드</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="top-list/knit">니트</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="top-list/blouse">블라우스</a>
-													<span class="u-label g-bg-primary g-ml-10">New</span></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="top-list/tshirt">T-shirt &amp; Jackets</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="top-list/mtmh">맨투맨/후드</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="top-list/knit">니트</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="top-list/blouse">블라우스</a> <span
+													class="u-label g-bg-primary g-ml-10">New</span></li>
 											</ul>
 
-											<h4 class="h5 text-uppercase g-font-weight-600"><a href="bottom-list/all" style="text-decoration: none"><span
-													style="color: #000000;">Bottom</span></h4>
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="bottom-list/all" style="text-decoration: none"><span
+													style="color: #000000;">Bottom</span>
+											</h4>
 											<ul class="list-unstyled">
-												<li class="g-mb-5"><a class="g-color-main" href="bottom-list/spants">short
-														pants</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="bottom-list/lpants">long
-														pants</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="bottom-list/training">training</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="bottom-list/spants">short pants</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="bottom-list/lpants">long pants</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="bottom-list/training">training</a></li>
 											</ul>
 										</div>
 
@@ -730,16 +732,21 @@
 										</div>
 
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-											<h4 class="h5 text-uppercase g-font-weight-600"><a href="acc-list/all" style="text-decoration: none"><span
-													style="color: #000000;">ACC</span></h4>
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="acc-list/all" style="text-decoration: none"><span
+													style="color: #000000;">ACC</span>
+											</h4>
 											<ul class="list-unstyled g-mb-25">
-												<li class="g-mb-5"><a class="g-color-main" href="acc-list/earings">귀걸이</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="acc-list/necklaces">목걸이</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="acc-list/bracelets">팔찌
-												</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="acc-list/socks">양말
-												</a></li>
-												<li class="g-mb-5"><a class="g-color-main" href="acc-list/belts">벨트</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="acc-list/earings">귀걸이</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="acc-list/necklaces">목걸이</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="acc-list/bracelets">팔찌 </a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="acc-list/socks">양말 </a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="acc-list/belts">벨트</a></li>
 											</ul>
 										</div>
 									</div>
