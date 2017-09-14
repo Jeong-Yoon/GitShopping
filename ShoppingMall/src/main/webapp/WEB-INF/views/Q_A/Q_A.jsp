@@ -1098,9 +1098,7 @@
       <td>${row.BOARD_WRITER}</td>
       <td>${row.BOARD_DATE}</td>
       
-      <!-- 원하는 날짜형식으로 출력하기 위해 fmt태그 사용 --> 
-<!-- 	<fmt:formatDate -->
-<!-- 	value="${row.BOARD_DATE}" pattern="yyyy-MM-dd HH:mm:ss" /></td> -->
+ 
     </tr>
   </c:forEach>
   
