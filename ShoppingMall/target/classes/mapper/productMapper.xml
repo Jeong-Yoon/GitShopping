@@ -291,6 +291,11 @@ WHERE product_no = #{product_no}
 		) WHERE rn BETWEEN #{start} AND #{end}
 
 	</sql>
-
-
+	
+	<insert id="addCart">
+		INSERT INTO BASKET
+		(product_no, m_id, basket_quantity)
+		VALUES
+		(#{pro_no}, #{m_id}, 1)
+	</insert>
 </mapper>

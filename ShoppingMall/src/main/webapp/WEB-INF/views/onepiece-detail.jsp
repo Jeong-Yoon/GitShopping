@@ -61,12 +61,10 @@
 <style>
 .selectbox { 
 position: relative; 
-width: 120px; /* 너비설정 */ border: 0.5px solid #dcdcdc; 
+width: 120px; /* 너비설정 */ border: 1px solid #dcdcdc; 
 /* 테두리 설정 */ z-index: 1; } 
     
 .selectbox:before {
-g-color-gray g-color-primary--hover fa fa-angle-down
-}
  /* 화살표 대체 */ content: ""; 
      position: absolute;  
      top: 50%;  
@@ -76,13 +74,14 @@ g-color-gray g-color-primary--hover fa fa-angle-down
      margin-top: -1px;  
      border-left: 5px solid transparent;  
      border-right: 5px solid transparent;  
-     border-top: 5px solid #bebebe; }  
+     border-top: 5px solid #999; }  
+}
     
     .selectbox label { 
     position: absolute; 
     top: 1px; 
     /* 위치정렬 */ left: 5px; 
-    /* 위치정렬 */ padding: .8em .5em; 
+    /* 위치정렬 */ padding: .2em .3em; 
     /* select의 여백 크기 만큼 */ 
     color: #999; z-index: -1; 
     /* IE8에서 label이 위치한 곳이 클릭되지 않는 것 해결 */ } 
@@ -95,7 +94,7 @@ g-color-gray g-color-primary--hover fa fa-angle-down
     /* line-height 초기화 */ 
     font-family: inherit; 
     /* 폰트 상속 */ 
-    padding: .8em .5em; 
+    padding: .2em .3em; 
     /* 여백과 높이 결정 */ 
     border: 0; 
     opacity: 0; 
@@ -211,6 +210,8 @@ g-color-gray g-color-primary--hover fa fa-angle-down
 
                 <!-- Checkbox -->
               <ul class="list-inline mb-0">
+              <c:choose>
+              <c:when test="${not empty onepiecedetail.color}">
               <div class="selectbox"> 
               <select id="ex_select"> 
 <!--               <option selected>-----</option> -->
@@ -219,6 +220,17 @@ g-color-gray g-color-primary--hover fa fa-angle-down
                 </c:forEach>
               </select> 
               </div>
+              </c:when>
+              <c:otherwise>
+               <li class="list-inline-item g-mx-15">
+                    <label class="form-check-inline u-check">
+                      <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="text">--
+                      <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
+                      </div>
+                    </label>
+                  </li>
+              </c:otherwise>
+              </c:choose>
 <!--                   <li class="list-inline-item g-mx-15"> -->
 <!--                     <label class="form-check-inline u-check"> -->
 <!--                       <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="radio"> -->

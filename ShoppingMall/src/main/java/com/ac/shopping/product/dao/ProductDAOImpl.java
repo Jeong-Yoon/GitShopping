@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.ac.shopping.member.dto.MemberDTO;
 import com.ac.shopping.product.dto.Outer_OnepieceDTO;
 import com.ac.shopping.product.dto.ShoesDTO;
 import com.ac.shopping.product.dto.TBADTO;
@@ -157,6 +158,7 @@ public class ProductDAOImpl implements ProductDAO {
 		
 		return sqlSession.selectOne("product.topListProduct_count",param);		
 	}
+	
 	@Override
 	public int all_count_bottom(int first_value, int second_value, int idf) {
 		
@@ -167,6 +169,14 @@ public class ProductDAOImpl implements ProductDAO {
 		param.put("idf", idf);	
 		
 		return sqlSession.selectOne("product.bottomListProduct_count",param);
+	}
+	
+	@Override
+	public void addCart(String pro_no, String m_id) {
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("pro_no", pro_no);
+		param.put("m_id", m_id);
+		sqlSession.insert("product.addCart", param);
 	}
 	
 }

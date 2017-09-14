@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -99,9 +100,6 @@ public class ProductController {
 		int end = boardPager.getPageEnd();
 
 		Map<String, Object> map = new HashMap<String, Object>();
-
-		
-		
 		
 		map.put("count", count); // 레코드의 갯수
 		map.put("search_method", search_method); // 검색옵션
@@ -124,6 +122,7 @@ public class ProductController {
 		mav.addObject("topdetail", productService.topDetail(pro_no));
     	return mav;
 	}
+	
 
 	// ==================BOTTOM===================
 	// BOTTOM 목록
@@ -233,6 +232,7 @@ public class ProductController {
 		mav.addObject("outerlist", productService.outerListProduct());
 		return mav;
 	}
+	
 	//ONEPIECE 상세페이지
 	@RequestMapping("/outer-detail")
 	public ModelAndView outerDetail(ModelAndView mav, HttpServletRequest request){
@@ -241,5 +241,15 @@ public class ProductController {
     	mav.addObject("outerdetail", productService.outerDetail(pro_no));
     	return mav;
 	}
-
+	
+	// ===================ADD TO CART============================
+	@RequestMapping("/add-cart")
+	public String addCart(HttpSession session, HttpServletRequest request){
+		String pro_no = request.getParameter("product_no");
+		String m_id = (String) session.getAttribute("m_id");
+		System.out.println(m_id);
+		System.out.println(pro_no);
+		productService.addCart(pro_no, m_id);
+		return "add-cart";
+	}
 }

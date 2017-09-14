@@ -65,7 +65,8 @@
 </head>
 <body>
 	<!-- Header -->
-	<header id="js-header" class="u-header u-header--static"> <!-- Top Bar -->
+	<header id="js-header" class="u-header u-header--static"> 
+	<!-- Top Bar -->
 	<div
 		class="u-header__section u-header__section--dark g-bg-black g-transition-0_3 g-py-10">
 		<div class="container">
@@ -73,21 +74,21 @@
 				class="row flex-column flex-sm-row justify-content-between align-items-center text-uppercase g-font-weight-600 g-color-white g-font-size-12 g-mx-0--lg">
 				<div class="col-auto hidden-sm-down">
 					<ul class="list-inline mb-0">
-						<li class="list-inline-item"><a href="#"
-							class="g-color-white g-color-primary--hover g-pa-3"><i
-								class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="#"
-							class="g-color-white g-color-primary--hover g-pa-3"><i
-								class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="#"
-							class="g-color-white g-color-primary--hover g-pa-3"><i
-								class="fa fa-tumblr"></i></a></li>
-						<li class="list-inline-item"><a href="#"
-							class="g-color-white g-color-primary--hover g-pa-3"><i
-								class="fa fa-pinterest-p"></i></a></li>
-						<li class="list-inline-item"><a href="#"
-							class="g-color-white g-color-primary--hover g-pa-3"><i
-								class="fa fa-google"></i></a></li>
+<!-- 						<li class="list-inline-item"><a href="#" -->
+<!-- 							class="g-color-white g-color-primary--hover g-pa-3"><i -->
+<!-- 								class="fa fa-facebook"></i></a></li> -->
+<!-- 						<li class="list-inline-item"><a href="#" -->
+<!-- 							class="g-color-white g-color-primary--hover g-pa-3"><i -->
+<!-- 								class="fa fa-twitter"></i></a></li> -->
+<!-- 						<li class="list-inline-item"><a href="#" -->
+<!-- 							class="g-color-white g-color-primary--hover g-pa-3"><i -->
+<!-- 								class="fa fa-tumblr"></i></a></li> -->
+<!-- 						<li class="list-inline-item"><a href="#" -->
+<!-- 							class="g-color-white g-color-primary--hover g-pa-3"><i -->
+<!-- 								class="fa fa-pinterest-p"></i></a></li> -->
+<!-- 						<li class="list-inline-item"><a href="#" -->
+<!-- 							class="g-color-white g-color-primary--hover g-pa-3"><i -->
+<!-- 								class="fa fa-google"></i></a></li> -->
 					</ul>
 				</div>
 
@@ -105,38 +106,38 @@
 
 				<div class="col-auto g-pos-rel g-pb-10 g-pb-0--sm">
 					<ul class="list-inline g-overflow-hidden g-pt-1 g-mx-minus-4 mb-0">
-						<li class="list-inline-item g-mx-4"><i
-							class="icon-globe-alt g-font-size-18 g-valign-middle g-color-primary g-pos-rel g-top-minus-2 g-mr-10"></i>
-							<a href="#" id="languages-dropdown-invoker-2"
-							class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-							aria-controls="languages-dropdown-2" aria-haspopup="true"
-							aria-expanded="false" data-dropdown-event="click"
-							data-dropdown-target="#languages-dropdown-2"
-							data-dropdown-type="css-animation" data-dropdown-duration="300"
-							data-dropdown-hide-on-scroll="false"
-							data-dropdown-animation-in="fadeIn"
-							data-dropdown-animation-out="fadeOut"> English </a>
-							<ul id="languages-dropdown-2"
-								class="list-unstyled g-pos-abs g-left-0 g-bg-black g-width-160 g-pb-5 g-mt-10 g-z-index-2"
-								aria-labelledby="languages-dropdown-invoker-2">
-								<li><a
-									class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-									href="#">English</a></li>
-								<li><a
-									class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-									href="#">Spanish</a></li>
-								<li><a
-									class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-									href="#">Russian</a></li>
-								<li><a
-									class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-									href="#">German</a></li>
-							</ul></li>
-						<li class="list-inline-item g-mx-4">|</li>
-						<li class="list-inline-item g-mx-4"><a
-							class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-							href="#">FAQ</a></li>
-						<li class="list-inline-item g-mx-4">|</li>
+<!-- 						<li class="list-inline-item g-mx-4"><i -->
+<!-- 							class="icon-globe-alt g-font-size-18 g-valign-middle g-color-primary g-pos-rel g-top-minus-2 g-mr-10"></i> -->
+<!-- 							<a href="#" id="languages-dropdown-invoker-2" -->
+<!-- 							class="g-color-white g-color-primary--hover g-text-underline--none--hover" -->
+<!-- 							aria-controls="languages-dropdown-2" aria-haspopup="true" -->
+<!-- 							aria-expanded="false" data-dropdown-event="click" -->
+<!-- 							data-dropdown-target="#languages-dropdown-2" -->
+<!-- 							data-dropdown-type="css-animation" data-dropdown-duration="300" -->
+<!-- 							data-dropdown-hide-on-scroll="false" -->
+<!-- 							data-dropdown-animation-in="fadeIn" -->
+<!-- 							data-dropdown-animation-out="fadeOut"> English </a> -->
+<!-- 							<ul id="languages-dropdown-2" -->
+<!-- 								class="list-unstyled g-pos-abs g-left-0 g-bg-black g-width-160 g-pb-5 g-mt-10 g-z-index-2" -->
+<!-- 								aria-labelledby="languages-dropdown-invoker-2"> -->
+<!-- 								<li><a -->
+<!-- 									class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" -->
+<!-- 									href="#">English</a></li> -->
+<!-- 								<li><a -->
+<!-- 									class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" -->
+<!-- 									href="#">Spanish</a></li> -->
+<!-- 								<li><a -->
+<!-- 									class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" -->
+<!-- 									href="#">Russian</a></li> -->
+<!-- 								<li><a -->
+<!-- 									class="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" -->
+<!-- 									href="#">German</a></li> -->
+<!-- 							</ul></li> -->
+<!-- 						<li class="list-inline-item g-mx-4">|</li> -->
+                           <li class="list-inline-item g-mx-4">
+								<c:if test="${not empty sessionScope.m_id}">
+										<h6>${sessionScope.m_id}님&nbsp;&nbsp;</h6>
+									</c:if></li>
 						<c:if test="${empty sessionScope.m_id}">
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
@@ -146,12 +147,27 @@
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 								href="logout.do">Logout</a></li>
+						</c:if>
+						<c:if test="${empty sessionScope.m_id }">
+							<li class="list-inline-item g-mx-4">|</li>
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="#"><c:if test="${msg == 'success'}">
-										<h6>${sessionScope.m_id}</h6>
-									</c:if></a></li>
-						</c:if>
+								href="sign_Up">JOIN</a></li>
+							</c:if>
+							<c:if test="${not empty sessionScope.m_id }">
+							<li class="list-inline-item g-mx-4">|</li>
+							<li class="list-inline-item g-mx-4"><a
+								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+								href="#">MY PAGE</a></li>
+							</c:if>
+							<li class="list-inline-item g-mx-4">|</li>
+							<li class="list-inline-item g-mx-4"><a
+								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+								href="#">CART</a></li>
+						<li class="list-inline-item g-mx-4">|</li>
+						<li class="list-inline-item g-mx-4"><a
+							class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+							href="#">FAQ</a></li>
 					</ul>
 				</div>
 
