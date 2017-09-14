@@ -281,7 +281,6 @@ WHERE product_no = #{product_no}
 		WHERE product_no = #{product_no}
 	</select>
 
-
 	<!-- 페이징 sql -->
 	<sql id="pagingHeader">
 		SELECT * FROM (
