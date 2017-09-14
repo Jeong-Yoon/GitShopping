@@ -9,7 +9,7 @@ public class ShoesDTO {
 	//가격
 	int pro_price;
 	//이미지
-	String pro_img_url;
+//	String pro_img_url;
 	
 	public String getProduct_no() {
 		return product_no;
@@ -29,11 +29,11 @@ public class ShoesDTO {
 	public void setPro_price(int pro_price) {
 		this.pro_price = pro_price;
 	}
-	public String getPro_img_url() {
-		return pro_img_url;
-	}
-	public void setPro_img_url(String pro_img_url) {
-		this.pro_img_url = pro_img_url;
-	}
+//	public String getPro_img_url() {
+//		return pro_img_url;
+//	}
+//	public void setPro_img_url(String pro_img_url) {
+//		this.pro_img_url = pro_img_url;
+//	}
 	
 }

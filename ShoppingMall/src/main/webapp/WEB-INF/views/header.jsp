@@ -340,8 +340,8 @@
 			<!-- End Responsive Toggle Button -->
 
 			<!-- Logo -->
-			<a href="index.html" class="navbar-brand"> <img
-				src="resources/WB0412697/html/e-commerce/assets/img/logo/logo-1.png"
+			<a href="${contextPath}/shoppingindex" class="navbar-brand"> <img
+				src="resources/WB0412697/html/assets/img/logo/로고1.PNG"
 				alt="Image Description">
 			</a>
 			<!-- End Logo -->
@@ -352,7 +352,7 @@
 				id="navBar">
 				<ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
 					<li class="nav-item g-mx-10--lg g-mx-15--xl"><a
-						href="index.html" class="nav-link g-px-0">Home</a></li>
+						href="${contextPath}/shoppingindex" class="nav-link g-px-0">Home</a></li>
 
 					<li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
 						<a id="nav-link--pages" class="nav-link g-px-0" href="#"
@@ -724,15 +724,15 @@
 
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="outer-list" style="text-decoration: none"><span
+												<a href="${contextPath}/outer-list" style="text-decoration: none"><span
 													style="color: #000000;">Outer</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="onepiece-list" style="text-decoration: none"><span
+												<a href="${contextPath}/onepiece-list" style="text-decoration: none"><span
 													style="color: #000000;">OPS</span></a>
 											</h4>
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="shoes-list" style="text-decoration: none"><span
+												<a href="${contextPath}/shoes-list" style="text-decoration: none"><span
 													style="color: #000000;">Shoes</span></a>
 											</h4>
 										</div>
@@ -1246,20 +1246,20 @@
 				2018</p>
 		</div>
 
-		<div class="d-flex justify-content-end">
-			<ul
-				class="u-list-inline g-bg-gray-dark-v1 g-font-weight-300 g-rounded-50 g-py-5 g-px-20">
-				<li class="list-inline-item g-mr-5"><a
-					class="u-link-v5 g-color-white g-color-primary--hover" href="#">Home</a>
-					<i class="g-color-white-opacity-0_5 g-ml-5">/</i></li>
-				<li class="list-inline-item g-mr-5"><a
-					class="u-link-v5 g-color-white g-color-primary--hover" href="#">Pages</a>
-					<i class="g-color-white-opacity-0_5 g-ml-5">/</i></li>
-				<li class="list-inline-item g-color-primary g-font-weight-400">
-					<span>Signup</span>
-				</li>
-			</ul>
-		</div>
+<!-- 		<div class="d-flex justify-content-end"> -->
+<!-- 			<ul -->
+<!-- 				class="u-list-inline g-bg-gray-dark-v1 g-font-weight-300 g-rounded-50 g-py-5 g-px-20"> -->
+<!-- 				<li class="list-inline-item g-mr-5"><a -->
+<!-- 					class="u-link-v5 g-color-white g-color-primary--hover" href="#">Home</a> -->
+<!-- 					<i class="g-color-white-opacity-0_5 g-ml-5">/</i></li> -->
+<!-- 				<li class="list-inline-item g-mr-5"><a -->
+<!-- 					class="u-link-v5 g-color-white g-color-primary--hover" href="#">Pages</a> -->
+<!-- 					<i class="g-color-white-opacity-0_5 g-ml-5">/</i></li> -->
+<!-- 				<li class="list-inline-item g-color-primary g-font-weight-400"> -->
+<!-- 					<span>Signup</span> -->
+<!-- 				</li> -->
+<!-- 			</ul> -->
+<!-- 		</div> -->
 	</div>
 	</section>
 	<!-- End Promo Block -->

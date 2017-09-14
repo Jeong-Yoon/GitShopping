@@ -148,9 +148,9 @@
 								<!-- Product -->
 								<figure>
 									<div class="g-pos-rel g-mb-20">
-										<img class="img-fluid"
-											src="${list.pro_img_url}"
-											alt="Image Description">
+										<a href="shoes-detail?product_no=${list.product_no}"><img class="img-fluid"
+											src="resources/Shoes/${list.product_no}_1.jpg"
+											alt="Image Description"></a>
 <!-- 											<img class="img-fluid" -->
 <!-- 											src="resources/WB0412697/html/assets/img-temp/480x700/img1.jpg" -->
 <!-- 											alt="Image Description"> -->
