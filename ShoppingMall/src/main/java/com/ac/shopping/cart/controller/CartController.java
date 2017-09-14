@@ -16,6 +16,9 @@ public class CartController {
 	public String shipping() {
 		return "/Cart/shipping";
 	}
-	
+	@RequestMapping("shipping_non")	
+	public String shipping_non() {
+		return "/Cart/shipping_non";
+	}
 	
 }
