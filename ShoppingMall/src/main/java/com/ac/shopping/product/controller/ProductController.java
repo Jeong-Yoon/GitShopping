@@ -64,40 +64,55 @@ public class ProductController {
 	@RequestMapping("/top-list/{var}")
 	public ModelAndView topList(ModelAndView mav, HttpServletRequest request, HttpServletResponse response, @PathVariable String var) {
 		mav.setViewName("/top-list");
-
-		int cur_page = 1;
-
-		String search_option = "";
-		String search_keyword = "";
-
-		if (request.getParameter("cur_page") != null) {
-			cur_page = Integer.parseInt(request.getParameter("cur_page"));
+	      
+      	int cur_page=1;
+		
+		String search_method="";
+		int first_value=10000;
+		int second_value=100000;
+		int star_num=1;		
+		
+		if(request.getParameter("cur_page")!=null){	
+		cur_page = Integer.parseInt(request.getParameter("cur_page"));
+		}			
+		
+		if(request.getParameter("search_method")!=null){
+		search_method = request.getParameter("search_method");
 		}
+		
+		if((request.getParameter("pricerange")!=null)&&(request.getParameter("pricerange").charAt(0)!='0')){
+		String price = request.getParameter("pricerange");
+		
+		first_value = Integer.parseInt(price.substring(0,5));
+		second_value = Integer.parseInt(price.substring(8));
+		
+		}      
+      
+		if(request.getParameter("board_like")!=null){
+			star_num = Integer.parseInt(request.getParameter("board_like"));
+		}	
 
-		if (request.getParameter("search_option") != null) {
-			search_option = request.getParameter("search_option");
-		}
-
-		if (request.getParameter("search_keyword") != null) {
-			search_keyword = request.getParameter("search_keyword");
-		}
-
-		int count = productService.all_count_tba(search_option, search_keyword,var);
-
+		int count = productService.all_count_tba(first_value,second_value,var);
+		
 		ProductPager boardPager = new ProductPager(count, cur_page);
 		int start = boardPager.getPageBegin();
 		int end = boardPager.getPageEnd();
 
 		Map<String, Object> map = new HashMap<String, Object>();
 
+		
+		
+		
 		map.put("count", count); // 레코드의 갯수
-		map.put("searchOption", search_option); // 검색옵션
-		map.put("keyword", search_keyword); // 검색키워드
+		map.put("search_method", search_method); // 검색옵션
+		map.put("first_value", first_value); 
+		map.put("second_value", second_value); 
 		map.put("boardPager", boardPager); // 페이징
+		map.put("board_like", star_num);
 		map.put("var", var);
-
+		
 		mav.addObject("map", map); // 맵에 저장된 데이터를 mav에 저장
-		mav.addObject("toplist", productService.topListProduct(start, end, search_option, search_keyword, var));
+		mav.addObject("toplist", productService.topListProduct(first_value,second_value,start, end, var));
 		return mav;
 	}
 	
@@ -113,9 +128,55 @@ public class ProductController {
 	// ==================BOTTOM===================
 	// BOTTOM 목록
 	@RequestMapping("/bottom-list/{var}")
-	public ModelAndView bottomList(ModelAndView mav, @PathVariable String var) {
+	public ModelAndView bottomList(ModelAndView mav, HttpServletRequest request, HttpServletResponse response, @PathVariable String var) {
 		mav.setViewName("/bottom-list");
-		mav.addObject("bottomlist", productService.bottomListProduct(var));
+		
+		int cur_page=1;
+		
+		String search_method="";
+		int first_value=10000;
+		int second_value=100000;
+		int star_num=1;		
+		
+		if(request.getParameter("cur_page")!=null){	
+		cur_page = Integer.parseInt(request.getParameter("cur_page"));
+		}			
+		
+		if(request.getParameter("search_method")!=null){
+		search_method = request.getParameter("search_method");
+		}
+		
+		if((request.getParameter("pricerange")!=null)&&(request.getParameter("pricerange").charAt(0)!='0')){
+		String price = request.getParameter("pricerange");
+		
+		first_value = Integer.parseInt(price.substring(0,5));
+		second_value = Integer.parseInt(price.substring(8));
+		
+		}      
+      
+		if(request.getParameter("board_like")!=null){
+			star_num = Integer.parseInt(request.getParameter("board_like"));
+		}	
+
+		
+		int count = productService.all_count_bottom(first_value,second_value,var);
+		
+		ProductPager boardPager = new ProductPager(count, cur_page);
+		int start = boardPager.getPageBegin();
+		int end = boardPager.getPageEnd();
+
+		Map<String, Object> map = new HashMap<String, Object>();
+
+		map.put("count", count); // 레코드의 갯수
+		map.put("search_method", search_method); // 검색옵션
+		map.put("first_value", first_value); 
+		map.put("second_value", second_value); 
+		map.put("boardPager", boardPager); // 페이징
+		map.put("board_like", star_num);
+		map.put("var", var);
+		
+		mav.addObject("map", map); // 맵에 저장된 데이터를 mav에 저장		
+		mav.addObject("bottomlist", productService.bottomListProduct(first_value,second_value,start, end,var));
 		return mav;
 	}
 	

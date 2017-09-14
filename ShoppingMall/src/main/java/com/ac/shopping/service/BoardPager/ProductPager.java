@@ -2,7 +2,7 @@ package com.ac.shopping.service.BoardPager;
 
 public class ProductPager {
 
-	public static final int PAGE_SCALE = 15;
+	public static final int PAGE_SCALE = 9;
     // 화면당 페이지 수
     public static final int BLOCK_SCALE = 5;
     private int curPage; // 현재 페이수
