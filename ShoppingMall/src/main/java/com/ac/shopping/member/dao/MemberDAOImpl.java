@@ -39,7 +39,7 @@ public class MemberDAOImpl implements MemberDAO{
     }
 	// 02. 회원 로그아웃
     @Override
-    public void logout(HttpSession sessin) {
+    public void logout(HttpSession session) {
     }
 
 	public int id_check(String id) {

@@ -147,12 +147,16 @@ public class MemberController {
     
     // 03. 로그아웃 처리
     @RequestMapping("logout.do")
-    public ModelAndView logout(HttpSession session){
+    public ModelAndView logout(HttpSession session, HttpServletResponse response) throws IOException{
         memberService.logout(session);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("shoppingindex");
-        mav.addObject("msg", "logout");
+        response.setContentType("text/html; charset=UTF-8");
+    	PrintWriter out = response.getWriter();
+    	out.println("<script>alert('로그아웃 되셨습니다.'); document.location.href='shoppingindex'</script>");
+    	out.close();
         return mav;
     }
+    
+
 
 }

@@ -547,10 +547,7 @@
 		</div>
 	</div>
 	<!-- End Filters -->
+<jsp:include page="footer.jsp" flush="false" />
 
-
-
-
-	<jsp:include page="footer.jsp" flush="false" />
 </body>
 </html>

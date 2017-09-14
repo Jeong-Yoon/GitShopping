@@ -145,7 +145,7 @@
 						<c:if test="${not empty sessionScope.m_id}">
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="${contextPath}/page-login">Logout</a></li>
+								href="logout.do">Logout</a></li>
 							<li class="list-inline-item g-mx-4"><a
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 								href="#"><c:if test="${msg == 'success'}">
@@ -156,7 +156,7 @@
 				</div>
 
 				<div class="col-auto">
-
+               ${sessionScope.m_id}
 					<!-- Basket -->
 					<div class="u-basket d-inline-block g-valign-middle g-pt-2">
 						<a href="#" id="basket-bar-invoker"
