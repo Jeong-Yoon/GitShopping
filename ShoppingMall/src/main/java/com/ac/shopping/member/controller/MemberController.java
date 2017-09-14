@@ -154,8 +154,6 @@ public class MemberController {
     	PrintWriter out = response.getWriter();
     	out.println("<script>alert('로그아웃 되셨습니다.'); document.location.href='shoppingindex'</script>");
     	out.close();
-        mav.setViewName("shoppingindex");
-        mav.addObject("msg", "logout");
         return mav;
     }
     
