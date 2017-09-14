@@ -132,10 +132,12 @@
 								<form class="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-30"
 									name="insert" action="insert.do">
 									<div class="form-group g-mb-25">
-										<label for="exampleInputEmail1">작성자</label> <input type="text"
-											class="form-control form-control-md rounded-0"
-											id="BOARD_WRITER" name="BOARD_WRITER" aria-describedby="emailHelp"
-											placeholder="작성자">
+										<label for="exampleInputEmail1">작성자</label> 
+										${sessionScope.m_id}
+<!-- 										<input type="text" -->
+<!-- 											class="form-control form-control-md rounded-0" -->
+<!-- 											id="BOARD_WRITER" name="BOARD_WRITER" aria-describedby="emailHelp" -->
+<!-- 											placeholder="작성자"> -->
 									</div>
 
 									<div class="form-group g-mb-25">

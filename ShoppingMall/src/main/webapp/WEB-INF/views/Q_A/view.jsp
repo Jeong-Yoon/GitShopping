@@ -86,10 +86,9 @@
 				
 				<!-- Table #01 -->
 				
-				
-				<form name="form1">
+				<form name="form1" style="margin: 0 auto;">
 				<section class="g-pb-100">
-					<div class="container">
+					<div class="container" style="margin: 0 auto;">
 						<div class="text-center g-mb-50">
 							<h2 class="h4">
 								게시글 <span class="g-color-primary g-ml-5">#읽기</span>
@@ -100,10 +99,10 @@
 							<div class="shortcode-html">
 								<!--Basic Table-->
 								<div class="table-responsive">
-									<table class="table table-bordered u-table--v2">
+									<table class="table table-bordered u-table--v2" style="margin: 0 auto; width:600px;">
 											<tr>
-												<td class="align-middle text-nowrap" style="width:200px;">작성자</td>
-												<td class="align-middle" name="BOARD_WRITER">
+												<td class="align-middle text-nowrap" style="width:100px;">작성자</td>
+												<td class="align-middle" name="BOARD_WRITER" style="width:500px;">
 													${view.BOARD_WRITER}</td>
 											</tr>
 
@@ -130,7 +129,29 @@
 												<td class="align-middle" name="BOARD_CONTENT"> ${view.BOARD_CONTENT}</td>
 											</tr>
 										</tbody>
+									
 									</table>
+									
+
+				 
+                 <c:choose>  
+				    <c:when test="${empty view.BOARD_REPLY}">  
+    				</c:when>  
+      
+    				<c:otherwise> 
+    				<table class="table table-bordered u-table--v2" style="margin: 0 auto; width:600px;">
+				          <tr> 
+				          <hr class="g-brd-gray-light-v4 my-0" style="width:1000px;">
+							<hr class="g-brd-gray-light-v4 my-0" style="width:1000px;">
+				          
+                             <td class="align-middle text-nowrap" style="width:100px;">답변</td>
+                             <td class="align-middle" name="BOARD_WRITER" style="width:500px;">                                        
+                                    ${view.BOARD_REPLY}</td>
+                                  </tr> 
+                            </table> 
+    				</c:otherwise>  
+				</c:choose>  
+									
 								</div>
 								<!--End Basic Table-->
 							</div>
@@ -151,21 +172,22 @@
 							</script>
 							</div>
 						</div>
-					</div>
-				</section>
 				<!-- End Table #01 -->
 
-				<hr class="g-brd-gray-light-v4 my-0">
-
-		<div style="width:650px; text-align: center;">
+		
        	 	 <input type="hidden" name="BOARD_INDEX" value="${view.BOARD_INDEX}">
-				<button type="button"class="btn btn-md u-btn-primary rounded-0" onclick="location.href='../Q_A/modify?BOARD_INDEX=${view.BOARD_INDEX}&BOARD_WRITER=${view.BOARD_WRITER}&BOARD_TITLE=${view.BOARD_TITLE}&BOARD_CONTENT=${view.BOARD_CONTENT}'">
+				<div style="margin: 0 auto;">
+				<button type="button" class="btn btn-md u-btn-primary rounded-0" onclick="location.href='../Q_A/modify?BOARD_INDEX=${view.BOARD_INDEX}&BOARD_WRITER=${view.BOARD_WRITER}&BOARD_TITLE=${view.BOARD_TITLE}&BOARD_CONTENT=${view.BOARD_CONTENT}'">
 				수정</button>
 				<button type="button"
-					class="btn btn-md u-btn-primary rounded-0" onclick="location.href='../Q_A/delete.do?BOARD_INDEX=${view.BOARD_INDEX}'" >
+					class="btn btn-md u-btn-primary rounded-0" onclick="button_event()" >
 					삭제</button>
+		
+				</div>
+				</div>
+				
+				</section>
 		</form>			
-		</div>
 		</div>
 		</div>
 	</section>
@@ -253,6 +275,19 @@
 	<script
 		src="resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
 	<script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+
+	<script type="text/javascript">
+	function button_event(){
+	if (confirm("정말 삭제합니까?") == true){    //확인
+		location.href = "../Q_A/delete.do?BOARD_INDEX=${view.BOARD_INDEX}";
+    }else{   
+     return;
+    }
+	}
+
+</script>
+
+
 
 	<script>
 		$(document).on('ready', function() {
