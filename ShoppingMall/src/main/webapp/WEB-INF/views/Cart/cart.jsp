@@ -18,31 +18,33 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/chosen/chosen.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/animate.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/icon-hs/style.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/chosen/chosen.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/animate.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
 
     <!-- CSS Unify Theme -->
-    <link rel="stylesheet" href="resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/css/custom.css">
+    <link rel="stylesheet" href="../resources/WB0412697/html/assets/css/custom.css">
   </head>
 
   <body>
     <main>
+    	<jsp:include page="../header.jsp" flush="false" />
+    
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
         <form class="js-validate js-step-form" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
@@ -98,7 +100,7 @@
                         <!-- Item-->
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+                            <img class="d-inline-block g-width-100 mr-4" src="../resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">Sneaker</h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
@@ -130,7 +132,7 @@
                         <!-- Item-->
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
+                            <img class="d-inline-block g-width-100 mr-4" src="../resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">Chukka Shoes</h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
@@ -162,7 +164,7 @@
                         <!-- Item-->
                         <tr>
                           <td class="text-left g-pt-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
+                            <img class="d-inline-block g-width-100 mr-4" src="../resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">Desk Clock</h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
@@ -201,6 +203,67 @@
                   <div class="g-bg-gray-light-v5 g-pa-20 g-pb-50 mb-4">
                     <h4 class="h6 text-uppercase mb-3">총 결제 금액</h4>
 
+                                 <!-- Accordion -->
+                    <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true">
+                      <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab">
+                        <h5 class="g-font-weight-400 g-font-size-default mb-0">
+                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">총     $ 개의 상품
+                            <span class="ml-3 fa fa-angle-down"></span></a>
+                        </h5>
+                      </div>
+                      <div id="accordion-03-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-03-heading-03">
+                        <div class="g-py-15">
+                          <ul class="list-unstyled mb-3">
+                            <!-- Product -->
+                            <li class="d-flex justify-content-start">
+                              <img class="g-width-100 g-height-100 mr-3" src="resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+                              <div class="d-block">
+                                <h4 class="h6 g-color-black">Sneaker</h4>
+                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
+                                  <li>색상: Black</li>
+                                  <li>Size: MD</li>
+                                  <li>수량: 1</li>
+                                </ul>
+                                <span class="d-block g-color-black g-font-weight-400">&#8361; 87.00</span>
+                              </div>
+                            </li>
+                            <!-- End Product -->
+
+                            <!-- Product -->
+                            <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
+                              <img class="g-width-100 g-height-100 mr-3" src="../resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
+                              <div class="d-block">
+                                <h4 class="h6 g-color-black">Chukka Shoes</h4>
+                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
+                                  <li>색상: Black</li>
+                                  <li>Size: MD</li>
+                                  <li>수량: 2</li>
+                                </ul>
+                                <span class="d-block g-color-black g-font-weight-400"> &#8361; 160.00</span>
+                              </div>
+                            </li>
+                            <!-- End Product -->
+
+                            <!-- Product -->
+                            <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
+                              <img class="g-width-100 g-height-100 mr-3" src="../resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
+                              <div class="d-block">
+                                <h4 class="h6 g-color-black">Desk Clock</h4>
+                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
+                                  <li>색상: Brown Wood</li>
+                                  <li>Type: Desk</li>
+                                  <li>수량: 1</li>
+                                </ul>
+                                <span class="d-block g-color-black g-font-weight-400">&#8361; 47.00</span>
+                              </div>
+                            </li>
+                            <!-- End Product -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Accordion -->
+                    
                     
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
@@ -243,38 +306,40 @@
          data-show-effect="zoomIn">
         <i class="hs-icon hs-icon-arrow-top"></i>
       </a>
+      
+          	<jsp:include page="../footer.jsp" flush="false" />
     </main>
 
     <!-- JS Global Compulsory -->
-    <script src="resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/tether.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/tether.min.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
     <!-- JS Implementing Plugins -->
-    <script src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/chosen/chosen.jquery.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/chosen/chosen.jquery.js"></script>
+    <script src="../resources/WB0412697/html/assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
 
     <!-- JS Unify -->
-    <script src="resources/WB0412697/html/assets/js/hs.core.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.header.js"></script>
-    <script src="resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.select.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.count-qty.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.step-form.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.validation.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/hs.core.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/components/hs.header.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/components/hs.select.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/components/hs.count-qty.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/components/hs.step-form.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/components/hs.validation.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
 
     <!-- JS Customization -->
-    <script src="resources/WB0412697/html/assets/js/custom.js"></script>
+    <script src="../resources/WB0412697/html/assets/js/custom.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>

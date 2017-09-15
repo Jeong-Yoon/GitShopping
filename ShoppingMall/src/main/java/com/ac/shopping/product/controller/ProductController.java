@@ -267,5 +267,32 @@ public class ProductController {
 		
 		
 	}
+<<<<<<< HEAD
 
+=======
+	
+	@RequestMapping("/cart_Chk")
+	public String cartChk(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws IOException{
+		String pro_no = request.getParameter("product_no");
+		String m_id = (String) session.getAttribute("m_id");
+		int quantity = Integer.parseInt(request.getParameter("quantity"));
+		System.out.println(m_id);
+		System.out.println(pro_no);
+		boolean result = productService.cart_Chk(pro_no, m_id);
+		if (result) {
+			productService.addCart2(pro_no, m_id,quantity);
+			return"cart";
+		} else{
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('이미 담겨져 있는 상품입니다.'); history.go(-1);</script>"); 
+			out.flush();
+			out.close();
+			return "";
+		}
+	}
+	
+	
+	
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 }

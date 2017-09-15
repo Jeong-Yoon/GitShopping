@@ -69,14 +69,14 @@ function goto_url(act) {
               </header>
 
               <!-- Form -->
-              <form class="g-py-15" id="sign_Up" action="sign_Up_OK" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+              <form class="g-py-15" name="sign_Up" action="sign_Up_OK" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
 
                 <div class="row" id="nanum">
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" required>
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" name="m_id" placeholder="Id" value="${id}"  required>
                   </div>
                   <div>
-                  <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="button" onclick="">중복확인</button>
+                   <button class="btn btn-block u-btn-primary g-font-size-default text-uppercase g-py-13" type="button" onclick="goto_url('id_check')">중복확인</button>
                   </div>
                 </div>
  

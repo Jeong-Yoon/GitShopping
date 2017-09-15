@@ -23,45 +23,45 @@
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
 
 <!-- CSS Implementing Plugins -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/slick-carousel/slick/slick.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/slick-carousel/slick/slick.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-hs/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/animate.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/animate.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
 
 <!-- Revolution Slider -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/css/settings.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/revolution-slider/revolution/css/settings.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/css/layers.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/revolution-slider/revolution/css/layers.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/css/navigation.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/revolution-slider/revolution/css/navigation.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/revolution-slider/revolution-addons/typewriter/css/typewriter.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/revolution-slider/revolution-addons/typewriter/css/typewriter.css">
 
 <!-- CSS Unify Theme -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
+	href="${contextPath}/resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
 
 <!-- CSS Customization -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/css/custom.css">
+	href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
 </head>
 <body>
 	<!-- Header -->
@@ -197,7 +197,7 @@
 									<div class="row align-items-center no-gutters">
 										<div class="col-4 g-pr-20">
 											<a href="#" class="u-basket__product-img"><img
-												src="resources/WB0412697/html/assets/img-temp/150x150/img1.jpg"
+												src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img1.jpg"
 												alt="Image Description"></a>
 										</div>
 
@@ -243,7 +243,7 @@
 									<div class="row align-items-center no-gutters">
 										<div class="col-4 g-pr-20">
 											<a href="#" class="u-basket__product-img"><img
-												src="resources/WB0412697/html/assets/img-temp/150x150/img3.jpg"
+												src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg"
 												alt="Image Description"></a>
 										</div>
 
@@ -266,7 +266,7 @@
 									<div class="row align-items-center no-gutters">
 										<div class="col-4 g-pr-20">
 											<a href="#" class="u-basket__product-img"><img
-												src="resources/WB0412697/html/assets/img-temp/150x150/img4.jpg"
+												src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img4.jpg"
 												alt="Image Description"></a>
 										</div>
 
@@ -357,7 +357,7 @@
 
 			<!-- Logo -->
 			<a href="${contextPath}/shoppingindex" class="navbar-brand"> <img
-				src="resources/WB0412697/html/assets/img/logo/로고1.PNG"
+				src="${contextPath}/resources/WB0412697/html/assets/img/logo/로고1.PNG"
 				alt="Image Description">
 			</a>
 			<!-- End Logo -->
@@ -407,7 +407,7 @@
 									<figure class="g-px-10">
 									<div class="g-pos-rel g-mb-20">
 										<a href="#"><img class="img-fluid"
-											src="resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
 											alt="Image Description"></a>
 										<!-- Ribbon -->
 										<figcaption> <span
@@ -453,7 +453,7 @@
 									<figure class="g-px-10">
 									<div class="g-pos-rel g-mb-20">
 										<a href="#"><img class="img-fluid"
-											src="resources/WB0412697/html/assets/img-temp/480x700/img2.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img2.jpg"
 											alt="Image Description"></a>
 									</div>
 
@@ -495,7 +495,7 @@
 									<figure class="g-px-10">
 									<div class="g-pos-rel g-mb-20">
 										<a href="#"><img class="img-fluid"
-											src="resources/WB0412697/html/assets/img-temp/480x700/img3.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img3.jpg"
 											alt="Image Description"></a>
 
 										<!-- Ribbon -->
@@ -542,7 +542,7 @@
 									<figure class="g-px-10">
 									<div class="g-pos-rel g-mb-20">
 										<a href="#"><img class="img-fluid"
-											src="resources/WB0412697/html/assets/img-temp/480x700/img4.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img4.jpg"
 											alt="Image Description"></a>
 									</div>
 
@@ -596,7 +596,7 @@
 								<div class="col-md-4 g-mb-30 g-mb-0--md">
 									<article class="u-block-hover"> <img
 										class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-										src="resources/WB0412697/html/assets/img-temp/650x850/img1.jpg"
+										src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x850/img1.jpg"
 										alt="Image Description">
 									<div class="g-pos-abs g-bottom-30 g-left-30">
 										<span class="d-block g-color-black">Collections</span>
@@ -608,7 +608,7 @@
 								<div class="col-md-4 g-mb-30 g-mb-0--md">
 									<article class="u-block-hover"> <img
 										class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-										src="resources/WB0412697/html/assets/img-temp/650x850/img2.jpg"
+										src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x850/img2.jpg"
 										alt="Image Description">
 									<div class="g-pos-abs g-bottom-30 g-left-30">
 										<span class="d-block g-color-black">Collections</span>
@@ -620,7 +620,7 @@
 								<div class="col-md-4 g-mb-30 g-mb-0--md">
 									<article class="u-block-hover"> <img
 										class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-										src="resources/WB0412697/html/assets/img-temp/650x850/img3.jpg"
+										src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x850/img3.jpg"
 										alt="Image Description">
 									<div class="g-pos-abs g-bottom-30 g-left-30">
 										<span class="d-block g-color-black">Collections</span>
@@ -645,7 +645,7 @@
 							<div class="row align-items-center no-gutters">
 								<div
 									class="col-sm-7 col-lg-8 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered"
-									data-bg-img-src="resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg"
+									data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg"
 									style="background-image: url(resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg);">
 									<div class="g-flex-centered-item text-right g-pa-50">
 										<h2
@@ -662,11 +662,11 @@
 
 								<div
 									class="col-sm-5 col-lg-4 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered"
-									data-bg-img-src="resources/WB0412697/html/assets/img/bg/secondary.png"
+									data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img/bg/secondary.png"
 									style="background-image: url(resources/WB0412697/html/assets/img/bg/secondary.png);">
 									<div class="text-center">
 										<img class="img-fluid mb-3"
-											src="resources/WB0412697/html/assets/img-temp/500x320/img4.png"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/500x320/img4.png"
 											alt="Image Description">
 										<h3
 											class="h5 u-link-v5 g-color-primary--hover g-font-weight-400 mb-3">Sneaker
@@ -789,7 +789,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img1.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img1.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->
@@ -839,7 +839,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img2.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img2.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->
@@ -889,7 +889,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img3.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->
@@ -939,7 +939,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img4.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img4.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->
@@ -989,7 +989,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img5.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img5.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->
@@ -1039,7 +1039,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img6.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img6.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->
@@ -1089,7 +1089,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img7.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->
@@ -1139,7 +1139,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img8.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img8.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->
@@ -1189,7 +1189,7 @@
 									<!-- Article Image -->
 									<div class="g-max-width-100 g-mr-15">
 										<img class="d-flex w-100"
-											src="resources/WB0412697/html/assets/img-temp/150x150/img9.jpg"
+											src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img9.jpg"
 											alt="Image Description">
 									</div>
 									<!-- End Article Image --> <!-- Article Info -->

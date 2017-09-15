@@ -44,8 +44,8 @@
   <body>
     <main>
       
-<jsp:include page="../header.jsp" flush="false" />
 
+     <jsp:include page="../header.jsp" flush="false" />
      
 
       <!-- Checkout Form -->
@@ -103,7 +103,7 @@
                         <!-- Item-->
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+                            <img class="d-inline-block g-width-100 mr-4" src="../resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">Sneaker</h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
@@ -279,42 +279,59 @@
                   <div class="row">
                     <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
-                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">이름</label>
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문자 이름</label>
                         <input id="inputGroup4" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="firstName" type="text" placeholder="이름" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
 
-                     
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
-                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">연락처</label>
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">받으실 분 이름</label>
                         <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="stateProvince" type="text" placeholder="010-000-0000" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
-                      
                     </div>
-
                   </div>
 
                   <div class="row">
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
-                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">주소</label>
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문자 연락처</label>
                         <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="" type="text" placeholder="주소">
                       </div>
                     </div>
                      
-		 <div class="col-sm-6 g-mb-20">
+		 			<div class="col-sm-6 g-mb-20">
                       <div class="form-group">
-                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문메시지</label>
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">받으실 분 연락처</label>
                         <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="zip" type="text" placeholder="부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
-
-                    
                   </div>
 
+                  <div class="row">
+                     <div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문자 주소</label>
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="" type="text" placeholder="주소">
+                      </div>
+                    </div>
+                     
+		 			<div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">받으실 분 주소</label>
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="zip" type="text" required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1" placeholder="주소">
+                      </div>
+                    </div>
+                  </div>
                   
-                  
+                  <div class="row">
+                     <div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문 메시지</label>
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" placeholder="부재시 경비실에 맡겨주세요."  name="" type="text" >
+                      </div>
+                    </div>
+                  </div>
 
                   <hr class="g-mb-50">
 
@@ -326,8 +343,9 @@
                   <!-- Order Summary -->
                   <div class="g-bg-gray-light-v5 g-pa-20 g-pb-50 mb-4">
                     <h4 class="h6 text-uppercase mb-3">총 결제금액</h4>
-
-                        <!-- Accordion -->
+                    
+                    
+				            <!-- Accordion -->
                     <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true">
                       <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab">
                         <h5 class="g-font-weight-400 g-font-size-default mb-0">
@@ -388,8 +406,6 @@
                     </div>
                     <!-- End Accordion -->
            
-           
-           
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
                       <span class="g-color-black g-font-weight-300">$454.00</span>
@@ -418,7 +434,7 @@
                           <i class="fa" data-check-icon="&#xf00c"></i>
                         </div>
                         Pay with
-                        <img class="g-width-70 ml-2" src="../resources/WB0412697/html/assets/img-temp/200x55/img1.jpg" alt="Image Description">
+                        <img class="g-width-70 ml-2" src="resources/WB0412697/html/assets/img-temp/200x55/img1.jpg" alt="Image Description">
                       </label>
                     </li>
                     <li class="my-3">
@@ -538,7 +554,7 @@
 
                             <!-- Product -->
                             <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
-                              <img class="g-width-100 g-height-100 mr-3" src="../resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
+                              <img class="g-width-100 g-height-100 mr-3" src="resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
                               <div class="d-block">
                                 <h4 class="h6 g-color-black">Chukka Shoes</h4>
                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
