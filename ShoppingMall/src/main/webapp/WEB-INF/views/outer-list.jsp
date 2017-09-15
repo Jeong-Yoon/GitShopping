@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
-
+<!-- Title -->
+<title>E-commerce Grid Filter Page | Unify - Responsive Website
+	Template</title>
 
 <!-- Required Meta Tags Always Come First -->
 <meta charset="utf-8">
@@ -549,5 +547,90 @@
 	<!-- End Filters -->
 <jsp:include page="footer.jsp" flush="false" />
 
+<a class="js-go-to u-go-to-v2" href="#" data-type="fixed"
+				data-position='{
+           "bottom": 15,
+           "right": 15
+         }'
+				data-offset-top="400" data-compensation="#js-header"
+				data-show-effect="zoomIn"> <i class="hs-icon hs-icon-arrow-top"></i>
+			</a>
+	</main>
+
+	<!-- JS Global Compulsory -->
+	<script
+		src="resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+	<script src="resources/WB0412697/html/assets/vendor/tether.min.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+	<!-- JS Implementing Plugins -->
+	<script
+		src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/slider.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<!-- JS Unify -->
+	<script src="resources/WB0412697/html/assets/js/hs.core.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/js/components/hs.header.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
+	<script src="resources/WB0412697/html/assets/js/helpers/hs.rating.js"></script>
+	<script
+		src="resources/WB0412697/html/assets/js/components/hs.slider.js"></script>
+	<script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+
+	<!-- JS Customization -->
+	<script src="resources/WB0412697/html/assets/js/custom.js"></script>
+
+	<!-- JS Plugins Init. -->
+	<script>
+		$(document).on('ready', function() {
+			// initialization of header
+			$.HSCore.components.HSHeader.init($('#js-header'));
+			$.HSCore.helpers.HSHamburgers.init('.hamburger');
+			// initialization of HSMegaMenu component
+			$('.js-mega-menu').HSMegaMenu({
+				event : 'hover',
+				pageContainer : $('.container'),
+				breakpoint : 991
+			});
+			// initialization of HSDropdown component
+			$.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
+				afterOpen : function() {
+					$(this).find('input[type="search"]').focus();
+				}
+			});
+			// initialization of HSScrollBar component
+			$.HSCore.components.HSScrollBar.init($('.js-scrollbar'));
+			// initialization of go to
+			$.HSCore.components.HSGoTo.init('.js-go-to');
+			// initialization of rating
+			$.HSCore.helpers.HSRating.init();
+			// initialization of range slider
+			$.HSCore.components.HSSlider.init('#rangeSlider1');
+		});
+	</script>
 </body>
 </html>
