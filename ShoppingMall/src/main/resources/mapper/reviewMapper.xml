@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="review">
+
+<select id="selectbox" resultType="String">
+	
+   SELECT		
+		p.pro_name	
+		<include refid="type"></include> 
+		   
+</select>
+
+<sql id="type">
+    <choose>
+      <!-- 검색옵션이 전체 검색일 경우 -->
+      	<when test="case_type == 1"> 
+        FROM product p JOIN top_bottom_acc
+		tba			
+		ON p.product_no = tba.product_no		       
+        </when>      
+        <when test="case_type == 2"> 
+        FROM product p JOIN top_bottom_acc
+		tba			
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[T]%'
+		AND tba.category like '%T-SHIRT%'         
+        </when>
+        <when test="case_type == 3"> 
+        FROM product p JOIN top_bottom_acc
+		tba			
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[T]%'
+		AND tba.category like '%MANTOMAN/HOODTEE%'    
+        </when>
+        <when test="case_type == 4"> 
+        FROM product p JOIN top_bottom_acc
+		tba			
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[T]%'
+		AND tba.category like '%KNIT%'   
+        </when>
+        <when test="case_type == 5"> 
+        FROM product p JOIN top_bottom_acc
+		tba			
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[T]%'
+		AND tba.category like '%BLOUSE%'   
+        </when>        
+        
+        
+        <when test="case_type == 6">  
+        FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[B]%'		
+        </when>
+        
+        <when test="case_type == 7">  
+        FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[B]%'	
+		AND tba.category like '%SHORTPANTS%'	
+        </when>
+        
+        <when test="case_type == 8">  
+        FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[B]%'	
+		AND tba.category like '%STRAIGHT%'	
+        </when>
+        
+        <when test="case_type == 9">  
+        FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[B]%'	
+		AND tba.category like '%TRAINING%'	
+        </when>
+        
+        
+        <when test="case_type == 10">  
+       	FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[A]%'
+        </when>
+        
+        <when test="case_type == 11">  
+       	FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[A]%'
+		AND tba.category like '%EARRING%'
+        </when>
+        
+        <when test="case_type == 12">  
+       	FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[A]%'
+		AND tba.category like '%NECK%'
+        </when>
+        
+        <when test="case_type == 13">  
+       	FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[A]%'
+		AND tba.category like '%BLACELET%'
+        </when>
+        
+        <when test="case_type == 14">  
+       	FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[A]%'
+		AND tba.category like '%SOCKS%'
+        </when>
+        
+        <when test="case_type == 15">  
+       	FROM product p JOIN top_bottom_acc
+		tba
+		ON p.product_no = tba.product_no
+		WHERE tba.category like '%[A]%'
+		AND tba.category like '%BELT%'
+        </when>            
+        
+        <when test="case_type == 16">        
+		FROM product p JOIN outer_onepiece otop
+		ON p.product_no = otop.product_no
+		WHERE otop.category LIKE '%[OUT]%'		
+        </when>
+         <when test="case_type == 17"> 
+        FROM product p JOIN outer_onepiece otop
+		ON p.product_no = otop.product_no
+		WHERE otop.category LIKE '%[OPS]%'
+        </when>
+        <when test="case_type == 18">          
+		FROM PRODUCT p JOIN SHOES shoe ON
+		p.product_no = shoe.product_no           
+        </when>  
+        
+        <otherwise>
+        FROM PRODUCT p
+        </otherwise>    
+     
+    </choose>
+</sql>
+
+</mapper>

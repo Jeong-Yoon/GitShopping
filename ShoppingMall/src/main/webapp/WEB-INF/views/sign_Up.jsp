@@ -69,7 +69,7 @@ function goto_url(act) {
               </header>
 
               <!-- Form -->
-              <form class="g-py-15" id="sign_Up" action="sign_Up_OK" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+              <form class="g-py-15" name="sign_Up" action="sign_Up_OK" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
 
                 <div class="row" id="nanum">
                   <div class="col g-mb-20">
