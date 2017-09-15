@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var="contextPath" value="<%= request.getContextPath()%>"></c:set>
+<c:set var="contextPath" value="<%=request.getContextPath()%>"></c:set>
 <head>
 <!-- Title -->
 <title>E-commerce Grid Filter Page | Unify - Responsive Website
@@ -83,7 +83,7 @@ function starfive(){
         		+"&board_like=${map.board_like}";
  }
 
-</script>	
+</script>
 
 <script>
 body {margin: 10px; font-size: 13px}
@@ -264,133 +264,146 @@ body {margin: 10px; font-size: 13px}
 					<!-- End Filters -->
 
 					<!-- Products -->
-					
-						<div class="row g-pt-30 g-mb-50">
-							<c:forEach var="row" items="${toplist}">
-								<div class="col-6 col-lg-4 g-mb-30">
-									<!-- Product -->
-									<figure>
-										<div class="g-pos-rel g-mb-20">
-											<img class="img-fluid" src="../resources/TOP/${row.product_no}_1.jpg"
-												alt="Image Description" witdh="480" height="700"></a>
-											<!-- Ribbon -->
-											<figcaption>
-												<span
-													class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
-											</figcaption>
-											<!-- End Ribbon -->
-										</div>
-										<div class="media">
-											<!-- Product Info -->
-											<div class="d-flex flex-column">
-												<h4 class="h6 g-color-black mb-1">
-													<a class="u-link-v5 g-color-black g-color-primary--hover"
-														href="${contextPath}/top-detail?product_no=${row.product_no}"> ${row.pro_name} </a>
-												</h4>
-												<span class="d-block g-color-black g-font-size-17">${row.pro_price}</span>
-											</div>
 
-											<!-- End Product Info -->
-
-											<!-- Products Icons -->
-											<ul class="list-inline media-body text-right">
-												<li class="list-inline-item align-middle mx-0"><a
-													class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-													href="${contextPath}/add-cart?product_no=${row.product_no}" data-toggle="tooltip" data-placement="top"
-													title="Add to Cart"> <i
-														class="icon-finance-100 u-line-icon-pro"></i>
-												</a></li>
-											</ul>
-											<!-- End Products Icons -->
+					<div class="row g-pt-30 g-mb-50">
+						<c:forEach var="row" items="${toplist}">
+							<div class="col-6 col-lg-4 g-mb-30">
+								<!-- Product -->
+								<figure>
+									<div class="g-pos-rel g-mb-20">
+										<img class="img-fluid"
+											src="../resources/TOP/${row.product_no}_1.jpg"
+											alt="Image Description" witdh="480" height="700"></a>
+										<!-- Ribbon -->
+										<figcaption>
+											<span
+												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
+										</figcaption>
+										<!-- End Ribbon -->
+									</div>
+									<div class="media">
+										<!-- Product Info -->
+										<div class="d-flex flex-column">
+											<h4 class="h6 g-color-black mb-1">
+												<a class="u-link-v5 g-color-black g-color-primary--hover"
+													href="${contextPath}/top-detail?product_no=${row.product_no}">
+													${row.pro_name} </a>
+											</h4>
+											<span class="d-block g-color-black g-font-size-17">${row.pro_price}</span>
 										</div>
-									</figure>
-									<!-- End Product -->
-								</div>
+
+										<!-- End Product Info -->
+
+										<!-- Products Icons -->
+										<ul class="list-inline media-body text-right">
+<!-- 											<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 												class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<%-- 												href="${contextPath}/add-cart?product_no=${row.product_no}" --%>
+<!-- 												data-toggle="tooltip" data-placement="top" -->
+<!-- 												title="Add to Cart"> <i -->
+<!-- 													class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 											</a></li> -->
+
+											<li class="list-inline-item align-middle mx-0"><a
+												class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5
+												g-color-primary--hover g-font-size-15 rounded-circle"
+												href="${contextPath}/Cart/wish?product_no=${row.product_no}&pro_price=${row.pro_price}" data-toggle="tooltip" data-placement="top"
+												title="Add to Wishlist"> <i
+													class="icon-medical-022 u-line-icon-pro"></i>
+											</a></li>
+										</ul>
+										<!-- End Products Icons -->
+									</div>
+								</figure>
+								<!-- End Product -->
+							</div>
+						</c:forEach>
+
+					</div>
+
+					<!-- End Products -->
+
+					<hr class="g-mb-60">
+
+					<!-- Pagination -->
+					<nav class="g-mb-60" aria-label="Page Navigation">
+						<ul class="list-inline">
+
+							<c:if test="${map.boardPager.curBlock > 1}">
+								<li class="list-inline-item hidden-down"><a
+									class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+									href="javascript:list('1')">[처음]</a></li>
+							</c:if>
+
+							<c:if test="${map.boardPager.curBlock > 1}">
+								<li class="list-inline-item hidden-down"><a
+									class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+									href="javascript:list('${map.boardPager.prevPage}')">[이전]</a></li>
+							</c:if>
+
+
+							<!-- **하나의 블럭에서 반복문 수행 시작페이지부터 끝페이지까지 -->
+							<c:forEach var="num" begin="${map.boardPager.blockBegin}"
+								end="${map.boardPager.blockEnd}">
+								<!-- **현재페이지이면 하이퍼링크 제거 -->
+								<c:choose>
+									<c:when test="${num == map.boardPager.curPage}">
+
+										<li class="list-inline-item hidden-down"><a
+											class="active u-pagination-v1__item g-width-30 g-height-30 g-brd-gray-light-v3 g-brd-primary--active g-color-white g-bg-primary--active g-font-size-12 rounded-circle g-pa-5">${num}</a></li>
+									</c:when>
+									<c:otherwise>
+										<li class="list-inline-item hidden-down"><a
+											class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+											href="javascript:list('${num}')">${num}</a></li>
+									</c:otherwise>
+								</c:choose>
 							</c:forEach>
 
-						</div>
 
-						<!-- End Products -->
+							<!-- **다음페이지 블록으로 이동 : 현재 페이지 블럭이 전체 페이지 블럭보다 작거나 같으면 [다음]하이퍼링크를 화면에 출력 -->
+							<c:if
+								test="${map.boardPager.curBlock <= map.boardPager.totBlock}">
+								<li class="list-inline-item hidden-xs-down"><a
+									class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+									href="javascript:list('${map.boardPager.nextPage}')">[다음]</a></li>
+							</c:if>
 
-						<hr class="g-mb-60">
+							<!-- **끝페이지로 이동 : 현재 페이지가 전체 페이지보다 작거나 같으면 [끝]하이퍼링크를 화면에 출력 -->
+							<c:if test="${map.boardPager.curPage <= map.boardPager.totPage}">
+								<li class="list-inline-item hidden-down"><a
+									class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
+									href="javascript:list('${map.boardPager.totPage}')">[끝]</a></li>
+							</c:if>
 
-						<!-- Pagination -->
-						<nav class="g-mb-60" aria-label="Page Navigation">
-							<ul class="list-inline">
-
-								<c:if test="${map.boardPager.curBlock > 1}">
-									<li class="list-inline-item hidden-down"><a
-										class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-										href="javascript:list('1')">[처음]</a></li>
-								</c:if>
-
-								<c:if test="${map.boardPager.curBlock > 1}">
-									<li class="list-inline-item hidden-down"><a
-										class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-										href="javascript:list('${map.boardPager.prevPage}')">[이전]</a></li>
-								</c:if>
-
-
-								<!-- **하나의 블럭에서 반복문 수행 시작페이지부터 끝페이지까지 -->
-								<c:forEach var="num" begin="${map.boardPager.blockBegin}"
-									end="${map.boardPager.blockEnd}">
-									<!-- **현재페이지이면 하이퍼링크 제거 -->
-									<c:choose>
-										<c:when test="${num == map.boardPager.curPage}">
-
-											<li class="list-inline-item hidden-down"><a
-												class="active u-pagination-v1__item g-width-30 g-height-30 g-brd-gray-light-v3 g-brd-primary--active g-color-white g-bg-primary--active g-font-size-12 rounded-circle g-pa-5">${num}</a></li>
-										</c:when>
-										<c:otherwise>
-											<li class="list-inline-item hidden-down"><a
-												class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-												href="javascript:list('${num}')">${num}</a></li>
-										</c:otherwise>
-									</c:choose>
-								</c:forEach>
-
-
-								<!-- **다음페이지 블록으로 이동 : 현재 페이지 블럭이 전체 페이지 블럭보다 작거나 같으면 [다음]하이퍼링크를 화면에 출력 -->
-								<c:if
-									test="${map.boardPager.curBlock <= map.boardPager.totBlock}">
-									<li class="list-inline-item hidden-xs-down"><a
-										class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-										href="javascript:list('${map.boardPager.nextPage}')">[다음]</a></li>
-								</c:if>
-
-								<!-- **끝페이지로 이동 : 현재 페이지가 전체 페이지보다 작거나 같으면 [끝]하이퍼링크를 화면에 출력 -->
-								<c:if test="${map.boardPager.curPage <= map.boardPager.totPage}">
-									<li class="list-inline-item hidden-down"><a
-										class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-										href="javascript:list('${map.boardPager.totPage}')">[끝]</a></li>
-								</c:if>
-
-							</ul>
-						</nav>
-						<!-- End Pagination -->
+						</ul>
+					</nav>
+					<!-- End Pagination -->
 				</div>
 			</div>
 			<!-- End Content -->
-			
+
 			<!-- Filters -->
-			
-			
+
+
 			<div
 				class="col-md-3 flex-md-first g-brd-right--lg g-brd-gray-light-v4 g-pt-40">
 				<div class="g-pr-15--lg g-pt-60">
 					<!-- Pricing -->
-					<input type="hidden" name="pricerange" value="document.getElementById('rangeSliderAmount3').innerText">
+					<input type="hidden" name="pricerange"
+						value="document.getElementById('rangeSliderAmount3').innerText">
 					<div class="g-mb-30">
 						<h3 class="h5 mb-3">Pricing</h3>
 
 						<div class="text-center">
 							<span class="d-block g-color-primary mb-4">&#8361;<span
 								id="rangeSliderAmount3">20000</span>
-							</span>							
-							
+							</span>
+
 							<div id="rangeSlider1" class="u-slider-v1-3"
 								data-result-container="rangeSliderAmount3" data-range="true"
-								data-default="${map.first_value}, ${map.second_value}" data-min="10000" data-max="100000"></div>
+								data-default="${map.first_value}, ${map.second_value}"
+								data-min="10000" data-max="100000"></div>
 						</div>
 					</div>
 					<!-- End Pricing -->
@@ -402,65 +415,74 @@ body {margin: 10px; font-size: 13px}
 						<ul
 							class="js-rating u-rating-v1 g-font-size-20 g-color-gray-light-v3 mb-0"
 							data-hover-classes="g-color-primary">
-					<li id = "first" class="g-color-primary click" onclick="starone()">
-                    <i class="fa fa-star"></i>
-                  </li>
-                  <li id = "second" class="g-color-primary click" onclick="startwo()">
-                    <i class="fa fa-star"></i>
-                  </li>
-                  <li id = "third" class="g-color-primary click" onclick="starthree()">
-                    <i class="fa fa-star"></i>
-                  </li>
-                  <li id = "fourth" class="g-color-primary click" onclick="starfour()" >
-                    <i class="fa fa-star"></i>
-                  </li>
-                  <li id = "five" onclick="starfive()" >
-                    <i class="fa fa-star"></i>
-                  </li>
+							<li id="first" class="g-color-primary click" onclick="starone()">
+								<i class="fa fa-star"></i>
+							</li>
+							<li id="second" class="g-color-primary click" onclick="startwo()">
+								<i class="fa fa-star"></i>
+							</li>
+							<li id="third" class="g-color-primary click"
+								onclick="starthree()"><i class="fa fa-star"></i></li>
+							<li id="fourth" class="g-color-primary click"
+								onclick="starfour()"><i class="fa fa-star"></i></li>
+							<li id="five" onclick="starfive()"><i class="fa fa-star"></i>
+							</li>
 						</ul>
 					</div>
 					<!-- End Rating -->
 
 					<hr>
-					
+
 					<form name="search" action="../top-list/${map.var}">
-					<input type="hidden" name="pricerange" value="">		
-					<input type="hidden" name="board_like" value="1">	
-			
-					<div class="checks small">
-					
-					 <c:choose>
-  					<c:when test="${map.search_method=='price'}">
-  					<input type="radio" id="ex_rd2" name="search_method" value="price" checked="checked"> <label for="ex_rd2"> 가격으로 검색 </label>
+						<input type="hidden" name="pricerange" value=""> <input
+							type="hidden" name="board_like" value="1">
+
+						<div class="checks small">
+
+							<c:choose>
+								<c:when test="${map.search_method=='price'}">
+									<input type="radio" id="ex_rd2" name="search_method"
+										value="price" checked="checked">
+									<label for="ex_rd2"> 가격으로 검색 </label>
                      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="ex_rd2" name="search_method" value="star"> <label for="ex_rd2"> 좋아요로 검색 </label>
-     				</c:when>
-     				
-     				<c:when test="${map.search_method=='star'}">
-  					<input type="radio" id="ex_rd2" name="search_method" value="price" > <label for="ex_rd2"> 가격으로 검색 </label>
+                    <input type="radio" id="ex_rd2" name="search_method"
+										value="star">
+									<label for="ex_rd2"> 좋아요로 검색 </label>
+								</c:when>
+
+								<c:when test="${map.search_method=='star'}">
+									<input type="radio" id="ex_rd2" name="search_method"
+										value="price">
+									<label for="ex_rd2"> 가격으로 검색 </label>
                      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="ex_rd2" name="search_method" value="star" checked="checked"> <label for="ex_rd2"> 좋아요로 검색 </label>
-     				</c:when>
-     				
-     				<c:otherwise>
-     				<input type="radio" id="ex_rd2" name="search_method" value="price" > <label for="ex_rd2"> 가격으로 검색 </label>
+                    <input type="radio" id="ex_rd2" name="search_method"
+										value="star" checked="checked">
+									<label for="ex_rd2"> 좋아요로 검색 </label>
+								</c:when>
+
+								<c:otherwise>
+									<input type="radio" id="ex_rd2" name="search_method"
+										value="price">
+									<label for="ex_rd2"> 가격으로 검색 </label>
                      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="ex_rd2" name="search_method" value="star" > <label for="ex_rd2"> 좋아요로 검색 </label>        
-       				</c:otherwise> 
-  					
-  					</c:choose> 
-					                    
-                    </div>
-					
-					<button
-						class="btn btn-block u-btn-black g-font-size-default text-uppercase g-py-10"
-						type="button" onclick="lee()">검색</button>
-					</form>	
-					
+                    <input type="radio" id="ex_rd2" name="search_method"
+										value="star">
+									<label for="ex_rd2"> 좋아요로 검색 </label>
+								</c:otherwise>
+
+							</c:choose>
+
+						</div>
+
+						<button
+							class="btn btn-block u-btn-black g-font-size-default text-uppercase g-py-10"
+							type="button" onclick="lee()">검색</button>
+					</form>
+
 				</div>
-				
+
 			</div>
-			<!-- End Filters -->			
+			<!-- End Filters -->
 
 			<jsp:include page="footer.jsp" flush="false" />
 

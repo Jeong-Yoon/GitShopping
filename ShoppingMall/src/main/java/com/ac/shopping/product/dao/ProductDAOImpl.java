@@ -11,6 +11,7 @@ import com.ac.shopping.member.dto.MemberDTO;
 import com.ac.shopping.product.dto.Outer_OnepieceDTO;
 import com.ac.shopping.product.dto.ShoesDTO;
 import com.ac.shopping.product.dto.TBADTO;
+import com.ac.shopping.product.dto.WishListDTO;
 
 @Repository
 public class ProductDAOImpl implements ProductDAO {
@@ -172,11 +173,48 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 	
 	@Override
-	public void addCart(String pro_no, String m_id) {
+	public void addWish(String pro_no, String m_id, int pro_price) {
 		HashMap<String, Object> param = new HashMap<String, Object>();
 		param.put("pro_no", pro_no);
 		param.put("m_id", m_id);
-		sqlSession.insert("product.addCart", param);
+		param.put("pro_price", pro_price);
+		sqlSession.insert("product.addWish", param);
 	}
 	
+	@Override
+	public boolean wish_chk(String pro_no, String m_id) {
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("pro_no", pro_no);
+		param.put("m_id", m_id);
+		
+		int result = sqlSession.selectOne("product.wishOk", param);
+		if(result==1) {
+			return false;
+		}  
+		return true;
+	}
+	
+	@Override
+	public boolean cart_Chk(String pro_no, String m_id) {
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("pro_no", pro_no);
+		param.put("m_id", m_id);
+		int result = sqlSession.selectOne("product.cart_Chk", param);
+		if(result == 0){
+			return true;
+		}
+		return false;
+	}
+	@Override
+	public void addCart2(String pro_no, String m_id, int quantity) {
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("pro_no", pro_no);
+		param.put("m_id", m_id);
+		param.put("quantity", quantity);
+		sqlSession.insert("product.addCart2",param);
+	}
+	@Override
+	public List<WishListDTO> wishList(String m_id) {
+		return sqlSession.selectList("product.wishList",m_id);
+	}
 }

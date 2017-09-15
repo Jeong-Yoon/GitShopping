@@ -4,14 +4,17 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
 
+import com.ac.shopping.member.dto.MemberDTO;
 import com.ac.shopping.product.dao.ProductDAO;
 import com.ac.shopping.product.dao.ProductDAOImpl;
 import com.ac.shopping.product.dto.Outer_OnepieceDTO;
 import com.ac.shopping.product.dto.ShoesDTO;
 import com.ac.shopping.product.dto.TBADTO;
+import com.ac.shopping.product.dto.WishListDTO;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -147,8 +150,28 @@ public class ProductServiceImpl implements ProductService {
 	}
 	
 	@Override
-	public void addCart(String pro_no, String m_id) {
-		productDao.addCart(pro_no, m_id);
+	public void addWish(String pro_no, String m_id, int pro_price) {
+		productDao.addWish(pro_no, m_id, pro_price);
+	}
+	
+	@Override
+	public boolean wish_chk(String pro_no, String m_id) {
+		return productDao.wish_chk(pro_no, m_id);
+	}
+
+	@Override
+	public boolean cart_Chk(String pro_no, String m_id) {
+		return productDao.cart_Chk(pro_no, m_id);
+	}
+
+	@Override
+	public void addCart2(String pro_no, String m_id,int quantity) {
+		productDao.addCart2(pro_no, m_id,quantity);
+	}
+
+	@Override
+	public List<WishListDTO> wishList(String m_id) {
+		return productDao.wishList(m_id);
 	}
 	
 	
