@@ -3,6 +3,7 @@ package com.ac.shopping.product.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ac.shopping.product.dto.WishListDTO;
 import com.ac.shopping.product.service.ProductService;
 import com.ac.shopping.product.service.ProductServiceImpl;
 import com.ac.shopping.service.BoardPager.ProductPager;
@@ -244,17 +246,35 @@ public class ProductController {
     	return mav;
 	}
 	
-	// ===================ADD TO CART============================
-	@RequestMapping("/add-cart")
-	public String addCart(HttpSession session, HttpServletRequest request){
+	// ===================ADD TO WISH============================
+	@RequestMapping("/Cart/wish")
+	public String addWish(HttpSession session, HttpServletRequest request, HttpServletResponse response, Model model) throws IOException{
 		String pro_no = request.getParameter("product_no");
 		String m_id = (String) session.getAttribute("m_id");
-		System.out.println(m_id);
+		int pro_price = Integer.parseInt(request.getParameter("pro_price"));
 		System.out.println(pro_no);
-		productService.addCart(pro_no, m_id);
-		return "add-cart";
+		System.out.println(m_id);
+		System.out.println(pro_price);
+		
+		boolean result = productService.wish_chk(pro_no, m_id);
+		if(result) {
+			productService.addWish(pro_no, m_id, pro_price);
+			List<WishListDTO> wdto = productService.wishList(m_id);
+			
+			System.out.println(wdto);
+			
+			model.addAttribute("wdto", wdto);
+			
+			return "Cart/wish";
+		} else {
+			response.setContentType("text/html; charset=UTF-8");
+	    	PrintWriter out = response.getWriter();
+	    	out.println("<script>alert('선택하신 상품이 찜 목록에 있습니다.'); history.go(-1);</script>");
+	    	out.close();
+	    	return "";
+		}
 	}
-	
+	// ===================ADD TO CART============================
 	@RequestMapping("/cart_Chk")
 	public String cartChk(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String pro_no = request.getParameter("product_no");
@@ -276,7 +296,4 @@ public class ProductController {
 			return "";
 		}
 	}
-	
-	
-	
 }
