@@ -75,17 +75,12 @@
 					data-nav-for="#carouselCus2">
 					<div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
 						<img class="img-fluid w-100"
-							src="resources/WB0412697/html/assets/img-temp/650x750/img1.jpg"
+							src="resources/TOP/${row.product_no}_1.jpg"
 							alt="Image Description">
 					</div>
 					<div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
 						<img class="img-fluid w-100"
 							src="resources/WB0412697/html/assets/img-temp/650x750/img2.jpg"
-							alt="Image Description">
-					</div>
-					<div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
-						<img class="img-fluid w-100"
-							src="resources/WB0412697/html/assets/img-temp/650x750/img3.jpg"
 							alt="Image Description">
 					</div>
 				</div>
@@ -108,12 +103,6 @@
 
 					<div class="js-slide g-cursor-pointer g-px-5">
 						<img class="img-fluid"
-							src="resources/WB0412697/html/assets/img-temp/250x170/img3.jpg"
-							alt="Image Description">
-					</div>
-
-					<div class="js-slide g-cursor-pointer g-px-5">
-						<img class="img-fluid"
 							src="resources/WB0412697/html/assets/img-temp/250x170/img1.jpg"
 							alt="Image Description">
 					</div>
@@ -124,11 +113,6 @@
 							alt="Image Description">
 					</div>
 
-					<div class="js-slide g-cursor-pointer g-px-5">
-						<img class="img-fluid"
-							src="resources/WB0412697/html/assets/img-temp/250x170/img3.jpg"
-							alt="Image Description">
-					</div>
 				</div>
 				<!-- End Carousel -->
 			</div>
@@ -274,14 +258,14 @@
 											class="align-middle ml-2 icon-finance-100 u-line-icon-pro"></i>
 									</button>
 								</div>
-								<div class="col g-px-5 g-mb-10">
-									<button
-										class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25"
-										type="button">
-										Add to Wishlist <i
-											class="align-middle ml-2 icon-medical-022 u-line-icon-pro"></i>
-									</button>
-								</div>
+<!-- 								<div class="col g-px-5 g-mb-10"> -->
+<!-- 									<button -->
+<!-- 										class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25" -->
+<!-- 										type="button"> -->
+<!-- 										Add to Wishlist <i -->
+<!-- 											class="align-middle ml-2 icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 									</button> -->
+<!-- 								</div> -->
 							</div>
 							<!-- End Buttons -->
 

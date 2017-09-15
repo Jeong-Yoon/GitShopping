@@ -359,12 +359,12 @@ width: 120px; /* 너비설정 */ border: 1px solid #dcdcdc;
                     Add to Cart <i class="align-middle ml-2 icon-finance-100 u-line-icon-pro"></i>
                   </button>
                 </div>
-                <div class="col g-px-5 g-mb-10">
-                  <button class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25" type="button">
-                    Add to Wishlist <i class="align-middle ml-2 icon-medical-022 u-line-icon-pro"></i>
-                  </button>
-                </div>
-              </div>
+<!--                 <div class="col g-px-5 g-mb-10"> -->
+<!--                   <button class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25" type="button"> -->
+<!--                     Add to Wishlist <i class="align-middle ml-2 icon-medical-022 u-line-icon-pro"></i> -->
+<!--                   </button> -->
+<!--                 </div> -->
+<!--               </div> -->
               <!-- End Buttons -->
 
               <!-- Nav Tabs -->

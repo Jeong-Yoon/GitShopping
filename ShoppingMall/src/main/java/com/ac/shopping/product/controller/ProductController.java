@@ -1,5 +1,7 @@
 package com.ac.shopping.product.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -244,12 +246,26 @@ public class ProductController {
 	
 	// ===================ADD TO CART============================
 	@RequestMapping("/add-cart")
-	public String addCart(HttpSession session, HttpServletRequest request){
+	public String addCart(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String pro_no = request.getParameter("product_no");
 		String m_id = (String) session.getAttribute("m_id");
-		System.out.println(m_id);
 		System.out.println(pro_no);
-		productService.addCart(pro_no, m_id);
-		return "add-cart";
+		System.out.println(m_id);
+		
+		boolean result = productService.addCart_chk(pro_no, m_id);
+		//System.out.println(result);
+		if(result) {
+			productService.addCart(pro_no, m_id);
+			return "cart";
+		} else {
+			response.setContentType("text/html; charset=UTF-8");
+	    	PrintWriter out = response.getWriter();
+	    	out.println("<script>alert('선택하신 상품이 장바구니에 존재합니다.'); history.go(-1);</script>");
+	    	out.close();
+	    	return "";
+		}
+		
+		
 	}
+
 }

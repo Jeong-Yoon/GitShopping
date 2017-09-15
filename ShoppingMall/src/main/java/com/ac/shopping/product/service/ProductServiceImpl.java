@@ -4,9 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
 
+import com.ac.shopping.member.dto.MemberDTO;
 import com.ac.shopping.product.dao.ProductDAO;
 import com.ac.shopping.product.dao.ProductDAOImpl;
 import com.ac.shopping.product.dto.Outer_OnepieceDTO;
@@ -151,7 +153,10 @@ public class ProductServiceImpl implements ProductService {
 		productDao.addCart(pro_no, m_id);
 	}
 	
-	
+	@Override
+	public boolean addCart_chk(String pro_no, String m_id) {
+		return productDao.addCart_chk(pro_no, m_id);
+	}
 	
 	
 }

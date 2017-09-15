@@ -179,4 +179,18 @@ public class ProductDAOImpl implements ProductDAO {
 		sqlSession.insert("product.addCart", param);
 	}
 	
+	@Override
+	public boolean addCart_chk(String pro_no, String m_id) {
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("pro_no", pro_no);
+		param.put("m_id", m_id);
+		
+		int result = sqlSession.selectOne("product.cartOk", param);
+		if(result==1) {
+			return false;
+		}  
+		return true;
+	}
+	
+	
 }
