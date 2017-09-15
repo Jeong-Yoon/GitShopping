@@ -259,13 +259,14 @@ public class ProductController {
 	public String cartChk(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String pro_no = request.getParameter("product_no");
 		String m_id = (String) session.getAttribute("m_id");
+		System.out.println(pro_no);
 		int quantity = Integer.parseInt(request.getParameter("quantity"));
 		System.out.println(m_id);
 		System.out.println(pro_no);
 		boolean result = productService.cart_Chk(pro_no, m_id);
 		if (result) {
 			productService.addCart2(pro_no, m_id,quantity);
-			return"cart";
+			return"Cart/cart";
 		} else{
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();

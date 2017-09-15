@@ -220,7 +220,7 @@
 									<div class="row align-items-center no-gutters">
 										<div class="col-4 g-pr-20">
 											<a href="#" class="u-basket__product-img"><img
-												src="resources/WB0412697/html/assets/img-temp/150x150/img2.jpg"
+												src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img2.jpg"
 												alt="Image Description"></a>
 										</div>
 
@@ -646,7 +646,7 @@
 								<div
 									class="col-sm-7 col-lg-8 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered"
 									data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg"
-									style="background-image: url(resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg);">
+									style="background-image: url(${contextPath}/resources/WB0412697/html/assets/img-temp/1200x800/img1.jpg);">
 									<div class="g-flex-centered-item text-right g-pa-50">
 										<h2
 											class="g-color-white g-font-weight-700 g-font-size-50 text-uppercase g-line-height-1 mb-4">
@@ -663,7 +663,7 @@
 								<div
 									class="col-sm-5 col-lg-4 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered"
 									data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img/bg/secondary.png"
-									style="background-image: url(resources/WB0412697/html/assets/img/bg/secondary.png);">
+									style="background-image: url(${contextPath}/resources/WB0412697/html/assets/img/bg/secondary.png);">
 									<div class="text-center">
 										<img class="img-fluid mb-3"
 											src="${contextPath}/resources/WB0412697/html/assets/img-temp/500x320/img4.png"
@@ -1230,6 +1230,7 @@
 									</div>
 									</article>
 									<!-- End Article -->
+									
 								</div>
 							</div>
 						</div> <!-- End Mega Menu --></li>
@@ -1248,7 +1249,7 @@
 		class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
 		data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}'>
 	<div class="divimage dzsparallaxer--target w-100 g-bg-pos-top-center"
-		style="height: 140%; background-image: url(assets/img-temp/1920x1080/img3.jpg);"></div>
+		style="height: 140%; background-image: url(${contextPath}/resources/assets/img-temp/1920x1080/img3.jpg);"></div>
 
 	<div class="container g-color-white g-pt-100 g-pb-40">
 		<div class="g-mb-50">
