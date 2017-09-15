@@ -150,6 +150,16 @@ public class ProductServiceImpl implements ProductService {
 	public void addCart(String pro_no, String m_id) {
 		productDao.addCart(pro_no, m_id);
 	}
+
+	@Override
+	public boolean cart_Chk(String pro_no, String m_id) {
+		return productDao.cart_Chk(pro_no, m_id);
+	}
+
+	@Override
+	public void addCart2(String pro_no, String m_id,int quantity) {
+		productDao.addCart2(pro_no, m_id,quantity);
+	}
 	
 	
 	

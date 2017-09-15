@@ -298,4 +298,18 @@ WHERE product_no = #{product_no}
 		VALUES
 		(#{pro_no}, #{m_id}, 1)
 	</insert>
+	
+	<select id="cart_Chk" resultType="int">
+	SELECT count(product_no)
+	FROM basket
+	WHERE m_id = #{m_id}
+	AND product_no = #{pro_no}
+	</select>
+	
+	<insert id="addCart2">
+		INSERT INTO BASKET
+		(product_no, m_id, basket_quantity)
+		VALUES
+		(#{pro_no}, #{m_id}, #{quantity})
+	</insert>
 </mapper>

@@ -61,57 +61,57 @@
 <style>
 .selectbox { 
 position: relative; 
-width: 120px; /* 너비설정 */ border: 1px solid #dcdcdc; 
-/* 테두리 설정 */ z-index: 1; } 
-    
-.selectbox:before {
- /* 화살표 대체 */ content: ""; 
-     position: absolute;  
-     top: 50%;  
-     right: 15px;  
-     width: 0;  
-     height: 0;  
-     margin-top: -1px;  
-     border-left: 5px solid transparent;  
-     border-right: 5px solid transparent;  
-     border-top: 5px solid #999; }  
-}
-    
-    .selectbox label { 
-    position: absolute; 
-    top: 1px; 
-    /* 위치정렬 */ left: 5px; 
-    /* 위치정렬 */ padding: .2em .3em; 
-    /* select의 여백 크기 만큼 */ 
-    color: #999; z-index: -1; 
-    /* IE8에서 label이 위치한 곳이 클릭되지 않는 것 해결 */ } 
-    
-    .selectbox select { 
-    width: 100%; 
-    height: auto; 
-    /* 높이 초기화 */ 
-    line-height: normal; 
-    /* line-height 초기화 */ 
-    font-family: inherit; 
-    /* 폰트 상속 */ 
-    padding: .2em .3em; 
-    /* 여백과 높이 결정 */ 
-    border: 0; 
-    opacity: 0; 
-    /* 숨기기 */ 
-    filter:alpha(opacity=0); 
-    /* IE8 숨기기 */ -webkit-appearance: none; 
-    /* 네이티브 외형 감추기 */ -moz-appearance: none; 
-    appearance: none; }
+width: 120px; /* 너비설정 */ 
+border: 1px solid #999; /* 테두리 설정 */ 
+z-index: 1; } 
+
+.selectbox:before { /* 화살표 대체 */ 
+content: ""; 
+position: absolute; 
+top: 50%; 
+right: 15px; 
+width: 0; 
+height: 0; 
+margin-top: -1px; 
+border-left: 5px solid transparent; 
+border-right: 5px solid transparent; 
+border-top: 5px solid #333; } 
+
+.selectbox label { 
+position: absolute; 
+top: 1px; /* 위치정렬 */ 
+left: 5px; /* 위치정렬 */ 
+padding: .8em .5em; /* select의 여백 크기 만큼 */ 
+color: #999; z-index: -1; /* IE8에서 label이 위치한 곳이 클릭되지 않는 것 해결 */ } 
+
+.selectbox select { 
+width: 100%; 
+height: auto; /* 높이 초기화 */ 
+line-height: normal; /* line-height 초기화 */ 
+font-family: inherit; /* 폰트 상속 */ 
+padding: .8em .5em; /* 여백과 높이 결정 */ 
+border: 0; opacity: 0; /* 숨기기 */ 
+filter:alpha(opacity=0); /* IE8 숨기기 */ 
+-webkit-appearance: none; /* 네이티브 외형 감추기 */ 
+-moz-appearance: none; 
+appearance: none; }
+
   
 </style>
-	
+
+	<script>
+	function goto_url(act) {
+		  document.onepiece_detail.action = act;
+		  document.onepiece_detail.submit();
+		}
+	</script>
 </head>
 
 <body>
 	<jsp:include page="header.jsp" flush="false" />
 
       <!-- Product Description -->
+      <form action="cart_Chk?product_no=${onepiecedetail.dto.product_no}" method="post">
       <div class="container">
         <div class="row">
           <div class="col-lg-7">
@@ -355,7 +355,7 @@ width: 120px; /* 너비설정 */ border: 1px solid #dcdcdc;
               <!-- Buttons -->
               <div class="row g-mx-minus-5 g-mb-20">
                 <div class="col g-px-5 g-mb-10">
-                  <button class="btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-15 g-px-25" type="button">
+                  <button class="btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-15 g-px-25" type="submit">
                     Add to Cart <i class="align-middle ml-2 icon-finance-100 u-line-icon-pro"></i>
                   </button>
                 </div>
@@ -499,6 +499,7 @@ width: 120px; /* 너비설정 */ border: 1px solid #dcdcdc;
           </div>
         </div>
       </div>
+      </form>
       <!-- End Product Description -->
 
       <!-- Features -->
@@ -672,6 +673,15 @@ width: 120px; /* 너비설정 */ border: 1px solid #dcdcdc;
           $.HSCore.components.HSTabs.init('[role="tablist"]');
         }, 200);
       });
+      
+      $(document).ready(function() { 
+    	  var selectTarget = $('.selectbox select'); 
+    	  selectTarget.change(function(){ 
+    		  var select_name = $(this).children('option:selected').text(); 
+    	  $(this).siblings('label').text(select_name); 
+    	  }); 
+    	  });
+
     </script>
   </body>
 </html>
