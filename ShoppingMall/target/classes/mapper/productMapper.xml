@@ -101,7 +101,8 @@
 				ORDER BY p.pro_name
 			</when>
 			<otherwise>
-				AND p.pro_price Between #{first_value} and #{second_value} order by
+				AND p.pro_price Between #{first_value} and #{second_value}
+				order by
 				p.pro_price
 			</otherwise>
 		</choose>
@@ -115,7 +116,8 @@
 		SELECT count(*)
 		FROM product p JOIN top_bottom_acc
 		tba
-		ON p.product_no = tba.product_no
+		ON p.product_no =
+		tba.product_no
 		WHERE tba.category like '%[B]%'
 		<include refid="bottomkind"></include>
 		<include refid="count_price_range"></include>
@@ -243,7 +245,8 @@
 		product_no,
 		pro.pro_name as pro_name,
 		pro.pro_price as pro_price
-		FROM product pro JOIN outer_onepiece otop
+		FROM
+		product pro JOIN outer_onepiece otop
 		ON
 		pro.product_no = otop.product_no
 		WHERE otop.category LIKE '%[OUT]%'
@@ -251,7 +254,8 @@
 	</select>
 	<select id="outColor" resultType="String">
 		SELECT pro_color
-		FROM product_color
+		FROM
+		product_color
 		WHERE product_no = #{product_no}
 	</select>
 
@@ -318,34 +322,38 @@
 
 	</sql>
 
-	<insert id="addCart">
-		INSERT INTO BASKET
-		(product_no, m_id, basket_quantity)
+	<insert id="addWish">
+		INSERT INTO PRO_LIKE
+		(product_no, m_id, pro_price)
 		VALUES
-		(#{pro_no}, #{m_id}, 1)
+		(#{pro_no}, #{m_id}, #{pro_price})
 	</insert>
-<<<<<<< HEAD
 
-	<select id="cartOk" resultType="int">
-		SELECT count(*) from BASKET
+	<select id="wishOk" resultType="int">
+		SELECT count(*) from PRO_LIKE
 		WHERE product_no = #{pro_no}
 		AND m_id = #{m_id}
 	</select>
 
-=======
-	
+
 	<select id="cart_Chk" resultType="int">
-	SELECT count(product_no)
-	FROM basket
-	WHERE m_id = #{m_id}
-	AND product_no = #{pro_no}
+		SELECT count(product_no)
+		FROM basket
+		WHERE m_id = #{m_id}
+		AND product_no = #{pro_no}
 	</select>
-	
+
 	<insert id="addCart2">
 		INSERT INTO BASKET
 		(product_no, m_id, basket_quantity)
 		VALUES
 		(#{pro_no}, #{m_id}, #{quantity})
 	</insert>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
+
+	<select id="wishList" resultType="com.ac.shopping.product.dto.WishListDTO">
+		SELECT pl.product_no, p.pro_name, pl.pro_price
+		FROM pro_like pl JOIN product p
+		ON pl.product_no = p.product_no
+		WHERE m_id = #{m_id}
+	</select>
 </mapper>

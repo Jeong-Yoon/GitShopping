@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import com.ac.shopping.product.dto.Outer_OnepieceDTO;
 import com.ac.shopping.product.dto.ShoesDTO;
 import com.ac.shopping.product.dto.TBADTO;
+import com.ac.shopping.product.dto.WishListDTO;
 
 public interface ProductService {
    
@@ -30,13 +31,12 @@ public interface ProductService {
    
    public int all_count_tba(int first_value, int second_value, String var);
    public int all_count_bottom(int first_value, int second_value, String var);
-   public void addCart(String pro_no, String m_id);
-<<<<<<< HEAD
-   public boolean addCart_chk(String pro_no, String m_id);
-=======
+   public void addWish(String pro_no, String m_id, int pro_price);
+   public boolean wish_chk(String pro_no, String m_id);
+   
    public boolean cart_Chk(String pro_no, String m_id);
    public void addCart2(String pro_no, String m_id, int quantity);
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
+   public List<WishListDTO> wishList(String m_id);
     
 }
 
