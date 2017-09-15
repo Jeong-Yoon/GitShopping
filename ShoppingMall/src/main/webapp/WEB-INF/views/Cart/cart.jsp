@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextPath" value="<%= request.getContextPath()%>"></c:set>
 
   <head>
     <!-- Title -->
@@ -98,21 +99,26 @@
 
                       <tbody>
                         <!-- Item-->
+                        <c:forEach var="row" items="${map.list}" >
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
                             <img class="d-inline-block g-width-100 mr-4" src="../resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+<<<<<<< HEAD
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+=======
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
                             <div class="d-inline-block align-middle">
-                              <h4 class="h6 g-color-black">Sneaker</h4>
+                              <h4 class="h6 g-color-black">${row.pro_name} </h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
                                 <li>Color: Black</li>
                                 <li>Size: MD</li>
                               </ul>
                             </div>
                           </td>
-                          <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; 87.00</td>
+                          <td class="g-color-gray-dark-v2 g-font-size-13">${row.pro_price} </td>
                           <td>
                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
-                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="1" readonly>
+                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="${row.basket_Quantity}" readonly>
 
                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6">
                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i>
@@ -121,13 +127,16 @@
                             </div>
                           </td>
                           <td class="text-right g-color-black">
-                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; 87.00</span>
+                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">${row.pro_price * row.basket_Quantity}</span>
                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
-                              <i class="mt-auto fa fa-trash"></i>
+                              <a href="${contextPath}/cart_delete.do?product_No=${row.product_No}&m_Id=${m_Id}"><i class="mt-auto fa fa-trash"></i></a>
                             </span>
                           </td>
                         </tr>
+                        </c:forEach>
                         <!-- End Item-->
+<<<<<<< HEAD
+=======
 
                         <!-- Item-->
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
@@ -192,6 +201,7 @@
                           </td>
                         </tr>
                         <!-- End Item -->
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
                       </tbody>
                     </table>
                   </div>
@@ -207,10 +217,13 @@
                     <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true">
                       <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab">
                         <h5 class="g-font-weight-400 g-font-size-default mb-0">
-                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">총     $ 개의 상품
+                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">배송료 : ${map.deliveryFee }
                             <span class="ml-3 fa fa-angle-down"></span></a>
                         </h5>
                       </div>
+<<<<<<< HEAD
+                      
+=======
                       <div id="accordion-03-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-03-heading-03">
                         <div class="g-py-15">
                           <ul class="list-unstyled mb-3">
@@ -261,22 +274,23 @@
                           </ul>
                         </div>
                       </div>
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
                     </div>
                     <!-- End Accordion -->
                     
                     
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
-                      <span class="g-color-black g-font-weight-300">&#8361;454.00</span>
+                      <span class="g-color-black g-font-weight-300">${map.sumMoney}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
-                      <span class="g-color-black g-font-weight-300">&#8361;454.00</span>
+                      <span class="g-color-black g-font-weight-300">${map.allSum}</span>
                     </div>
                   </div>
                   <!-- End Summary -->
 
-                  <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button">영수증 새로고침</button>
+                  <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button">수정</button>
                   <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2">결제 진행하기</button>
 
                   

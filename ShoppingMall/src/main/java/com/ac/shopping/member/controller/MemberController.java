@@ -43,6 +43,12 @@ public class MemberController {
 //		return "login";
 //	}
 	
+	@RequestMapping("/cart")
+	public String cart(){
+		
+		return "/Cart/shipping";
+	}
+	
 	@RequestMapping("/sign_Up")
 	public String signUP(){
 		
