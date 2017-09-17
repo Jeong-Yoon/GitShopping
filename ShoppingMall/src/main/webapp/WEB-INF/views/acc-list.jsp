@@ -148,7 +148,7 @@
 								<figure>
 									<div class="g-pos-rel g-mb-20">
 										<img class="img-fluid"
-											src="../resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
+											src="../resources/ACC/${row.product_no}_1.jpg"
 											alt="Image Description">
 
 										<!-- Ribbon -->

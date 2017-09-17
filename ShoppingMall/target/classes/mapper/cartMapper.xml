@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cart">
+
+	<!-- 1.장바구니 추가 -->
+	<insert id="insertCart">
+	 insert into basket(
+	 m_Id, product_No, basket_Quantity
+	 )values(
+	 	#{m_Id}, #{product_No}, #{basket_Quantity}
+	 )
+	</insert>
+	
+	<!-- 2. 장바구니 목록 -->
+	<!-- 아이디, 상품번호, 수량, 상품명, 상품가격 -->
+	<select id="listCart" resultType="com.ac.shopping.cart.dto.CartDTO">
+select 
+    m.m_Id,
+    p.product_No,
+	b.basket_Quantity,
+	p.pro_price,
+	p.pro_name
+		
+from  
+	basket b, product p, member m
+   
+where
+	b.product_no = p.product_no
+	and b.m_id = m.m_id
+	and m.m_id = 'hj'
+	</select>
+	
+	<!-- 3. 장바구니 전체 금액 -->
+	<select id="sumMoney" resultType="int">
+		select nvl(sum(pro_price*basket_quantity),0) money
+		from basket b, product p
+		where b.product_no = p.product_no
+		and b.m_id = 'hj'
+	
+	</select>
+	<!-- 4. 장바구니 수정 -->
+    <update id="modifyCart">
+        UPDATE basket 
+        SET basket_Quantity = #{basket_Quantity} 
+        WHERE m_Id= 'hj'
+        AND product_No = #{product_No}
+    </update>
+	<!-- 5. 장바구니 삭제 -->
+	<delete id="deleteCart">
+		delete from basket
+		where product_No = #{product_No}
+		and m_Id = #{m_Id}
+	
+	</delete>
+
+
+
+
+
+</mapper>
