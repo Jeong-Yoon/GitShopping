@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ac.shopping.cart.dto.CartDTO;
 import com.ac.shopping.product.dto.WishListDTO;
 import com.ac.shopping.product.service.ProductService;
 import com.ac.shopping.product.service.ProductServiceImpl;
@@ -277,15 +278,24 @@ public class ProductController {
 	// ===================ADD TO CART============================
 	@RequestMapping("/cart_Chk")
 	public String cartChk(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws IOException{
-		String pro_no = request.getParameter("product_no");
-		String m_id = (String) session.getAttribute("m_id");
-		System.out.println(pro_no);
-		int quantity = Integer.parseInt(request.getParameter("quantity"));
-		System.out.println(m_id);
-		System.out.println(pro_no);
-		boolean result = productService.cart_Chk(pro_no, m_id);
+		CartDTO cdto = new CartDTO();
+		cdto.setM_Id((String) session.getAttribute("m_id"));
+		cdto.setProduct_No(request.getParameter("product_no"));
+		cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
+		cdto.setPro_size(request.getParameter("pro_size"));
+		System.out.println(request.getParameter("pro_size"));
+		cdto.setPro_color(request.getParameter("select_color"));
+		cdto.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
+		cdto.setPro_name(request.getParameter("pro_name"));
+//		String pro_no = request.getParameter("product_no");
+//		String m_id = (String) session.getAttribute("m_id");
+//		System.out.println(pro_no);
+//		int quantity = Integer.parseInt(request.getParameter("quantity"));
+//		System.out.println(m_id);
+//		System.out.println(pro_no);
+		boolean result = productService.cart_Chk(cdto.getProduct_No(), cdto.getM_Id());
 		if (result) {
-			productService.addCart2(pro_no, m_id,quantity);
+			productService.addCart2(cdto);
 			return"Cart/cart";
 		} else{
 			response.setContentType("text/html; charset=UTF-8");

@@ -3,6 +3,7 @@ package com.ac.shopping.product.dao;
 import java.util.HashMap;
 import java.util.List;
 
+import com.ac.shopping.cart.dto.CartDTO;
 import com.ac.shopping.product.dto.Outer_OnepieceDTO;
 import com.ac.shopping.product.dto.ShoesDTO;
 import com.ac.shopping.product.dto.TBADTO;
@@ -32,7 +33,7 @@ public interface ProductDAO {
    public void addWish(String pro_no, String m_id, int pro_price);
    public boolean wish_chk(String pro_no, String m_id);
    public boolean cart_Chk(String pro_no, String m_id);
-   public void addCart2(String pro_no, String m_id, int quantity);
+   public void addCart2(CartDTO cdto);
    public List<WishListDTO> wishList(String m_id);
 
 
