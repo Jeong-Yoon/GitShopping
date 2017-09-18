@@ -283,9 +283,20 @@ public class ProductController {
 			cdto.setM_Id((String) session.getAttribute("m_id"));
 			cdto.setProduct_No(request.getParameter("product_no"));
 			cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
-			cdto.setPro_size(request.getParameter("pro_size"));
 			System.out.println(request.getParameter("pro_size"));
-			cdto.setPro_color(request.getParameter("select_color"));
+			String pro_quantity = request.getParameter("quantity");
+			if (request.getParameter("select_color") != "") {
+				cdto.setPro_color(request.getParameter("select_color"));
+			}else{
+				cdto.setPro_color("-");
+			}
+			if (request.getParameter("pro_size") != "") {
+				cdto.setPro_size(request.getParameter("pro_size"));
+			} else{
+				cdto.setPro_size("FREE");
+			}
+//			cdto.setPro_size(request.getParameter("pro_size"));
+//			cdto.setPro_color(request.getParameter("select_color"));
 			cdto.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
 			cdto.setPro_name(request.getParameter("pro_name"));
 			// String pro_no = request.getParameter("product_no");

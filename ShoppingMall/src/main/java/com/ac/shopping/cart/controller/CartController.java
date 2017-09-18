@@ -116,8 +116,8 @@ public class CartController {
 	}
 	
 	// 5. 주문하기
-	@RequestMapping("/order")
-	public String payment(HttpSession session, HttpServletRequest request){
+	@RequestMapping("/direct_order")
+	public String direct_order(HttpSession session, HttpServletRequest request){
 		CartDTO cdto = new CartDTO();
 		OrderDTO odto = new OrderDTO();
 		
@@ -135,7 +135,19 @@ public class CartController {
 		odto.setPhone(request.getParameter("phone"));
 		odto.setRequest(request.getParameter("request"));
 		
-		cartService.order(cdto, odto);
+		cartService.direct_order(cdto, odto);
+		return "";
+	}
+	
+	@RequestMapping("/order")
+	public String order(HttpSession session, HttpServletRequest request){
+		String m_id = (String) session.getAttribute("m_id");
+		OrderDTO odto = new OrderDTO();
+		odto.setAddress(request.getParameter("address"));
+		odto.setName(request.getParameter("name"));
+		odto.setPhone(request.getParameter("phone"));
+		odto.setRequest(request.getParameter("request"));
+		cartService.order(m_id, odto);
 		return "";
 	}
 	
