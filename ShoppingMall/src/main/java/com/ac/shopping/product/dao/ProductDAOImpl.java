@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.ac.shopping.cart.dto.CartDTO;
 import com.ac.shopping.member.dto.MemberDTO;
 import com.ac.shopping.product.dto.Outer_OnepieceDTO;
 import com.ac.shopping.product.dto.ShoesDTO;
@@ -206,12 +207,12 @@ public class ProductDAOImpl implements ProductDAO {
 		return false;
 	}
 	@Override
-	public void addCart2(String pro_no, String m_id, int quantity) {
-		HashMap<String, Object> param = new HashMap<String, Object>();
-		param.put("pro_no", pro_no);
-		param.put("m_id", m_id);
-		param.put("quantity", quantity);
-		sqlSession.insert("product.addCart2",param);
+	public void addCart2(CartDTO cdto) {
+//		HashMap<String, Object> param = new HashMap<String, Object>();
+//		param.put("pro_no", pro_no);
+//		param.put("m_id", m_id);
+//		param.put("quantity", quantity);
+		sqlSession.insert("product.addCart2",cdto);
 	}
 	@Override
 	public List<WishListDTO> wishList(String m_id) {

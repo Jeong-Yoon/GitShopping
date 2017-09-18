@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import com.ac.shopping.cart.dto.CartDTO;
 import com.ac.shopping.product.dto.Outer_OnepieceDTO;
 import com.ac.shopping.product.dto.ShoesDTO;
 import com.ac.shopping.product.dto.TBADTO;
@@ -35,7 +36,7 @@ public interface ProductService {
    public boolean wish_chk(String pro_no, String m_id);
    
    public boolean cart_Chk(String pro_no, String m_id);
-   public void addCart2(String pro_no, String m_id, int quantity);
+   public void addCart2(CartDTO cdto);
    public List<WishListDTO> wishList(String m_id);
     
 }

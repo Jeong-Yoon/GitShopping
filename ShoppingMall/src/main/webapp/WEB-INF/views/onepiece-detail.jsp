@@ -26,39 +26,39 @@
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
 
 <!-- CSS Implementing Plugins -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-hs/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/animate.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/animate.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
 
 <!-- CSS Unify Theme -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
+	href="${contextPath}/resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
 
 <!-- CSS Customization -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/css/custom.css">
+	href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
 	
 <style>
 /* .selectbox {  */
@@ -134,13 +134,13 @@ function Selected(){
                  data-arrow-right-classes="fa fa-angle-right g-right-40"
                  data-nav-for="#carouselCus2">
               <div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
-                <img class="img-fluid w-100" src="resources/OPS/${onepiecedetail.dto.product_no}_1.jpg" alt="Image Description">
+                <img class="img-fluid w-100" src="${contextPath}/resources/OPS/${onepiecedetail.dto.product_no}_1.jpg" alt="Image Description">
               </div>
               <div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
-                <img class="img-fluid w-100" src="resources/WB0412697/html/assets/img-temp/650x750/img2.jpg" alt="Image Description">
+                <img class="img-fluid w-100" src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x750/img2.jpg" alt="Image Description">
               </div>
               <div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
-                <img class="img-fluid w-100" src="resources/WB0412697/html/assets/img-temp/650x750/img3.jpg" alt="Image Description">
+                <img class="img-fluid w-100" src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x750/img3.jpg" alt="Image Description">
               </div>
             </div>
 
@@ -151,27 +151,27 @@ function Selected(){
                  data-is-thumbs="true"
                  data-nav-for="#carouselCus1">
               <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="resources/WB0412697/html/assets/img-temp/250x170/img1.jpg" alt="Image Description">
+                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img1.jpg" alt="Image Description">
               </div>
 
               <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="resources/WB0412697/html/assets/img-temp/250x170/img2.jpg" alt="Image Description">
+                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img2.jpg" alt="Image Description">
               </div>
 
               <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="resources/WB0412697/html/assets/img-temp/250x170/img3.jpg" alt="Image Description">
+                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img3.jpg" alt="Image Description">
               </div>
 
               <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="resources/WB0412697/html/assets/img-temp/250x170/img1.jpg" alt="Image Description">
+                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img1.jpg" alt="Image Description">
               </div>
 
               <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="resources/WB0412697/html/assets/img-temp/250x170/img2.jpg" alt="Image Description">
+                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img2.jpg" alt="Image Description">
               </div>
 
               <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="resources/WB0412697/html/assets/img-temp/250x170/img3.jpg" alt="Image Description">
+                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img3.jpg" alt="Image Description">
               </div>
             </div>
             <!-- End Carousel -->
@@ -369,7 +369,6 @@ function Selected(){
                     Add to Cart <i class="align-middle ml-2 icon-finance-100 u-line-icon-pro"></i>
                   </button>
                 </div>
-<<<<<<< HEAD
                 <div class="col g-px-5 g-mb-10">
                   <button class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25" type="button" onclick="goto_url('direct_shipping')">
                   
@@ -377,14 +376,12 @@ function Selected(){
                   </button>
                 </div>
               </div>
-=======
 <!--                 <div class="col g-px-5 g-mb-10"> -->
 <!--                   <button class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25" type="button"> -->
 <!--                     Add to Wishlist <i class="align-middle ml-2 icon-medical-022 u-line-icon-pro"></i> -->
 <!--                   </button> -->
 <!--                 </div> -->
 <!--               </div> -->
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
               <!-- End Buttons -->
 
               <!-- Nav Tabs -->
@@ -571,7 +568,7 @@ function Selected(){
             </div>
           </div>
 
-          <div class="col-md-6 g-bg-size-cover g-min-height-300" data-bg-img-src="resources/WB0412697/html/assets/img-temp/900x900/img1.jpg"></div>
+          <div class="col-md-6 g-bg-size-cover g-min-height-300" data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img1.jpg"></div>
         </div>
       </div>
       <!-- End Details -->
@@ -587,7 +584,7 @@ function Selected(){
             </div>
           </div>
 
-          <div class="col-md-6 flex-md-first g-bg-size-cover g-min-height-300" data-bg-img-src="resources/WB0412697/html/assets/img-temp/900x900/img2.jpg"></div>
+          <div class="col-md-6 flex-md-first g-bg-size-cover g-min-height-300" data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img2.jpg"></div>
         </div>
       </div>
       <!-- End Craftmanship -->
@@ -603,7 +600,7 @@ function Selected(){
             </div>
           </div>
 
-          <div class="col-md-6 g-bg-size-cover g-min-height-300" data-bg-img-src="resources/WB0412697/html/assets/img-temp/900x900/img3.jpg"></div>
+          <div class="col-md-6 g-bg-size-cover g-min-height-300" data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img3.jpg"></div>
         </div>
       </div>
       <!-- End Caring -->
@@ -625,31 +622,31 @@ function Selected(){
     </main>
 
     <!-- JS Global Compulsory -->
-    <script src="resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/tether.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
     <!-- JS Implementing Plugins -->
-    <script src="resources/WB0412697/html/assets/vendor/slick-carousel/slick/slick.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/jquery.countdown.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/vendor/slick-carousel/slick/slick.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery.countdown.min.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <!-- JS Unify -->
-    <script src="resources/WB0412697/html/assets/js/hs.core.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.header.js"></script>
-    <script src="resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.countdown.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.carousel.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.count-qty.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.countdown.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.carousel.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.count-qty.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
 
     <!-- JS Customization -->
-    <script src="resources/WB0412697/html/assets/js/custom.js"></script>
+    <script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
