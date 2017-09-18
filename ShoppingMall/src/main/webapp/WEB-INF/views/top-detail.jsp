@@ -71,16 +71,18 @@
 					data-infinite="true" data-fade="true"
 					data-arrows-classes="u-arrow-v1 g-brd-around g-brd-white g-absolute-centered--y g-width-45 g-height-45 g-font-size-14 g-color-white g-color-primary--hover rounded-circle"
 					data-arrow-left-classes="fa fa-angle-left g-left-40"
-					data-arrow-right-classes="fa fa-angle-right g-right-40"
-					data-nav-for="#carouselCus2">
+					data-arrow-right-classes="fa fa-angle-right g-right-40">
 					<div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
 						<img class="img-fluid w-100"
-							src="../resources/TOP/${row.product_no}_1.jpg"
+							src="resources/TOP/${topdetail.dto.product_no}_1.jpg"
+							alt="Image Description">
+					</div>
+					<div class="js-slide g-cursor-pointer g-px-5">
+						<img class="img-fluid"
+							src="resources/TOP/${topdetail.dto.product_no}_3.jpg"
 							alt="Image Description">
 					</div>
 				</div>
-				<!-- End Carousel -->
-				
 			</div>
 
 			<div class="col-lg-5">
@@ -224,14 +226,14 @@
 									class="align-middle ml-2 icon-finance-100 u-line-icon-pro"></i>
 							</button>
 						</div>
-						<!-- 								<div class="col g-px-5 g-mb-10"> -->
-						<!-- 									<button -->
-						<!-- 										class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25" -->
-						<!-- 										type="button"> -->
-						<!-- 										Add to Wishlist <i -->
-						<!-- 											class="align-middle ml-2 icon-medical-022 u-line-icon-pro"></i> -->
-						<!-- 									</button> -->
-						<!-- 								</div> -->
+														<div class="col g-px-5 g-mb-10">
+															<button
+																class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25"
+																type="button">
+																Go Order <i
+																	class="align-middle ml-2 icon-medical-022 u-line-icon-pro"></i>
+															</button>
+														</div>
 					</div>
 					<!-- End Buttons -->
 

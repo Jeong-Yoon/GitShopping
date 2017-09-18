@@ -5,18 +5,18 @@
 
 <mapper namespace="cart">
 
-	<!-- 1.장바구니 추가 -->
-	<insert id="insertCart">
-	 insert into basket(
-	 m_Id, product_No, basket_Quantity
-	 )values(
-	 	#{m_Id}, #{product_No}, #{basket_Quantity}
-	 )
-	</insert>
-	
-	<!-- 2. 장바구니 목록 -->
-	<!-- 아이디, 상품번호, 수량, 상품명, 상품가격 -->
-	<select id="listCart" resultType="com.ac.shopping.cart.dto.CartDTO">
+   <!-- 1.장바구니 추가 -->
+   <insert id="insertCart">
+    insert into basket(
+    m_Id, product_No, basket_Quantity
+    )values(
+       #{m_Id}, #{product_No}, #{basket_Quantity}
+    )
+   </insert>
+   
+   <!-- 2. 장바구니 목록 -->
+   <!-- 아이디, 상품번호, 수량, 상품명, 상품가격 -->
+   <select id="listCart" resultType="com.ac.shopping.cart.dto.CartDTO">
 select 
     m.m_Id as m_Id,
     p.product_No as product_No,
@@ -25,25 +25,23 @@ select
 	p.pro_name as pro_name,
 	b.basket_color as pro_color,
     b.basket_size as pro_size
-		
 from  
-	basket b, product p, member m
-   
+   basket b, product p, member m
 where
 	b.product_no = p.product_no
 	and b.m_id = m.m_id
 	and m.m_id = #{m_Id}
 	</select>
 	
-	<!-- 3. 장바구니 전체 금액 -->
-	<select id="sumMoney" resultType="int">
-		select nvl(sum(pro_price*basket_quantity),0) money
-		from basket b, product p
-		where b.product_no = p.product_no
-		and b.m_id = #{m_Id}
-	
-	</select>
-	<!-- 4. 장바구니 수정 -->
+   <!-- 3. 장바구니 전체 금액 -->
+   <select id="sumMoney" resultType="int">
+      select nvl(sum(pro_price*basket_quantity),0) money
+      from basket b, product p
+      where b.product_no = p.product_no
+      and b.m_id = #{m_Id}
+   
+   </select>
+   <!-- 4. 장바구니 수정 -->
     <update id="modifyCart">
         UPDATE basket 
         SET basket_Quantity = #{basket_Quantity} 
@@ -57,15 +55,16 @@ where
 		and m_Id = #{m_Id}
 	
 	</delete>
-	<select id="countCart" resultType="int">
-	SELECT count(*)
+	
+   <select id="countCart" resultType="int">
+   SELECT count(*)
     FROM BASKET
     WHERE M_ID = #{m_Id}
-	</select>
+   </select>
     <insert id="order" statementType="CALLABLE" parameterType="hashmap">
         {
             CALL M_ORDER(
-            	#{odto.name},
+               #{odto.name},
                 #{odto.phone},
                 #{odto.address},
                 #{odto.request},
