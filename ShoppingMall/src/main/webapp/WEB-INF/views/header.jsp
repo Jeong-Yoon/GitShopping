@@ -294,7 +294,7 @@
 
 								<div
 									class="d-flex flex-row align-items-center justify-content-between g-font-size-18">
-									<a href="Cart/cart"
+									<a href="cart_list.do"
 										class="btn u-btn-outline-primary rounded-0 g-width-120">View
 										Cart</a> <a href="#"
 										class="btn u-btn-primary rounded-0 g-width-120">Checkout</a>
