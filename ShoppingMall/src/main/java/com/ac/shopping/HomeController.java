@@ -1,7 +1,11 @@
 package com.ac.shopping;
 
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -32,13 +36,21 @@ public class HomeController {
 		return "/shoppingindex";
 	}
 	
-	@RequestMapping(value = "Cart/cart", method = RequestMethod.GET)
-	public String cart() {		
-		return "Cart/cart";
-	}
+//	@RequestMapping(value = "Cart/cart", method = RequestMethod.GET)
+//	public String cart() {		
+//		return "Cart/cart";
+//	}
 	
 	@RequestMapping("/direct_shipping")
-	public String shipping(HttpSession session, HttpServletRequest request, Model model) {	
+	public String shipping(HttpSession session, HttpServletRequest request, Model model, HttpServletResponse response) throws IOException {
+		if (session.getAttribute("m_id") == null || session.getAttribute("m_id") == "") {
+			response.setContentType("text/html; charset=UTF-8");
+	    	PrintWriter out = response.getWriter();
+	    	out.println("<script>alert('로그인이 필요합니다.'); history.go(-1);</script>");
+	    	out.flush();
+	    	out.close();
+	    	return "";
+		}
 		String m_id = (String) session.getAttribute("m_id");
 		String pro_no = request.getParameter("product_no");
 		String pro_name = request.getParameter("pro_name");

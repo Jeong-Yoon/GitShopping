@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.ac.shopping.cart.dao.CartDAO;
 import com.ac.shopping.cart.dao.CartDAOImpl;
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.OrderDTO;
 
 @Service
 public class CartServiceImpl implements CartService{
@@ -26,7 +27,7 @@ public class CartServiceImpl implements CartService{
 	//2. 장바구니 목록 보기
 	@Override
 	public List<CartDTO> listCart(String m_Id) {
-		return cartDao.listCart("m_id");
+		return cartDao.listCart(m_Id);
 	}
 	//3. 장바구니 삭제
 	@Override
@@ -54,6 +55,11 @@ public class CartServiceImpl implements CartService{
 	public void updateCart(CartDTO cartDto) {
 		// TODO Auto-generated method stub
 		
+	}
+	//8.주문하기
+	@Override
+	public void order(CartDTO cdto, OrderDTO odto) {
+		cartDao.order(cdto, odto);
 	}
 
 }

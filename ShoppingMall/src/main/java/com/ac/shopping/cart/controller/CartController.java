@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
@@ -15,40 +18,46 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.OrderDTO;
 import com.ac.shopping.cart.service.CartService;
 import com.ac.shopping.cart.service.CartServiceImpl;
 
 @Controller
-/*@RequestMapping("/Cart/cart/*")*/
 public class CartController {
-	
+
 	@Inject
 	@Autowired
 	CartServiceImpl cartService;
-	
-	//1. 장바구니 추가
+
+	int nonm_index = 1;
+
+	// 1. 장바구니 추가
 	@RequestMapping("/cart_insert.do")
-	public String cartInsert(CartDTO cartDto, HttpSession session) {
-		String m_Id = (String)session.getAttribute("m_Id");
-		cartDto.setM_Id(m_Id);
-		
-		//장바구니에 기존 상품이 있는지 검사
-		int count = cartService.countCart(cartDto.getProduct_No(), m_Id );
-		if (count == 0) {
-			//장바구니에 아무것도 없으면 insert
-			cartService.insert(cartDto);
-		}else {
-			cartService.updateCart(cartDto);
+	public String cartInsert(HttpServletResponse response, CartDTO cartDto, HttpSession session, HttpServletRequest request) {
+		if (request.getParameter("m_id") != null) {
+			String m_Id = (String) session.getAttribute("m_Id");
+			cartDto.setM_Id(m_Id);
+
+			// 장바구니에 기존 상품이 있는지 검사
+			int count = cartService.countCart(cartDto.getProduct_No(), m_Id);
+			if (count == 0) {
+				// 장바구니에 아무것도 없으면 insert
+				cartService.insert(cartDto);
+			} else {
+				cartService.updateCart(cartDto);
+			}
+		} else {
+			session.setAttribute("nonmemberPro"+nonm_index, cartDto);
+			nonm_index ++;
 		}
 		return "redirect:/cart/cart_list.do";
 	}
 	
 	//2. 장바구니 목록
 	@RequestMapping("/cart_list.do")
-	public ModelAndView list(HttpSession session, ModelAndView mav) {
-		String m_Id = "hj";
+	public ModelAndView cart(HttpSession session, ModelAndView mav) {
 		
-//		(String) session.getAttribute("m_Id");
+		String m_Id = (String)session.getAttribute("m_id");
 		Map<String, Object> map = new HashMap<String, Object>(); 	
 		List<CartDTO> list = cartService.listCart(m_Id);//해당회원의 장바구니 정보
 		int sumMoney = cartService.sumMoney(m_Id);//장바구니 전체 금액 호출
@@ -62,56 +71,72 @@ public class CartController {
 		map.put("allSum", sumMoney+deliveryFee); //총 결제금액 : 상품금액+배송비
 		
 		
-		
-		
-		mav.setViewName("Cart/cart");
+		mav.setViewName("/Cart/cart");
+
 		mav.addObject("map", map);
-		
 		return mav;
 	}
-	
-
-	//3.장바구니 삭제
+		
+	// 3.장바구니 삭제
 	@RequestMapping("/cart_delete.do")
 	public String delete(@RequestParam String product_No, HttpSession session) {
 		System.out.println(product_No);
-		
+
 		String m_Id = (String) session.getAttribute("m_Id");
 		m_Id = "hj";
 		System.out.println(m_Id);
-		
+
 		cartService.delete(product_No, m_Id);
-		
-		
+
 		return "redirect:cart_list.do";
 	}
-	
-	
-	
-///4. 장바구니 수정
+
+	/// 4. 장바구니 수정
 	@RequestMapping("/cart_update.do")
 	public String update(@RequestParam int basket_Quantity, @RequestParam String product_No, HttpSession session) {
-		//session의 회원 아이디
+		// session의 회원 아이디
 		String m_Id = (String) session.getAttribute("m_Id");
-		
+
 		System.out.println(basket_Quantity);
 		System.out.println(product_No);
-		
-			CartDTO cartDto = new CartDTO();
-			cartDto.setM_Id(m_Id);
-			cartDto.setBasket_Quantity(basket_Quantity);
-			cartDto.setProduct_No(product_No);
-			cartService.modifyCart(cartDto);
-			
-			return "redirect:cart_list.do";
-			
+
+		CartDTO cartDto = new CartDTO();
+		cartDto.setM_Id(m_Id);
+		cartDto.setBasket_Quantity(basket_Quantity);
+		cartDto.setProduct_No(product_No);
+		cartService.modifyCart(cartDto);
+
+		return "redirect:cart_list.do";
+
 	}
-	
+
 	@RequestMapping("/boot_cart")
 	public String boot_cart() {
 		return "cart/boot_Cart";
 	}
 	
+	// 5. 주문하기
+	@RequestMapping("/order")
+	public String payment(HttpSession session, HttpServletRequest request){
+		CartDTO cdto = new CartDTO();
+		OrderDTO odto = new OrderDTO();
+		
+		cdto.setM_Id((String)session.getAttribute("m_id"));
+		cdto.setProduct_No(request.getParameter("pro_no"));
+		cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
+		cdto.setPro_color(request.getParameter("pro_color"));
+		cdto.setPro_size(request.getParameter("pro_size"));
+		cdto.setPro_name(request.getParameter("pro_name"));
+		cdto.setPro_price(Integer.parseInt(request.getParameter("allprice")));
+		System.out.println(request.getParameter("name"));
+		
+		odto.setAddress(request.getParameter("address"));
+		odto.setName(request.getParameter("name"));
+		odto.setPhone(request.getParameter("phone"));
+		odto.setRequest(request.getParameter("request"));
+		
+		cartService.order(cdto, odto);
+		return "";
+	}
 	
-
 }

@@ -2,147 +2,185 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+    
 <mapper namespace="review">
 
-<select id="selectbox" resultType="String">
-	
-   SELECT		
-		p.pro_name	
-		<include refid="type"></include> 
-		   
+   <!-- 리뷰 리스트 -->
+   <select id="list" resultType="com.ac.shopping.review.dto.review_dto">
+   SELECT R.PRODUCT_NO, R.BOARD_INDEX, R.M_ID, P.PRO_NAME, R.REVIEW_TITLE, R.REVIEW_CONTENT, R.REVIEW_DATE, R.REVIEW_HIT
+   FROM REVIEW R JOIN PRODUCT P
+   ON R.PRODUCT_NO = P.PRODUCT_NO
+   
+   </select>
+   
+   <!-- 리뷰 등록 -->
+   <insert id="insert" parameterType="com.ac.shopping.review.dto.review_dto">
+      INSERT INTO REVIEW VALUES (
+      #{M_ID},
+      #{PRODUCT_NO},
+      REVIEW_SEQ.nextval,
+      0,
+      #{REVIEW_TITLE},
+      #{REVIEW_CONTENT},
+      NULL,
+      SYSDATE
+      )
+   </insert>
+   
+   <select id="namemap" resultType="String">
+   SELECT PRODUCT_NO from PRODUCT
+   where PRO_NAME = #{product_name}
+   
+   </select>
+   
+   <!-- 리뷰 읽기 -->
+   <select id="view" resultType="com.ac.shopping.review.dto.review_dto">
+        SELECT R.M_ID as BOARD_WRITER , P.PRODUCT_NO as product_no,
+         R.BOARD_INDEX as board_index,R.REVIEW_HIT as REVIEW_HIT ,R.REVIEW_TITLE as REVIEW_TITLE,
+         R.REVIEW_CONTENT as REVIEW_CONTENT,R.REVIEW_DATE as REVIEW_DATE, p.pro_name as pro_name
+         FROM REVIEW R JOIN PRODUCT P
+         ON R.PRODUCT_NO = P.PRODUCT_NO
+        WHERE BOARD_INDEX = #{BOARD_INDEX}
+   </select>
+   
+   <select id="selectbox" resultType="String">
+   
+   SELECT      
+      p.pro_name   
+      <include refid="type"></include> 
+         
 </select>
 
 <sql id="type">
     <choose>
       <!-- 검색옵션이 전체 검색일 경우 -->
-      	<when test="case_type == 1"> 
+         <when test="case_type == 1"> 
         FROM product p JOIN top_bottom_acc
-		tba			
-		ON p.product_no = tba.product_no		       
+      tba         
+      ON p.product_no = tba.product_no             
         </when>      
         <when test="case_type == 2"> 
         FROM product p JOIN top_bottom_acc
-		tba			
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[T]%'
-		AND tba.category like '%T-SHIRT%'         
+      tba         
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[T]%'
+      AND tba.category like '%T-SHIRT%'         
         </when>
         <when test="case_type == 3"> 
         FROM product p JOIN top_bottom_acc
-		tba			
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[T]%'
-		AND tba.category like '%MANTOMAN/HOODTEE%'    
+      tba         
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[T]%'
+      AND tba.category like '%MANTOMAN/HOODTEE%'    
         </when>
         <when test="case_type == 4"> 
         FROM product p JOIN top_bottom_acc
-		tba			
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[T]%'
-		AND tba.category like '%KNIT%'   
+      tba         
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[T]%'
+      AND tba.category like '%KNIT%'   
         </when>
         <when test="case_type == 5"> 
         FROM product p JOIN top_bottom_acc
-		tba			
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[T]%'
-		AND tba.category like '%BLOUSE%'   
+      tba         
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[T]%'
+      AND tba.category like '%BLOUSE%'   
         </when>        
         
         
         <when test="case_type == 6">  
         FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[B]%'		
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[B]%'      
         </when>
         
         <when test="case_type == 7">  
         FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[B]%'	
-		AND tba.category like '%SHORTPANTS%'	
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[B]%'   
+      AND tba.category like '%SHORTPANTS%'   
         </when>
         
         <when test="case_type == 8">  
         FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[B]%'	
-		AND tba.category like '%STRAIGHT%'	
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[B]%'   
+      AND tba.category like '%STRAIGHT%'   
         </when>
         
         <when test="case_type == 9">  
         FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[B]%'	
-		AND tba.category like '%TRAINING%'	
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[B]%'   
+      AND tba.category like '%TRAINING%'   
         </when>
         
         
         <when test="case_type == 10">  
-       	FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[A]%'
+          FROM product p JOIN top_bottom_acc
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[A]%'
         </when>
         
         <when test="case_type == 11">  
-       	FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[A]%'
-		AND tba.category like '%EARRING%'
+          FROM product p JOIN top_bottom_acc
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[A]%'
+      AND tba.category like '%EARRING%'
         </when>
         
         <when test="case_type == 12">  
-       	FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[A]%'
-		AND tba.category like '%NECK%'
+          FROM product p JOIN top_bottom_acc
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[A]%'
+      AND tba.category like '%NECK%'
         </when>
         
         <when test="case_type == 13">  
-       	FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[A]%'
-		AND tba.category like '%BLACELET%'
+          FROM product p JOIN top_bottom_acc
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[A]%'
+      AND tba.category like '%BLACELET%'
         </when>
         
         <when test="case_type == 14">  
-       	FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[A]%'
-		AND tba.category like '%SOCKS%'
+          FROM product p JOIN top_bottom_acc
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[A]%'
+      AND tba.category like '%SOCKS%'
         </when>
         
         <when test="case_type == 15">  
-       	FROM product p JOIN top_bottom_acc
-		tba
-		ON p.product_no = tba.product_no
-		WHERE tba.category like '%[A]%'
-		AND tba.category like '%BELT%'
+          FROM product p JOIN top_bottom_acc
+      tba
+      ON p.product_no = tba.product_no
+      WHERE tba.category like '%[A]%'
+      AND tba.category like '%BELT%'
         </when>            
         
         <when test="case_type == 16">        
-		FROM product p JOIN outer_onepiece otop
-		ON p.product_no = otop.product_no
-		WHERE otop.category LIKE '%[OUT]%'		
+      FROM product p JOIN outer_onepiece otop
+      ON p.product_no = otop.product_no
+      WHERE otop.category LIKE '%[OUT]%'      
         </when>
          <when test="case_type == 17"> 
         FROM product p JOIN outer_onepiece otop
-		ON p.product_no = otop.product_no
-		WHERE otop.category LIKE '%[OPS]%'
+      ON p.product_no = otop.product_no
+      WHERE otop.category LIKE '%[OPS]%'
         </when>
         <when test="case_type == 18">          
-		FROM PRODUCT p JOIN SHOES shoe ON
-		p.product_no = shoe.product_no           
+      FROM PRODUCT p JOIN SHOES shoe ON
+      p.product_no = shoe.product_no           
         </when>  
         
         <otherwise>
@@ -151,5 +189,4 @@
      
     </choose>
 </sql>
-
 </mapper>

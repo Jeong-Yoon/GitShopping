@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
 
+import com.ac.shopping.cart.dto.CartDTO;
 import com.ac.shopping.member.dto.MemberDTO;
 import com.ac.shopping.product.dao.ProductDAO;
 import com.ac.shopping.product.dao.ProductDAOImpl;
@@ -165,8 +166,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public void addCart2(String pro_no, String m_id,int quantity) {
-		productDao.addCart2(pro_no, m_id,quantity);
+	public void addCart2(CartDTO cdto) {
+		productDao.addCart2(cdto);
 	}
 
 	@Override

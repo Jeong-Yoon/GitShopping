@@ -40,18 +40,30 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
+    <script>
+    function goto_url(act) {
+  	  document.direct_shipping.action = act;
+  	  document.direct_shipping.submit();
+  	}
+    </script>
   </head>
 
   <body>
     <main>
       
 <jsp:include page="../header.jsp" flush="false" />
-<input type="hidden" name="pro_no" value="${pro_no}">
      
 
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
-        <form class="js-validate js-step-form" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
+        <form class="js-validate js-step-form" name="direct_shipping" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
+<input type="hidden" name="pro_no" value="${pro_no}">
+<input type="hidden" name="pro_name" value="${pro_name}">
+<input type="hidden" name="pro_color" value="${pro_color}">
+<input type="hidden" name="pro_size" value="${pro_size}">
+<input type="hidden" name="allprice" value="${allprice}">
+<input type="hidden" name="quantity" value="${pro_quantity}">
+<input type="hidden" name="" value="">
           <div class="g-mb-100">
             <!-- Step Titles -->
             <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
@@ -281,7 +293,7 @@
                     <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">이름</label>
-                        <input id="inputGroup4" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="firstName" type="text" placeholder="이름" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup4" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="name" id="name" type="text" placeholder="이름" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
 
@@ -289,7 +301,7 @@
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">연락처</label>
-                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="stateProvince" type="text" placeholder="010-000-0000" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="phone" id="phone" type="text" placeholder="010-000-0000" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                       
                     </div>
@@ -300,14 +312,14 @@
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주소</label>
-                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="" type="text" placeholder="주소">
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="address" id="address" type="text" placeholder="주소">
                       </div>
                     </div>
                      
 		 <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문메시지</label>
-                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="zip" type="text" placeholder="부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="request" id="request" type="text" placeholder="부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
 
@@ -320,7 +332,7 @@
                   <hr class="g-mb-50">
 
                   
-                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3">결제하기</button>
+                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3" onclick="goto_url('order')">결제하기</button>
                 </div>
 
                 <div class="col-md-4 g-mb-30">
@@ -348,9 +360,9 @@
                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
                                   <li>색상: ${pro_color}</li>
                                   <li>Size: ${pro_size}</li>
-                                  <li>수량: 1</li>
+                                  <li>수량: ${pro_quantity}</li>
                                 </ul>
-                                <span class="d-block g-color-black g-font-weight-400">&#8361; ${pro_price}</span>
+                                <span class="d-block g-color-black g-font-weight-400">&#8361; ${allprice}</span>
                               </div>
                             </li>
                             <!-- End Product -->

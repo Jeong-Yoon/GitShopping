@@ -74,7 +74,7 @@ public class MemberController {
 			mdto.setEmail(request.getParameter("email"));
 			
 			memberService.signUp(mdto);
-			return "shoppingindex";
+			return "redirect:shoppingindex";
 		}else{
 		
 			response.setContentType("text/html; charset=UTF-8");

@@ -271,14 +271,14 @@ body {margin: 10px; font-size: 13px}
 								<!-- Product -->
 								<figure>
 									<div class="g-pos-rel g-mb-20">
-										<img class="img-fluid"
-											src="../resources/TOP/${row.product_no}_1.jpg"
-											alt="Image Description" witdh="480" height="700"></a>
+										<a href="${contextPath}/top-detail?product_no=${row.product_no}"><img
+											class="img-fluid" src="../resources/TOP/${row.product_no}_1.jpg"
+											alt="Image Description"></a>
 										<!-- Ribbon -->
-										<figcaption>
-											<span
-												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
-										</figcaption>
+<!-- 										<figcaption> -->
+<!-- 											<span -->
+<!-- 												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span> -->
+<!-- 										</figcaption> -->
 										<!-- End Ribbon -->
 									</div>
 									<div class="media">
@@ -296,18 +296,11 @@ body {margin: 10px; font-size: 13px}
 
 										<!-- Products Icons -->
 										<ul class="list-inline media-body text-right">
-<!-- 											<li class="list-inline-item align-middle mx-0"><a -->
-<!-- 												class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
-<%-- 												href="${contextPath}/add-cart?product_no=${row.product_no}" --%>
-<!-- 												data-toggle="tooltip" data-placement="top" -->
-<!-- 												title="Add to Cart"> <i -->
-<!-- 													class="icon-finance-100 u-line-icon-pro"></i> -->
-<!-- 											</a></li> -->
-
 											<li class="list-inline-item align-middle mx-0"><a
 												class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5
 												g-color-primary--hover g-font-size-15 rounded-circle"
-												href="${contextPath}/Cart/wish?product_no=${row.product_no}&pro_price=${row.pro_price}" data-toggle="tooltip" data-placement="top"
+												href="${contextPath}/Cart/wish?product_no=${row.product_no}&pro_price=${row.pro_price}"
+												data-toggle="tooltip" data-placement="top"
 												title="Add to Wishlist"> <i
 													class="icon-medical-022 u-line-icon-pro"></i>
 											</a></li>

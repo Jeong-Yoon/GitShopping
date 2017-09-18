@@ -341,13 +341,14 @@
 		FROM basket
 		WHERE m_id = #{m_id}
 		AND product_no = #{pro_no}
+<!-- 		AND basket_color = #{pro_color} -->
 	</select>
 
 	<insert id="addCart2">
 		INSERT INTO BASKET
-		(product_no, m_id, basket_quantity)
+		(product_no, m_id, basket_quantity, basket_size, basket_color)
 		VALUES
-		(#{pro_no}, #{m_id}, #{quantity})
+		(#{product_No}, #{m_Id}, #{basket_Quantity}, #{pro_size}, #{pro_color})
 	</insert>
 
 	<select id="wishList" resultType="com.ac.shopping.product.dto.WishListDTO">
