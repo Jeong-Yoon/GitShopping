@@ -96,9 +96,10 @@
                           <th></th>
                         </tr>
                       </thead>
-
                       <tbody>
                         <!-- Item-->
+                        <c:choose>
+                        <c:when test="${not empty Sessionscpoe.m_id}">
                         <c:forEach var="row" items="${map.list}" >
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
@@ -131,6 +132,42 @@
                           </td>
                         </tr>
                         </c:forEach>
+                        </c:when>
+                        <c:when test="${empty Sessionscpoe.m_id }">
+                        <c:forEach var="row" items="${map.list}" >
+                        <tr class="g-brd-bottom g-brd-gray-light-v3">
+                          <td class="text-left g-py-25">
+                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <div class="d-inline-block align-middle">
+                              <h4 class="h6 g-color-black">${row.pro_name} </h4>
+                              <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
+                                <li>Color: Black</li>
+                                <li>Size: MD</li>
+                              </ul>
+                            </div>
+                          </td>
+                          <td class="g-color-gray-dark-v2 g-font-size-13">${row.pro_price} </td>
+                          <td>
+                            <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
+                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="${row.basket_Quantity}" readonly>
+
+                              <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6">
+                                <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i>
+                                <i class="js-minus g-color-gray g-color-primary--hover fa fa-angle-down"></i>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-right g-color-black">
+                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">${row.pro_price * row.basket_Quantity}</span>
+                            <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
+                              <a href="${contextPath}/cart_delete.do?product_No=${row.product_No}&m_Id=${m_Id}"><i class="mt-auto fa fa-trash"></i></a>
+                            </span>
+                          </td>
+                        </tr>
+                        </c:forEach>
+                        </c:when>
+                        </c:choose>
                         <!-- End Item-->
                         <!-- Item-->
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
