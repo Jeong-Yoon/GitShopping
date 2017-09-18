@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<c:set var="contextPath" value="<%= request.getContextPath()%>"></c:set>
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +22,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="resources/WB0412697/html/favicon.ico">
+<link rel="shortcut icon" href="${contextPath}/resources/WB0412697/html/favicon.ico">
 
 <!-- Google Fonts -->
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=cyrillic,latin"
@@ -30,43 +30,43 @@
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.css">
 
 <!-- CSS Implementing Plugins -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
-<link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
+<link rel="${contextPath}/stylesheet" href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
 
 <!-- Show / Copy Code -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
-<link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/prism/themes/prism.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/prism/themes/prism.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/custombox/custombox.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/custombox/custombox.min.css">
 
-<link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/animate.css">
+<link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/animate.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
 
 <!-- CSS Unify -->
-<link rel="stylesheet" href="resources/WB0412697/html/assets/css/unify.css">
+<link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/unify.css">
 
 <!-- CSS Customization -->
-<link rel="stylesheet" href="resources/WB0412697/html/assets/css/custom.css">
+<link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
 
 </head>
 
@@ -91,7 +91,7 @@
 					<div class="container" style="margin: 0 auto;">
 						<div class="text-center g-mb-50">
 							<h2 class="h4">
-								게시글 <span class="g-color-primary g-ml-5">#읽기</span>
+								문의글 <span class="g-color-primary g-ml-5">#읽기</span>
 							</h2>
 						</div>
 
@@ -141,9 +141,8 @@
     				<c:otherwise> 
     				<table class="table table-bordered u-table--v2" style="margin: 0 auto; width:600px;">
 				          <tr> 
-				          <hr class="g-brd-gray-light-v4 my-0" style="width:1000px;">
-							<hr class="g-brd-gray-light-v4 my-0" style="width:1000px;">
-				          
+				          <hr class="g-brd-gray-light-v4 my-0" style="width:500px;"><br />
+				          	
                              <td class="align-middle text-nowrap" style="width:100px;">답변</td>
                              <td class="align-middle" name="BOARD_WRITER" style="width:500px;">                                        
                                     ${view.BOARD_REPLY}</td>
@@ -173,8 +172,8 @@
 							</div>
 						</div>
 				<!-- End Table #01 -->
-
-		
+			<br />
+		<div  style="text-align:center;">
        	 	 <input type="hidden" name="BOARD_INDEX" value="${view.BOARD_INDEX}">
 				<div style="margin: 0 auto;">
 				<button type="button" class="btn btn-md u-btn-primary rounded-0" onclick="location.href='../Q_A/modify?BOARD_INDEX=${view.BOARD_INDEX}&BOARD_WRITER=${view.BOARD_WRITER}&BOARD_TITLE=${view.BOARD_TITLE}&BOARD_CONTENT=${view.BOARD_CONTENT}'">
@@ -185,7 +184,7 @@
 		
 				</div>
 				</div>
-				
+			</div>	
 				</section>
 		</form>			
 		</div>
@@ -209,72 +208,72 @@
 		style="display: none;"></div>
 
 	<!-- JS Global Compulsory -->
-	<script src="resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/tether.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.js"></script>
 
 	<!-- JS Implementing Plugins -->
-	<script src="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/jquery.peity.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery.peity.min.js"></script>
 
 	<!-- JS Unify -->
-	<script src="resources/WB0412697/html/assets/js/hs.core.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.header.js"></script>
-	<script src="resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.rating.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.chart.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.rating.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.chart.js"></script>
 
 	<!-- jQuery UI Core -->
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/version.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/keycode.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/position.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/unique-id.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/version.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/keycode.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/position.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/unique-id.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
 	<!-- End jQuery UI Core -->
 
 	<!-- jQuery UI Helpers -->
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
 	<!-- End jQuery UI Helpers -->
 
 	<!-- jQuery UI Widgets -->
-	<script src="resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
 	<!-- End jQuery UI Widgets -->
 
 	<!-- Show / Copy Code -->
-	<script src="resources/WB0412697/html/assets/vendor/prism/prism.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/prism/components/prism-markup.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/prism/components/prism-css.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/prism/components/prism-clike.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/prism.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-markup.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-css.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-clike.min.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/prism/components/prism-javascript.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-javascript.min.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/prism/plugins/toolbar/prism-toolbar.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/plugins/toolbar/prism-toolbar.min.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/prism/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
 
 	<script
-		src="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/custombox/custombox.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/custombox/custombox.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/clipboard/dist/clipboard.min.js"></script>
 
-	<script src="resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
-	<script src="resources/WB0412697/html/assets/js/helpers/hs.modal-markup.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.markup-copy.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.modal-window.js"></script>
-	<script src="resources/WB0412697/html/assets/js/helpers/hs.shortcode-filter.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.modal-markup.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.markup-copy.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.modal-window.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.shortcode-filter.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
 
 	<script type="text/javascript">
 	function button_event(){
@@ -298,7 +297,7 @@
 	</script>
 
 	<!-- JS Custom -->
-	<script src="resources/WB0412697/html/assets/js/custom.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
 
 	<!-- JS Plugins Init. -->
 	<script>

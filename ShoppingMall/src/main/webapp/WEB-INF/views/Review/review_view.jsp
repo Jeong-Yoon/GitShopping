@@ -147,8 +147,8 @@
 											</tbody>
 											
 												
-										</table>
-											<div style="margin: 0 auto;">
+										</table><br />
+											<div style="text-align:center;">
 											<button type="button"
 												class="btn btn-md u-btn-primary rounded-0"
 												onclick="location.href='http://localhost:7070/shopping/review'">
