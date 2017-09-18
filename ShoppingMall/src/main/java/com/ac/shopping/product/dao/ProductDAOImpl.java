@@ -200,6 +200,7 @@ public class ProductDAOImpl implements ProductDAO {
 		HashMap<String, Object> param = new HashMap<String, Object>();
 		param.put("pro_no", pro_no);
 		param.put("m_id", m_id);
+//		param.put("pro_color", pro_color);
 		int result = sqlSession.selectOne("product.cart_Chk", param);
 		if(result == 0){
 			return true;
@@ -209,9 +210,11 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public void addCart2(CartDTO cdto) {
 //		HashMap<String, Object> param = new HashMap<String, Object>();
-//		param.put("pro_no", pro_no);
-//		param.put("m_id", m_id);
-//		param.put("quantity", quantity);
+//		param.put("pro_no", cdto.getProduct_No());
+//		param.put("m_id", cdto.getM_Id());
+//		param.put("quantity", cdto.getBasket_Quantity());
+//		param.put("pro_size", cdto.getPro_size());
+//		param.put("pro_color", cdto.getPro_color());
 		sqlSession.insert("product.addCart2",cdto);
 	}
 	@Override

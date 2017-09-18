@@ -341,6 +341,7 @@
 		FROM basket
 		WHERE m_id = #{m_id}
 		AND product_no = #{pro_no}
+<!-- 		AND basket_color = #{pro_color} -->
 	</select>
 
 	<insert id="addCart2">

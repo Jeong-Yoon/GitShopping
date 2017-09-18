@@ -8,6 +8,8 @@ public class CartDTO {
 	private String m_Id;
 	private int basket_Quantity;
 	private String pro_color;
+	private String pro_size;
+	private String non_member_order_no;
 	///////getter, setter////////////////
 	
 	
@@ -47,6 +49,18 @@ public class CartDTO {
 	}
 	public void setBasket_Quantity(int basket_Quantity) {
 		this.basket_Quantity = basket_Quantity;
+	}
+	public String getPro_size() {
+		return pro_size;
+	}
+	public void setPro_size(String pro_size) {
+		this.pro_size = pro_size;
+	}
+	public String getNon_member_order_no() {
+		return non_member_order_no;
+	}
+	public void setNon_member_order_no(String non_member_order_no) {
+		this.non_member_order_no = non_member_order_no;
 	}
 	
 	

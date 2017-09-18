@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.OrderDTO;
 
 public interface CartDAO {
 
@@ -25,6 +26,8 @@ public interface CartDAO {
 	public int countCart(String product_No, String m_Id);
 	//7.장바구니 상품수량 변경
 	public void updateCart(CartDTO cartDto);
+	//8.주문하기
+	public void order(CartDTO cdto, OrderDTO odto);
 	
 
 }

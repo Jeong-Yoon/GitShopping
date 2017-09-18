@@ -99,20 +99,19 @@
 
                       <tbody>
                         <!-- Item-->
-                        <c:forEach var="row" items="${map.list}" >
+                        <c:forEach var="row" items="${map.list}">
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
-                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">${row.pro_name} </h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
-                                <li>Color: Black</li>
-                                <li>Size: MD</li>
+                                <li>Color: ${row.pro_color}</li>
+                                <li>Size: ${row.pro_size}</li>
                               </ul>
                             </div>
                           </td>
-                          <td class="g-color-gray-dark-v2 g-font-size-13">${row.pro_price} </td>
+                          <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; ${row.pro_price} </td>
                           <td>
                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
                               <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="${row.basket_Quantity}" readonly>
@@ -124,76 +123,76 @@
                             </div>
                           </td>
                           <td class="text-right g-color-black">
-                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">${row.pro_price * row.basket_Quantity}</span>
+                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; ${row.pro_price * row.basket_Quantity}</span>
                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
-                              <a href="${contextPath}/cart_delete.do?product_No=${row.product_No}&m_Id=${m_Id}"><i class="mt-auto fa fa-trash"></i></a>
+                              <a href="/cart_delete.do?product_No=${row.product_No}&m_Id=${m_Id}"><i class="mt-auto fa fa-trash"></i></a>
                             </span>
                           </td>
                         </tr>
                         </c:forEach>
                         <!-- End Item-->
                         <!-- Item-->
-                        <tr class="g-brd-bottom g-brd-gray-light-v3">
-                          <td class="text-left g-py-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
-                            <div class="d-inline-block align-middle">
-                              <h4 class="h6 g-color-black">Chukka Shoes</h4>
-                              <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
-                                <li>Color: Black</li>
-                                <li>Size: MD</li>
-                              </ul>
-                            </div>
-                          </td>
-                          <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; 160.00</td>
-                          <td>
-                            <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
-                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="2" readonly>
+<!--                         <tr class="g-brd-bottom g-brd-gray-light-v3"> -->
+<!--                           <td class="text-left g-py-25"> -->
+<%--                             <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description"> --%>
+<!--                             <div class="d-inline-block align-middle"> -->
+<!--                               <h4 class="h6 g-color-black">Chukka Shoes</h4> -->
+<!--                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0"> -->
+<!--                                 <li>Color: Black</li> -->
+<!--                                 <li>Size: MD</li> -->
+<!--                               </ul> -->
+<!--                             </div> -->
+<!--                           </td> -->
+<!--                           <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; 160.00</td> -->
+<!--                           <td> -->
+<!--                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus"> -->
+<!--                               <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="2" readonly> -->
 
-                              <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6">
-                                <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i>
-                                <i class="js-minus g-color-gray g-color-primary--hover fa fa-angle-down"></i>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="text-right g-color-black">
-                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; 320.00</span>
-                            <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
-                              <i class="mt-auto fa fa-trash"></i>
-                            </span>
-                          </td>
-                        </tr>
+<!--                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6"> -->
+<!--                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i> -->
+<!--                                 <i class="js-minus g-color-gray g-color-primary--hover fa fa-angle-down"></i> -->
+<!--                               </div> -->
+<!--                             </div> -->
+<!--                           </td> -->
+<!--                           <td class="text-right g-color-black"> -->
+<!--                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; 320.00</span> -->
+<!--                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer"> -->
+<!--                               <i class="mt-auto fa fa-trash"></i> -->
+<!--                             </span> -->
+<!--                           </td> -->
+<!--                         </tr> -->
                         <!-- End Item-->
 
                         <!-- Item-->
-                        <tr>
-                          <td class="text-left g-pt-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
-                            <div class="d-inline-block align-middle">
-                              <h4 class="h6 g-color-black">Desk Clock</h4>
-                              <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
-                                <li>Color: Brown Wood</li>
-                                <li>Type: Desk</li>
-                              </ul>
-                            </div>
-                          </td>
-                          <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; 47.00</td>
-                          <td>
-                            <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
-                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="1" readonly>
+<!--                         <tr> -->
+<!--                           <td class="text-left g-pt-25"> -->
+<%--                             <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description"> --%>
+<!--                             <div class="d-inline-block align-middle"> -->
+<!--                               <h4 class="h6 g-color-black">Desk Clock</h4> -->
+<!--                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0"> -->
+<!--                                 <li>Color: Brown Wood</li> -->
+<!--                                 <li>Type: Desk</li> -->
+<!--                               </ul> -->
+<!--                             </div> -->
+<!--                           </td> -->
+<!--                           <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; 47.00</td> -->
+<!--                           <td> -->
+<!--                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus"> -->
+<!--                               <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="1" readonly> -->
 
-                              <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6">
-                                <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i>
-                                <i class="js-minus g-color-gray g-color-primary--hover fa fa-angle-down"></i>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="text-right g-color-black">
-                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; 47.00</span>
-                            <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
-                              <i class="mt-auto fa fa-trash"></i>
-                            </span>
-                          </td>
-                        </tr>
+<!--                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6"> -->
+<!--                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i> -->
+<!--                                 <i class="js-minus g-color-gray g-color-primary--hover fa fa-angle-down"></i> -->
+<!--                               </div> -->
+<!--                             </div> -->
+<!--                           </td> -->
+<!--                           <td class="text-right g-color-black"> -->
+<!--                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; 47.00</span> -->
+<!--                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer"> -->
+<!--                               <i class="mt-auto fa fa-trash"></i> -->
+<!--                             </span> -->
+<!--                           </td> -->
+<!--                         </tr> -->
                         <!-- End Item -->
                       </tbody>
                     </table>
@@ -271,17 +270,17 @@
                     
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
-                      <span class="g-color-black g-font-weight-300">${map.sumMoney}</span>
+                      <span class="g-color-black g-font-weight-300">&#8361; ${map.sumMoney}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
-                      <span class="g-color-black g-font-weight-300">${map.allSum}</span>
+                      <span class="g-color-black g-font-weight-300">&#8361; ${map.allSum}</span>
                     </div>
                   </div>
                   <!-- End Summary -->
 
                   <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button">수정</button>
-                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2">결제 진행하기</button>
+                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="">결제 진행하기</button>
 
                   
 

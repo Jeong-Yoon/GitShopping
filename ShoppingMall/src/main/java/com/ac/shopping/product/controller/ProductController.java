@@ -293,10 +293,11 @@ public class ProductController {
 //		int quantity = Integer.parseInt(request.getParameter("quantity"));
 //		System.out.println(m_id);
 //		System.out.println(pro_no);
+//		boolean result = productService.cart_Chk(cdto.getProduct_No(), cdto.getM_Id(),cdto.getPro_color());
 		boolean result = productService.cart_Chk(cdto.getProduct_No(), cdto.getM_Id());
 		if (result) {
 			productService.addCart2(cdto);
-			return"Cart/cart";
+			return"redirect:Cart/cart";
 		} else{
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();

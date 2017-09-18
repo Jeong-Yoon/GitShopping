@@ -36,10 +36,10 @@ public class HomeController {
 		return "/shoppingindex";
 	}
 	
-	@RequestMapping(value = "Cart/cart", method = RequestMethod.GET)
-	public String cart() {		
-		return "Cart/cart";
-	}
+//	@RequestMapping(value = "Cart/cart", method = RequestMethod.GET)
+//	public String cart() {		
+//		return "Cart/cart";
+//	}
 	
 	@RequestMapping("/direct_shipping")
 	public String shipping(HttpSession session, HttpServletRequest request, Model model, HttpServletResponse response) throws IOException {

@@ -3,6 +3,7 @@ package com.ac.shopping.cart.service;
 import java.util.List;
 
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.OrderDTO;
 
 public interface CartService {
 
@@ -20,7 +21,8 @@ public interface CartService {
 	public int countCart(String product_No, String m_Id);
 	//7. 장바구니 상품 수량 변경
 	public void updateCart(CartDTO cartDTO);
-	
+	//8. 주문하기
+	public void order(CartDTO cdto, OrderDTO odto);
 	
 	
 }
