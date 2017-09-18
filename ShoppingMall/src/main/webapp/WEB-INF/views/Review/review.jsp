@@ -85,11 +85,12 @@
       </c:forEach>
     </tbody>
   </table>
-  <input type="submit" value="조회" class="btn btn-md u-btn-primary rounded-0">
+<!--   <input type="submit" value="조회" class="btn btn-md u-btn-primary rounded-0"> -->
 <%--   <c:if test="${sessionScope.M_ID != null}"> --%>
+		<div style="text-align:center;">
         <input type="button" class="btn btn-md u-btn-primary rounded-0" name="write" value="글쓰기" onclick="location.href='http://localhost:7070/shopping/review_write'";><br />
 <%--     </c:if> --%>
-        
+        </div>
 </div>
 <!-- End Hoverable Rows -->
                 </div>

@@ -1273,13 +1273,13 @@
 						data-slotamount="default" data-hideafterloop="0"
 						data-hideslideonmobile="off" data-easein="default"
 						data-easeout="default" data-masterspeed="default"
-						data-thumb="resources/WB0412697/html/e-commerce/assets/img-temp/1920x1080/img2.jpg"
+						data-thumb="resources/WB0412697/html/assets/img/logo/메인.PNG"
 						data-rotate="0" data-saveperformance="off" data-title="Slide"
 						data-param1="" data-param2="" data-param3="" data-param4=""
 						data-param5="" data-param6="" data-param7="" data-param8=""
 						data-param9="" data-param10="" data-description="">
 						<!-- MAIN IMAGE --> <img
-						src="resources/WB0412697/html/e-commerce/assets/img-temp/1920x1080/img2.jpg"
+						src="resources/WB0412697/html/assets/img/logo/메인.PNG"
 						alt="" data-bgposition="center center" data-bgfit="cover"
 						data-bgparallax="10" class="rev-slidebg"> <!-- LAYERS --> <!-- LAYER NR. 1 -->
 						<div class="tp-caption tp-shape tp-shapewrapper"
@@ -1311,8 +1311,8 @@
 							data-textAlign="['center','center','center','center']"
 							data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-							style="z-index: 6; white-space: nowrap; font-size: 110px; line-height: 110px; font-weight: 700; color: rgba(255, 255, 255, 1.00); border-width: 0px; letter-spacing: -7px;">Summer
-							Collection</div> <!-- LAYER NR. 4 -->
+							style="z-index: 6; white-space: nowrap; font-size: 110px; line-height: 110px; font-weight: 700; color: rgba(255, 255, 255, 1.00); border-width: 0px; letter-spacing: -7px;">
+							Autumn Collection</div> <!-- LAYER NR. 4 -->
 						<div class="tp-caption   tp-resizeme" id="slide-2800-layer-2"
 							data-x="['center','center','center','center']"
 							data-hoffset="['-10','-10','-10','-10']"
@@ -1322,14 +1322,14 @@
 							data-width="['640','640','480','360']" data-height="none"
 							data-whitespace="['nowrap','nowrap','normal','normal']"
 							data-type="text"
-							data-typewriter='{"lines":"Special%20Offer:%20Free%20Shipping%20Today,%20Shop%20with%20Unify","enabled":"on","speed":"70","delays":"1%7C100","looped":"on","cursorType":"one","blinking":"on","word_delay":"off","sequenced":"on","hide_cursor":"off","start_delay":"1500","newline_delay":"1000","deletion_speed":"20","deletion_delay":"1000","blinking_speed":"500","linebreak_delay":"60","cursor_type":"two","background":"off"}'
+							data-typewriter='{"lines":"특별 이벤트: 배송비무료 단 일주일간,%20Shop%20with%20Always Wearing","enabled":"on","speed":"70","delays":"1%7C100","looped":"on","cursorType":"one","blinking":"on","word_delay":"off","sequenced":"on","hide_cursor":"off","start_delay":"1500","newline_delay":"1000","deletion_speed":"20","deletion_delay":"1000","blinking_speed":"500","linebreak_delay":"60","cursor_type":"two","background":"off"}'
 							data-responsive_offset="on"
 							data-frames='[{"from":"y:50px;sX:1;sY:1;opacity:0;","speed":2500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
 							data-textAlign="['center','center','center','center']"
 							data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-							style="z-index: 8; min-width: 640px; max-width: 640px; white-space: nowrap; font-size: 40px; line-height: 40px; font-weight: 400; color: rgba(255, 255, 255, 1.00); border-width: 0px;">Get
-							20% off any Purchase over $100</div> <!-- LAYER NR. 5 -->
+							style="z-index: 8; min-width: 640px; max-width: 640px; white-space: nowrap; font-size: 40px; line-height: 40px; font-weight: 400; color: rgba(255, 255, 255, 1.00); border-width: 0px;">
+							Always Wearing에서 당신의 스타일을 만나보세요 </div> <!-- LAYER NR. 5 -->
 						<div class="tp-caption rev-btn  tp-resizeme"
 							id="slide-2800-layer-4"
 							data-x="['right','right','center','center']"
@@ -1343,8 +1343,8 @@
 							data-textAlign="['left','left','left','left']"
 							data-paddingtop="[0,0,0,0]" data-paddingright="[50,50,50,50]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[50,50,50,50]"
-							style="z-index: 9; white-space: nowrap; font-size: 15px; line-height: 46px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, 0.25); border-style: solid; border-width: 2px; border-radius: 4px 4px 4px 4px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 5px; cursor: pointer;">SHOP
-							NOW</div> <!-- LAYER NR. 6 -->
+							style="z-index: 9; white-space: nowrap; font-size: 15px; line-height: 46px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, 0.25); border-style: solid; border-width: 2px; border-radius: 4px 4px 4px 4px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 5px; cursor: pointer;">
+							쇼핑하기</div> <!-- LAYER NR. 6 -->
 						<div class="tp-caption   tp-resizeme" id="slide-2800-layer-6"
 							data-x="['center','center','center','center']"
 							data-hoffset="['0','0','0','0']"
@@ -1371,7 +1371,7 @@
 							data-textAlign="['left','left','left','left']"
 							data-paddingtop="[0,0,0,0]" data-paddingright="[50,50,50,50]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[50,50,50,50]"
-							style="z-index: 11; white-space: nowrap; font-size: 15px; line-height: 46px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, 0.25); border-style: solid; border-width: 2px; border-radius: 4px 4px 4px 4px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 5px; cursor: pointer;">CONTACT
+							style="z-index: 11; white-space: nowrap; font-size: 15px; line-height: 46px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, 0.25); border-style: solid; border-width: 2px; border-radius: 4px 4px 4px 4px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 5px; cursor: pointer;">둘러보기
 						</div>
 					</li>
 					<!-- SLIDE  -->
@@ -1379,13 +1379,13 @@
 						data-slotamount="default" data-hideafterloop="0"
 						data-hideslideonmobile="off" data-easein="default"
 						data-easeout="default" data-masterspeed="default"
-						data-thumb="resources/WB0412697/html/e-commerce/assets/img-temp/1920x1080/img1.jpg"
+						data-thumb="resources/WB0412697/html/assets/img/logo/메인2.PNG"
 						data-rotate="0" data-saveperformance="off" data-title="Slide"
 						data-param1="" data-param2="" data-param3="" data-param4=""
 						data-param5="" data-param6="" data-param7="" data-param8=""
 						data-param9="" data-param10="" data-description="">
 						<!-- MAIN IMAGE --> <img
-						src="resources/WB0412697/html/e-commerce/assets/img-temp/1920x1080/img1.jpg"
+						src="resources/WB0412697/html/assets/img/logo/메인2.PNG"
 						alt="" data-bgposition="center center" data-bgfit="cover"
 						data-bgrepeat="no-repeat" class="rev-slidebg"> <!-- LAYERS -->
 
@@ -1423,7 +1423,7 @@
 							data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
 							style="z-index: 20; min-width: 760px; max-width: 760px; white-space: normal; font-size: 100px; line-height: 100px; font-weight: 700; color: rgba(255, 255, 255, 1.00); border-width: 0px; letter-spacing: -5px;">
-							Finding your<br>Perfect Clothes..
+							Basic<br>Shirts
 						</div>
 					</li>
 					<!-- SLIDE  -->
@@ -1431,13 +1431,13 @@
 						data-slotamount="default" data-hideafterloop="0"
 						data-hideslideonmobile="off" data-easein="default"
 						data-easeout="default" data-masterspeed="default"
-						data-thumb="resources/WB0412697/html/e-commerce/assets/img-temp/1920x1080/img3.jpg"
+						data-thumb="resources/WB0412697/html/assets/img/logo/메인3.PNG"
 						data-rotate="0" data-saveperformance="off" data-title="Slide"
 						data-param1="" data-param2="" data-param3="" data-param4=""
 						data-param5="" data-param6="" data-param7="" data-param8=""
 						data-param9="" data-param10="" data-description="">
 						<!-- MAIN IMAGE --> <img
-						src="resources/WB0412697/html/e-commerce/assets/img-temp/1920x1080/img3.jpg"
+						src="resources/WB0412697/html/assets/img/logo/메인3.PNG"
 						alt="" data-bgposition="center center" data-bgfit="cover"
 						data-bgrepeat="no-repeat" class="rev-slidebg"> <!-- LAYERS -->
 
@@ -1471,8 +1471,8 @@
 							data-textAlign="['center','center','center','center']"
 							data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-							style="z-index: 13; white-space: nowrap; font-size: 130px; line-height: 130px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-width: 0px; letter-spacing: -7px;">High
-							Quality</div> <!-- LAYER NR. 10 -->
+							style="z-index: 13; white-space: nowrap; font-size: 130px; line-height: 130px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-width: 0px; letter-spacing: -7px;">
+							Always Wearing자체제작</div> <!-- LAYER NR. 10 -->
 						<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
 							id="slide-2801-layer-3"
 							data-x="['center','center','center','center']"
@@ -1502,8 +1502,9 @@
 							data-textAlign="['center','center','center','center']"
 							data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-							style="z-index: 15; min-width: 640px; max-width: 640px; white-space: nowrap; font-size: 40px; line-height: 40px; font-weight: 400; color: rgba(255, 255, 255, 1.00); border-width: 0px;">Made
-							to Captivate your Audience.</div> <!-- LAYER NR. 12 -->
+							style="z-index: 15; min-width: 640px; max-width: 640px; white-space: nowrap; font-size: 40px; line-height: 40px; font-weight: 400; color: rgba(255, 255, 255, 1.00); border-width: 0px;">
+							shop with Always Wearing
+							</div> <!-- LAYER NR. 12 -->
 						<div class="tp-caption rev-btn  tp-resizeme"
 							id="slide-2801-layer-4"
 							data-x="['right','right','center','center']"
@@ -1517,8 +1518,8 @@
 							data-textAlign="['left','left','left','left']"
 							data-paddingtop="[0,0,0,0]" data-paddingright="[50,50,50,50]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[50,50,50,50]"
-							style="z-index: 16; white-space: nowrap; font-size: 15px; line-height: 46px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, 0.25); border-style: solid; border-width: 2px; border-radius: 4px 4px 4px 4px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 5px; cursor: pointer;">ABOUT
-							US</div> <!-- LAYER NR. 13 -->
+							style="z-index: 16; white-space: nowrap; font-size: 15px; line-height: 46px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, 0.25); border-style: solid; border-width: 2px; border-radius: 4px 4px 4px 4px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 5px; cursor: pointer;">
+							쇼핑하기</div> <!-- LAYER NR. 13 -->
 						<div class="tp-caption   tp-resizeme" id="slide-2801-layer-6"
 							data-x="['center','center','center','center']"
 							data-hoffset="['0','0','0','0']"
@@ -1545,7 +1546,8 @@
 							data-textAlign="['left','left','left','left']"
 							data-paddingtop="[0,0,0,0]" data-paddingright="[50,50,50,50]"
 							data-paddingbottom="[0,0,0,0]" data-paddingleft="[50,50,50,50]"
-							style="z-index: 18; white-space: nowrap; font-size: 15px; line-height: 46px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, 0.25); border-style: solid; border-width: 2px; border-radius: 4px 4px 4px 4px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 5px; cursor: pointer;">CONTACT
+							style="z-index: 18; white-space: nowrap; font-size: 15px; line-height: 46px; font-weight: 700; color: rgba(255, 255, 255, 1.00); background-color: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, 0.25); border-style: solid; border-width: 2px; border-radius: 4px 4px 4px 4px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 5px; cursor: pointer;">
+							둘러보기
 						</div>
 					</li>
 				</ul>
@@ -1565,8 +1567,8 @@
 						<div class="media-body">
 							<span
 								class="d-block g-font-weight-400 g-font-size-default text-uppercase">Free
-								Shipping</span> <span class="d-block g-color-gray-dark-v4">In
-								2-3 Days</span>
+								Shipping</span> <span class="d-block g-color-gray-dark-v4">5만원 이상 구매 시
+								</span>
 						</div>
 					</div>
 				</div>
@@ -1579,8 +1581,7 @@
 						<div class="media-body">
 							<span
 								class="d-block g-font-weight-400 g-font-size-default text-uppercase">Free
-								Returns</span> <span class="d-block g-color-gray-dark-v4">No
-								Questions Asked</span>
+								Returns</span> <span class="d-block g-color-gray-dark-v4">오픈 기념 이벤트</span>
 						</div>
 					</div>
 				</div>
@@ -1592,8 +1593,7 @@
 						<div class="media-body text-left">
 							<span
 								class="d-block g-font-weight-400 g-font-size-default text-uppercase">Free
-								24</span> <span class="d-block g-color-gray-dark-v4">Days
-								Storage</span>
+								24</span> <span class="d-block g-color-gray-dark-v4">24시간 대기중</span>
 						</div>
 					</div>
 				</div>
@@ -1606,11 +1606,11 @@
 			<div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
 				<article class="u-block-hover">
 					<img class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-						src="resources/WB0412697/html/e-commerce/assets/img-temp/650x850/img1.jpg"
+						src="resources/WB0412697/html/assets/img/logo/팬츠.PNG"
 						alt="Image Description">
 					<div class="g-pos-abs g-bottom-30 g-left-30">
 						<span class="d-block g-color-black">Collections</span>
-						<h2 class="h1 mb-0">Women</h2>
+						<h2 class="h1 mb-0">Bending Pants</h2>
 					</div>
 					<a class="u-link-v2" href="#"></a>
 				</article>
@@ -1619,11 +1619,11 @@
 			<div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
 				<article class="u-block-hover">
 					<img class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-						src="resources/WB0412697/html/e-commerce/assets/img-temp/650x850/img2.jpg"
+						src="resources/WB0412697/html/assets/img/logo/가디건.PNG"
 						alt="Image Description">
 					<div class="g-pos-abs g-bottom-30 g-left-30">
 						<span class="d-block g-color-black">Collections</span>
-						<h2 class="h1 mb-0">Children</h2>
+						<h2 class="h1 mb-0">Cardigan</h2>
 					</div>
 					<a class="u-link-v2" href="#"></a>
 				</article>
@@ -1632,11 +1632,11 @@
 			<div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
 				<article class="u-block-hover">
 					<img class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-						src="resources/WB0412697/html/e-commerce/assets/img-temp/650x850/img3.jpg"
+						src="resources/WB0412697/html/assets/img/logo/셔츠.PNG""
 						alt="Image Description">
 					<div class="g-pos-abs g-bottom-30 g-left-30">
 						<span class="d-block g-color-black">Collections</span>
-						<h2 class="h1 mb-0">Men</h2>
+						<h2 class="h1 mb-0">Basic Shirt</h2>
 					</div>
 					<a class="u-link-v2" href="#"></a>
 				</article>
@@ -1646,10 +1646,8 @@
 	<!-- End Categories --> <!-- Products -->
 	<div class="container g-pb-100">
 		<div class="text-center mx-auto g-max-width-600 g-mb-50">
-			<h2 class="g-color-black mb-4">Featured Products</h2>
-			<p class="lead">We want to create a range of beautiful, practical
-				and modern outerwear that doesn't cost the earth – but let's you
-				still live life in style.</p>
+			<h2 class="g-color-black mb-4">Best Things</h2>
+			<p class="lead"></p>
 		</div>
 
 		<div id="carouselCus1" class="js-carousel g-pb-100 g-mx-minus-10"
@@ -2033,83 +2031,12 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Products --> <!-- Promo Block -->
-	<section
-		class="g-min-height-100vhg-flex-centered g-bg-secondary g-pos-rel">
-		<div class="container g-pt-100 g-pb-70">
-			<div class="row justify-content-between align-items-center">
-				<div class="col-md-8 col-lg-6 flex-md-unordered g-mb-30">
-					<div class="g-pos-rel">
-						<img class="img-fluid w-100"
-							src="resources/WB0412697/html/e-commerce/assets/img-temp/725x725/img1.png"
-							alt="Image Description"> <span
-							class="u-icon-v1 g-width-85 g-height-85 g-brd-3 g-brd-white g-color-white g-bg-primary g-font-weight-300 g-font-size-22 rounded-circle g-pos-abs g-top-100 g-left-0 g-brd-around">
-							<i class="g-font-style-normal">$60<span
-								class="g-font-size-16">.00</span></i>
-						</span>
-					</div>
-				</div>
-
-				<div class="col-md-4 flex-md-first g-mb-30">
-					<div class="g-mb-30">
-						<h1 class="g-color-primary g-font-weight-400 g-font-size-40 mb-0">Leather</h1>
-						<h2
-							class="g-color-dark g-font-weight-300 g-font-size-75 g-line-height-1 mb-4">Gloves</h2>
-						<p class="lead">We want to create a range of beautiful,
-							practical and modern outerwear that doesn't cost the earth.</p>
-					</div>
-
-					<a
-						class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25 g-mb-70"
-						href="#">Shop Now</a>
-
-					<!-- Countdown -->
-					<div class="text-uppercase">
-						<div
-							class="js-countdown u-countdown-v3 g-line-height-1_3 g-color-black"
-							data-end-date="2018/08/20" data-month-format="%m"
-							data-days-format="%D" data-hours-format="%H"
-							data-minutes-format="%M" data-seconds-format="%S">
-							<div class="d-inline-block text-center g-mx-15 mb-3">
-								<div
-									class="js-cd-days g-color-lightred g-font-weight-500 g-font-size-15">12</div>
-								<span class="g-color-gray-dark-v4 g-font-size-11">Days</span>
-							</div>
-
-							<div class="hidden-down d-inline-block align-top g-font-size-15">:</div>
-
-							<div class="d-inline-block text-center g-mx-15 mb-3">
-								<div class="js-cd-hours g-font-weight-500 g-font-size-15">01</div>
-								<span class="g-color-gray-dark-v4 g-font-size-11">Hours</span>
-							</div>
-
-							<div class="hidden-down d-inline-block align-top g-font-size-15">:</div>
-
-							<div class="d-inline-block text-center g-mx-15 mb-3">
-								<div class="js-cd-minutes g-font-weight-500 g-font-size-15">52</div>
-								<span class="g-color-gray-dark-v4 g-font-size-11">Minutes</span>
-							</div>
-
-							<div class="hidden-down d-inline-block align-top g-font-size-15">:</div>
-
-							<div class="d-inline-block text-center g-mx-15 mb-3">
-								<div class="js-cd-seconds g-font-weight-500 g-font-size-15">52</div>
-								<span class="g-color-gray-dark-v4 g-font-size-11">Seconds</span>
-							</div>
-						</div>
-					</div>
-					<!-- End Countdown -->
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Promo Block --> <!-- Product Blocks -->
+	<!-- End Products --> 
+	<!-- Product Blocks -->
 	<section class="container g-py-100">
 		<div class="text-center mx-auto g-max-width-600 g-mb-50">
 			<h2 class="g-color-black mb-4">New Arrivals</h2>
-			<p class="lead">We want to create a range of beautiful, practical
-				and modern outerwear that doesn't cost the earth – but let's you
-				still live life in style.</p>
+			<p class="lead"></p>
 		</div>
 
 		<div class="row g-mx-minus-10 g-mb-50">
@@ -2594,230 +2521,9 @@
 				href="#">All New Arrivals</a>
 		</div>
 	</section>
-	<!-- End Product Blocks --> <!-- Categories -->
-	<div class="container-fluid px-0">
-		<div class="row align-items-center no-gutters">
-			<div
-				class="col-md-7 col-lg-8 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered"
-				data-bg-img-src="resources/WB0412697/html/e-commerce/assets/img-temp/1200x800/img1.jpg">
-				<div class="g-flex-centered-item text-right g-pa-50">
-					<h2
-						class="g-color-white g-font-weight-700 g-font-size-50 text-uppercase g-line-height-1 mb-4">
-						Summer<br>Collection
-					</h2>
-					<span
-						class="u-link-v5 g-color-black g-color-primary--hover g-font-size-18">Shop
-						Now</span>
-				</div>
-
-				<a class="u-link-v2" href="#"></a>
-			</div>
-
-			<div
-				class="col-md-5 col-lg-4 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered"
-				data-bg-img-src="resources/WB0412697/html/e-commerce/assets/img/bg/secondary.png">
-				<div class="text-center">
-					<img class="img-fluid mb-3"
-						src="resources/WB0412697/html/e-commerce/assets/img-temp/500x320/img1.png"
-						alt="Image Description">
-					<h3
-						class="h5 u-link-v5 g-color-primary--hover g-font-weight-400 mb-3">Sneaker
-						Shoes for Man</h3>
-					<span class="g-color-primary g-font-weight-700 g-font-size-20">$45.00</span>
-				</div>
-
-				<a class="u-link-v2" href="#"></a>
-			</div>
-		</div>
-	</div>
-	<!-- End Categories --> <!-- News -->
-	<div class="container g-pt-100 g-pb-70">
-		<div class="text-center mx-auto g-max-width-600 g-mb-50">
-			<h2 class="g-color-black mb-4">Blog News</h2>
-			<p class="lead">Keep in touch with the latest blogs &amp; news.</p>
-		</div>
-
-		<div class="row g-mx-minus-10">
-			<div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-				<!-- Blog Background Overlay Blocks -->
-				<article class="u-block-hover">
-					<div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-						<img
-							class="d-flex align-items-end u-block-hover__main--mover-down"
-							src="resources/WB0412697/html/e-commerce/assets/img-temp/650x650/img1.jpg"
-							alt="Image Description">
-					</div>
-					<div
-						class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-						<div class="u-block-hover__visible g-pa-25">
-							<span
-								class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">sport</span>
-							<h2 class="h4 g-color-white g-font-weight-400 mb-3">
-								<a
-									class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer"
-									href="#">24 Hours in Shopping</a>
-							</h2>
-							<h4
-								class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-								By, <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan
-									Shaw</a>
-							</h4>
-							<span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-							<span
-								class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May
-								31, 2017</span>
-						</div>
-
-						<a
-							class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30"
-							href="#">Read more</a>
-					</div>
-				</article>
-				<!-- End Blog Background Overlay Blocks -->
-			</div>
-
-			<div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-				<!-- Blog Background Overlay Blocks -->
-				<article class="u-block-hover">
-					<div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-						<img
-							class="d-flex align-items-end u-block-hover__main--mover-down"
-							src="resources/WB0412697/html/e-commerce/assets/img-temp/650x650/img2.jpg"
-							alt="Image Description">
-					</div>
-					<div
-						class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-						<div class="u-block-hover__visible g-pa-25">
-							<span
-								class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">design</span>
-							<h2 class="h4 g-color-white g-font-weight-400 mb-3">
-								<a
-									class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer"
-									href="#">How to Design with Colors</a>
-							</h2>
-							<h4
-								class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-								By, <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan
-									Shaw</a>
-							</h4>
-							<span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-							<span
-								class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May
-								31, 2017</span>
-						</div>
-
-						<a
-							class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30"
-							href="#">Read more</a>
-					</div>
-				</article>
-				<!-- End Blog Background Overlay Blocks -->
-			</div>
-
-			<div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-				<!-- Blog Background Overlay Blocks -->
-				<article class="u-block-hover">
-					<div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-						<img
-							class="d-flex align-items-end u-block-hover__main--mover-down"
-							src="resources/WB0412697/html/e-commerce/assets/img-temp/650x650/img3.jpg"
-							alt="Image Description">
-					</div>
-					<div
-						class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-						<div class="u-block-hover__visible g-pa-25">
-							<span
-								class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">photography</span>
-							<h2 class="h4 g-color-white g-font-weight-400 mb-3">
-								<a
-									class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer"
-									href="#">Stunning Woman's Capture</a>
-							</h2>
-							<h4
-								class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-								By, <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan
-									Shaw</a>
-							</h4>
-							<span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-							<span
-								class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May
-								31, 2017</span>
-						</div>
-
-						<a
-							class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30"
-							href="#">Read more</a>
-					</div>
-				</article>
-				<!-- End Blog Background Overlay Blocks -->
-			</div>
-		</div>
-	</div>
-	<!-- End News --> <!-- Subscribe -->
-	<div class="text-center g-max-width-600 mx-auto g-pb-30">
-		<div class="g-px-30 g-px-50--md">
-			<div class="mb-3">
-				<span
-					class="d-inline-block g-width-3 g-height-10 g-bg-gray-light-v1 g-mb-4"></span><br>
-				<span class="d-inline-block g-width-3 g-height-16 g-bg-gray-dark-v5"></span><br>
-				<span class="d-inline-block g-color-gray-dark-v4 fa fa-arrow-down"></span>
-			</div>
-
-			<h2 class="h3 g-mb-30">Subscribe</h2>
-
-			<form class="input-group u-shadow-v21 rounded g-mb-50">
-				<input
-					class="form-control g-brd-gray-light-v4 g-brd-right-none g-color-gray-dark-v4 g-placeholder-gray-dark-v3 rounded g-px-25 g-py-17"
-					type="email" placeholder="Enter your email"> <span
-					class="input-group-addon u-shadow-v19 g-brd-gray-light-v4 g-bg-white">
-					<button
-						class="btn u-btn-primary g-font-size-12 rounded text-uppercase g-py-12 g-px-25"
-						type="submit">Submit</button>
-				</span>
-			</form>
-		</div>
-	</div>
-	<!-- End Subscribe --> <!-- Social Icons -->
-	<div class="container g-mb-30">
-		<ul class="list-inline text-center mb-0">
-			<li class="list-inline-item g-mx-2"><a
-				class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-facebook--hover"
-				href="#"> <i
-					class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-facebook"></i>
-					<i
-					class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-facebook"></i>
-			</a></li>
-			<li class="list-inline-item g-mx-2"><a
-				class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-twitter--hover"
-				href="#"> <i
-					class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-twitter"></i>
-					<i
-					class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-twitter"></i>
-			</a></li>
-			<li class="list-inline-item g-mx-2"><a
-				class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-instagram--hover"
-				href="#"> <i
-					class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-instagram"></i>
-					<i
-					class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-instagram"></i>
-			</a></li>
-			<li class="list-inline-item g-mx-2"><a
-				class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-google-plus--hover"
-				href="#"> <i
-					class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-google-plus"></i>
-					<i
-					class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-google-plus"></i>
-			</a></li>
-			<li class="list-inline-item g-mx-2"><a
-				class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-linkedin--hover"
-				href="#"> <i
-					class="g-font-size-18 g-line-height-1 u-icon__elem-regular fa fa-linkedin"></i>
-					<i
-					class="g-font-size-18 g-line-height-0_8 u-icon__elem-hover fa fa-linkedin"></i>
-			</a></li>
-		</ul>
-	</div>
-	<!-- End Social Icons --> <!-- Footer --> <footer>
+	<!-- End Product Blocks --> 
+	 <!-- Footer --> 
+	 <footer>
 		<!-- Content -->
 		<div class="g-brd-y g-brd-gray-light-v4">
 			<div class="container g-pt-100 g-pb-70">
