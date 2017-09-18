@@ -116,6 +116,7 @@ public class HomeController {
 		mav.setViewName("/Cart/shipping");
 		mav.addObject("map", map);
 		return mav;
+		
 	}
 	
 	//비회원
