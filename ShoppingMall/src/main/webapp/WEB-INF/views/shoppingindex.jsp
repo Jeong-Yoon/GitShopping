@@ -2480,12 +2480,8 @@
 							href="#">Hi-Tech</a>
 						<!-- End Article Info -->
 
-						<<<<<<< HEAD
 						<!-- News -->
 
-
-
-						=======
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
