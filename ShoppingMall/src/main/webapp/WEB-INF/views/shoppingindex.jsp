@@ -1269,7 +1269,7 @@
 						<div class="d-flex flex-column">
 							<h4 class="h6 g-color-black mb-1">
 								<a class="u-link-v5 g-color-black g-color-primary--hover"
-									href="#"> Wool lined parka </a>
+									href="#"> Round neck knit </a>
 							</h4>
 							<a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
 								href="#">Woman</a> <span
