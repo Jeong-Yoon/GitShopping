@@ -149,7 +149,7 @@
 				<figure>
 									<div class="g-pos-rel g-mb-20">
 										<a href="outer-detail?product_no=${list.product_no}"><img class="img-fluid"
-											src="${contextPath}/resources/OUTER/${list.product_no}_1.jpg"
+											src="${contextPath}/resources/product/${list.product_no}_1.jpg"
 											alt="Image Description"></a>
 <!-- 											<img class="img-fluid" -->
 <!-- 											src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img1.jpg" -->

@@ -294,9 +294,20 @@
 
 								<div
 									class="d-flex flex-row align-items-center justify-content-between g-font-size-18">
+									<c:if test="${not empty sessionScope.m_id}">
 									<a href="cart_list.do"
 										class="btn u-btn-outline-primary rounded-0 g-width-120">View
-										Cart</a> <a href="#"
+										Cart</a> 
+									
+									</c:if>
+						<c:if test="${empty sessionScope.m_id}">
+																<a href="non_mem_Cart"
+										class="btn u-btn-outline-primary rounded-0 g-width-120">View
+										Cart</a> 
+						</c:if>
+									
+									
+										<a href="#"
 										class="btn u-btn-primary rounded-0 g-width-120">Checkout</a>
 								</div>
 							</div>
