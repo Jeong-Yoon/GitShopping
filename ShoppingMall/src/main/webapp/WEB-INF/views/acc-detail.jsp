@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextPath" value="<%= request.getContextPath()%>"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,45 +25,57 @@
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
 
 <!-- CSS Implementing Plugins -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-hs/style.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/animate.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/animate.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
 
 <!-- CSS Unify Theme -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
+	href="${contextPath}/resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
 
 <!-- CSS Customization -->
 <link rel="stylesheet"
-	href="resources/WB0412697/html/assets/css/custom.css">
+	href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
+	
+<script>
+	 function goto_url(act) {
+	  document.acc_detail.action = act;
+	  document.acc_detail.submit();
+	}
+</script>
+	
 </head>
 
 <body>
 	<jsp:include page="header.jsp" flush="false" />
 
 	<!-- Product Description -->
+	 <form name="acc_detail" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+      <input type="hidden" name="product_no" id="product_no" value="${accdetail.dto.product_no}"> 
+      <input type="hidden" name="pro_name" value="${accdetail.dto.pro_name}">
+      <input type="hidden" name="pro_price" value="${accdetail.dto.pro_price}">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-7">
@@ -75,17 +88,17 @@
 					data-nav-for="#carouselCus2">
 					<div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
 						<img class="img-fluid w-100"
-							src="resources/WB0412697/html/assets/img-temp/650x750/img1.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x750/img1.jpg"
 							alt="Image Description">
 					</div>
 					<div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
 						<img class="img-fluid w-100"
-							src="resources/WB0412697/html/assets/img-temp/650x750/img2.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x750/img2.jpg"
 							alt="Image Description">
 					</div>
 					<div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
 						<img class="img-fluid w-100"
-							src="resources/WB0412697/html/assets/img-temp/650x750/img3.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x750/img3.jpg"
 							alt="Image Description">
 					</div>
 				</div>
@@ -96,37 +109,37 @@
 					data-is-thumbs="true" data-nav-for="#carouselCus1">
 					<div class="js-slide g-cursor-pointer g-px-5">
 						<img class="img-fluid"
-							src="resources/WB0412697/html/assets/img-temp/250x170/img1.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img1.jpg"
 							alt="Image Description">
 					</div>
 
 					<div class="js-slide g-cursor-pointer g-px-5">
 						<img class="img-fluid"
-							src="resources/WB0412697/html/assets/img-temp/250x170/img2.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img2.jpg"
 							alt="Image Description">
 					</div>
 
 					<div class="js-slide g-cursor-pointer g-px-5">
 						<img class="img-fluid"
-							src="resources/WB0412697/html/assets/img-temp/250x170/img3.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img3.jpg"
 							alt="Image Description">
 					</div>
 
 					<div class="js-slide g-cursor-pointer g-px-5">
 						<img class="img-fluid"
-							src="resources/WB0412697/html/assets/img-temp/250x170/img1.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img1.jpg"
 							alt="Image Description">
 					</div>
 
 					<div class="js-slide g-cursor-pointer g-px-5">
 						<img class="img-fluid"
-							src="resources/WB0412697/html/assets/img-temp/250x170/img2.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img2.jpg"
 							alt="Image Description">
 					</div>
 
 					<div class="js-slide g-cursor-pointer g-px-5">
 						<img class="img-fluid"
-							src="resources/WB0412697/html/assets/img-temp/250x170/img3.jpg"
+							src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img3.jpg"
 							alt="Image Description">
 					</div>
 				</div>
@@ -193,20 +206,26 @@
 						<ul class="list-inline mb-0">
 
 							<c:choose>
-								<c:when test="${not empty accdetail.color}">
-								<div class="selectbox">
-										<select id="ex_select">
-											<c:forEach var="color" items="${accdetail.color}">
-												<option>${color}</option>
-											</c:forEach>
-										</select>
-									</div>
-								</c:when>
-								<c:otherwise>
-									<div class="selectbox">
-									</div>
-								</c:otherwise>
-							</c:choose>
+              <c:when test="${not empty accdetail.color}">
+              <div class="selectbox"> 
+              <select name="select_color"> 
+              <option selected>-----</option>
+                <c:forEach var="color" items="${accdetail.color}">
+              <option>${color}</option> 
+                </c:forEach>
+              </select> 
+              </div>
+              </c:when>
+              <c:otherwise>
+               <li class="list-inline-item g-mx-15">
+                    <label class="form-check-inline u-check">
+                      <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="text">--
+                      <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
+                      </div>
+                    </label>
+                  </li>
+              </c:otherwise>
+              </c:choose>
 
 						</ul>
 					</div>
@@ -263,7 +282,7 @@
 							class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
 							<input
 								class="js-result form-control text-center g-font-size-13 rounded-0"
-								type="text" value="1" readonly>
+								type="text" name="quantity" value="1" readonly>
 
 							<div
 								class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-13 rounded-0 g-pa-5">
@@ -281,7 +300,7 @@
 						<div class="col g-px-5 g-mb-10">
 							<button
 								class="btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-15 g-px-25"
-								type="button">
+								type="button" onclick="goto_url('cart_Chk')">
 								Add to Cart <i
 									class="align-middle ml-2 icon-finance-100 u-line-icon-pro"></i>
 							</button>
@@ -289,7 +308,7 @@
 						<div class="col g-px-5 g-mb-10">
 							<button
 								class="btn btn-block u-btn-outline-black g-brd-gray-dark-v5 g-brd-black--hover g-color-gray-dark-v4 g-color-white--hover g-font-size-12 text-uppercase g-py-15 g-px-25"
-								type="button">
+								type="button" onclick="goto_url('direct_shipping')">
 								Go order <i
 									class="align-middle ml-2 icon-medical-022 u-line-icon-pro"></i>
 							</button>
@@ -435,6 +454,7 @@
 			</div>
 		</div>
 	</div>
+	</form>
 	<!-- End Product Description -->
 
 	<!-- Features -->
@@ -502,7 +522,7 @@
 			</div>
 
 			<div class="col-md-6 g-bg-size-cover g-min-height-300"
-				data-bg-img-src="resources/WB0412697/html/assets/img-temp/900x900/img1.jpg"></div>
+				data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img1.jpg"></div>
 		</div>
 	</div>
 	<!-- End Details -->
@@ -523,7 +543,7 @@
 			</div>
 
 			<div class="col-md-6 flex-md-first g-bg-size-cover g-min-height-300"
-				data-bg-img-src="resources/WB0412697/html/assets/img-temp/900x900/img2.jpg"></div>
+				data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img2.jpg"></div>
 		</div>
 	</div>
 	<!-- End Craftmanship -->
@@ -544,7 +564,7 @@
 			</div>
 
 			<div class="col-md-6 g-bg-size-cover g-min-height-300"
-				data-bg-img-src="resources/WB0412697/html/assets/img-temp/900x900/img3.jpg"></div>
+				data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img3.jpg"></div>
 		</div>
 	</div>
 	<!-- End Caring -->
@@ -564,44 +584,44 @@
 
 	<!-- JS Global Compulsory -->
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-	<script src="resources/WB0412697/html/assets/vendor/tether.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
 	<!-- JS Implementing Plugins -->
 	<script
-		src="resources/WB0412697/html/assets/vendor/slick-carousel/slick/slick.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/slick-carousel/slick/slick.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/jquery.countdown.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery.countdown.min.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
 	<!-- JS Unify -->
-	<script src="resources/WB0412697/html/assets/js/hs.core.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.header.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.countdown.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.countdown.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.carousel.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.carousel.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
 	<script
-		src="resources/WB0412697/html/assets/js/components/hs.count-qty.js"></script>
-	<script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.count-qty.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
 
 	<!-- JS Customization -->
-	<script src="resources/WB0412697/html/assets/js/custom.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
 
 	<!-- JS Plugins Init. -->
 	<script>

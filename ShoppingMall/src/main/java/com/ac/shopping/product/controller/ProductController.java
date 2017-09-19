@@ -280,8 +280,9 @@ public class ProductController {
 	@RequestMapping("/cart_Chk")
 	public String cartChk(HttpSession session, HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
+		System.out.println("m_id = " + (String)session.getAttribute("m_id"));
 		CartDTO cdto = new CartDTO();
-		if ((String) session.getAttribute("m_id") != null || (String) session.getAttribute("m_id") != "") {
+		if ((String)session.getAttribute("m_id") != null) {
 			cdto.setM_Id((String) session.getAttribute("m_id"));
 			cdto.setProduct_No(request.getParameter("product_no"));
 			cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
@@ -336,11 +337,18 @@ public class ProductController {
 	               
 	               pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
 	               pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
-	               pnmC.setPro_size(prevNonmem.get(i).getPro_size());
-	               pnmC.setPro_color(prevNonmem.get(i).getPro_color());
+	               if (request.getParameter("select_color") != "") {
+	            	   pnmC.setPro_color(prevNonmem.get(i).getPro_color());
+	   			}else{
+	   				pnmC.setPro_color("-");
+	   			}
+	   			if (request.getParameter("pro_size") != "") {
+	   				pnmC.setPro_size(prevNonmem.get(i).getPro_size());
+	   			} else{
+	   				pnmC.setPro_size("FREE");
+	   			}
 	               pnmC.setPro_price(prevNonmem.get(i).getPro_price());
 	               pnmC.setPro_name(prevNonmem.get(i).getPro_name());
-	               
 	               if(prevNonmem.get(i).getProduct_No().equals(request.getParameter("product_no"))){
 	                  
 	                  identify =1;
@@ -359,8 +367,16 @@ public class ProductController {
 	                           
 	            nmC.setProduct_No(request.getParameter("product_no"));         
 	            nmC.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
-	            nmC.setPro_size(request.getParameter("pro_size"));         
-	            nmC.setPro_color(request.getParameter("select_color"));
+	            if (request.getParameter("select_color") != "") {
+	            	nmC.setPro_color(request.getParameter("select_color"));
+	   			}else{
+	   				nmC.setPro_color("-");
+	   			}
+	   			if (request.getParameter("pro_size") != "") {
+	   				nmC.setPro_size(request.getParameter("pro_size"));
+	   			} else{
+	   				nmC.setPro_size("FREE");
+	   			}
 	            nmC.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
 	            nmC.setPro_name(request.getParameter("pro_name"));      
 	         
