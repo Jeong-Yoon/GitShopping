@@ -250,7 +250,7 @@
 		ON
 		pro.product_no = otop.product_no
 		WHERE otop.category LIKE '%[OUT]%'
-		s AND pro.product_no = #{product_no}
+		AND pro.product_no = #{product_no}
 	</select>
 	<select id="outColor" resultType="String">
 		SELECT pro_color
