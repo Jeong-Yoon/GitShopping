@@ -127,15 +127,14 @@ public class CartDAOImpl implements CartDAO {
 			HashMap<String, Object> param = new HashMap<String, Object>();
 			param.put("clist", clist.get(i));
 			param.put("odto", odto);
-			
+			param.put("order_no", order_no);
 			
 			if (i == 0) {
 				sqlSession.insert("cart.order",param);
 				order_no = (String)param.get("PARM10");
-				param.put("order_no", order_no);
 			}else{
-				sqlSession.insert("cart.order2",param);
 				System.out.println(order_no);
+				sqlSession.insert("cart.re_order",param);
 			}
 		}
 	}

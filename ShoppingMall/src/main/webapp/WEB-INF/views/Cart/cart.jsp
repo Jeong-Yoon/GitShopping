@@ -52,8 +52,8 @@
     
     <script>
     function goto_url(act) {
-  	  document.shipping.action = act;
-  	  document.shipping.submit();
+  	  document.update.action = act;
+  	  document.update.submit();
   	}
     </script>
   </head>

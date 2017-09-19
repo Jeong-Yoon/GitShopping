@@ -83,10 +83,10 @@ where
     {
      CALL M_REORDER(
                 #{order_no},
-                #{cdto.product_No},
-                #{cdto.pro_size},
-                #{cdto.pro_color},
-                #{cdto.basket_Quantity},
+                #{clist.product_No},
+                #{clist.pro_size},
+                #{clist.pro_color},
+                #{clist.basket_Quantity}
             )
     }
     
