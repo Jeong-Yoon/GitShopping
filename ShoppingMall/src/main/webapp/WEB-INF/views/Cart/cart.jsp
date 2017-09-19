@@ -19,10 +19,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
     <!-- CSS Global Compulsory -->
+
+
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
 
     <!-- CSS Implementing Plugins -->
+
+ 
+
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-hs/style.css">
@@ -35,20 +40,22 @@
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
 
+
     <!-- CSS Unify Theme -->
+
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
 
     <!-- CSS Customization -->
+
+
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
     
     <script>
     function goto_url(act) {
-  	  document.order.action = act;
-  	  document.order.submit();
+  	  document.shipping.action = act;
+  	  document.shipping.submit();
   	}
     </script>
-    
-    
   </head>
 
   <body>
@@ -57,7 +64,7 @@
     
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
-        <form class="js-validate js-step-form" name="order" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
+        <form class="js-validate js-step-form" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps" name="update" action="cart_update.do">
           <div class="g-mb-100">
             <!-- Step Titles -->
             <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
@@ -108,12 +115,13 @@
                       <tbody>
                         <!-- Item-->
                         <c:choose>
-                        <c:when test="${not empty Sessionscpoe.m_id}">
+                        <c:when test="${not empty sessionScope.m_id}">
                         <c:forEach var="row" items="${map.list}" >
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="../resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
-                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
+
+
+                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/product/${row.product_No}_1.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">${row.pro_name} </h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
@@ -125,7 +133,8 @@
                           <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; ${row.pro_price} </td>
                           <td>
                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
-                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="${row.basket_Quantity}" readonly>
+                             <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" name="m_basket_q" type="text" value="${row.basket_Quantity}" readonly>
+                         	 <input type="hidden" name="m_product_no" value="${row.product_No}">
 
                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6">
                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i>
@@ -142,11 +151,14 @@
                         </tr>
                         </c:forEach>
                         </c:when>
-                        <c:when test="${empty Sessionscpoe.m_id }">
-                        <c:forEach var="row" items="${map.list}" >
+                        <c:when test="${empty sessionScope.m_id }">
+                        
+                     
+                        <c:forEach var="row" items="${sessionScope.nmC}" >
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
                             <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+
                             &nbsp; &nbsp; &nbsp; &nbsp;
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">${row.pro_name} </h4>
@@ -170,77 +182,15 @@
                           <td class="text-right g-color-black">
                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">${row.pro_price * row.basket_Quantity}</span>
                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
-                              <a href="${contextPath}/cart_delete.do?product_No=${row.product_No}&m_Id=${m_Id}"><i class="mt-auto fa fa-trash"></i></a>
+                              <a href="${contextPath}/cart_delete.do?product_No=${row.product_No}"><i class="mt-auto fa fa-trash"></i></a>
                             </span>
                           </td>
                         </tr>
                         </c:forEach>
                         </c:when>
                         </c:choose>
-                        <!-- End Item-->
-                        <!-- Item-->
-<!--                         <tr class="g-brd-bottom g-brd-gray-light-v3"> -->
-<!--                           <td class="text-left g-py-25"> -->
-<%--                             <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description"> --%>
-<!--                             <div class="d-inline-block align-middle"> -->
-<!--                               <h4 class="h6 g-color-black">Chukka Shoes</h4> -->
-<!--                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0"> -->
-<!--                                 <li>Color: Black</li> -->
-<!--                                 <li>Size: MD</li> -->
-<!--                               </ul> -->
-<!--                             </div> -->
-<!--                           </td> -->
-<!--                           <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; 160.00</td> -->
-<!--                           <td> -->
-<!--                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus"> -->
-<!--                               <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="2" readonly> -->
+                   
 
-<!--                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6"> -->
-<!--                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i> -->
-<!--                                 <i class="js-minus g-color-gray g-color-primary--hover fa fa-angle-down"></i> -->
-<!--                               </div> -->
-<!--                             </div> -->
-<!--                           </td> -->
-<!--                           <td class="text-right g-color-black"> -->
-<!--                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; 320.00</span> -->
-<!--                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer"> -->
-<!--                               <i class="mt-auto fa fa-trash"></i> -->
-<!--                             </span> -->
-<!--                           </td> -->
-<!--                         </tr> -->
-                        <!-- End Item-->
-
-                        <!-- Item-->
-<!--                         <tr> -->
-<!--                           <td class="text-left g-pt-25"> -->
-<%--                             <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description"> --%>
-<!--                             <div class="d-inline-block align-middle"> -->
-<!--                               <h4 class="h6 g-color-black">Desk Clock</h4> -->
-<!--                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0"> -->
-<!--                                 <li>Color: Brown Wood</li> -->
-<!--                                 <li>Type: Desk</li> -->
-<!--                               </ul> -->
-<!--                             </div> -->
-<!--                           </td> -->
-<!--                           <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; 47.00</td> -->
-<!--                           <td> -->
-<!--                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus"> -->
-<!--                               <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="1" readonly> -->
-
-<!--                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6"> -->
-<!--                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i> -->
-<!--                                 <i class="js-minus g-color-gray g-color-primary--hover fa fa-angle-down"></i> -->
-<!--                               </div> -->
-<!--                             </div> -->
-<!--                           </td> -->
-<!--                           <td class="text-right g-color-black"> -->
-<!--                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; 47.00</span> -->
-<!--                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer"> -->
-<!--                               <i class="mt-auto fa fa-trash"></i> -->
-<!--                             </span> -->
-<!--                           </td> -->
-<!--                         </tr> -->
-                        <!-- End Item -->
                       </tbody>
                     </table>
                   </div>
@@ -260,7 +210,7 @@
                             <span class="ml-3 fa fa-angle-down"></span></a>
                         </h5>
                       </div>
-                      
+
                       <div id="accordion-03-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-03-heading-03">
                         <div class="g-py-15">
                           <ul class="list-unstyled mb-3">
@@ -311,6 +261,7 @@
                           </ul>
                         </div>
                       </div>
+
                     </div>
                     <!-- End Accordion -->
                     
@@ -326,8 +277,8 @@
                   </div>
                   <!-- End Summary -->
 
-                  <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button">수정</button>
-                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="goto_url('order')">결제 진행하기</button>
+                  <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="submit">수정</button>
+                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="goto_url('shipping')">결제 진행하기</button>
 
                   
 
@@ -361,12 +312,17 @@
     </main>
 
     <!-- JS Global Compulsory -->
+
+
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
+
     <!-- JS Implementing Plugins -->
+
+
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
@@ -376,7 +332,10 @@
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/chosen/chosen.jquery.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
 
+
     <!-- JS Unify -->
+
+  
     <script src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
@@ -388,8 +347,13 @@
     <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.validation.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
 
+
     <!-- JS Customization -->
+
+    <script src="resources/WB0412697/html/assets/js/custom.js"></script>
+
     <script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
+
 
     <!-- JS Plugins Init. -->
     <script>

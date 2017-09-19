@@ -55,7 +55,18 @@ public class CartDAOImpl implements CartDAO {
 	public void modifyCart(CartDTO cartDto) {
 		sqlSession.update("cart.modifyCart", cartDto);
 	}
-
+	public void modifyCartList(List<String> quantity, List<String> product_no, String m_Id) {
+	      for(int i=0;i<quantity.size();i++){
+	         
+	         Map<String, Object> map = new HashMap<String, Object>();
+	         map.put("basket_Quantity", quantity.get(i));
+	         map.put("product_No", product_no.get(i));
+	         map.put("m_Id", m_Id);
+	         
+	         sqlSession.update("cart.modifyCart",map);
+	      }
+	      
+	   }
 	// 장바구니 금액 합계
 	@Override
 	public int sumMoney(String m_Id) {
@@ -106,10 +117,18 @@ public class CartDAOImpl implements CartDAO {
 		List<CartDTO> clist = sqlSession.selectList("cart.listCart", m_id);
 		int count = sqlSession.selectOne("cart.countCart", m_id);
 		String order_no = "";
-		HashMap<String, Object> param = new HashMap<String, Object>();
-		param.put("clist", clist);
-		param.put("odto", odto);
+		System.out.println(odto.getName());
+
+
+		System.out.println(count);
+		System.out.println(m_id);
 		for (int i = 0; i < count; i++) {
+			
+			HashMap<String, Object> param = new HashMap<String, Object>();
+			param.put("clist", clist.get(i));
+			param.put("odto", odto);
+			
+			
 			if (i == 0) {
 				sqlSession.insert("cart.order",param);
 				order_no = (String)param.get("PARM10");

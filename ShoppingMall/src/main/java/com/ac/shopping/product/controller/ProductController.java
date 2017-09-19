@@ -281,7 +281,7 @@ public class ProductController {
 	public String cartChk(HttpSession session, HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
 		CartDTO cdto = new CartDTO();
-		if (request.getParameter("m_id") != null) {
+		if ((String) session.getAttribute("m_id") != null || (String) session.getAttribute("m_id") != "") {
 			cdto.setM_Id((String) session.getAttribute("m_id"));
 			cdto.setProduct_No(request.getParameter("product_no"));
 			cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));

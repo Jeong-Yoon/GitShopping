@@ -17,8 +17,7 @@ public interface CartService {
 	public void delete(String product_No, String m_Id);
 
 	// 4. 장바구니 수정
-	public void modifyCart(CartDTO cartDTO);
-
+	public void modifyCart(List<String> quantity, List<String> product_no, String m_Id);
 	// 5. 장바구니 금액 합계
 	public int sumMoney(String m_Id);
 
@@ -27,6 +26,7 @@ public interface CartService {
 
 	// 7. 장바구니 상품 수량 변경
 	public void updateCart(CartDTO cartDTO);
+	
 	//8. 주문하기
 	public void direct_order(CartDTO cdto, OrderDTO odto);
 	public void order(String m_id, OrderDTO odto);

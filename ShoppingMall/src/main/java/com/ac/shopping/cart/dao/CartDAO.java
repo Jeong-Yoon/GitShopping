@@ -22,7 +22,8 @@ public interface CartDAO {
 	// 4.장바구니 수정
 
 	public void modifyCart(CartDTO cartDto);
-
+	public void modifyCartList(List<String> quantity, List<String> product_no, String m_Id);
+	
 	// 5.장바구니 상품 금액합계
 	public int sumMoney(String m_Id);
 

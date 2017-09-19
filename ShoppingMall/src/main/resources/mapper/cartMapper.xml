@@ -64,15 +64,15 @@ where
     <insert id="order" statementType="CALLABLE" parameterType="hashmap">
         {
             CALL M_ORDER(
-               #{odto.name},
+                #{odto.name},
                 #{odto.phone},
                 #{odto.address},
                 #{odto.request},
-                #{cdto.m_Id},
-                #{cdto.product_No},
-                #{cdto.pro_size},
-                #{cdto.pro_color},
-                #{cdto.basket_Quantity},
+                #{clist.m_Id},
+                #{clist.product_No},
+                #{clist.pro_size},
+                #{clist.pro_color},
+                #{clist.basket_Quantity},
                 #{PARM10, mode=OUT, jdbcType=VARCHAR, javaType=String}          
                     
             )

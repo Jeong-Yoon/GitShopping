@@ -33,7 +33,8 @@ public class CartController {
 
 	// 1. 장바구니 추가
 	@RequestMapping("/cart_insert.do")
-	public String cartInsert(HttpServletResponse response, CartDTO cartDto, HttpSession session, HttpServletRequest request) {
+	public String cartInsert(HttpServletResponse response, CartDTO cartDto, HttpSession session,
+			HttpServletRequest request) {
 		if (request.getParameter("m_id") != null) {
 			String m_Id = (String) session.getAttribute("m_Id");
 			cartDto.setM_Id(m_Id);
@@ -47,36 +48,35 @@ public class CartController {
 				cartService.updateCart(cartDto);
 			}
 		} else {
-			session.setAttribute("nonmemberPro"+nonm_index, cartDto);
-			nonm_index ++;
+			session.setAttribute("nonmemberPro" + nonm_index, cartDto);
+			nonm_index++;
 		}
 		return "redirect:/cart/cart_list.do";
 	}
-	
-	//2. 장바구니 목록
+
+	// 2. 장바구니 목록
 	@RequestMapping("/cart_list.do")
 	public ModelAndView cart(HttpSession session, ModelAndView mav) {
-		
-		String m_Id = (String)session.getAttribute("m_id");
-		Map<String, Object> map = new HashMap<String, Object>(); 	
-		List<CartDTO> list = cartService.listCart(m_Id);//해당회원의 장바구니 정보
-		int sumMoney = cartService.sumMoney(m_Id);//장바구니 전체 금액 호출
-		//장바구니 전체 금액에 따라 배송비 구분
-		//배송료 : 10만원이상 무료, 미만 2500원
-		int deliveryFee = sumMoney >=100000 ? 0 : 1500;
-		map.put("list", list);//장바구니 정보를 map에 저장
-		map.put("count", list.size()); //장바구니 상품의 유무. 장바구니 리스트의 크기
+
+		String m_Id = (String) session.getAttribute("m_id");
+		Map<String, Object> map = new HashMap<String, Object>();
+		List<CartDTO> list = cartService.listCart(m_Id);// 해당회원의 장바구니 정보
+		int sumMoney = cartService.sumMoney(m_Id);// 장바구니 전체 금액 호출
+		// 장바구니 전체 금액에 따라 배송비 구분
+		// 배송료 : 10만원이상 무료, 미만 2500원
+		int deliveryFee = sumMoney >= 100000 ? 0 : 1500;
+		map.put("list", list);// 장바구니 정보를 map에 저장
+		map.put("count", list.size()); // 장바구니 상품의 유무. 장바구니 리스트의 크기
 		map.put("sumMoney", sumMoney);// 장바구니 전체 금액
-		map.put("deliveryFee", deliveryFee); //배송비
-		map.put("allSum", sumMoney+deliveryFee); //총 결제금액 : 상품금액+배송비
-		
-		
+		map.put("deliveryFee", deliveryFee); // 배송비
+		map.put("allSum", sumMoney + deliveryFee); // 총 결제금액 : 상품금액+배송비
+
 		mav.setViewName("/Cart/cart");
 
 		mav.addObject("map", map);
 		return mav;
 	}
-		
+
 	// 3.장바구니 삭제
 	@RequestMapping("/cart_delete.do")
 	public String delete(@RequestParam String product_No, HttpSession session) {
@@ -93,35 +93,26 @@ public class CartController {
 
 	/// 4. 장바구니 수정
 	@RequestMapping("/cart_update.do")
-	public String update(@RequestParam int basket_Quantity, @RequestParam String product_No, HttpSession session) {
-		// session의 회원 아이디
-		String m_Id = (String) session.getAttribute("m_Id");
-
-		System.out.println(basket_Quantity);
-		System.out.println(product_No);
-
-		CartDTO cartDto = new CartDTO();
-		cartDto.setM_Id(m_Id);
-		cartDto.setBasket_Quantity(basket_Quantity);
-		cartDto.setProduct_No(product_No);
-		cartService.modifyCart(cartDto);
-
+	public String update(@RequestParam(value = "m_basket_q", required = true) List<String> quantity,
+			@RequestParam(value = "m_product_no", required = true) List<String> product_no, HttpSession session) {
+		String m_Id = (String) session.getAttribute("m_id");
+		cartService.modifyCart(quantity, product_no, m_Id);
 		return "redirect:cart_list.do";
 
 	}
 
-	@RequestMapping("/boot_cart")
+	@RequestMapping("/non_mem_Cart")
 	public String boot_cart() {
-		return "cart/boot_Cart";
+		return "Cart/cart";
 	}
-	
+
 	// 5. 주문하기
 	@RequestMapping("/direct_order")
-	public String direct_order(HttpSession session, HttpServletRequest request){
+	public String direct_order(HttpSession session, HttpServletRequest request) {
 		CartDTO cdto = new CartDTO();
 		OrderDTO odto = new OrderDTO();
-		
-		cdto.setM_Id((String)session.getAttribute("m_id"));
+
+		cdto.setM_Id((String) session.getAttribute("m_id"));
 		cdto.setProduct_No(request.getParameter("pro_no"));
 		cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
 		cdto.setPro_color(request.getParameter("pro_color"));
@@ -129,18 +120,18 @@ public class CartController {
 		cdto.setPro_name(request.getParameter("pro_name"));
 		cdto.setPro_price(Integer.parseInt(request.getParameter("allprice")));
 		System.out.println(request.getParameter("name"));
-		
+
 		odto.setAddress(request.getParameter("address"));
 		odto.setName(request.getParameter("name"));
 		odto.setPhone(request.getParameter("phone"));
 		odto.setRequest(request.getParameter("request"));
-		
+
 		cartService.direct_order(cdto, odto);
 		return "";
 	}
-	
+
 	@RequestMapping("/order")
-	public String order(HttpSession session, HttpServletRequest request){
+	public String order(HttpSession session, HttpServletRequest request) {
 		String m_id = (String) session.getAttribute("m_id");
 		OrderDTO odto = new OrderDTO();
 		odto.setAddress(request.getParameter("address"));
@@ -150,5 +141,5 @@ public class CartController {
 		cartService.order(m_id, odto);
 		return "";
 	}
-	
+
 }

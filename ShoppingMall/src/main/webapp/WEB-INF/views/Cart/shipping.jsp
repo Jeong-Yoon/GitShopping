@@ -41,6 +41,13 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
   </head>
+<script>
+function goto_url(act) {
+	  document.order.action = act;
+	  document.order.submit();
+	}
+</script>
+
 
   <body>
     <main>
@@ -51,7 +58,7 @@
 
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
-        <form class="js-validate js-step-form" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
+        <form class="js-validate js-step-form" name="order" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
           <div class="g-mb-100">
             <!-- Step Titles -->
             <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
@@ -281,7 +288,7 @@
                     <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">이름</label>
-                        <input id="inputGroup4" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="firstName" type="text" placeholder="이름" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup4" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="name" type="text" placeholder="이름" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
 
@@ -289,7 +296,7 @@
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">연락처</label>
-                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="stateProvince" type="text" placeholder="010-000-0000" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="phone" type="text" placeholder="010-000-0000" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                       
                     </div>
@@ -300,14 +307,14 @@
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주소</label>
-                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="" type="text" placeholder="주소">
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="address" type="text" placeholder="주소">
                       </div>
                     </div>
                      
 		 <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문메시지</label>
-                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="zip" type="text" placeholder="부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="request" type="text" placeholder="부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
 
@@ -320,7 +327,7 @@
                   <hr class="g-mb-50">
 
                   
-                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3">결제하기</button>
+                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" onclick="goto_url('order')" data-next-step="#step3">결제하기</button>
                 </div>
 
                 <div class="col-md-4 g-mb-30">
@@ -340,48 +347,50 @@
                         <div class="g-py-15">
                           <ul class="list-unstyled mb-3">
                             <!-- Product -->
+                            <c:forEach var="list" items="${map.list}">
                             <li class="d-flex justify-content-start">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/product/${list.product_No}.jpg" alt="Image Description">
                               <div class="d-block">
-                                <h4 class="h6 g-color-black">Sneaker</h4>
+                                <h4 class="h6 g-color-black">${list.pro_name}</h4>
                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Black</li>
-                                  <li>Size: MD</li>
-                                  <li>수량: 1</li>
+                                  <li>색상: ${list.pro_color}</li>
+                                  <li>Size: ${list.pro_size}</li>
+                                  <li>수량: ${list.basket_Quantity}</li>
                                 </ul>
-                                <span class="d-block g-color-black g-font-weight-400">&#8361; 87.00</span>
+                                <span class="d-block g-color-black g-font-weight-400">&#8361; ${list.pro_price * list.basket_Quantity}</span>
                               </div>
                             </li>
+                            </c:forEach>
                             <!-- End Product -->
 
                             <!-- Product -->
-                            <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
-                              <div class="d-block">
-                                <h4 class="h6 g-color-black">Chukka Shoes</h4>
-                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Black</li>
-                                  <li>Size: MD</li>
-                                  <li>수량: 2</li>
-                                </ul>
-                                <span class="d-block g-color-black g-font-weight-400"> &#8361; 160.00</span>
-                              </div>
-                            </li>
+<!--                             <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4"> -->
+<%--                               <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description"> --%>
+<!--                               <div class="d-block"> -->
+<!--                                 <h4 class="h6 g-color-black">Chukka Shoes</h4> -->
+<!--                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1"> -->
+<!--                                   <li>색상: Black</li> -->
+<!--                                   <li>Size: MD</li> -->
+<!--                                   <li>수량: 2</li> -->
+<!--                                 </ul> -->
+<!--                                 <span class="d-block g-color-black g-font-weight-400"> &#8361; 160.00</span> -->
+<!--                               </div> -->
+<!--                             </li> -->
                             <!-- End Product -->
 
                             <!-- Product -->
-                            <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
-                              <div class="d-block">
-                                <h4 class="h6 g-color-black">Desk Clock</h4>
-                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Brown Wood</li>
-                                  <li>Type: Desk</li>
-                                  <li>수량: 1</li>
-                                </ul>
-                                <span class="d-block g-color-black g-font-weight-400">&#8361; 47.00</span>
-                              </div>
-                            </li>
+<!--                             <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4"> -->
+<%--                               <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description"> --%>
+<!--                               <div class="d-block"> -->
+<!--                                 <h4 class="h6 g-color-black">Desk Clock</h4> -->
+<!--                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1"> -->
+<!--                                   <li>색상: Brown Wood</li> -->
+<!--                                   <li>Type: Desk</li> -->
+<!--                                   <li>수량: 1</li> -->
+<!--                                 </ul> -->
+<!--                                 <span class="d-block g-color-black g-font-weight-400">&#8361; 47.00</span> -->
+<!--                               </div> -->
+<!--                             </li> -->
                             <!-- End Product -->
                           </ul>
                         </div>
@@ -393,11 +402,11 @@
            
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
-                      <span class="g-color-black g-font-weight-300">$454.00</span>
+                      <span class="g-color-black g-font-weight-300">&#8361; ${map.sumMoney}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
-                      <span class="g-color-black g-font-weight-300">$459.5</span>
+                      <span class="g-color-black g-font-weight-300">&#8361; ${map.allSum}</span>
                     </div>
                   </div>
                   <!-- End Order Summary -->

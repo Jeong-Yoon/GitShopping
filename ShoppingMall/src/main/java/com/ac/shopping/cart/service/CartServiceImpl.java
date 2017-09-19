@@ -35,10 +35,9 @@ public class CartServiceImpl implements CartService{
 		cartDao.delete(product_No, m_Id);
 	}
 	//4. 장바구니 수정
-	@Override
-	public void modifyCart(CartDTO cartDto) {
-		cartDao.modifyCart(cartDto);
-	}
+	public void modifyCart(List<String> quantity, List<String> product_no, String m_Id) {
+	      cartDao.modifyCartList(quantity,product_no,m_Id);
+	   }
 	//5. 장바구니 금액 합계
 	@Override
 	public int sumMoney(String m_Id) {
@@ -56,6 +55,7 @@ public class CartServiceImpl implements CartService{
 		// TODO Auto-generated method stub
 		
 	}
+	
 	//8.주문하기
 	@Override
 	public void direct_order(CartDTO cdto, OrderDTO odto) {
