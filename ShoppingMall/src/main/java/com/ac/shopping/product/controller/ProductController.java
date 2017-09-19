@@ -2,6 +2,7 @@ package com.ac.shopping.product.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.Non_mem_CartDTO;
 import com.ac.shopping.product.dto.WishListDTO;
 import com.ac.shopping.product.service.ProductService;
 import com.ac.shopping.service.BoardPager.ProductPager;
@@ -319,7 +321,55 @@ public class ProductController {
 			}
 
 		}else{
-			return "redirect: cart_list.do";
+			 int identify=0;
+	         
+	         List<Non_mem_CartDTO> non_mem_pro = new ArrayList<Non_mem_CartDTO>();         
+	         
+	         if(session.getAttribute("nmC") !=null){
+	            
+	            List<Non_mem_CartDTO> prevNonmem = (List<Non_mem_CartDTO>) session.getAttribute("nmC");         
+	         
+	            for(int i=0;i<prevNonmem.size();i++){
+	            
+	               Non_mem_CartDTO pnmC = new Non_mem_CartDTO();
+	               System.out.println("???");
+	               
+	               pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
+	               pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
+	               pnmC.setPro_size(prevNonmem.get(i).getPro_size());
+	               pnmC.setPro_color(prevNonmem.get(i).getPro_color());
+	               pnmC.setPro_price(prevNonmem.get(i).getPro_price());
+	               pnmC.setPro_name(prevNonmem.get(i).getPro_name());
+	               
+	               if(prevNonmem.get(i).getProduct_No().equals(request.getParameter("product_no"))){
+	                  
+	                  identify =1;
+	                  response.setContentType("text/html; charset=UTF-8");
+	                  PrintWriter out = response.getWriter();
+	                  out.println("<script>alert('이미 담겨져 있는 상품입니다.'); history.go(-1);</script>");
+	                  out.flush();
+	                  out.close();
+	               }               
+	               non_mem_pro.add(pnmC);            
+	            }   
+	         }
+	         
+	         if(identify==0){
+	            Non_mem_CartDTO nmC = new Non_mem_CartDTO();
+	                           
+	            nmC.setProduct_No(request.getParameter("product_no"));         
+	            nmC.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
+	            nmC.setPro_size(request.getParameter("pro_size"));         
+	            nmC.setPro_color(request.getParameter("select_color"));
+	            nmC.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
+	            nmC.setPro_name(request.getParameter("pro_name"));      
+	         
+	            non_mem_pro.add(nmC);
+	         }
+	         
+	         session.setAttribute("nmC", non_mem_pro);   
+	         
+	         return "redirect:/non_mem_Cart";
 		}
 	}
 	
