@@ -19,28 +19,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
     <!-- CSS Global Compulsory -->
-<<<<<<< HEAD
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
-=======
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
     <!-- CSS Implementing Plugins -->
-<<<<<<< HEAD
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/chosen/chosen.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/animate.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
-=======
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line-pro/style.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-hs/style.css">
@@ -52,21 +34,21 @@
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
     <!-- CSS Unify Theme -->
-<<<<<<< HEAD
-    <link rel="stylesheet" href="resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
-=======
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/e-commerce/assets/css/styles.e-commerce.css">
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
     <!-- CSS Customization -->
-<<<<<<< HEAD
-    <link rel="stylesheet" href="resources/WB0412697/html/assets/css/custom.css">
-=======
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
+    
+    <script>
+    function goto_url(act) {
+  	  document.order.action = act;
+  	  document.order.submit();
+  	}
+    </script>
+    
+    
   </head>
 
   <body>
@@ -75,7 +57,7 @@
     
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
-        <form class="js-validate js-step-form" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
+        <form class="js-validate js-step-form" name="order" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
           <div class="g-mb-100">
             <!-- Step Titles -->
             <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
@@ -130,9 +112,7 @@
                         <c:forEach var="row" items="${map.list}" >
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
-<<<<<<< HEAD
                             <img class="d-inline-block g-width-100 mr-4" src="../resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
-=======
                             <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">${row.pro_name} </h4>
@@ -167,7 +147,6 @@
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
                             <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
                             &nbsp; &nbsp; &nbsp; &nbsp;
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">${row.pro_name} </h4>
@@ -199,8 +178,6 @@
                         </c:when>
                         </c:choose>
                         <!-- End Item-->
-<<<<<<< HEAD
-=======
                         <!-- Item-->
 <!--                         <tr class="g-brd-bottom g-brd-gray-light-v3"> -->
 <!--                           <td class="text-left g-py-25"> -->
@@ -264,7 +241,6 @@
 <!--                           </td> -->
 <!--                         </tr> -->
                         <!-- End Item -->
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
                       </tbody>
                     </table>
                   </div>
@@ -285,8 +261,6 @@
                         </h5>
                       </div>
                       
-<<<<<<< HEAD
-=======
                       <div id="accordion-03-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-03-heading-03">
                         <div class="g-py-15">
                           <ul class="list-unstyled mb-3">
@@ -337,7 +311,6 @@
                           </ul>
                         </div>
                       </div>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
                     </div>
                     <!-- End Accordion -->
                     
@@ -354,7 +327,7 @@
                   <!-- End Summary -->
 
                   <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button">수정</button>
-                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="">결제 진행하기</button>
+                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="goto_url('order')">결제 진행하기</button>
 
                   
 
@@ -388,29 +361,12 @@
     </main>
 
     <!-- JS Global Compulsory -->
-<<<<<<< HEAD
-    <script src="resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/tether.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
-=======
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
     <!-- JS Implementing Plugins -->
-<<<<<<< HEAD
-    <script src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/chosen/chosen.jquery.js"></script>
-    <script src="resources/WB0412697/html/assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
-=======
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
@@ -419,21 +375,8 @@
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/chosen/chosen.jquery.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
     <!-- JS Unify -->
-<<<<<<< HEAD
-    <script src="resources/WB0412697/html/assets/js/hs.core.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.header.js"></script>
-    <script src="resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.dropdown.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.select.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.count-qty.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.step-form.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.validation.js"></script>
-    <script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
-=======
     <script src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
@@ -444,14 +387,9 @@
     <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.step-form.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.validation.js"></script>
     <script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
     <!-- JS Customization -->
-<<<<<<< HEAD
-    <script src="resources/WB0412697/html/assets/js/custom.js"></script>
-=======
     <script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
     <!-- JS Plugins Init. -->
     <script>

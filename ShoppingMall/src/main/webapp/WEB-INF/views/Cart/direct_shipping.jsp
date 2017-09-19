@@ -332,7 +332,7 @@
                   <hr class="g-mb-50">
 
                   
-                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3" onclick="goto_url('order')">결제하기</button>
+                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3" onclick="goto_url('direct_order')">결제하기</button>
                 </div>
 
                 <div class="col-md-4 g-mb-30">

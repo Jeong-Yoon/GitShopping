@@ -58,8 +58,12 @@ public class CartServiceImpl implements CartService{
 	}
 	//8.주문하기
 	@Override
-	public void order(CartDTO cdto, OrderDTO odto) {
-		cartDao.order(cdto, odto);
+	public void direct_order(CartDTO cdto, OrderDTO odto) {
+		cartDao.direct_order(cdto, odto);
+	}
+	@Override
+	public void order(String m_id, OrderDTO odto) {
+		cartDao.order(m_id, odto);
 	}
 
 }

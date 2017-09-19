@@ -28,6 +28,7 @@ public interface CartService {
 	// 7. 장바구니 상품 수량 변경
 	public void updateCart(CartDTO cartDTO);
 	//8. 주문하기
-	public void order(CartDTO cdto, OrderDTO odto);
+	public void direct_order(CartDTO cdto, OrderDTO odto);
+	public void order(String m_id, OrderDTO odto);
 	
 }
