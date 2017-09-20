@@ -470,12 +470,12 @@ public class ProductController {
 	         cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
 	         System.out.println(request.getParameter("pro_size"));
 	         String pro_quantity = request.getParameter("quantity");
-	         if (request.getParameter("select_color") != null) {
+	         if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
 	            cdto.setPro_color(request.getParameter("select_color"));
 	         }else{
 	            cdto.setPro_color("-");
 	         }
-	         if (request.getParameter("pro_size") != "") {
+	         if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
 	            cdto.setPro_size(request.getParameter("pro_size"));
 	         } else{
 	            cdto.setPro_size("FREE");
@@ -519,12 +519,12 @@ public class ProductController {
 	                  System.out.println("color = "+request.getParameter("select_color"));
 	                  pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
 	                  pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
-	                  if (request.getParameter("select_color") != null) {
+	                  if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
 	                     pnmC.setPro_color(prevNonmem.get(i).getPro_color());
 	               }else{
 	                  pnmC.setPro_color("-");
 	               }
-	               if (request.getParameter("pro_size") != "") {
+	               if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
 	                  pnmC.setPro_size(prevNonmem.get(i).getPro_size());
 	               } else{
 	                  pnmC.setPro_size("FREE");
@@ -549,13 +549,13 @@ public class ProductController {
 	                              
 	               nmC.setProduct_No(request.getParameter("product_no"));         
 	               nmC.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
-	               if (request.getParameter("select_color") != null) {
+	               if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
 	                  nmC.setPro_color(request.getParameter("select_color"));
 	               }else{
 	                  nmC.setPro_color("-");
 	               }
 	               System.out.println(request.getParameter("pro_size"));
-	               if (request.getParameter("pro_size") != "") {
+	               if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
 	                  nmC.setPro_size(request.getParameter("pro_size"));
 	               } else{
 	                  nmC.setPro_size("FREE");

@@ -139,7 +139,7 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/nonMem_order")
-	public String nonMem_order(HttpSession session, HttpServletRequest request){
+	public String nonMem_order(HttpSession session, HttpServletRequest request,Model model){
 //		HashMap<String, Object> param = new HashMap<String, Object>();
 	Non_mem_OrderDTO nmodto = new Non_mem_OrderDTO();
 	List<Non_mem_CartDTO> plist = (List<Non_mem_CartDTO>) session.getAttribute("nmC");
@@ -152,8 +152,9 @@ public class HomeController {
 	nmodto.setRequest(request.getParameter("request"));
 //	param.put("nmodto", nmodto);
 //	param.put("plist", plist);
-	cartService.nonMem_order(nmodto,plist);
-	return "";
+	String order_no = cartService.nonMem_order(nmodto,plist);
+	model.addAttribute("order_no", order_no);
+	return "redirect:/order_list.do";
 	}
 	
 //	

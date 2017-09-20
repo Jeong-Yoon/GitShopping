@@ -67,7 +67,7 @@ function goto_url(act) {
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">1</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Shopping Cart</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">장바구니</h4>
               </li>
 
               <li class="col-3 list-inline-item g-mb-20 g-mb-0--sm">
@@ -75,7 +75,7 @@ function goto_url(act) {
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">2</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Shipping</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">배송정보</h4>
               </li>
 
               <li class="col-3 list-inline-item">
@@ -83,7 +83,7 @@ function goto_url(act) {
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">3</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Payment &amp; Review</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">주문완료</h4>
               </li>
             </ul>
             <!-- End Step Titles -->
@@ -327,7 +327,7 @@ function goto_url(act) {
                   <hr class="g-mb-50">
 
                   
-                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" onclick="goto_url('order')" data-next-step="#step3">결제하기</button>
+                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" onclick="goto_url('order')">결제하기</button>
                 </div>
 
                 <div class="col-md-4 g-mb-30">

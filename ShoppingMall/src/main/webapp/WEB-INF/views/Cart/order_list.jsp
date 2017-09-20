@@ -93,17 +93,18 @@
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">3</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">결제</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">주문완료</h4>
               </li>
             </ul>
             <!-- End Step Titles -->
           </div>
 
-          <div id="stepFormSteps">
+<!--           <div id="stepFormSteps"> -->
             <!-- Shopping Cart -->
-            <div id="step1" class="active">
+            <div id="step3">
               <div class="row">
                 <div class="col-md-8 g-mb-30">
+                
                   <!-- Products Block -->
                   <div class="g-overflow-x-scroll g-overflow-x-visible--lg">
                     <table class="text-center w-100">
@@ -134,14 +135,14 @@
                           </td>
                           <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; ${row.pro_price} </td>
                           <td>
-                            <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
-                             <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="${row.order_quantity}" readonly>
-
+<!--                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus"> -->
+<%--                              <input class="js-result form-control text-center g-font-size-13" type="text" value="${row.order_quantity}" readonly> --%>
+                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${row.order_quantity}</span>
 <!--                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6"> -->
 <!--                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i> -->
 <!--                                 <i class="js-minus g-color-gray g-color-primary--hover fa fa-angle-down"></i> -->
 <!--                               </div> -->
-                            </div>
+<!--                             </div> -->
                           </td>
                           <td class="text-right g-color-black">
                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; ${row.pro_price * row.order_quantity}</span>
