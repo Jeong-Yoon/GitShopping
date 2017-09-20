@@ -35,7 +35,7 @@ public interface CartDAO {
 	// 7.장바구니 상품수량 변경
 	public void updateCart(CartDTO cartDto);
 	//8.주문하기
-	public void direct_order(CartDTO cdto, OrderDTO odto);
+	public String direct_order(CartDTO cdto, OrderDTO odto);
 	public String order(String m_id, OrderDTO odto);
 	public HashMap<String, Object> order_list(HttpSession session, String order_no);
 

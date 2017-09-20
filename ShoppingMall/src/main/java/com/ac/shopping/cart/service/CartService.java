@@ -31,7 +31,7 @@ public interface CartService {
 	public void updateCart(CartDTO cartDTO);
 	
 	//8. 주문하기
-	public void direct_order(CartDTO cdto, OrderDTO odto);
+	public String direct_order(CartDTO cdto, OrderDTO odto);
 	public String order(String m_id, OrderDTO odto);
 	public HashMap<String, Object> order_list(HttpSession session, String order_no);
 }
