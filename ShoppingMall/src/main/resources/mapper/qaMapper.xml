@@ -11,6 +11,7 @@
     FROM Q_A 
     <!-- WHERE절을 include 태그로 삽입 -->
     <include refid="search"></include>  
+    order by BOARD_INDEX desc
     <include refid="pagingFooter"></include>  
 	</select>
 
@@ -80,7 +81,7 @@
           #{BOARD_QUERY_TYPE},
           #{BOARD_TITLE},
           #{BOARD_REPLY},
-          #{BOARD_PWD}
+          '1'
         )
         ]]>
 	</insert>

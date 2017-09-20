@@ -470,7 +470,7 @@ public class ProductController {
 	         cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
 	         System.out.println(request.getParameter("pro_size"));
 	         String pro_quantity = request.getParameter("quantity");
-	         if (request.getParameter("select_color") != "") {
+	         if (request.getParameter("select_color") != null) {
 	            cdto.setPro_color(request.getParameter("select_color"));
 	         }else{
 	            cdto.setPro_color("-");
