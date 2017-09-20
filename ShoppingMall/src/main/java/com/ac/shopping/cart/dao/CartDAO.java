@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -36,7 +37,7 @@ public interface CartDAO {
 	//8.주문하기
 	public void direct_order(CartDTO cdto, OrderDTO odto);
 	public String order(String m_id, OrderDTO odto);
-	public HashMap<String, Object> order_list(String order_no);
+	public HashMap<String, Object> order_list(HttpSession session, String order_no);
 
 
 }

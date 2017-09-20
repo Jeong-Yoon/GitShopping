@@ -114,9 +114,10 @@
 </head>
 
 <body>
+<jsp:include page="../short_header.jsp" flush="false" />
 	<main>
 	<div class="col-sm-8 col-md-9 col-xl-10 g-py-30 g-pa-30--md">
-		<h1 class="g-font-weight-300 g-letter-spacing-1 g-mb-35">Q & A</h1>
+		<center><h1 class="g-font-weight-300 g-letter-spacing-1 g-mb-35">Q & A 글쓰기</h1></center>
 
 		<!-- Form Controls -->
 		<section class="g-py-50">
@@ -216,55 +217,52 @@
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.js"></script>
 
+	<!-- JS Global Compulsory -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.js"></script>
+
 	<!-- JS Implementing Plugins -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
 	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-
-	<!-- jQuery UI Core -->
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/version.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/keycode.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/position.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/unique-id.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
-	<!-- End jQuery UI Core -->
-
-	<!-- jQuery UI Helpers -->
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
-
-	<!-- jQuery UI Widgets -->
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery.peity.min.js"></script>
 
 	<!-- JS Unify -->
 	<script src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
-	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.shortcode-filter.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.rating.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.chart.js"></script>
+
+	<!-- jQuery UI Core -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/version.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/keycode.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/position.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/unique-id.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
+	<!-- End jQuery UI Core -->
+
+	<!-- jQuery UI Helpers -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+	<!-- End jQuery UI Helpers -->
+
+	<!-- jQuery UI Widgets -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+	<!-- End jQuery UI Widgets -->
 
 	<!-- Show / Copy Code -->
 	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/prism.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-markup.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-css.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-clike.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-markup.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-css.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-clike.min.js"></script>
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-javascript.min.js"></script>
 	<script
@@ -274,50 +272,77 @@
 
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/custombox/custombox.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/custombox/custombox.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/clipboard/dist/clipboard.min.js"></script>
 
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.modal-markup.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.markup-copy.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.modal-markup.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.markup-copy.js"></script>
 	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.modal-window.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.shortcode-filter.js"></script>
 	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.modal-window.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+
+	<script type="text/javascript">
+	function button_event(){
+	if (confirm("정말 삭제합니까?") == true){    //확인
+		location.href = "../Q_A/delete.do?BOARD_INDEX=${view.BOARD_INDEX}";
+    }else{   
+     return;
+    }
+	}
+
+</script>
 
 
 
+	<script>
+		$(document).on('ready', function() {
+			$.HSCore.helpers.HSModalMarkup.init('.js-modal-markup');
+
+			$.HSCore.components.HSMarkupCopy.init('.js-copy');
+		});
+	</script>
 
 	<!-- JS Custom -->
 	<script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
 
 	<!-- JS Plugins Init. -->
-	<!--     <script> -->
-	<!-- //       $(document).on('ready', function () { -->
-	<!-- //         // initialization of go to -->
-	<!-- //         $.HSCore.components.HSGoTo.init('.js-go-to'); -->
-	<!-- //       }); -->
+	<script>
+		$(document).on('ready', function() {
+			// initialization of rating
+			$.HSCore.components.HSRating.init($('.js-rating'), {
+				spacing : 2
+			});
 
-	<!-- //       $(window).on('load', function () { -->
-	<!-- //         // initialization of autocomplet -->
-	<!-- //         $.HSCore.components.HSLocalSearchAutocomplete.init('#autocomplete1'); -->
+			// initialization of peity charts
+			$.HSCore.components.HSChart.peity.init($('.js-peity-chart'));
+		});
 
-	<!-- //         // initialization of header -->
-	<!-- //         $.HSCore.components.HSHeader.init($('#js-header')); -->
-	<!-- //         $.HSCore.helpers.HSHamburgers.init('.hamburger'); -->
+		$(window).on(
+				'load',
+				function() {
+					// initialization of header
+					$.HSCore.components.HSHeader.init($('#js-header'));
+					$.HSCore.helpers.HSHamburgers.init('.hamburger');
 
-	<!-- //         // initialization of HSMegaMenu component -->
-	<!-- //         $('.js-mega-menu').HSMegaMenu({ -->
-	<!-- //           event: 'hover', -->
-	<!-- //           pageContainer: $('.container'), -->
-	<!-- //           breakpoint: 991 -->
-	<!-- //         }); -->
-	<!-- //       }); -->
-	<!--     </script> -->
+					// initialization of autocomplet
+					$.HSCore.components.HSLocalSearchAutocomplete
+							.init('#autocomplete1');
+
+					// initialization of go to
+					$.HSCore.components.HSGoTo.init('.js-go-to');
+
+					// initialization of HSMegaMenu component
+					$('.js-mega-menu').HSMegaMenu({
+						event : 'hover',
+						pageContainer : $('.container'),
+						breakpoint : 991
+					});
+				});
+	</script>
 
 
 </body>

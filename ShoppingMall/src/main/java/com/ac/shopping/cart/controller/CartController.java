@@ -231,9 +231,10 @@ public class CartController {
 	public ModelAndView order_list(HttpSession session,HttpServletRequest request, ModelAndView mav) {
 
 		String m_Id = (String) session.getAttribute("m_id");
+		order_no = request.getParameter("order_no");
 		System.out.println("order = " + order_no);
 		Map<String, Object> map = new HashMap<String, Object>();
-		map = cartService.order_list(order_no);
+		map = cartService.order_list(session, order_no);
 		order_no = (String)map.get("order_no");
 		List<Order_listDTO> olist = (List<Order_listDTO>) map.get("olist");
 	

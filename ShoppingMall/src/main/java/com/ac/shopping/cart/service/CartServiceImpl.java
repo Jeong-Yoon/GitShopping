@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -73,11 +75,11 @@ public class CartServiceImpl implements CartService{
 //		cartDao.nonMem_order(param);
 //	}
 	
-	public void nonMem_order(Non_mem_OrderDTO nmodto, List<Non_mem_CartDTO> plist) {
-		cartDao.nonMem_order(nmodto,plist);		
+	public String nonMem_order(Non_mem_OrderDTO nmodto, List<Non_mem_CartDTO> plist) {
+		return cartDao.nonMem_order(nmodto,plist);		
 	}
-	public HashMap<String, Object> order_list(String order_no) {
-		return cartDao.order_list(order_no);
+	public HashMap<String, Object> order_list(HttpSession session, String order_no) {
+		return cartDao.order_list(session, order_no);
 	}
 
 }

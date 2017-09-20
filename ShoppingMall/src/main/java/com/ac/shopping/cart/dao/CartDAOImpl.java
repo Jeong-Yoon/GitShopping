@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.concurrent.SynchronousQueue;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
@@ -163,7 +164,7 @@ public class CartDAOImpl implements CartDAO {
 //		}
 //	}
 
-	public void nonMem_order(Non_mem_OrderDTO nmodto, List<Non_mem_CartDTO> plist) {
+	public String nonMem_order(Non_mem_OrderDTO nmodto, List<Non_mem_CartDTO> plist) {
 		
 		String order_no = "";
 		for (int i = 0; i < plist.size(); i++) {
@@ -181,14 +182,22 @@ public class CartDAOImpl implements CartDAO {
 				sqlSession.insert("cart.re_nonMem_order",param);
 			}
 		}
+		return order_no;
 		
 	}
 
-	public HashMap<String, Object> order_list(String order_no) {
+	public HashMap<String, Object> order_list(HttpSession session, String order_no) {
 		HashMap<String, Object> param = new HashMap<String, Object>();
-		List<Order_listDTO> olist = sqlSession.selectList("cart.order_list", order_no);
-		param.put("order_no", order_no);
-		param.put("olist", olist);
+		//String m_Id = (String) session.getAttribute("m_id");
+		if ((String) session.getAttribute("m_id") != null && (String) session.getAttribute("m_id") != "") {
+			List<Order_listDTO> olist = sqlSession.selectList("cart.order_list", order_no);
+			param.put("order_no", order_no);
+			param.put("olist", olist);
+		}else{
+			List<Order_listDTO> olist = sqlSession.selectList("cart.nonorder_list", order_no);
+			param.put("order_no", order_no);
+			param.put("olist", olist);
+		}
 		return param;
 	}
 

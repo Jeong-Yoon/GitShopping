@@ -1,58 +1,76 @@
-<%@page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="contextPath" value="<%= request.getContextPath()%>"></c:set>
-
 <head>
-    <!-- Title -->
-    <title>Tables | Unify - Responsive Website Template</title>
 
-    <!-- Required Meta Tags Always Come First -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Title -->
+<title>Table Designs | Unify - Responsive Website Template</title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../../favicon.ico">
+<!-- Required Meta Tags Always Come First -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Google Fonts -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="${contextPath}/resources/WB0412697/html/favicon.ico">
 
-    <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.css">
+<!-- Google Fonts -->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=cyrillic,latin"
+	rel="stylesheet" type="text/css"">
 
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-hs/style.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
+<!-- CSS Global Compulsory -->
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.css">
 
-    <!-- Show / Copy Code -->
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/prism/themes/prism.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/custombox/custombox.min.css">
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/icon-line/css/simple-line-icons.css">
+<link rel="${contextPath}/stylesheet" href="resources/WB0412697/html/assets/vendor/icon-hs/style.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/hamburgers/hamburgers.min.css">
 
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/animate.css">
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+<!-- Show / Copy Code -->
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/prism/themes/prism.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/custombox/custombox.min.css">
 
-    <!-- CSS Unify -->
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/unify.css">
+<link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/vendor/animate.css">
+<link rel="stylesheet"
+	href="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
 
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
+<!-- CSS Unify -->
+<link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/unify.css">
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
   </head>
 <body>
 <jsp:include page="../header.jsp" flush="false" />
-<main>
+
 
 
 <form name="form1" action="Q_A.do">
@@ -150,8 +168,8 @@
         <input name="search_keyword" value="${map.keyword}">
         
         <input type="submit" class="btn btn-md u-btn-primary rounded-0" value="조회">
-        <input type="button" class="btn btn-md u-btn-primary rounded-0" name="write" value="글쓰기" onclick="location.href='/shopping/Q_A/write'"><br />
-        ${map.count}개의 게시물이 있습니다.
+        <input type="button" class="btn btn-md u-btn-primary rounded-0" name="write" value="글쓰기" onclick="location.href='/shopping/Q_A/write'">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${map.count}개의 게시물이 있습니다.
        
         <!-- Go To Top --> <a class="js-go-to u-go-to-v1" href="#"
 		data-type="fixed"
@@ -161,72 +179,54 @@
          }'
 		data-offset-top="400" data-compensation="#js-header"
 		data-show-effect="zoomIn"> <i class="hs-icon hs-icon-arrow-top"></i>
-	</a> <!-- End Go To Top --> </form></main>
-
-	<div id="modalMarkup"
-		class="text-left modal-demo g-max-width-600 g-height-95x g-bg-white g-color-black g-pa-20"
-		style="display: none;"></div>
+	</a> <!-- End Go To Top --> </form>
 
 	<!-- JS Global Compulsory -->
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
 	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/offcanvas.js"></script>
 
 	<!-- JS Implementing Plugins -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
 	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-
-	<!-- jQuery UI Core -->
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/version.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/keycode.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/position.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/unique-id.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
-	<!-- End jQuery UI Core -->
-
-	<!-- jQuery UI Helpers -->
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
-
-	<!-- jQuery UI Widgets -->
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery.peity.min.js"></script>
 
 	<!-- JS Unify -->
 	<script src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
-	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.shortcode-filter.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.hamburgers.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.rating.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.chart.js"></script>
+
+	<!-- jQuery UI Core -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widget.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/version.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/keycode.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/position.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/unique-id.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
+	<!-- End jQuery UI Core -->
+
+	<!-- jQuery UI Helpers -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+	<!-- End jQuery UI Helpers -->
+
+	<!-- jQuery UI Widgets -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+	<!-- End jQuery UI Widgets -->
 
 	<!-- Show / Copy Code -->
 	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/prism.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-markup.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-css.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-clike.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-markup.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-css.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-clike.min.js"></script>
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/prism/components/prism-javascript.min.js"></script>
 	<script
@@ -236,27 +236,76 @@
 
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/custombox/custombox.min.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/custombox/custombox.min.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/clipboard/dist/clipboard.min.js"></script>
 
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.modal-markup.js"></script>
-	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.markup-copy.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.scrollbar.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.modal-markup.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.markup-copy.js"></script>
 	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.tabs.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.modal-window.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/helpers/hs.shortcode-filter.js"></script>
 	<script
-		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.modal-window.js"></script>
+		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+
+	<script type="text/javascript">
+	function button_event(){
+	if (confirm("정말 삭제합니까?") == true){    //확인
+		location.href = "../Q_A/delete.do?BOARD_INDEX=${view.BOARD_INDEX}";
+    }else{   
+     return;
+    }
+	}
+
+</script>
 
 
 
+	<script>
+		$(document).on('ready', function() {
+			$.HSCore.helpers.HSModalMarkup.init('.js-modal-markup');
+
+			$.HSCore.components.HSMarkupCopy.init('.js-copy');
+		});
+	</script>
 
 	<!-- JS Custom -->
 	<script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
-       
-</form>
+
+	<!-- JS Plugins Init. -->
+	<script>
+		$(document).on('ready', function() {
+			// initialization of rating
+			$.HSCore.components.HSRating.init($('.js-rating'), {
+				spacing : 2
+			});
+
+			// initialization of peity charts
+			$.HSCore.components.HSChart.peity.init($('.js-peity-chart'));
+		});
+
+		$(window).on(
+				'load',
+				function() {
+					// initialization of header
+					$.HSCore.components.HSHeader.init($('#js-header'));
+					$.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+					// initialization of autocomplet
+					$.HSCore.components.HSLocalSearchAutocomplete
+							.init('#autocomplete1');
+
+					// initialization of go to
+					$.HSCore.components.HSGoTo.init('.js-go-to');
+
+					// initialization of HSMegaMenu component
+					$('.js-mega-menu').HSMegaMenu({
+						event : 'hover',
+						pageContainer : $('.container'),
+						breakpoint : 991
+					});
+				});
+	</script>
 
 </body>

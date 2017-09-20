@@ -72,16 +72,12 @@
 
 <body>
 	<main>
-
+	<jsp:include page="../short_header.jsp" flush="false" />
 
 	<section class="container-fluid">
 		<div class="row row-offcanvas row-offcanvas-left">
 
 			<div class="col-sm-8 col-lg-9 col-xl-10 g-py-30 g-pa-30--md">
-
-
-				<h1 class="g-font-weight-300 g-letter-spacing-1 g-pt-30 g-mb-35">Read</h1>
-
 
 				
 				<!-- Table #01 -->

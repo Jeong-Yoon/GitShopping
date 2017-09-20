@@ -67,7 +67,7 @@ function goto_url(act) {
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">1</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Shopping Cart</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">장바구니</h4>
               </li>
 
               <li class="col-3 list-inline-item g-mb-20 g-mb-0--sm">
@@ -75,7 +75,7 @@ function goto_url(act) {
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">2</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Shipping</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">배송정보</h4>
               </li>
 
               <li class="col-3 list-inline-item">
@@ -83,7 +83,7 @@ function goto_url(act) {
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">3</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Payment &amp; Review</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">주문완료</h4>
               </li>
             </ul>
             <!-- End Step Titles -->
@@ -304,14 +304,14 @@ function goto_url(act) {
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문자 연락처</label>
-                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="order_phone" type="text" placeholder="010-0000-0000">
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="order_phone" type="text" placeholder="01012345678">
                       </div>
                     </div>
                      
 		 			<div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">받으실 분 연락처</label>
-                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="receive_phone" type="text" placeholder="010-0000-0000" required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="receive_phone" type="text" placeholder="01087654321" required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
                   </div>
@@ -344,7 +344,7 @@ function goto_url(act) {
                   <hr class="g-mb-50">
 
                   
-                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3" onclick="goto_url('nonMem_order')">결제하기</button>
+                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" onclick="goto_url('nonMem_order')">결제하기</button>
                 </div>
 
                 <div class="col-md-4 g-mb-30">
@@ -397,7 +397,6 @@ function goto_url(act) {
                                   <li>수량: ${list.basket_Quantity}</li>
                                 </ul>
                                 <span class="d-block g-color-black g-font-weight-400">&#8361; ${list.pro_price * list.basket_Quantity}</span>
-                               <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4"></li>
                               </div>
                             </li>
                             </c:forEach>
