@@ -234,7 +234,7 @@
                     
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
-                      
+                      &#8361; 
                      <c:choose>
                      <c:when test="${not empty sessionScope.m_id}">
                      <span class="g-color-black g-font-weight-300">&#8361; ${map.sumMoney}</span>
@@ -246,6 +246,7 @@
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
+                     &#8361; 
                      <c:choose>
                      <c:when test="${not empty sessionScope.m_id}">
                       <span class="g-color-black g-font-weight-300">&#8361; ${map.allSum}</span>
