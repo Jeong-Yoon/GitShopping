@@ -80,7 +80,7 @@
           #{BOARD_QUERY_TYPE},
           #{BOARD_TITLE},
           #{BOARD_REPLY},
-          #{BOARD_PWD}
+          '1'
         )
         ]]>
 	</insert>

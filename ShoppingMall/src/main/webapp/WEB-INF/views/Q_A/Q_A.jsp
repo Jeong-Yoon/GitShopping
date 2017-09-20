@@ -13,6 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../favicon.ico">
 
@@ -49,8 +53,11 @@
 <body>
 <jsp:include page="../header.jsp" flush="false" />
 <main>
+
+
 <form name="form1" action="Q_A.do">
-<table class="table table-striped table-hover ">
+
+<table class="table table-striped table-hover " >
   <thead>
     <tr>
       <th>분류</th>
@@ -61,17 +68,18 @@
     </tr>
   </thead>
   <c:forEach var="row" items="${map.list}">
-    <tr>
-      <td>${row.BOARD_QUERY_TYPE}</td>
+  
+    <tr class="${row.BOARD_PWD}">
+      <td>${row.BOARD_QUERY_TYPE} </td>
       <td>${row.BOARD_INDEX}</td>
       
       <td><a href="${path}/shopping/Q_A/view?BOARD_INDEX=${row.BOARD_INDEX}&BOARD_WRITER=${row.BOARD_WRITER}">
       <c:choose>
       	<c:when test="${empty row.BOARD_REPLY}">
-       		${row.BOARD_TITLE}
+       		<font color="black">${row.BOARD_TITLE}</font>
       	</c:when>
       	<c:otherwise>
-      		[답변완료]${row.BOARD_TITLE}
+      		<font color="black">[답변완료]${row.BOARD_TITLE}</font>
       	</c:otherwise>
       </c:choose>
 	</a></td>
@@ -124,11 +132,11 @@
 		 <select name="search_query_option" class="custom-select rounded-0" onchange="this.form.submit()">
             <!-- 검색조건을 검색처리후 결과화면에 보여주기위해  c:out 출력태그 사용, 삼항연산자 -->
             <option value="all" <c:out value="${map.search_query_opt == 'all'?'selected':''}"/> >전체 보기</option>
-            <option value="배송" <c:out value="${map.search_query_opt == '배송'?'selected':''}"/> >배송 문의</option>
-            <option value="반품" <c:out value="${map.search_query_opt == '반품'?'selected':''}"/> >상품 문의</option>
-            <option value="질문" <c:out value="${map.search_query_opt == '질문'?'selected':''}"/> > 교환 문의 </option>
-            <option value="항의" <c:out value="${map.search_query_opt == '항의'?'selected':''}"/>  > 반품 문의 </option>
-            <option value="주문변경" <c:out value="${map.search_query_opt == '주문변경'?'selected':''}"/> > 주문 변경 문의 </option>
+            <option value="shipment" <c:out value="${map.search_query_opt == 'shipment'?'selected':''}"/> >배송 문의</option>
+            <option value="product" <c:out value="${map.search_query_opt == 'product'?'selected':''}"/> >상품 문의</option>
+            <option value="exchange" <c:out value="${map.search_query_opt == 'exchange'?'selected':''}"/> > 교환 문의 </option>
+            <option value="return" <c:out value="${map.search_query_opt == 'return'?'selected':''}"/>  > 반품 문의 </option>
+            <option value="order_change" <c:out value="${map.search_query_opt == 'order_change'?'selected':''}"/> > 주문 배송 문의 </option>
         </select>
 
         <select name="search_option" class="custom-select rounded-0">
@@ -142,7 +150,7 @@
         <input name="search_keyword" value="${map.keyword}">
         
         <input type="submit" class="btn btn-md u-btn-primary rounded-0" value="조회">
-        <input type="button" class="btn btn-md u-btn-primary rounded-0" name="write" value="글쓰기" onclick="location.href='http://localhost:7070/shopping/Q_A/write'"><br />
+        <input type="button" class="btn btn-md u-btn-primary rounded-0" name="write" value="글쓰기" onclick="location.href='/shopping/Q_A/write'"><br />
         ${map.count}개의 게시물이 있습니다.
        
         <!-- Go To Top --> <a class="js-go-to u-go-to-v1" href="#"

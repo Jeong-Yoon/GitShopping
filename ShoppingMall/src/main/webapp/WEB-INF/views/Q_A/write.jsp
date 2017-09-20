@@ -132,28 +132,23 @@
 								<form class="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-30"
 									name="insert" action="insert.do">
 									<div class="form-group g-mb-25">
-										<label for="exampleInputEmail1">작성자</label> 
-										${sessionScope.m_id}
+										<label for="exampleInputEmail1">작성자:     	</label> 
+										 ${sessionScope.m_id} 님
 <!-- 										<input type="text" -->
 <!-- 											class="form-control form-control-md rounded-0" -->
 <!-- 											id="BOARD_WRITER" name="BOARD_WRITER" aria-describedby="emailHelp" -->
 <!-- 											placeholder="작성자"> -->
-									</div>
-
-									<div class="form-group g-mb-25">
-										<label for="exampleInputPassword1">패스워드</label> <input
-											type="password" class="form-control form-control-md rounded-0"
-											id="BOARD_PWD" name="BOARD_PWD" placeholder="Password">
-									</div>
+									</div>									
 
 									<div class="form-group g-mb-25">
 										<label for="exampleInputPassword1">제목</label> <input
 											type="text"
 											class="form-control form-control-md rounded-0"
-											id="BOARD_TITLE" name="BOARD_TITLE" placeholder="Title">
+											id="BOARD_TITLE" name="BOARD_TITLE" placeholder="Title" required>
 									</div>
 
 
+									질문 종류 선택 : 
 									<!-- Select Menu -->
 <!-- 									<form class="g-bg-white g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-30"> -->
 										<select class="custom-select rounded-0"  name="BOARD_QUERY_TYPE">
@@ -166,26 +161,20 @@
 										</select>
 <!-- 									</form> -->
 									<!-- End Select Menu -->
+									
+									<br/><br/>
 
 									<div class="form-group g-mb-25">
 										<label for="exampleTextarea">내용</label>
 										<textarea class="form-control form-control-md rounded-0"
-											id="BOARD_CONTENT" name="BOARD_CONTENT" rows="6"></textarea>
+											id="BOARD_CONTENT" name="BOARD_CONTENT" rows="6" required></textarea>
 									</div>
-
-									<div class="form-group g-mb-25">
-										<label for="exampleInputFile">FILE</label> <input type="file"
-											class="form-control-file" id="exampleInputFile"
-											aria-describedby="fileHelp">
-									</div>
-
-
 
 									<button type="submit"
 										class="btn btn-md u-btn-primary rounded-0" id=btnSave>등록</button>
 									<button type="button"
 										class="btn btn-md u-btn-primary rounded-0"
-										onclick="location.href='http://localhost:7070/shopping/Q_A.do'";>목록보기</button>
+										onclick="location.href='/shopping/Q_A.do'";>목록보기</button>
 								</form>
 								<hr class="g-brd-gray-light-v4 g-mx-minus-30">
 							</div>
