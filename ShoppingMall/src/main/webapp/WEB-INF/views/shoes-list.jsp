@@ -281,10 +281,10 @@ body {margin: 10px; font-size: 13px}
 <!-- 											alt="Image Description"> -->
 
 										<!-- Ribbon -->
-<!-- 										<figcaption> -->
-<!-- 											<span -->
-<!-- 												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span> -->
-<!-- 										</figcaption> -->
+										<figcaption>
+											<span
+												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
+										</figcaption>
 										<!-- End Ribbon -->
 									</div>
 
@@ -814,9 +814,16 @@ body {margin: 10px; font-size: 13px}
 
 					<hr>
 
+<<<<<<< HEAD
 
+=======
+					<form name="search" action="../shoes-list/${map.var}">
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 					<form name="search" action="${contextPath}/shoes-list/${map.var}">
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 						<input type="hidden" name="pricerange" value=""> <input
 							type="hidden" name="board_like" value="1">
 
