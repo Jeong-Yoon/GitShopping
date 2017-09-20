@@ -188,7 +188,7 @@
 							<li class="list-inline-item g-mx-15"><label
 								class="form-check-inline u-check"> <input
 									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="pro_size" type="radio">
+									name="pro_size" type="radio" value="S">
 									<div
 										class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
 										S</div>
@@ -196,7 +196,7 @@
 							<li class="list-inline-item g-mx-15"><label
 								class="form-check-inline u-check"> <input
 									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="pro_size" type="radio">
+									name="pro_size" type="radio" value="M">
 									<div
 										class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
 										M</div>
@@ -204,7 +204,7 @@
 							<li class="list-inline-item g-mx-15"><label
 								class="form-check-inline u-check"> <input
 									class="hidden-xs-up g-pos-abs g-top-0 g-left-0"
-									name="pro_size" type="radio">
+									name="pro_size" type="radio" value="L">
 									<div
 										class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
 										L</div>
