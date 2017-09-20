@@ -105,17 +105,13 @@
 <body>
 	<main>
 
-
+	<jsp:include page="../short_header.jsp" flush="false" />
 	<section class="container-fluid">
 		<div class="row row-offcanvas row-offcanvas-left">
 
 			<div class="col-sm-8 col-lg-9 col-xl-10 g-py-30 g-pa-30--md">
 
 
-				<h1 class="g-font-weight-300 g-letter-spacing-1 g-pt-30 g-mb-35">Modify</h1>
-
-
-				
 				<!-- Table #01 -->
 				
 				
@@ -192,7 +188,7 @@
        	 	 <input type="hidden" name="BOARD_INDEX" value="${BOARD_INDEX}">
 				<button type="sumbit"	class="btn btn-md u-btn-primary rounded-0" >완료</button>
 				<button type="button"
-					class="btn btn-md u-btn-primary rounded-0" onclick="location.href='http://localhost:7070/shopping/Q_A.do'">취소</button>
+					class="btn btn-md u-btn-primary rounded-0" onclick="location.href='/shopping/Q_A.do'">취소</button>
 		</form>			
    		 	</div>
 		</div>

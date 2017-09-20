@@ -114,9 +114,10 @@
 </head>
 
 <body>
+<jsp:include page="../short_header.jsp" flush="false" />
 	<main>
 	<div class="col-sm-8 col-md-9 col-xl-10 g-py-30 g-pa-30--md">
-		<h1 class="g-font-weight-300 g-letter-spacing-1 g-mb-35">Q & A</h1>
+		<center><h1 class="g-font-weight-300 g-letter-spacing-1 g-mb-35">Q & A 글쓰기</h1></center>
 
 		<!-- Form Controls -->
 		<section class="g-py-50">

@@ -150,8 +150,8 @@
         <input name="search_keyword" value="${map.keyword}">
         
         <input type="submit" class="btn btn-md u-btn-primary rounded-0" value="조회">
-        <input type="button" class="btn btn-md u-btn-primary rounded-0" name="write" value="글쓰기" onclick="location.href='/shopping/Q_A/write'"><br />
-        ${map.count}개의 게시물이 있습니다.
+        <input type="button" class="btn btn-md u-btn-primary rounded-0" name="write" value="글쓰기" onclick="location.href='/shopping/Q_A/write'">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${map.count}개의 게시물이 있습니다.
        
         <!-- Go To Top --> <a class="js-go-to u-go-to-v1" href="#"
 		data-type="fixed"
