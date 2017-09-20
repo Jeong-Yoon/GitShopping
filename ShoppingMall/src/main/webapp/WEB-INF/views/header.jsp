@@ -146,7 +146,7 @@
                   <c:if test="${not empty sessionScope.m_id}">
                      <li class="list-inline-item g-mx-4"><a
                         class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-                        href="logout.do">Logout</a></li>
+                        href="${contextPath}/logout.do">Logout</a></li>
                   </c:if>
                   <c:if test="${empty sessionScope.m_id }">
                      <li class="list-inline-item g-mx-4">|</li>

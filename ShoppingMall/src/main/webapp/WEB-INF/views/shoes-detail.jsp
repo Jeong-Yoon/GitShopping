@@ -133,7 +133,7 @@
 
               <!-- Colour -->
               <div class="d-flex justify-content-between align-items-center g-brd-bottom g-brd-gray-light-v3 py-3" role="tab">
-                <h5 class="g-color-gray-dark-v5 g-font-weight-400 g-font-size-default mb-0">Colour</h5>
+                <h5 class="g-color-gray-dark-v5 g-font-weight-400 g-font-size-default mb-0">Color</h5>
 
                 <!-- Checkbox -->
 <!--                 <ul class="list-inline mb-0"> -->

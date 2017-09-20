@@ -60,7 +60,7 @@
 	href="../resources/WB0412697/html/assets/css/custom.css">
 </head>
 
-<body>
+<body align="center">
 	<main> <jsp:include page="../header.jsp" flush="false" /> <!-- Checkout Form -->
 	<div class="container g-pt-100 g-pb-70">
 		<form class="js-validate js-step-form"
