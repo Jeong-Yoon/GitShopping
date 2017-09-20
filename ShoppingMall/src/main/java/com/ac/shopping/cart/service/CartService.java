@@ -3,6 +3,8 @@ package com.ac.shopping.cart.service;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import com.ac.shopping.cart.dto.CartDTO;
 import com.ac.shopping.cart.dto.OrderDTO;
 
@@ -31,5 +33,5 @@ public interface CartService {
 	//8. 주문하기
 	public void direct_order(CartDTO cdto, OrderDTO odto);
 	public String order(String m_id, OrderDTO odto);
-	public HashMap<String, Object> order_list(String order_no);
+	public HashMap<String, Object> order_list(HttpSession session, String order_no);
 }

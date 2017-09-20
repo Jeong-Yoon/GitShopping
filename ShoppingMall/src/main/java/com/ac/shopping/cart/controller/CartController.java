@@ -40,7 +40,7 @@ public class CartController {
 	public String cartInsert(HttpServletResponse response, CartDTO cartDto, HttpSession session,
 			HttpServletRequest request) {
 		if (request.getParameter("m_id") != null) {
-			String m_Id = (String) session.getAttribute("m_Id");
+			String m_Id = (String) session.getAttribute("m_id");
 			cartDto.setM_Id(m_Id);
 
 			// 장바구니에 기존 상품이 있는지 검사
@@ -86,13 +86,17 @@ public class CartController {
 	public String delete(@RequestParam String product_No, HttpSession session) {
 		System.out.println(product_No);
 
-		String m_Id = (String) session.getAttribute("m_Id");
-		m_Id = "hj";
+		String m_Id = (String) session.getAttribute("m_id");
 		System.out.println(m_Id);
 
 		cartService.delete(product_No, m_Id);
 
-		return "redirect:cart_list.do";
+		return "redirect:/cart_list.do";
+	}
+	
+	@RequestMapping("/mem_cart")
+	public String mem_cart(){
+		return "Cart/cart";
 	}
 
 	/// 4. 장바구니 수정
@@ -101,7 +105,7 @@ public class CartController {
 			@RequestParam(value = "m_product_no", required = true) List<String> product_no, HttpSession session) {
 		String m_Id = (String) session.getAttribute("m_id");
 		cartService.modifyCart(quantity, product_no, m_Id);
-		return "redirect:cart_list.do";
+		return "redirect:/cart_list.do";
 
 	}
 
@@ -231,9 +235,10 @@ public class CartController {
 	public ModelAndView order_list(HttpSession session,HttpServletRequest request, ModelAndView mav) {
 
 		String m_Id = (String) session.getAttribute("m_id");
+		order_no = request.getParameter("order_no");
 		System.out.println("order = " + order_no);
 		Map<String, Object> map = new HashMap<String, Object>();
-		map = cartService.order_list(order_no);
+		map = cartService.order_list(session, order_no);
 		order_no = (String)map.get("order_no");
 		List<Order_listDTO> olist = (List<Order_listDTO>) map.get("olist");
 	

@@ -93,7 +93,7 @@
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">3</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">결제</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">주문완료</h4>
               </li>
             </ul>
             <!-- End Step Titles -->
@@ -149,7 +149,7 @@
                           <td class="text-right g-color-black">
                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; ${row.pro_price * row.basket_Quantity}</span>
                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
-                              <a href="/cart_delete.do?product_No=${row.product_No}&m_Id=${m_Id}"><i class="mt-auto fa fa-trash"></i></a>
+                              <a href="${contextPath}/cart_delete.do?product_No=${row.product_No}"><i class="mt-auto fa fa-trash"></i></a>
                             </span>
                           </td>
                         </tr>
@@ -262,11 +262,11 @@
                   <c:choose>
                   <c:when test="${not empty sessionScope.m_id}">
                   <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button" onclick="goto_url('cart_update.do')">수정</button>
-                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="goto_url('shipping')">결제 진행하기</button>
+                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" onclick="goto_url('shipping')">결제 진행하기</button>
                   </c:when>
                   <c:otherwise>
                   <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button" onclick="goto_url('cart_update_non.do')">수정</button>
-                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="goto_url('shipping_non')">결제 진행하기</button>
+                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" onclick="goto_url('shipping_non')">결제 진행하기</button>
                   </c:otherwise>
                   </c:choose>
                   

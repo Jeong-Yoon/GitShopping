@@ -301,7 +301,7 @@
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">연락처</label>
-                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="phone" id="phone" type="text" placeholder="010-000-0000" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="phone" id="phone" type="text" placeholder="-를 제외하고 입력해주세요." required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                       
                     </div>

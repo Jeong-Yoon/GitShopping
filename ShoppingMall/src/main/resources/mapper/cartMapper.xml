@@ -136,4 +136,16 @@ WHERE o.product_no = p.product_no
 AND o.order_no = #{order_no}
 </select>
 
+<select id="nonorder_list" resultType="com.ac.shopping.cart.dto.Order_listDTO">
+SELECT o.product_no as product_no,
+o.order_quantity as order_quantity,
+o.order_color as order_color,
+o.order_size as order_size,
+p.pro_name as pro_name,
+p.pro_price as pro_price
+FROM non_detail_orderlist o, product p
+WHERE o.product_no = p.product_no
+AND o.non_member_order_no = #{order_no}
+</select>
+
 </mapper>
