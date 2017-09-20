@@ -149,7 +149,7 @@
                           <td class="text-right g-color-black">
                             <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; ${row.pro_price * row.basket_Quantity}</span>
                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
-                              <a href="/cart_delete.do?product_No=${row.product_No}&m_Id=${m_Id}"><i class="mt-auto fa fa-trash"></i></a>
+                              <a href="${contextPath}/cart_delete.do?product_No=${row.product_No}"><i class="mt-auto fa fa-trash"></i></a>
                             </span>
                           </td>
                         </tr>
