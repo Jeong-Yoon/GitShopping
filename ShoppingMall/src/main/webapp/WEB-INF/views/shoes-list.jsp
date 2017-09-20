@@ -281,10 +281,10 @@ body {margin: 10px; font-size: 13px}
 <!-- 											alt="Image Description"> -->
 
 										<!-- Ribbon -->
-<!-- 										<figcaption> -->
-<!-- 											<span -->
-<!-- 												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span> -->
-<!-- 										</figcaption> -->
+										<figcaption>
+											<span
+												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
+										</figcaption>
 										<!-- End Ribbon -->
 									</div>
 
