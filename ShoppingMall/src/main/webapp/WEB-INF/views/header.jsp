@@ -161,48 +161,56 @@
                         href="">MY PAGE</a></li>
                      </c:if>
                      <li class="list-inline-item g-mx-4">|</li>
+                      <c:if test="${not empty sessionScope.m_id}">
+                         <li class="list-inline-item g-mx-4"><a
+                        class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+                        href="/shopping/cart_list.do">CART</a></li>
+                           </c:if>
+                  <c:if test="${empty sessionScope.m_id}">
                      <li class="list-inline-item g-mx-4"><a
                         class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-                        href="*">CART</a></li>
-                  <li class="list-inline-item g-mx-4">|</li>
-                  <li class="list-inline-item g-mx-4"><a
-                     class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-                     href="#">FAQ</a></li>
+                        href="/shopping/non_mem_Cart">CART</a></li>
+                  </c:if>
+                    
+<!--                   <li class="list-inline-item g-mx-4">|</li> -->
+<!--                   <li class="list-inline-item g-mx-4"><a -->
+<!--                      class="g-color-white g-color-primary--hover g-text-underline--none--hover" -->
+<!--                      href="#">FAQ</a></li> -->
                </ul>
             </div>
 
             <div class="col-auto">
-               ${sessionScope.m_id}
+<%--                ${sessionScope.m_id} --%>
 
                <!-- Search -->
-               <div class="d-inline-block g-valign-middle g-pos-rel g-top-minus-1">
-                  <a href="#"
-                     class="g-font-size-18 g-color-white g-color-primary--hover"
-                     aria-haspopup="true" aria-expanded="false"
-                     aria-controls="searchform-1" data-dropdown-target="#searchform-1"
-                     data-dropdown-type="css-animation" data-dropdown-duration="300"
-                     data-dropdown-animation-in="fadeInUp"
-                     data-dropdown-animation-out="fadeOutDown"> <i
-                     class="fa fa-search"></i>
-                  </a>
+<!--                <div class="d-inline-block g-valign-middle g-pos-rel g-top-minus-1"> -->
+<!--                   <a href="#" -->
+<!--                      class="g-font-size-18 g-color-white g-color-primary--hover" -->
+<!--                      aria-haspopup="true" aria-expanded="false" -->
+<!--                      aria-controls="searchform-1" data-dropdown-target="#searchform-1" -->
+<!--                      data-dropdown-type="css-animation" data-dropdown-duration="300" -->
+<!--                      data-dropdown-animation-in="fadeInUp" -->
+<!--                      data-dropdown-animation-out="fadeOutDown"> <i -->
+<!--                      class="fa fa-search"></i> -->
+<!--                   </a> -->
 
                   <!-- Search Form -->
-                  <form id="searchform-1"
-                     class="u-searchform-v1 u-dropdown--css-animation u-dropdown--hidden g-bg-black g-pa-10 g-mt-10 g-box-shadow-none">
-                     <div class="input-group">
-                        <input
-                           class="form-control rounded-0 u-form-control border-0 g-py-10"
-                           type="search" placeholder="Enter Your Search Here...">
+<!--                   <form id="searchform-1" -->
+<!--                      class="u-searchform-v1 u-dropdown--css-animation u-dropdown--hidden g-bg-black g-pa-10 g-mt-10 g-box-shadow-none"> -->
+<!--                      <div class="input-group"> -->
+<!--                         <input -->
+<!--                            class="form-control rounded-0 u-form-control border-0 g-py-10" -->
+<!--                            type="search" placeholder="Enter Your Search Here..."> -->
 
-                        <div class="input-group-addon p-0">
-                           <button
-                              class="btn rounded-0 btn-primary btn-md g-font-size-14 g-px-18"
-                              type="submit">Go</button>
-                        </div>
-                     </div>
-                  </form>
+<!--                         <div class="input-group-addon p-0"> -->
+<!--                            <button -->
+<!--                               class="btn rounded-0 btn-primary btn-md g-font-size-14 g-px-18" -->
+<!--                               type="submit">Go</button> -->
+<!--                         </div> -->
+<!--                      </div> -->
+<!--                   </form> -->
                   <!-- End Search Form -->
-               </div>
+<!--                </div> -->
                <!-- End Search -->
             </div>
          </div>

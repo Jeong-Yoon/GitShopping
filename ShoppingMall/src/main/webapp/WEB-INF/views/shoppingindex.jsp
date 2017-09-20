@@ -79,11 +79,11 @@
 						</ul>
 					</div>
 
-					<div class="col-auto g-pb-10 g-pb-0--sm">
-						<i
-							class="fa fa-phone g-font-size-18 g-valign-middle g-color-primary g-mr-10 g-mt-minus-2"></i>
-						8 800 1234 4321
-					</div>
+            <div class="col-auto g-pb-10 g-pb-0--sm">
+               <i
+                  class="fa fa-phone g-font-size-18 g-valign-middle g-color-primary g-mr-10 g-mt-minus-2"></i>
+               02 321   1234
+            </div>
 
 					<div class="col-auto hidden-md-down">
 						<i
@@ -118,22 +118,189 @@
 								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
 								href="#">MY PAGE</a></li>
 							</c:if>
-							<c:if test="${empty sessionScope.m_id }">
-							<li class="list-inline-item g-mx-4">|</li>
-							<li class="list-inline-item g-mx-4"><a
-								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="/shopping/non_mem_Cart">CART</a></li>		
-							</c:if>	
-							<c:if test="${ not empty sessionScope.m_id }">
-							<li class="list-inline-item g-mx-4">|</li>
-							<li class="list-inline-item g-mx-4"><a
-								class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-								href="/shopping/cart_list.do">CART</a></li>		
-							</c:if>				
+                     <li class="list-inline-item g-mx-4">|</li>
+                      <c:if test="${not empty sessionScope.m_id}">
+                         <li class="list-inline-item g-mx-4"><a
+                        class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+                        href="/shopping/cart_list.do">CART</a></li>
+                           </c:if>
+                  <c:if test="${empty sessionScope.m_id}">
+                     <li class="list-inline-item g-mx-4"><a
+                        class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+                        href="/shopping/non_mem_Cart">CART</a></li>
+                  </c:if>
+<!-- 						<li class="list-inline-item g-mx-4">|</li> -->
+<!-- 						<li class="list-inline-item g-mx-4"><a -->
+<!-- 							class="g-color-white g-color-primary--hover g-text-underline--none--hover" -->
+<!-- 							href="#">FAQ</a></li> -->
 						</ul>
 					</div>
 
-					
+					<div class="col-auto">
+
+						<!-- Basket -->
+<!-- 						<div class="u-basket d-inline-block g-valign-middle g-pt-2"> -->
+<!-- 							<a href="#" id="basket-bar-invoker" -->
+<!-- 								class="u-icon-v1 g-color-white g-text-underline--none--hover g-width-20 g-height-20 g-mr-40" -->
+<!-- 								aria-controls="basket-bar" aria-haspopup="true" -->
+<!-- 								aria-expanded="false" data-dropdown-event="hover" -->
+<!-- 								data-dropdown-target="#basket-bar" -->
+<!-- 								data-dropdown-type="css-animation" data-dropdown-duration="300" -->
+<!-- 								data-dropdown-hide-on-scroll="false" -->
+<!-- 								data-dropdown-animation-in="fadeIn" -->
+<!-- 								data-dropdown-animation-out="fadeOut"> <span -->
+<!-- 								class="u-badge-v1--sm g-color-white g-bg-primary g-rounded-50x">3</span> -->
+<!-- 								<i class="fa fa-shopping-cart"></i> -->
+<!-- 							</a> -->
+
+<!-- 							<div id="basket-bar" -->
+<!-- 								class="u-basket__bar u-dropdown--css-animation u-dropdown--hidden g-text-transform-none g-bg-black g-brd-top g-brd-2 g-brd-primary g-color-main g-mt-13" -->
+<!-- 								aria-labelledby="basket-bar-invoker"> -->
+<!-- 								<div class="js-scrollbar g-height-280"> -->
+									<!-- Product -->
+<!-- 									<div class="u-basket__product g-brd-white-opacity-0_1"> -->
+<!-- 										<div class="row align-items-center no-gutters"> -->
+<!-- 											<div class="col-4 g-pr-20"> -->
+<!-- 												<a href="#" class="u-basket__product-img"><img -->
+<!-- 													src="resources/WB0412697/html/assets/img-temp/150x150/img1.jpg" -->
+<!-- 													alt="Image Description"></a> -->
+<!-- 											</div> -->
+
+<!-- 											<div class="col-8"> -->
+<!-- 												<h6 class="g-font-weight-600 g-mb-0"> -->
+<!-- 													<a href="#" -->
+<!-- 														class="g-color-white g-color-white--hover g-text-underline--none--hover">Black -->
+<!-- 														Glasses</a> -->
+<!-- 												</h6> -->
+<!-- 												<small class="g-color-gray-dark-v5 g-font-size-14">1 -->
+<!-- 													x $400.00</small> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 										<button class="u-basket__product-remove" type="button">&times;</button> -->
+<!-- 									</div> -->
+									<!-- End Product -->
+
+									<!-- Product -->
+<!-- 									<div class="u-basket__product g-brd-white-opacity-0_1"> -->
+<!-- 										<div class="row align-items-center no-gutters"> -->
+<!-- 											<div class="col-4 g-pr-20"> -->
+<!-- 												<a href="#" class="u-basket__product-img"><img -->
+<!-- 													src="resources/WB0412697/html/assets/img-temp/150x150/img2.jpg" -->
+<!-- 													alt="Image Description"></a> -->
+<!-- 											</div> -->
+
+<!-- 											<div class="col-8"> -->
+<!-- 												<h6 class="g-font-weight-600 g-mb-0"> -->
+<!-- 													<a href="#" -->
+<!-- 														class="g-color-white g-color-white--hover g-text-underline--none--hover">Black -->
+<!-- 														Glasses</a> -->
+<!-- 												</h6> -->
+<!-- 												<small class="g-color-gray-dark-v5 g-font-size-14">1 -->
+<!-- 													x $400.00</small> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 										<button class="u-basket__product-remove" type="button">&times;</button> -->
+<!-- 									</div> -->
+									<!-- End Product -->
+
+									<!-- Product -->
+<!-- 									<div class="u-basket__product g-brd-white-opacity-0_1"> -->
+<!-- 										<div class="row align-items-center no-gutters"> -->
+<!-- 											<div class="col-4 g-pr-20"> -->
+<!-- 												<a href="#" class="u-basket__product-img"><img -->
+<!-- 													src="resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" -->
+<!-- 													alt="Image Description"></a> -->
+<!-- 											</div> -->
+
+<!-- 											<div class="col-8"> -->
+<!-- 												<h6 class="g-font-weight-600 g-mb-0"> -->
+<!-- 													<a href="#" -->
+<!-- 														class="g-color-white g-color-white--hover g-text-underline--none--hover">Black -->
+<!-- 														Glasses</a> -->
+<!-- 												</h6> -->
+<!-- 												<small class="g-color-gray-dark-v5 g-font-size-14">1 -->
+<!-- 													x $400.00</small> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 										<button class="u-basket__product-remove" type="button">&times;</button> -->
+<!-- 									</div> -->
+									<!-- End Product -->
+
+									<!-- Product -->
+<!-- 									<div class="u-basket__product g-brd-white-opacity-0_1"> -->
+<!-- 										<div class="row align-items-center no-gutters"> -->
+<!-- 											<div class="col-4 g-pr-20"> -->
+<!-- 												<a href="#" class="u-basket__product-img"><img -->
+<!-- 													src="resources/WB0412697/html/assets/img-temp/150x150/img4.jpg" -->
+<!-- 													alt="Image Description"></a> -->
+<!-- 											</div> -->
+
+<!-- 											<div class="col-8"> -->
+<!-- 												<h6 class="g-font-weight-600 g-mb-0"> -->
+<!-- 													<a href="#" -->
+<!-- 														class="g-color-white g-color-white--hover g-text-underline--none--hover">Black -->
+<!-- 														Glasses</a> -->
+<!-- 												</h6> -->
+<!-- 												<small class="g-color-gray-dark-v5 g-font-size-14">1 -->
+<!-- 													x $400.00</small> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 										<button class="u-basket__product-remove" type="button">&times;</button> -->
+<!-- 									</div> -->
+									<!-- End Product -->
+<!-- 								</div> -->
+
+<!-- 								<div class="g-brd-top g-brd-white-opacity-0_1 g-pa-15 g-pb-20"> -->
+<!-- 									<div -->
+<!-- 										class="d-flex flex-row align-items-center justify-content-between g-letter-spacing-1 g-font-size-16 g-mb-15"> -->
+<!-- 										<strong class="text-uppercase g-font-weight-600 g-color-white">총 -->
+<!-- 											합계</strong> <strong class="g-color-primary g-font-weight-600">$1200.00</strong> -->
+<!-- 									</div> -->
+
+<!-- 									<div -->
+<!-- 										class="d-flex flex-row align-items-center justify-content-between g-font-size-18"> -->
+<!-- 										<a href="#" -->
+<!-- 											class="btn u-btn-outline-primary rounded-0 g-width-120">카트가기</a> -->
+<!-- 										<a href="#" class="btn u-btn-primary rounded-0 g-width-120">결제하기</a> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+						<!-- End Basket -->
+
+						<!-- Search -->
+<!-- 						<div -->
+<!-- 							class="d-inline-block g-valign-middle g-pos-rel g-top-minus-1"> -->
+<!-- 							<a href="#" -->
+<!-- 								class="g-font-size-18 g-color-white g-color-primary--hover" -->
+<!-- 								aria-haspopup="true" aria-expanded="false" -->
+<!-- 								aria-controls="searchform-1" -->
+<!-- 								data-dropdown-target="#searchform-1" -->
+<!-- 								data-dropdown-type="css-animation" data-dropdown-duration="300" -->
+<!-- 								data-dropdown-animation-in="fadeInUp" -->
+<!-- 								data-dropdown-animation-out="fadeOutDown"> <i -->
+<!-- 								class="fa fa-search"></i> -->
+<!-- 							</a> -->
+
+							<!-- Search Form -->
+<!-- 							<form id="searchform-1" -->
+<!-- 								class="u-searchform-v1 u-dropdown--css-animation u-dropdown--hidden g-bg-black g-pa-10 g-mt-10 g-box-shadow-none"> -->
+<!-- 								<div class="input-group"> -->
+<!-- 									<input -->
+<!-- 										class="form-control rounded-0 u-form-control border-0 g-py-10" -->
+<!-- 										type="search" placeholder="Enter Your Search Here..."> -->
+
+<!-- 									<div class="input-group-addon p-0"> -->
+<!-- 										<button -->
+<!-- 											class="btn rounded-0 btn-primary btn-md g-font-size-14 g-px-18" -->
+<!-- 											type="submit">Go</button> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</form> -->
+<!-- 							End Search Form -->
+<!-- 						</div> -->
+<!-- 						End Search -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -178,16 +345,217 @@
 									class="hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-py-7 g-mt-22 g-mt-12--lg--scrolling"
 									id="nav-submenu--pages" aria-labelledby="nav-link--pages">
 									<li class="dropdown-item"><a class="nav-link"
-										href="/shopping/Q_A.do">Q & A</a></li>
+										href="http://localhost:7070/shopping/Q_A.do">Q & A</a></li>
 									<li class="dropdown-item"><a class="nav-link"
-										href="/shopping/review">Review</a></li>
+										href="http://localhost:7070/shopping/review">Review</a></li>
 									<li class="dropdown-item"><a class="nav-link"
-										href="/shopping/page-login">Login</a></li>
+										href="http://localhost:7070/shopping/page-login">Login</a></li>
 									<li class="dropdown-item"><a class="nav-link"
-										href="/shopping/sign_Up">Signup</a></li>
+										href="http://localhost:7070/shopping/sign_Up">Signup</a></li>
 								</ul> <!-- End Submenu -->
 							</li>
 
+							<!-- Mega Menu Item -->
+							<li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
+								data-animation-in="fadeIn" data-animation-out="fadeOut"
+								data-position="right"><a id="mega-menu-label-3"
+								class="nav-link g-px-0" href="#" aria-haspopup="true"
+								aria-expanded="false">Clothes <i
+									class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
+
+								<!-- Mega Menu -->
+								<div
+									class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
+									aria-labelledby="mega-menu-label-3">
+									<div class="row">
+										<div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
+											<figure class="g-px-10">
+												<div class="g-pos-rel g-mb-20">
+													<a href="#"><img class="img-fluid"
+														src="resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
+														alt="Image Description"></a>
+													<!-- Ribbon -->
+													<figcaption>
+														<span
+															class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
+													</figcaption>
+													<!-- End Ribbon -->
+												</div>
+
+												<div class="media">
+													<!-- Product Info -->
+													<div class="d-flex flex-column">
+														<h4 class="h6 g-color-black mb-1">
+															<a class="u-link-v5 g-color-black g-color-primary--hover"
+																href="#" tabindex="0"> Summer shorts </a>
+														</h4>
+														<a
+															class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
+															href="#" tabindex="0">Man</a> <span
+															class="d-block g-color-black g-font-size-17">$52.00</span>
+													</div>
+													<!-- End Product Info -->
+
+													<!-- Products Icons -->
+													<ul class="list-inline media-body text-right">
+														<li class="list-inline-item align-middle mx-0"><a
+															class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+															href="#" tabindex="0" data-toggle="tooltip"
+															data-placement="top" data-original-title="Add to Cart">
+																<i class="icon-finance-100 u-line-icon-pro"></i>
+														</a></li>
+														<li class="list-inline-item align-middle mx-0"><a
+															class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+															href="#" tabindex="0" data-toggle="tooltip"
+															data-placement="top"
+															data-original-title="Add to Wishlist"> <i
+																class="icon-medical-022 u-line-icon-pro"></i>
+														</a></li>
+													</ul>
+													<!-- End Products Icons -->
+												</div>
+											</figure>
+										</div>
+
+										<div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
+											<figure class="g-px-10">
+												<div class="g-pos-rel g-mb-20">
+													<a href="#"><img class="img-fluid"
+														src="resources/WB0412697/html/assets/img-temp/480x700/img2.jpg"
+														alt="Image Description"></a>
+												</div>
+
+												<div class="media">
+													<!-- Product Info -->
+													<div class="d-flex flex-column">
+														<h4 class="h6 g-color-black mb-1">
+															<a class="u-link-v5 g-color-black g-color-primary--hover"
+																href="#" tabindex="0"> Stylish shirt </a>
+														</h4>
+														<a
+															class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
+															href="#" tabindex="0">Woman</a> <s
+															class="d-block g-color-lightred g-font-weight-500 g-font-size-13">$101.00</s>
+														<span class="d-block g-color-black g-font-size-17">$99.00</span>
+													</div>
+													<!-- End Product Info -->
+
+													<!-- Products Icons -->
+													<ul class="list-inline media-body text-right">
+														<li class="list-inline-item align-middle mx-0"><a
+															class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+															href="#" tabindex="0" data-toggle="tooltip"
+															data-placement="top" data-original-title="Add to Cart">
+																<i class="icon-finance-100 u-line-icon-pro"></i>
+														</a></li>
+														<li class="list-inline-item align-middle mx-0"><a
+															class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+															href="#" tabindex="0" data-toggle="tooltip"
+															data-placement="top"
+															data-original-title="Add to Wishlist"> <i
+																class="icon-medical-022 u-line-icon-pro"></i>
+														</a></li>
+													</ul>
+													<!-- End Products Icons -->
+												</div>
+											</figure>
+										</div>
+
+										<div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
+											<figure class="g-px-10">
+												<div class="g-pos-rel g-mb-20">
+													<a href="#"><img class="img-fluid"
+														src="resources/WB0412697/html/assets/img-temp/480x700/img3.jpg"
+														alt="Image Description"></a>
+
+													<!-- Ribbon -->
+													<figcaption>
+														<span
+															class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-lightred g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">Sold</span>
+													</figcaption>
+													<!-- End Ribbon -->
+												</div>
+
+												<div class="media">
+													<!-- Product Info -->
+													<div class="d-flex flex-column">
+														<h4 class="h6 g-color-black mb-1">
+															<a class="u-link-v5 g-color-black g-color-primary--hover"
+																href="#" tabindex="0"> Classic jacket </a>
+														</h4>
+														<a
+															class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
+															href="#" tabindex="0">Man</a> <span
+															class="d-block g-color-black g-font-size-17">$49.99</span>
+													</div>
+													<!-- End Product Info -->
+
+													<!-- Products Icons -->
+													<ul class="list-inline media-body text-right">
+														<li class="list-inline-item align-middle mx-0"><a
+															class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+															href="#" tabindex="0" data-toggle="tooltip"
+															data-placement="top" data-original-title="Add to Cart">
+																<i class="icon-finance-100 u-line-icon-pro"></i>
+														</a></li>
+														<li class="list-inline-item align-middle mx-0"><a
+															class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+															href="#" tabindex="0" data-toggle="tooltip"
+															data-placement="top"
+															data-original-title="Add to Wishlist"> <i
+																class="icon-medical-022 u-line-icon-pro"></i>
+														</a></li>
+													</ul>
+													<!-- End Products Icons -->
+												</div>
+											</figure>
+										</div>
+
+										<div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
+											<figure class="g-px-10">
+												<div class="g-pos-rel g-mb-20">
+													<a href="#"><img class="img-fluid"
+														src="resources/WB0412697/html/assets/img-temp/480x700/img4.jpg"
+														alt="Image Description"></a>
+												</div>
+
+												<div class="media">
+													<!-- Product Info -->
+													<div class="d-flex flex-column">
+														<h4 class="h6 g-color-black mb-1">
+															<a class="u-link-v5 g-color-black g-color-primary--hover"
+																href="#" tabindex="0"> Wool lined parka </a>
+														</h4>
+														<a
+															class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
+															href="#" tabindex="0">Woman</a> <span
+															class="d-block g-color-black g-font-size-17">$82.37</span>
+													</div>
+													<!-- End Product Info -->
+
+													<!-- Products Icons -->
+													<ul class="list-inline media-body text-right">
+														<li class="list-inline-item align-middle mx-0"><a
+															class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+															href="#" tabindex="0" data-toggle="tooltip"
+															data-placement="top" data-original-title="Add to Cart">
+																<i class="icon-finance-100 u-line-icon-pro"></i>
+														</a></li>
+														<li class="list-inline-item align-middle mx-0"><a
+															class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
+															href="#" tabindex="0" data-toggle="tooltip"
+															data-placement="top"
+															data-original-title="Add to Wishlist"> <i
+																class="icon-medical-022 u-line-icon-pro"></i>
+														</a></li>
+													</ul>
+													<!-- End Products Icons -->
+												</div>
+											</figure>
+										</div>
+									</div>
+								</div> <!-- End Mega Menu --></li>
+							<!-- End Mega Menu Item -->
 
 							<!-- Mega Menu Item -->
 							<li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
