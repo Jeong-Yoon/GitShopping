@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -1349,8 +1348,6 @@
 				</figure>
 				<!-- End Product -->
 			</div>
-=======
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
 			<div class="js-slide">
 				<!-- Product -->
@@ -2076,7 +2073,7 @@
 		<div class="container g-pt-50 g-pb-30">
 			<div class="row justify-content-between align-items-center">
 				<div class="col-md-6 g-mb-20">
-					<p class="g-font-size-13 mb-0">2017 © Htmlstream. All Rights
+					<p class="g-font-size-13 mb-0">2017 ï¿½ Htmlstream. All Rights
 						Reserved.</p>
 				</div>
 				<div class="col-md-6 text-md-right g-mb-20">

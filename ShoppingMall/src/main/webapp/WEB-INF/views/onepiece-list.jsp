@@ -185,7 +185,6 @@ body {margin: 10px; font-size: 13px}
 <body>
 	<jsp:include page="header.jsp" flush="false" />
 
-
 	<main> <!--  Products -->
 	<div class="container">
 		<div class="row">
@@ -273,7 +272,7 @@ body {margin: 10px; font-size: 13px}
 				<!-- Product -->
 				<figure>
 									<div class="g-pos-rel g-mb-20">
-										<a href="onepiece-detail?product_no=${list.product_no}"><img class="img-fluid"
+										<a href="${contextPath}/onepiece-detail?product_no=${list.product_no}"><img class="img-fluid"
 											src="${contextPath}/resources/product/${list.product_no}_1.jpg"
 											alt="Image Description"></a>
 <!-- 											<img class="img-fluid" -->
@@ -293,7 +292,7 @@ body {margin: 10px; font-size: 13px}
 					<div class="d-flex flex-column">
 						<h4 class="h6 g-color-black mb-1">
 							<a class="u-link-v5 g-color-black g-color-primary--hover"
-								href="onepiece-detail?product_no=${list.product_no}"> ${list.pro_name} </a>
+								href="${contextPath}/onepiece-detail?product_no=${list.product_no}"> ${list.pro_name} </a>
 						</h4>
 						<span class="d-block g-color-black g-font-size-17">${list.pro_price}</span>
 					</div>
@@ -304,7 +303,7 @@ body {margin: 10px; font-size: 13px}
 											<li class="list-inline-item align-middle mx-0"><a
 												class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5
 												g-color-primary--hover g-font-size-15 rounded-circle"
-												href="${contextPath}/Cart/wish?product_no=${row.product_no}&pro_price=${row.pro_price}"
+												href="${contextPath}/Cart/wish?product_no=${list.product_no}&pro_price=${list.pro_price}"
 												data-toggle="tooltip" data-placement="top"
 												title="Add to Wishlist"> <i
 													class="icon-medical-022 u-line-icon-pro"></i>
