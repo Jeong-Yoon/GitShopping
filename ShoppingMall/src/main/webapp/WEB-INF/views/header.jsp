@@ -606,7 +606,7 @@
       class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
       data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}'>
    <div class="divimage dzsparallaxer--target w-100 g-bg-pos-top-center"
-      style="height: 140%; background-image: url(${contextPath}/resources/WB0412697/html/assets/img/logo/one_banner.jpg);"></div>
+      style="height: 140%; background-image: url(${contextPath}/resources/WB0412697/html/assets/img/logo/one-banner.jpg);"></div>
 
    <div class="container g-color-white g-pt-100 g-pb-40">
       <div class="g-mb-50">
