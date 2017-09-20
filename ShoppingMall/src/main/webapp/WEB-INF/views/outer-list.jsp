@@ -428,7 +428,7 @@ body {margin: 10px; font-size: 13px}
 
 					<hr>
 
-					<form name="search" action="../outer-list/${map.var}">
+					<form name="search" action="${contextPath}/outer-list/${map.var}">
 						<input type="hidden" name="pricerange" value=""> <input
 							type="hidden" name="board_like" value="1">
 
