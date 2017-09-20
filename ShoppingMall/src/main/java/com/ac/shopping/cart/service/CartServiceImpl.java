@@ -65,8 +65,8 @@ public class CartServiceImpl implements CartService{
 		cartDao.direct_order(cdto, odto);
 	}
 	@Override
-	public void order(String m_id, OrderDTO odto) {
-		cartDao.order(m_id, odto);
+	public String order(String m_id, OrderDTO odto) {
+		return cartDao.order(m_id, odto);
 	}
 	
 //	public void nonMem_order(HashMap<String, Object> param) {
@@ -75,6 +75,9 @@ public class CartServiceImpl implements CartService{
 	
 	public void nonMem_order(Non_mem_OrderDTO nmodto, List<Non_mem_CartDTO> plist) {
 		cartDao.nonMem_order(nmodto,plist);		
+	}
+	public HashMap<String, Object> order_list(String order_no) {
+		return cartDao.order_list(order_no);
 	}
 
 }

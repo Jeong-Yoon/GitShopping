@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ac.shopping.cart.dto.CartDTO;
 import com.ac.shopping.cart.dto.Non_mem_CartDTO;
 import com.ac.shopping.cart.dto.OrderDTO;
+import com.ac.shopping.cart.dto.Order_listDTO;
 import com.ac.shopping.cart.service.CartService;
 import com.ac.shopping.cart.service.CartServiceImpl;
 
@@ -32,7 +34,7 @@ public class CartController {
 	CartServiceImpl cartService;
 
 	int nonm_index = 1;
-
+	String order_no="";
 	// 1. 장바구니 추가
 	@RequestMapping("/cart_insert.do")
 	public String cartInsert(HttpServletResponse response, CartDTO cartDto, HttpSession session,
@@ -129,19 +131,20 @@ public class CartController {
 		odto.setRequest(request.getParameter("request"));
 
 		cartService.direct_order(cdto, odto);
-		return "";
+		return "redirect:/order_list.do";
 	}
 
 	@RequestMapping("/order")
-	public String order(HttpSession session, HttpServletRequest request) {
+	public String order(HttpSession session, HttpServletRequest request,Model model) {
 		String m_id = (String) session.getAttribute("m_id");
 		OrderDTO odto = new OrderDTO();
 		odto.setAddress(request.getParameter("address"));
 		odto.setName(request.getParameter("name"));
 		odto.setPhone(request.getParameter("phone"));
 		odto.setRequest(request.getParameter("request"));
-		cartService.order(m_id, odto);
-		return "";
+		order_no = cartService.order(m_id, odto);
+		model.addAttribute("order_no", order_no);
+		return "redirect:/order_list.do";
 	}
 	
 	@RequestMapping("/cart_delete_non.do")
@@ -223,5 +226,34 @@ public class CartController {
 	      return "redirect:/non_mem_Cart";
 
 	   }
+	
+	@RequestMapping("/order_list.do")
+	public ModelAndView order_list(HttpSession session,HttpServletRequest request, ModelAndView mav) {
+
+		String m_Id = (String) session.getAttribute("m_id");
+		System.out.println("order = " + order_no);
+		Map<String, Object> map = new HashMap<String, Object>();
+		map = cartService.order_list(order_no);
+		order_no = (String)map.get("order_no");
+		List<Order_listDTO> olist = (List<Order_listDTO>) map.get("olist");
+	
+//		String order_no = request.getParameter("order_no");
+//		List<CartDTO> list = cartService.listCart(m_Id);// 해당회원의 장바구니 정보
+//		int sumMoney = cartService.sumMoney(m_Id);// 장바구니 전체 금액 호출
+//		// 장바구니 전체 금액에 따라 배송비 구분
+//		// 배송료 : 10만원이상 무료, 미만 2500원
+//		int deliveryFee = sumMoney >= 100000 ? 0 : 1500;
+//		map.put("list", list);// 장바구니 정보를 map에 저장
+//		map.put("count", list.size()); // 장바구니 상품의 유무. 장바구니 리스트의 크기
+//		map.put("sumMoney", sumMoney);// 장바구니 전체 금액
+//		map.put("deliveryFee", deliveryFee); // 배송비
+//		map.put("allSum", sumMoney + deliveryFee); // 총 결제금액 : 상품금액+배송비
+//
+		mav.setViewName("Cart/order_list");
+
+		mav.addObject("order_no", order_no);
+		mav.addObject("olist", olist);
+		return mav;
+	}
 
 }

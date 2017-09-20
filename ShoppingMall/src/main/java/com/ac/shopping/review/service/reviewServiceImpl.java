@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.ac.shopping.review.dao.reviewDAO;
 import com.ac.shopping.review.dao.reviewDAOImpl;
 import com.ac.shopping.review.dto.review_dto;
+import com.ac.shopping.review.dto.selectDTO;
 
 @Service
 public class reviewServiceImpl implements reviewService {
@@ -52,7 +53,7 @@ public class reviewServiceImpl implements reviewService {
          return reviewDao.read(BOARD_INDEX);
       }
 
-      public List<String> selectbox(String first, String second) {
+      public List<selectDTO> selectbox(String first, String second) {
             
             int case_type = 0;
             
@@ -168,7 +169,7 @@ public class reviewServiceImpl implements reviewService {
             }      
             
             return reviewDao.selectbox(case_type);
-         }
+      }
 
       public String namemapping(String product_name) {
          
