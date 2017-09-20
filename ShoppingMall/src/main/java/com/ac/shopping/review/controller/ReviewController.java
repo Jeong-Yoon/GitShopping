@@ -1,6 +1,8 @@
 package com.ac.shopping.review.controller;
 
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.List;
@@ -48,7 +50,16 @@ public class ReviewController {
    
    //리뷰 작성화면
       @RequestMapping(value="/review_write", method=RequestMethod.GET)
-      public String write(){
+      public String write(HttpSession session,HttpServletResponse response) throws IOException{
+    	  
+    	 if(session.getAttribute("m_id")==null){
+    		response.setContentType("text/html; charset=UTF-8");
+ 			PrintWriter out = response.getWriter();
+
+ 			out.println("<script>alert('리뷰글을 등록하려면 로그인이 필요합니다'); history.go(-1);</script>"); 
+ 			out.flush();
+    	 }
+    	  
          return "Review/review_write2"; 
       }   
       
@@ -56,6 +67,9 @@ public class ReviewController {
       @RequestMapping("review/insert.do")
       public String write(HttpServletRequest request, @ModelAttribute review_dto vo, HttpSession session) throws Exception{
          
+    	 
+    	  
+    	  
          String product_no = request.getParameter("detail");         
          
          String User_id = (String)session.getAttribute("m_id");
