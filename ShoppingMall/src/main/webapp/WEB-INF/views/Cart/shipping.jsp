@@ -40,13 +40,13 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
-  </head>
 <script>
 function goto_url(act) {
 	  document.order.action = act;
 	  document.order.submit();
 	}
 </script>
+  </head>
 
 
   <body>
@@ -58,7 +58,7 @@ function goto_url(act) {
 
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
-        <form class="js-validate js-step-form" name="order" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
+        <form class="js-validate js-step-form" name="order" method="post" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
           <div class="g-mb-100">
             <!-- Step Titles -->
             <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
@@ -314,7 +314,7 @@ function goto_url(act) {
 		 <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문메시지</label>
-                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="request" type="text" placeholder="부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="request" type="text" placeholder="ex) 부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
 
@@ -339,7 +339,8 @@ function goto_url(act) {
                     <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true">
                       <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab">
                         <h5 class="g-font-weight-400 g-font-size-default mb-0">
-                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">총     $ 개의 상품
+                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">배송료 :
+                            ${map.deliveryFee}
                             <span class="ml-3 fa fa-angle-down"></span></a>
                         </h5>
                       </div>
@@ -349,7 +350,7 @@ function goto_url(act) {
                             <!-- Product -->
                             <c:forEach var="list" items="${map.list}">
                             <li class="d-flex justify-content-start">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/product/${list.product_No}.jpg" alt="Image Description">
+                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/product/${list.product_No}_1.jpg" alt="Image Description">
                               <div class="d-block">
                                 <h4 class="h6 g-color-black">${list.pro_name}</h4>
                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
@@ -358,6 +359,8 @@ function goto_url(act) {
                                   <li>수량: ${list.basket_Quantity}</li>
                                 </ul>
                                 <span class="d-block g-color-black g-font-weight-400">&#8361; ${list.pro_price * list.basket_Quantity}</span>
+                             <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">
+                              </a>
                               </div>
                             </li>
                             </c:forEach>

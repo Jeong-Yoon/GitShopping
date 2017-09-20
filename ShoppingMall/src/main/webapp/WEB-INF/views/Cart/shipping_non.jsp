@@ -40,18 +40,25 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
+<script>
+function goto_url(act) {
+	  document.nm_order.action = act;
+	  document.nm_order.submit();
+	}
+</script>
   </head>
+
 
   <body>
     <main>
       
+<jsp:include page="../header.jsp" flush="false" />
 
-     <jsp:include page="../header.jsp" flush="false" />
      
 
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
-        <form class="js-validate js-step-form" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
+        <form class="js-validate js-step-form" name="nm_order" method="post" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
           <div class="g-mb-100">
             <!-- Step Titles -->
             <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
@@ -168,7 +175,7 @@
                         <!-- Item-->
                         <tr>
                           <td class="text-left g-pt-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
+                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">Desk Clock</h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
@@ -281,14 +288,14 @@
                     <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문자 이름</label>
-                        <input id="inputGroup4" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="firstName" type="text" placeholder="이름" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup4" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="order_name" type="text" placeholder="주문자 이름" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
 
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">받으실 분 이름</label>
-                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="stateProvince" type="text" placeholder="010-000-0000" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="receive_name" type="text" placeholder="받는 사람 이름" required data-msg="필수로 입력해야 합니다." data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
                   </div>
@@ -297,14 +304,14 @@
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문자 연락처</label>
-                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="" type="text" placeholder="주소">
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="order_phone" type="text" placeholder="010-0000-0000">
                       </div>
                     </div>
                      
 		 			<div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">받으실 분 연락처</label>
-                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="zip" type="text" placeholder="부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="receive_phone" type="text" placeholder="010-0000-0000" required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
                   </div>
@@ -313,14 +320,14 @@
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문자 주소</label>
-                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="" type="text" placeholder="주소">
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="order_address" type="text" placeholder="주문자 주소">
                       </div>
                     </div>
                      
 		 			<div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">받으실 분 주소</label>
-                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="zip" type="text" required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1" placeholder="주소">
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="receive_address" type="text" required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1" placeholder="받는 사람 주소">
                       </div>
                     </div>
                   </div>
@@ -329,7 +336,7 @@
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문 메시지</label>
-                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" placeholder="부재시 경비실에 맡겨주세요."  name="" type="text" >
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" placeholder="ex) 부재시 경비실에 맡겨주세요."  name="request" type="text" >
                       </div>
                     </div>
                   </div>
@@ -337,69 +344,93 @@
                   <hr class="g-mb-50">
 
                   
-                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3">결제하기</button>
+                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3" onclick="goto_url('nonMem_order')">결제하기</button>
                 </div>
 
                 <div class="col-md-4 g-mb-30">
                   <!-- Order Summary -->
-                  <div class="g-bg-gray-light-v5 g-pa-20 g-pb-50 mb-4">
-                    <h4 class="h6 text-uppercase mb-3">총 결제금액</h4>
+<!--                   <div class="g-bg-gray-light-v5 g-pa-20 g-pb-50 mb-4"> -->
+<!--                     <h4 class="h6 text-uppercase mb-3">총 결제금액</h4> -->
                     
                     
 				            <!-- Accordion -->
+<!--                     <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true"> -->
+<!--                       <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab"> -->
+<!--                         <h5 class="g-font-weight-400 g-font-size-default mb-0"> -->
+<!--                           <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">총     $ 개의 상품 -->
+<!--                             <span class="ml-3 fa fa-angle-down"></span></a> -->
+<!--                         </h5> -->
+<!--                       </div> -->
+                 <div class="g-bg-gray-light-v5 g-pa-20 g-pb-50 mb-4">
+                    <h4 class="h6 text-uppercase mb-3">총 결제금액</h4>
+
+                        <!-- Accordion -->
                     <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true">
                       <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab">
                         <h5 class="g-font-weight-400 g-font-size-default mb-0">
-                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">총     $ 개의 상품
-                            <span class="ml-3 fa fa-angle-down"></span></a>
+                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">배송료 :
+<%--                                 <c:set var= "sum" value="${sum + list.pro_price*list.basket_Quantity}"/> --%>
+                        <c:choose>
+                        <c:when test="${sum >=100000}">
+                         0
+                         </c:when>
+                         <c:otherwise>
+                         1500
+                         <c:set var= "deliver" value="1500"/>
+                        </c:otherwise>
+                        </c:choose>
+                          <span class="ml-3 fa fa-angle-down"></span></a>
                         </h5>
                       </div>
                       <div id="accordion-03-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-03-heading-03">
                         <div class="g-py-15">
                           <ul class="list-unstyled mb-3">
                             <!-- Product -->
+                            <c:forEach var="list" items="${sessionScope.nmC}">
                             <li class="d-flex justify-content-start">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/product/${list.product_No}_1.jpg" alt="Image Description">
                               <div class="d-block">
-                                <h4 class="h6 g-color-black">Sneaker</h4>
+                                <h4 class="h6 g-color-black">${list.pro_name}</h4>
                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Black</li>
-                                  <li>Size: MD</li>
-                                  <li>수량: 1</li>
+                                  <li>색상: ${list.pro_color}</li>
+                                  <li>Size: ${list.pro_size}</li>
+                                  <li>수량: ${list.basket_Quantity}</li>
                                 </ul>
-                                <span class="d-block g-color-black g-font-weight-400">&#8361; 87.00</span>
+                                <span class="d-block g-color-black g-font-weight-400">&#8361; ${list.pro_price * list.basket_Quantity}</span>
+                               <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4"></li>
                               </div>
                             </li>
+                            </c:forEach>
                             <!-- End Product -->
 
                             <!-- Product -->
-                            <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
-                              <div class="d-block">
-                                <h4 class="h6 g-color-black">Chukka Shoes</h4>
-                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Black</li>
-                                  <li>Size: MD</li>
-                                  <li>수량: 2</li>
-                                </ul>
-                                <span class="d-block g-color-black g-font-weight-400"> &#8361; 160.00</span>
-                              </div>
-                            </li>
+<!--                             <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4"> -->
+<%--                               <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description"> --%>
+<!--                               <div class="d-block"> -->
+<!--                                 <h4 class="h6 g-color-black">Chukka Shoes</h4> -->
+<!--                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1"> -->
+<!--                                   <li>색상: Black</li> -->
+<!--                                   <li>Size: MD</li> -->
+<!--                                   <li>수량: 2</li> -->
+<!--                                 </ul> -->
+<!--                                 <span class="d-block g-color-black g-font-weight-400">&#8361; 160.00</span> -->
+<!--                               </div> -->
+<!--                             </li> -->
                             <!-- End Product -->
 
                             <!-- Product -->
-                            <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
-                              <div class="d-block">
-                                <h4 class="h6 g-color-black">Desk Clock</h4>
-                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Brown Wood</li>
-                                  <li>Type: Desk</li>
-                                  <li>수량: 1</li>
-                                </ul>
-                                <span class="d-block g-color-black g-font-weight-400">&#8361; 47.00</span>
-                              </div>
-                            </li>
+<!--                             <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4"> -->
+<%--                               <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description"> --%>
+<!--                               <div class="d-block"> -->
+<!--                                 <h4 class="h6 g-color-black">Desk Clock</h4> -->
+<!--                                 <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1"> -->
+<!--                                   <li>색상: Brown Wood</li> -->
+<!--                                   <li>Type: Desk</li> -->
+<!--                                   <li>수량: 1</li> -->
+<!--                                 </ul> -->
+<!--                                 <span class="d-block g-color-black g-font-weight-400">&#8361; 47.00</span> -->
+<!--                               </div> -->
+<!--                             </li> -->
                             <!-- End Product -->
                           </ul>
                         </div>
@@ -409,11 +440,11 @@
            
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
-                      <span class="g-color-black g-font-weight-300">$454.00</span>
+                      <span class="g-color-black g-font-weight-300">&#8361; ${sum}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
-                      <span class="g-color-black g-font-weight-300">$459.5</span>
+                      <span class="g-color-black g-font-weight-300">&#8361; <c:out value="${sum+deliver}"/></span>
                     </div>
                   </div>
                   <!-- End Order Summary -->
@@ -422,7 +453,7 @@
             </div>
             <!-- End Shipping -->
 
-            <!-- Payment & Review -->
+             <!-- Payment & Review -->
             <div id="step3">
               <div class="row">
                 <div class="col-md-8 g-mb-30">
@@ -684,36 +715,28 @@
         // initialization of header
         $.HSCore.components.HSHeader.init($('#js-header'));
         $.HSCore.helpers.HSHamburgers.init('.hamburger');
-
         // initialization of HSMegaMenu component
         $('.js-mega-menu').HSMegaMenu({
           event: 'hover',
           pageContainer: $('.container'),
           breakpoint: 991
         });
-
         // initialization of HSDropdown component
         $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
           afterOpen: function () {
             $(this).find('input[type="search"]').focus();
           }
         });
-
         // initialization of HSScrollBar component
         $.HSCore.components.HSScrollBar.init($('.js-scrollbar'));
-
         // initialization of go to
         $.HSCore.components.HSGoTo.init('.js-go-to');
-
         // initialization of form validation
         $.HSCore.components.HSValidation.init('.js-validate');
-
         // initialization of custom select
         $.HSCore.components.HSSelect.init('.js-custom-select');
-
         // initialization of quantity counter
         $.HSCore.components.HSCountQty.init('.js-quantity');
-
         // initialization of step form
         $.HSCore.components.HSStepForm.init('.js-step-form');
       });

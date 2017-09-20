@@ -330,14 +330,14 @@ public class ProductController {
 	            
 	            List<Non_mem_CartDTO> prevNonmem = (List<Non_mem_CartDTO>) session.getAttribute("nmC");         
 	         
-	            for(int i=0;i<prevNonmem.size();i++){
+	            for(int i=0;i < prevNonmem.size();i++){
 	            
 	               Non_mem_CartDTO pnmC = new Non_mem_CartDTO();
 	               System.out.println("???");
-	               
+	               System.out.println("color = "+request.getParameter("select_color"));
 	               pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
 	               pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
-	               if (request.getParameter("select_color") != "") {
+	               if (request.getParameter("select_color") != null) {
 	            	   pnmC.setPro_color(prevNonmem.get(i).getPro_color());
 	   			}else{
 	   				pnmC.setPro_color("-");
@@ -367,11 +367,12 @@ public class ProductController {
 	                           
 	            nmC.setProduct_No(request.getParameter("product_no"));         
 	            nmC.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
-	            if (request.getParameter("select_color") != "") {
+	            if (request.getParameter("select_color") != null) {
 	            	nmC.setPro_color(request.getParameter("select_color"));
 	   			}else{
 	   				nmC.setPro_color("-");
 	   			}
+	            System.out.println(request.getParameter("pro_size"));
 	   			if (request.getParameter("pro_size") != "") {
 	   				nmC.setPro_size(request.getParameter("pro_size"));
 	   			} else{
