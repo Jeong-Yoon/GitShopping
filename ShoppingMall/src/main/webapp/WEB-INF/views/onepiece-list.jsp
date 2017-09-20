@@ -330,13 +330,13 @@ body {margin: 10px; font-size: 13px}
 							<c:if test="${map.boardPager.curBlock > 1}">
 								<li class="list-inline-item hidden-down"><a
 									class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-									href="javascript:list('1')">[처음]</a></li>
+									href="javascript:list('1')">[◀◀]</a></li>
 							</c:if>
 
 							<c:if test="${map.boardPager.curBlock > 1}">
 								<li class="list-inline-item hidden-down"><a
 									class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-									href="javascript:list('${map.boardPager.prevPage}')">[이전]</a></li>
+									href="javascript:list('${map.boardPager.prevPage}')">[◀]</a></li>
 							</c:if>
 
 
@@ -364,14 +364,14 @@ body {margin: 10px; font-size: 13px}
 								test="${map.boardPager.curBlock <= map.boardPager.totBlock}">
 								<li class="list-inline-item hidden-xs-down"><a
 									class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-									href="javascript:list('${map.boardPager.nextPage}')">[다음]</a></li>
+									href="javascript:list('${map.boardPager.nextPage}')">[▶]</a></li>
 							</c:if>
 
 							<!-- **끝페이지로 이동 : 현재 페이지가 전체 페이지보다 작거나 같으면 [끝]하이퍼링크를 화면에 출력 -->
 							<c:if test="${map.boardPager.curPage <= map.boardPager.totPage}">
 								<li class="list-inline-item hidden-down"><a
 									class="u-pagination-v1__item g-width-30 g-height-30 g-color-gray-dark-v5 g-color-primary--hover g-font-size-12 rounded-circle g-pa-5"
-									href="javascript:list('${map.boardPager.totPage}')">[끝]</a></li>
+									href="javascript:list('${map.boardPager.totPage}')">[▶▶]</a></li>
 							</c:if>
 
 						</ul>
