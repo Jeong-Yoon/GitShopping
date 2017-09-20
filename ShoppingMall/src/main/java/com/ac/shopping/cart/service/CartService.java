@@ -1,5 +1,6 @@
 package com.ac.shopping.cart.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.ac.shopping.cart.dto.CartDTO;
@@ -29,6 +30,6 @@ public interface CartService {
 	
 	//8. 주문하기
 	public void direct_order(CartDTO cdto, OrderDTO odto);
-	public void order(String m_id, OrderDTO odto);
-	
+	public String order(String m_id, OrderDTO odto);
+	public HashMap<String, Object> order_list(String order_no);
 }

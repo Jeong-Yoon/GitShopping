@@ -14,6 +14,7 @@ import com.ac.shopping.cart.dto.CartDTO;
 import com.ac.shopping.cart.dto.Non_mem_CartDTO;
 import com.ac.shopping.cart.dto.Non_mem_OrderDTO;
 import com.ac.shopping.cart.dto.OrderDTO;
+import com.ac.shopping.cart.dto.Order_listDTO;
 
 @Repository
 public class CartDAOImpl implements CartDAO {
@@ -115,7 +116,7 @@ public class CartDAOImpl implements CartDAO {
 	}
 	
 	@Override
-	public void order(String m_id, OrderDTO odto){
+	public String order(String m_id, OrderDTO odto){
 		List<CartDTO> clist = sqlSession.selectList("cart.listCart", m_id);
 		int count = sqlSession.selectOne("cart.countCart", m_id);
 		String order_no = "";
@@ -139,6 +140,7 @@ public class CartDAOImpl implements CartDAO {
 				sqlSession.insert("cart.re_order",param);
 			}
 		}
+		return order_no;
 	}
 
 //	public void nonMem_order(HashMap<String, Object> param) {
@@ -180,6 +182,14 @@ public class CartDAOImpl implements CartDAO {
 			}
 		}
 		
+	}
+
+	public HashMap<String, Object> order_list(String order_no) {
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		List<Order_listDTO> olist = sqlSession.selectList("cart.order_list", order_no);
+		param.put("order_no", order_no);
+		param.put("olist", olist);
+		return param;
 	}
 
 

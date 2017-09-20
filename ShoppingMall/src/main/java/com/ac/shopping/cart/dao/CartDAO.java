@@ -1,5 +1,6 @@
 package com.ac.shopping.cart.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -34,7 +35,8 @@ public interface CartDAO {
 	public void updateCart(CartDTO cartDto);
 	//8.주문하기
 	public void direct_order(CartDTO cdto, OrderDTO odto);
-	public void order(String m_id, OrderDTO odto);
+	public String order(String m_id, OrderDTO odto);
+	public HashMap<String, Object> order_list(String order_no);
 
 
 }

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.ac.shopping.review.dto.review_dto;
+import com.ac.shopping.review.dto.selectDTO;
 
 @Repository
 public class reviewDAOImpl implements reviewDAO {
@@ -31,7 +32,7 @@ public class reviewDAOImpl implements reviewDAO {
       return sqlSession.selectOne("review.view",BOARD_INDEX);
    }
    
-     public List<String> selectbox(int case_type) {
+     public List<selectDTO> selectbox(int case_type) {
          
          
          HashMap<String,Object> param = new HashMap<String,Object>();
@@ -39,11 +40,12 @@ public class reviewDAOImpl implements reviewDAO {
          
              
          
-         //System.out.println(sqlSession.selectList("review.selectbox",param));
+         System.out.println(sqlSession.selectList("review.selectbox",param));
          
          return sqlSession.selectList("review.selectbox",param);
          
-      }
+     }
+     
    public String namemapping(String product_name) {      
       
       return sqlSession.selectOne("review.namemap",product_name);

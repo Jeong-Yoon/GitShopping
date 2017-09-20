@@ -43,10 +43,10 @@
         WHERE BOARD_INDEX = #{BOARD_INDEX}
    </select>
    
-   <select id="selectbox" resultType="String">
+   <select id="selectbox" resultType="com.ac.shopping.review.dto.selectDTO">
    
    SELECT      
-      p.pro_name   
+      p.pro_name, p.product_no   
       <include refid="type"></include> 
          
 </select>

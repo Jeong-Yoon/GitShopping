@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.shopping.review.dto.review_dto;
+import com.ac.shopping.review.dto.selectDTO;
 import com.ac.shopping.review.service.reviewServiceImpl;
 
 
@@ -89,20 +90,31 @@ public class ReviewController {
        public String select_OK(HttpServletRequest request,HttpServletResponse response,Model model) throws UnsupportedEncodingException{
           
          request.setCharacterEncoding("UTF-8");
-         
+         String REVIEW_TITLE = "";
+         String REVIEW_CONTENT = "";
           
          String first = request.getParameter("ctype");
          String second = request.getParameter("hobby");
+        
+         if(request.getParameter("REVIEW_TITLE")!=null){
+            REVIEW_TITLE = request.getParameter("REVIEW_TITLE");
+         }
+         
+         if(request.getParameter("REVIEW_CONTENT")!=null){
+            REVIEW_CONTENT = request.getParameter("REVIEW_CONTENT");
+         }
           
          model.addAttribute("first", Integer.parseInt(first));
          model.addAttribute("second", second);
+         model.addAttribute("REVIEW_TITLE", REVIEW_TITLE);
+         model.addAttribute("REVIEW_CONTENT", REVIEW_CONTENT);
           
          System.out.println(first);
          System.out.println(second);
          
          
-         List<String> selectType = reviewService.selectbox(first,second);
-         
+         List<selectDTO> selectType = reviewService.selectbox(first,second);
+         System.out.println(selectType);
          model.addAttribute("list", selectType);
          
           
