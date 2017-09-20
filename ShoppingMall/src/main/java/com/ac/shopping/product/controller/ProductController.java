@@ -458,119 +458,118 @@ public class ProductController {
 		return "";
 	}
 
-	   // ===================ADD TO CART============================
-	   @RequestMapping("/cart_Chk")
-	   public String cartChk(HttpSession session, HttpServletRequest request, HttpServletResponse response)
-	         throws IOException {
-	      System.out.println("m_id = " + (String)session.getAttribute("m_id"));
-	      CartDTO cdto = new CartDTO();
-	      if ((String)session.getAttribute("m_id") != null) {
-	         cdto.setM_Id((String) session.getAttribute("m_id"));
-	         cdto.setProduct_No(request.getParameter("product_no"));
-	         cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
-	         System.out.println(request.getParameter("pro_size"));
-	         String pro_quantity = request.getParameter("quantity");
-	         if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
-	            cdto.setPro_color(request.getParameter("select_color"));
-	         }else{
-	            cdto.setPro_color("-");
-	         }
-	         if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
-	            cdto.setPro_size(request.getParameter("pro_size"));
-	         } else{
-	            cdto.setPro_size("FREE");
-	         }
-//	         cdto.setPro_size(request.getParameter("pro_size"));
-//	         cdto.setPro_color(request.getParameter("select_color"));
-	         cdto.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
-	         cdto.setPro_name(request.getParameter("pro_name"));
-	         // String pro_no = request.getParameter("product_no");
-	         // String m_id = (String) session.getAttribute("m_id");
-	         // System.out.println(pro_no);
-	         // int quantity = Integer.parseInt(request.getParameter("quantity"));
-	         // System.out.println(m_id);
-	         // System.out.println(pro_no);
-	         boolean result = productService.cart_Chk(cdto.getProduct_No(), cdto.getM_Id());
-	         if (result) {
-	            productService.addCart2(cdto);
-	            return "redirect: cart_list.do";
-	         } else {
-	            response.setContentType("text/html; charset=UTF-8");
-	            PrintWriter out = response.getWriter();
-	            out.println("<script>alert('이미 담겨져 있는 상품입니다.'); history.go(-1);</script>");
-	            out.flush();
-	            out.close();
-	            return "";
-	         }
+	// ===================ADD TO CART============================
+	@RequestMapping("/cart_Chk")
+	public String cartChk(HttpSession session, HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
+		System.out.println("m_id = " + (String) session.getAttribute("m_id"));
+		CartDTO cdto = new CartDTO();
+		if ((String) session.getAttribute("m_id") != null) {
+			cdto.setM_Id((String) session.getAttribute("m_id"));
+			cdto.setProduct_No(request.getParameter("product_no"));
+			cdto.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
+			System.out.println(request.getParameter("pro_size"));
+			String pro_quantity = request.getParameter("quantity");
+			if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
+				cdto.setPro_color(request.getParameter("select_color"));
+			} else {
+				cdto.setPro_color("-");
+			}
+			if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
+				cdto.setPro_size(request.getParameter("pro_size"));
+			} else {
+				cdto.setPro_size("FREE");
+			}
 
-	      }else{
-	          int identify=0;
-	            
-	            List<Non_mem_CartDTO> non_mem_pro = new ArrayList<Non_mem_CartDTO>();         
-	            
-	            if(session.getAttribute("nmC") !=null){
-	               
-	               List<Non_mem_CartDTO> prevNonmem = (List<Non_mem_CartDTO>) session.getAttribute("nmC");         
-	            
-	               for(int i=0;i < prevNonmem.size();i++){
-	               
-	                  Non_mem_CartDTO pnmC = new Non_mem_CartDTO();
-	                  System.out.println("???");
-	                  System.out.println("color = "+request.getParameter("select_color"));
-	                  pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
-	                  pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
-	                  if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
-	                     pnmC.setPro_color(prevNonmem.get(i).getPro_color());
-	               }else{
-	                  pnmC.setPro_color("-");
-	               }
-	               if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
-	                  pnmC.setPro_size(prevNonmem.get(i).getPro_size());
-	               } else{
-	                  pnmC.setPro_size("FREE");
-	               }
-	                  pnmC.setPro_price(prevNonmem.get(i).getPro_price());
-	                  pnmC.setPro_name(prevNonmem.get(i).getPro_name());
-	                  if(prevNonmem.get(i).getProduct_No().equals(request.getParameter("product_no"))){
-	                     
-	                     identify =1;
-	                     response.setContentType("text/html; charset=UTF-8");
-	                     PrintWriter out = response.getWriter();
-	                     out.println("<script>alert('이미 담겨져 있는 상품입니다.'); history.go(-1);</script>");
-	                     out.flush();
-	                     out.close();
-	                  }               
-	                  non_mem_pro.add(pnmC);            
-	               }   
-	            }
-	            
-	            if(identify==0){
-	               Non_mem_CartDTO nmC = new Non_mem_CartDTO();
-	                              
-	               nmC.setProduct_No(request.getParameter("product_no"));         
-	               nmC.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
-	               if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
-	                  nmC.setPro_color(request.getParameter("select_color"));
-	               }else{
-	                  nmC.setPro_color("-");
-	               }
-	               System.out.println(request.getParameter("pro_size"));
-	               if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
-	                  nmC.setPro_size(request.getParameter("pro_size"));
-	               } else{
-	                  nmC.setPro_size("FREE");
-	               }
-	               nmC.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
-	               nmC.setPro_name(request.getParameter("pro_name"));      
-	            
-	               non_mem_pro.add(nmC);
-	            }
-	            
-	            session.setAttribute("nmC", non_mem_pro);   
-	            
-	            return "redirect:/non_mem_Cart";
-	      }
-	   }
-	   
+			cdto.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
+			cdto.setPro_name(request.getParameter("pro_name"));
+			// String pro_no = request.getParameter("product_no");
+			// String m_id = (String) session.getAttribute("m_id");
+			// System.out.println(pro_no);
+			// int quantity =
+			// Integer.parseInt(request.getParameter("quantity"));
+			// System.out.println(m_id);
+			// System.out.println(pro_no);
+			boolean result = productService.cart_Chk(cdto.getProduct_No(), cdto.getM_Id());
+			if (result) {
+				productService.addCart2(cdto);
+				return "redirect: cart_list.do";
+			} else {
+				response.setContentType("text/html; charset=UTF-8");
+				PrintWriter out = response.getWriter();
+				out.println("<script>alert('이미 담겨져 있는 상품입니다.'); history.go(-1);</script>");
+				out.flush();
+				out.close();
+				return "";
+			}
+
+		} else {
+			int identify = 0;
+
+			List<Non_mem_CartDTO> non_mem_pro = new ArrayList<Non_mem_CartDTO>();
+
+			if (session.getAttribute("nmC") != null) {
+
+				List<Non_mem_CartDTO> prevNonmem = (List<Non_mem_CartDTO>) session.getAttribute("nmC");
+
+				for (int i = 0; i < prevNonmem.size(); i++) {
+
+					Non_mem_CartDTO pnmC = new Non_mem_CartDTO();
+					System.out.println("???");
+					System.out.println("color = " + request.getParameter("select_color"));
+					pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
+					pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
+					if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
+						pnmC.setPro_color(prevNonmem.get(i).getPro_color());
+					} else {
+						pnmC.setPro_color("-");
+					}
+					if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
+						pnmC.setPro_size(prevNonmem.get(i).getPro_size());
+					} else {
+						pnmC.setPro_size("FREE");
+					}
+					pnmC.setPro_price(prevNonmem.get(i).getPro_price());
+					pnmC.setPro_name(prevNonmem.get(i).getPro_name());
+					if (prevNonmem.get(i).getProduct_No().equals(request.getParameter("product_no"))) {
+
+						identify = 1;
+						response.setContentType("text/html; charset=UTF-8");
+						PrintWriter out = response.getWriter();
+						out.println("<script>alert('이미 담겨져 있는 상품입니다.'); history.go(-1);</script>");
+						out.flush();
+						out.close();
+					}
+					non_mem_pro.add(pnmC);
+				}
+			}
+
+			if (identify == 0) {
+				Non_mem_CartDTO nmC = new Non_mem_CartDTO();
+
+				nmC.setProduct_No(request.getParameter("product_no"));
+				nmC.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
+				if (request.getParameter("select_color") != null && request.getParameter("select_color") != "") {
+					nmC.setPro_color(request.getParameter("select_color"));
+				} else {
+					nmC.setPro_color("-");
+				}
+				System.out.println(request.getParameter("pro_size"));
+				if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
+					nmC.setPro_size(request.getParameter("pro_size"));
+				} else {
+					nmC.setPro_size("FREE");
+				}
+				nmC.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
+				nmC.setPro_name(request.getParameter("pro_name"));
+
+				non_mem_pro.add(nmC);
+			}
+
+			session.setAttribute("nmC", non_mem_pro);
+
+			return "redirect:/non_mem_Cart";
+		}
 	}
 
+}

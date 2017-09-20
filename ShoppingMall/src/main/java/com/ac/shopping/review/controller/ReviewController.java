@@ -56,14 +56,13 @@ public class ReviewController {
       @RequestMapping("review/insert.do")
       public String write(HttpServletRequest request, @ModelAttribute review_dto vo, HttpSession session) throws Exception{
          
-         String product_name = request.getParameter("detail");
-         
-         String Product_no = reviewService.namemapping(product_name);
+         String product_no = request.getParameter("detail");         
          
          String User_id = (String)session.getAttribute("m_id");
-         vo.setPRODUCT_NO(Product_no);
+         vo.setPRODUCT_NO(product_no);
          vo.setM_ID(User_id);
          
+        
          System.out.println(User_id);            
          System.out.println("?");
          System.out.println(vo);

@@ -304,14 +304,14 @@ function goto_url(act) {
                      <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문자 연락처</label>
-                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="order_phone" type="text" placeholder="01012345678">
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" required data-msg="필수로 입력해야 합니다."  name="order_phone" type="text" placeholder="-를 제외하고 입력해주세요.">
                       </div>
                     </div>
                      
 		 			<div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">받으실 분 연락처</label>
-                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="receive_phone" type="text" placeholder="01087654321" required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="receive_phone" type="text" placeholder="-를 제외하고 입력해주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
                   </div>

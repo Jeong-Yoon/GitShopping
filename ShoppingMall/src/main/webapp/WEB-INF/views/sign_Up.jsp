@@ -111,7 +111,7 @@ function goto_url(act) {
 
                 <div class="mb-1" id="nanum">
                   <label class="form-check-inline u-check g-color-gray-dark-v5 g-font-size-13 g-pl-25 mb-2">
-                    <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox">
+                    <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox" name="check_agree" value="1">
                     <div class="u-check-icon-checkbox-v6 g-absolute-centered--y g-left-0">
                       <i class="fa" data-check-icon="&#xf00c"></i>
                     </div>

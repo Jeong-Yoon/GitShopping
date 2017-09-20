@@ -45,6 +45,12 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="resources/WB0412697/html/assets/css/custom.css">
+    
+    <script>
+    table { vertical-align: middle; }
+    
+    </script>
+    
   </head>
  <body>
   <jsp:include page="../header.jsp" flush="false" />
@@ -54,14 +60,14 @@
    <div class="shortcode-html">
 	<!-- Hoverable Rows -->
 	<div class="table-responsive">
-  		<table class="table table-hover">
+  		<table style="text-align:center;" class="table table-hover" >
    			 <thead>
       			<tr>
-		        <th>상품이름</th>
-		        <th>이미지</th>
-		        <th class="hidden-sm">제목</th>
-		        <th>날짜</th>
-		        <th>조회수</th>
+		        <th style="text-align:center;">상품이름</th>
+		        <th style="text-align:center;">이미지</th>
+		        <th style="text-align:center;" class="hidden-sm">제목</th>
+		        <th style="text-align:center;" >날짜</th>
+		        
 		      </tr>
 		    </thead>
 		    
@@ -69,7 +75,7 @@
 	<c:forEach var="row" items="${map.list}">
     <tbody>
       <tr>
-        <td>${row.PRO_NAME}</td>
+        <td><br/><br/>${row.PRO_NAME}</td>
         
         <td class="align-middle" name="PRODUCT_NO">
 		<img alt="Image Description" src="${contextPath}/resources/product/${row.PRODUCT_NO}_1.jpg" width="100" height="100">
@@ -78,9 +84,9 @@
         
         <td class="hidden-sm">
         <a href="${path}/shopping/Review/review_view?BOARD_INDEX=${row.BOARD_INDEX}">
-       		 ${row.REVIEW_TITLE}</a></td>
-        <td>${row.REVIEW_DATE}</td>
-        <td>${row.REVIEW_HIT}</td>
+       		<br/><br/> ${row.REVIEW_TITLE}</a></td>
+        <td><br/><br/>${row.REVIEW_DATE}</td>
+        
       </tr>
       </c:forEach>
     </tbody>

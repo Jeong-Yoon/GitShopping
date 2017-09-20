@@ -60,6 +60,16 @@ public class MemberController {
 	//회원가입
 	@RequestMapping("/sign_Up_OK")
 	public String signUP_OK(HttpServletRequest request,HttpServletResponse response,Model model) throws IOException{
+				
+		if(request.getParameter("check_agree")==null){
+			
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+
+			out.println("<script>alert('가입 서약에 동의해주시길 바랍니다.'); history.go(-1);</script>"); 
+			out.flush();
+			return "sign_Up";
+		};
 		
 		
 		MemberDTO mdto = new MemberDTO();		

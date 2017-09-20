@@ -151,7 +151,7 @@
 											<div style="text-align:center;">
 											<button type="button"
 												class="btn btn-md u-btn-primary rounded-0"
-												onclick="location.href='http://localhost:7070/shopping/review'">
+												onclick="location.href='/shopping/review'">
 												목록보기</button>
 											</div>
 
