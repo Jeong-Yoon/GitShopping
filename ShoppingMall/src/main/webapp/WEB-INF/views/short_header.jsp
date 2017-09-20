@@ -346,11 +346,11 @@
 										</div>
 										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="top-list/all" style="text-decoration: none"><span
+												<a href="${contextPath}/top-list/all" style="text-decoration: none"><span
 													style="color: #000000;">Top</span>
 											</h4>
 											<ul class="list-unstyled g-mb-25">
-												<li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
+												
 												<li class="g-mb-5"><a class="g-color-main"
 													href="${contextPath}/top-list/tshirt">T-shirt &amp; Jackets</a></li>
 												<li class="g-mb-5"><a class="g-color-main"
@@ -358,12 +358,11 @@
 												<li class="g-mb-5"><a class="g-color-main"
 													href="${contextPath}/top-list/knit">니트</a></li>
 												<li class="g-mb-5"><a class="g-color-main"
-													href="${contextPath}/top-list/blouse">블라우스</a> <span
-													class="u-label g-bg-primary g-ml-10">New</span></li>
+													href="${contextPath}/top-list/blouse">블라우스</a> </li>
 											</ul>
 
 											<h4 class="h5 text-uppercase g-font-weight-600">
-												<a href="bottom-list/all" style="text-decoration: none"><span
+												<a href="${contextPath}/bottom-list/all" style="text-decoration: none"><span
 													style="color: #000000;">Bottom</span>
 											</h4>
 											<ul class="list-unstyled">
