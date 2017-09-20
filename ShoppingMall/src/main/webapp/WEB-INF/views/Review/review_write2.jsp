@@ -78,10 +78,10 @@
 </head>
 
 <body>
- 
+ 	<jsp:include page="../short_header.jsp" flush="false" />
    <main>
    <div class="col-sm-8 col-md-9 col-xl-10 g-py-30 g-pa-30--md">
-      <h1 class="g-font-weight-300 g-letter-spacing-1 g-mb-35">리뷰 작성하기</h1>
+      <h1 class="g-font-weight-300 g-letter-spacing-1 g-mb-35" align="center">리뷰 작성하기</h1>
 
       <!-- Form Controls -->
       <section class="g-py-50">
@@ -200,7 +200,7 @@
                               class="btn btn-md u-btn-primary rounded-0" id=btnSave onClick="goto_url('review/insert.do')">등록</button>
                            <button type="button"
                               class="btn btn-md u-btn-primary rounded-0"
-                              onclick="location.href='http://localhost:7070/shopping/review'";>목록보기</button>
+                              onclick="location.href='/shopping/review'";>목록보기</button>
                         </form>
                         <hr class="g-brd-gray-light-v4 g-mx-minus-30">
                      </div>
