@@ -704,8 +704,6 @@
 												<li class="g-mb-5"><a class="g-color-main"
 													href="acc-list/bracelets">팔찌 </a></li>
 												<li class="g-mb-5"><a class="g-color-main"
-													href="acc-list/socks">양말 </a></li>
-												<li class="g-mb-5"><a class="g-color-main"
 													href="acc-list/belts">벨트</a></li>
 											</ul>
 										</div>
