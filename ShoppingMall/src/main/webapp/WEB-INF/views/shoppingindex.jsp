@@ -1029,7 +1029,7 @@
 						<div class="media-body">
 							<span
 								class="d-block g-font-weight-400 g-font-size-default text-uppercase">Free
-								Shipping</span> <span class="d-block g-color-gray-dark-v4">5만원 이상 구매 시
+								Shipping</span> <span class="d-block g-color-gray-dark-v4">10만원 이상 구매 시
 								</span>
 						</div>
 					</div>

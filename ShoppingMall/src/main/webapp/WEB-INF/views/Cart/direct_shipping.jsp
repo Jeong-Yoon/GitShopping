@@ -40,6 +40,9 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
+    
+    <c:set var = "deliver" value = "0" />
+    
     <script>
     function goto_url(act) {
   	  document.direct_shipping.action = act;
@@ -61,7 +64,8 @@
 <input type="hidden" name="pro_name" value="${pro_name}">
 <input type="hidden" name="pro_color" value="${pro_color}">
 <input type="hidden" name="pro_size" value="${pro_size}">
-<input type="hidden" name="allprice" value="${allprice}">
+<input type="hidden" name="pro_price" value="${pro_price}">
+<input type="hidden" name="allprice" value="${allprice+deliver}">
 <input type="hidden" name="quantity" value="${pro_quantity}">
 <input type="hidden" name="" value="">
           <div class="g-mb-100">
@@ -72,7 +76,7 @@
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">1</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Shopping Cart</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">장바구니</h4>
               </li>
 
               <li class="col-3 list-inline-item g-mb-20 g-mb-0--sm">
@@ -80,7 +84,7 @@
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">2</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Shipping</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">배송정보</h4>
               </li>
 
               <li class="col-3 list-inline-item">
@@ -88,7 +92,7 @@
                   <i class="g-font-style-normal g-font-weight-700 g-hide-check">3</i>
                   <i class="fa fa-check g-show-check"></i>
                 </span>
-                <h4 class="g-font-size-16 text-uppercase mb-0">Payment &amp; Review</h4>
+                <h4 class="g-font-size-16 text-uppercase mb-0">주문완료</h4>
               </li>
             </ul>
             <!-- End Step Titles -->
@@ -319,7 +323,7 @@
 		 <div class="col-sm-6 g-mb-20">
                       <div class="form-group">
                         <label class="d-block g-color-gray-dark-v2 g-font-size-13">주문메시지</label>
-                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="request" id="request" type="text" placeholder="부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" name="request" id="request" type="text" placeholder="ex) 부재시 경비실에 맡겨주세요." required data-msg="필수로 입력해야 합니다."  data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
                       </div>
                     </div>
 
@@ -332,19 +336,28 @@
                   <hr class="g-mb-50">
 
                   
-                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" data-next-step="#step3" onclick="goto_url('direct_order')">결제하기</button>
+                  <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15" type="button" onclick="goto_url('direct_order')">결제하기</button>
                 </div>
 
                 <div class="col-md-4 g-mb-30">
                   <!-- Order Summary -->
                   <div class="g-bg-gray-light-v5 g-pa-20 g-pb-50 mb-4">
-                    <h4 class="h6 text-uppercase mb-3">총 결제금액 : &#8361; ${allprice}</h4>
+                    <h4 class="h6 text-uppercase mb-3">총 결제금액</h4>
 
                         <!-- Accordion -->
                     <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true">
                       <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab">
                         <h5 class="g-font-weight-400 g-font-size-default mb-0">
-                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">총     1 개의 상품
+                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">배송료: &#8361; 
+                              <c:choose>
+                        <c:when test="${allprice >=100000}">
+                         0
+                         </c:when>
+                         <c:otherwise>
+                         1500
+                         <c:set var= "deliver" value="1500"/>
+                        </c:otherwise>
+                        </c:choose>
                             <span class="ml-3 fa fa-angle-down"></span></a>
                         </h5>
                       </div>
@@ -353,7 +366,7 @@
                           <ul class="list-unstyled mb-3">
                             <!-- Product -->
                             <li class="d-flex justify-content-start">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/OPS/${pro_no}_1.jpg" alt="Image Description">
+                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/product/${pro_no}_1.jpg" alt="Image Description">
                               <div class="d-block">
                               
                                 <h4 class="h6 g-color-black">${pro_name}</h4>
@@ -406,11 +419,11 @@
            
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
-                      <span class="g-color-black g-font-weight-300">$454.00</span>
+                      <span class="g-color-black g-font-weight-300">&#8361; ${allprice}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
-                      <span class="g-color-black g-font-weight-300">$459.5</span>
+                      <span class="g-color-black g-font-weight-300">&#8361; ${allprice+deliver}</span>
                     </div>
                   </div>
                   <!-- End Order Summary -->

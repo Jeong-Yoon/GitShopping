@@ -169,7 +169,7 @@
                     <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true">
                       <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab">
                         <h5 class="g-font-weight-400 g-font-size-default mb-0">
-                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">배송료 : 
+                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">배송료 : &#8361;  
                         <c:choose>
                         <c:when test="${sum >=100000}">
                          0
@@ -202,7 +202,7 @@
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
                      
-                      <c:out value="${sum+deliver}"/>
+                      &#8361; <c:out value="${sum+deliver}"/>
                     </div>
                   </div>
                   <!-- End Summary -->

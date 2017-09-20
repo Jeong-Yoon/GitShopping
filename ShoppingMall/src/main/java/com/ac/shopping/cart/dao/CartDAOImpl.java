@@ -96,24 +96,25 @@ public class CartDAOImpl implements CartDAO {
 	}
 	
 	@Override
-	public void direct_order(CartDTO cdto, OrderDTO odto) {
+	public String direct_order(CartDTO cdto, OrderDTO odto) {
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("cdto", cdto);
+		map.put("clist", cdto);
 		map.put("odto", odto);
 		int count = sqlSession.selectOne("cart.countCart", cdto.getM_Id());
 		String order_no = "";
-		for (int i = 0; i < count; i++) {
-			if (i == 0) {
+//		for (int i = 0; i < count; i++) {
+//			if (i == 0) {
 				sqlSession.insert("cart.order",map);
 				order_no = (String)map.get("PARM10");
 				map.put("order_no", order_no);
-			}else{
-				sqlSession.insert("cart.order2",map);
-				System.out.println(order_no);
-			}
-		}
+//			}else{
+//				sqlSession.insert("cart.order2",map);
+//				System.out.println(order_no);
+//			}
+//		}
 		// 주문번호, 제품번호, 사이즈, 컬러, 수량
 		// M_REORDER
+				return order_no;
 	}
 	
 	@Override
