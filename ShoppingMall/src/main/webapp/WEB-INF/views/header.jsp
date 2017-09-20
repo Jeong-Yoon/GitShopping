@@ -231,377 +231,196 @@
             alt="Image Description">
          </a>
          <!-- End Logo -->
-
-         <!-- Navigation -->
          <div
-            class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg"
-            id="navBar">
-            <ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
-               <li class="nav-item g-mx-10--lg g-mx-15--xl"><a
-                  href="${contextPath}/shoppingindex" class="nav-link g-px-0">Home</a></li>
+						class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg"
+						id="navBar">
+						<ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
+							<li class="nav-item g-mx-10--lg g-mx-15--xl"><a
+								href="${contextPath}/shoppingindex" class="nav-link g-px-0">Home</a></li>
 
-               <li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
-                  <a id="nav-link--pages" class="nav-link g-px-0" href="#"
-                  aria-haspopup="true" aria-expanded="false"
-                  aria-controls="nav-submenu--pages">Pages</a> <!-- Submenu -->
-                  <ul
-                           class="hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-py-7 g-mt-22 g-mt-12--lg--scrolling"
-                           id="nav-submenu--pages" aria-labelledby="nav-link--pages">
-                           <li class="dropdown-item"><a class="nav-link"
-                              href="http://localhost:7070/shopping/Q_A.do">Q & A</a></li>
-                           <li class="dropdown-item"><a class="nav-link"
-                              href="http://localhost:7070/shopping/review">Review Page</a></li>
-                           <li class="dropdown-item"><a class="nav-link"
-                              href="http://localhost:7070/shopping/page-login">Login</a></li>
-                           <li class="dropdown-item"><a class="nav-link"
-                              href="http://localhost:7070/shopping/sign_Up">Signup</a></li>
-                        </ul> <!-- End Submenu -->
-               </li>
+							<li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl">
+								<a id="nav-link--pages" class="nav-link g-px-0" href="#"
+								aria-haspopup="true" aria-expanded="false"
+								aria-controls="nav-submenu--pages">Pages</a> <!-- Submenu -->
+								<ul
+									class="hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-py-7 g-mt-22 g-mt-12--lg--scrolling"
+									id="nav-submenu--pages" aria-labelledby="nav-link--pages">
+									<li class="dropdown-item"><a class="nav-link"
+										href="${contextPath}/Q_A.do">Q & A</a></li>
+									<li class="dropdown-item"><a class="nav-link"
+										href="${contextPath}/review">Review</a></li>
+									<li class="dropdown-item"><a class="nav-link"
+										href="${contextPath}/page-login">Login</a></li>
+									<li class="dropdown-item"><a class="nav-link"
+										href="${contextPath}/sign_Up">Signup</a></li>
+								</ul> <!-- End Submenu -->
+							</li>
 
-            <%--    <!-- Mega Menu Item -->
-               <li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
-                  data-animation-in="fadeIn" data-animation-out="fadeOut"
-                  data-position="right"><a id="mega-menu-label-3"
-                  class="nav-link g-px-0" href="#" aria-haspopup="true"
-                  aria-expanded="false">Clothes <i
-                     class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a> <!-- Mega Menu -->
-                  <div
-                     class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
-                     aria-labelledby="mega-menu-label-3">
-                     <div class="row">
-                        <div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
-                           <figure class="g-px-10">
-                           <div class="g-pos-rel g-mb-20">
-                              <a href="#"><img class="img-fluid"
-                                 src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img1.jpg"
-                                 alt="Image Description"></a>
-                              <!-- Ribbon -->
-                              <figcaption> <span
-                                 class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span>
-                              </figcaption>
-                              <!-- End Ribbon -->
-                           </div>
 
-                           <div class="media">
-                              <!-- Product Info -->
-                              <div class="d-flex flex-column">
-                                 <h4 class="h6 g-color-black mb-1">
-                                    <a class="u-link-v5 g-color-black g-color-primary--hover"
-                                       href="#" tabindex="0"> Summer shorts </a>
-                                 </h4>
-                                 <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-                                    href="#" tabindex="0">Man</a> <span
-                                    class="d-block g-color-black g-font-size-17">$52.00</span>
-                              </div>
-                              <!-- End Product Info -->
+							<!-- Mega Menu Item -->
+							<li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
+								data-animation-in="fadeIn" data-animation-out="fadeOut"
+								data-position="right"><a id="mega-menu-label-2"
+								class="nav-link g-px-0" href="#" aria-haspopup="true"
+								aria-expanded="false">Collections <i
+									class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
 
-                              <!-- Products Icons -->
-                              <ul class="list-inline media-body text-right">
-                                 <li class="list-inline-item align-middle mx-0"><a
-                                    class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-                                    href="#" tabindex="0" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Add to Cart">
-                                       <i class="icon-finance-100 u-line-icon-pro"></i>
-                                 </a></li>
-                                 <li class="list-inline-item align-middle mx-0"><a
-                                    class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-                                    href="#" tabindex="0" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Add to Wishlist">
-                                       <i class="icon-medical-022 u-line-icon-pro"></i>
-                                 </a></li>
-                              </ul>
-                              <!-- End Products Icons -->
-                           </div>
-                           </figure>
-                        </div>
+								<!-- Mega Menu -->
+								<div
+									class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
+									aria-labelledby="mega-menu-label-2">
+									<div class="row align-items-stretch">
+										<div class="col-md-4 g-mb-30 g-mb-0--md">
+											<article class="u-block-hover">
+												<img class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
+													src="${contextPath}/resources/WB0412697/html/assets/img/logo/팬츠.PNG"
+													alt="Image Description">
+												<div class="g-pos-abs g-bottom-30 g-left-30">
+													<span class="d-block g-color-black">Collections</span>
+													<h2 class="h1 mb-0 g-color-black">Bending pants</h2>
+												</div>
+												<a class="u-link-v2" href="#"></a>
+											</article>
+										</div>
 
-                        <div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
-                           <figure class="g-px-10">
-                           <div class="g-pos-rel g-mb-20">
-                              <a href="#"><img class="img-fluid"
-                                 src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img2.jpg"
-                                 alt="Image Description"></a>
-                           </div>
+										<div class="col-md-4 g-mb-30 g-mb-0--md">
+											<article class="u-block-hover">
+												<img class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
+													src="${contextPath}/resources/WB0412697/html/assets/img/logo/가디건.PNG"
+													alt="Image Description">
+												<div class="g-pos-abs g-bottom-30 g-left-30">
+													<span class="d-block g-color-black">Collections</span>
+													<h2 class="h1 mb-0 g-color-black">Cardigan</h2>
+												</div>
+												<a class="u-link-v2" href="#"></a>
+											</article>
+										</div>
 
-                           <div class="media">
-                              <!-- Product Info -->
-                              <div class="d-flex flex-column">
-                                 <h4 class="h6 g-color-black mb-1">
-                                    <a class="u-link-v5 g-color-black g-color-primary--hover"
-                                       href="#" tabindex="0"> Stylish shirt </a>
-                                 </h4>
-                                 <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-                                    href="#" tabindex="0">Woman</a> <s
-                                    class="d-block g-color-lightred g-font-weight-500 g-font-size-13">$101.00</s>
-                                 <span class="d-block g-color-black g-font-size-17">$99.00</span>
-                              </div>
-                              <!-- End Product Info -->
+										<div class="col-md-4 g-mb-30 g-mb-0--md">
+											<article class="u-block-hover">
+												<img class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
+													src="${contextPath}/resources/WB0412697/html/assets/img/logo/셔츠.PNG"
+													alt="Image Description">
+												<div class="g-pos-abs g-bottom-30 g-left-30">
+													<span class="d-block g-color-black">Collections</span>
+													<h2 class="h1 mb-0 g-color-black">Basic shirts</h2>
+												</div>
+												<a class="u-link-v2" href="#"></a>
+											</article>
+										</div>
+									</div>
+								</div> <!-- End Mega Menu --></li>
+							<!-- End Mega Menu Item -->
+							
 
-                              <!-- Products Icons -->
-                              <ul class="list-inline media-body text-right">
-                                 <li class="list-inline-item align-middle mx-0"><a
-                                    class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-                                    href="#" tabindex="0" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Add to Cart">
-                                       <i class="icon-finance-100 u-line-icon-pro"></i>
-                                 </a></li>
-                                 <li class="list-inline-item align-middle mx-0"><a
-                                    class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-                                    href="#" tabindex="0" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Add to Wishlist">
-                                       <i class="icon-medical-022 u-line-icon-pro"></i>
-                                 </a></li>
-                              </ul>
-                              <!-- End Products Icons -->
-                           </div>
-                           </figure>
-                        </div>
+							<!-- Mega Menu Item -->
+							<li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
+								data-animation-in="fadeIn" data-animation-out="fadeOut"
+								data-position="right"><a id="mega-menu-label-5"
+								class="nav-link g-px-0" href="#" aria-haspopup="true"
+								aria-expanded="false">Catalogue <i
+									class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
 
-                        <div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
-                           <figure class="g-px-10">
-                           <div class="g-pos-rel g-mb-20">
-                              <a href="#"><img class="img-fluid"
-                                 src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img3.jpg"
-                                 alt="Image Description"></a>
+								<!-- Mega Menu -->
+								<div
+									class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
+									aria-labelledby="mega-menu-label-5">
+									<div class="row">
+										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
 
-                              <!-- Ribbon -->
-                              <figcaption> <span
-                                 class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-lightred g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">Sold</span>
-                              </figcaption>
-                              <!-- End Ribbon -->
-                           </div>
+											<div>
+												<h4 class="h5 text-uppercase g-font-weight-600">
+													<a href="#" style="text-decoration: none"><span
+														style="color: #000000;">NEW</span>
+												</h4>
 
-                           <div class="media">
-                              <!-- Product Info -->
-                              <div class="d-flex flex-column">
-                                 <h4 class="h6 g-color-black mb-1">
-                                    <a class="u-link-v5 g-color-black g-color-primary--hover"
-                                       href="#" tabindex="0"> Classic jacket </a>
-                                 </h4>
-                                 <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-                                    href="#" tabindex="0">Man</a> <span
-                                    class="d-block g-color-black g-font-size-17">$49.99</span>
-                              </div>
-                              <!-- End Product Info -->
+												<h4 class="h5 text-uppercase g-font-weight-600">
+													<a href="#" style="text-decoration: none"><span
+														style="color: #000000;">BEST 100</span>
+												</h4>
+												<h4 class="h5 text-uppercase g-font-weight-600">
+													<a href="#" style="text-decoration: none"><span
+														style="color: #000000;">REVIEW 30</span>
+												</h4>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="top-list/all" style="text-decoration: none"><span
+													style="color: #000000;">Top</span>
+											</h4>
+											<ul class="list-unstyled g-mb-25">
+												<li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/top-list/tshirt">T-shirt &amp; Jackets</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/top-list/mtmh">맨투맨/후드</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/top-list/knit">니트</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/top-list/blouse">블라우스</a> <span
+													class="u-label g-bg-primary g-ml-10">New</span></li>
+											</ul>
 
-                              <!-- Products Icons -->
-                              <ul class="list-inline media-body text-right">
-                                 <li class="list-inline-item align-middle mx-0"><a
-                                    class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-                                    href="#" tabindex="0" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Add to Cart">
-                                       <i class="icon-finance-100 u-line-icon-pro"></i>
-                                 </a></li>
-                                 <li class="list-inline-item align-middle mx-0"><a
-                                    class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-                                    href="#" tabindex="0" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Add to Wishlist">
-                                       <i class="icon-medical-022 u-line-icon-pro"></i>
-                                 </a></li>
-                              </ul>
-                              <!-- End Products Icons -->
-                           </div>
-                           </figure>
-                        </div>
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="bottom-list/all" style="text-decoration: none"><span
+													style="color: #000000;">Bottom</span>
+											</h4>
+											<ul class="list-unstyled">
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/bottom-list/spants">short pants</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/bottom-list/lpants">long pants</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/bottom-list/training">training</a></li>
+											</ul>
+										</div>
 
-                        <div class="col-sm-6 col-lg-3 g-mb-30 g-mb-0--sm">
-                           <figure class="g-px-10">
-                           <div class="g-pos-rel g-mb-20">
-                              <a href="#"><img class="img-fluid"
-                                 src="${contextPath}/resources/WB0412697/html/assets/img-temp/480x700/img4.jpg"
-                                 alt="Image Description"></a>
-                           </div>
+										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="${contextPath}/outer-list" style="text-decoration: none"><span
+													style="color: #000000;">Outer</span></a>
+											</h4>
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="${contextPath}/onepiece-list" style="text-decoration: none"><span
+													style="color: #000000;">OPS</span></a>
+											</h4>
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="${contextPath}/shoes-list" style="text-decoration: none"><span
+													style="color: #000000;">Shoes</span></a>
+											</h4>
+										</div>
 
-                           <div class="media">
-                              <!-- Product Info -->
-                              <div class="d-flex flex-column">
-                                 <h4 class="h6 g-color-black mb-1">
-                                    <a class="u-link-v5 g-color-black g-color-primary--hover"
-                                       href="#" tabindex="0"> Wool lined parka </a>
-                                 </h4>
-                                 <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13"
-                                    href="#" tabindex="0">Woman</a> <span
-                                    class="d-block g-color-black g-font-size-17">$82.37</span>
-                              </div>
-                              <!-- End Product Info -->
+										<div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
+											<h4 class="h5 text-uppercase g-font-weight-600">
+												<a href="${contextPath}/acc-list/all" style="text-decoration: none"><span
+													style="color: #000000;">ACC</span>
+											</h4>
+											<ul class="list-unstyled g-mb-25">
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/acc-list/earings">귀걸이</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/acc-list/necklaces">목걸이</a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/acc-list/bracelets">팔찌 </a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/acc-list/socks">양말 </a></li>
+												<li class="g-mb-5"><a class="g-color-main"
+													href="${contextPath}/acc-list/belts">벨트</a></li>
+											</ul>
+										</div>
+									</div>
+								</div> <!-- End Mega Menu --></li>
+							<!-- End Mega Menu Item -->
 
-                              <!-- Products Icons -->
-                              <ul class="list-inline media-body text-right">
-                                 <li class="list-inline-item align-middle mx-0"><a
-                                    class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-                                    href="#" tabindex="0" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Add to Cart">
-                                       <i class="icon-finance-100 u-line-icon-pro"></i>
-                                 </a></li>
-                                 <li class="list-inline-item align-middle mx-0"><a
-                                    class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-                                    href="#" tabindex="0" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Add to Wishlist">
-                                       <i class="icon-medical-022 u-line-icon-pro"></i>
-                                 </a></li>
-                              </ul>
-                              <!-- End Products Icons -->
-                           </div>
-                           </figure>
-                        </div>
-                     </div>
-                  </div> <!-- End Mega Menu --></li> --%>
-               <!-- End Mega Menu Item -->
+						
+						</ul>
+					</div>
 
-               <!-- Mega Menu Item -->
-               <%-- <li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
-                  data-animation-in="fadeIn" data-animation-out="fadeOut"
-                  data-position="right"><a id="mega-menu-label-2"
-                  class="nav-link g-px-0" href="#" aria-haspopup="true"
-                  aria-expanded="false">Collections <i
-                     class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a> <!-- Mega Menu -->
-                  <div
-                     class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
-                     aria-labelledby="mega-menu-label-2">
-                     <div class="row align-items-stretch">
-                        <div class="col-md-4 g-mb-30 g-mb-0--md">
-                           <article class="u-block-hover"> <img
-                              class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-                              src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x850/img1.jpg"
-                              alt="Image Description">
-                           <div class="g-pos-abs g-bottom-30 g-left-30">
-                              <span class="d-block g-color-black">Collections</span>
-                              <h2 class="h1 mb-0 g-color-black">Women</h2>
-                           </div>
-                           <a class="u-link-v2" href="#"></a> </article>
-                        </div>
-
-                        <div class="col-md-4 g-mb-30 g-mb-0--md">
-                           <article class="u-block-hover"> <img
-                              class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-                              src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x850/img2.jpg"
-                              alt="Image Description">
-                           <div class="g-pos-abs g-bottom-30 g-left-30">
-                              <span class="d-block g-color-black">Collections</span>
-                              <h2 class="h1 mb-0 g-color-black">Children</h2>
-                           </div>
-                           <a class="u-link-v2" href="#"></a> </article>
-                        </div>
-
-                        <div class="col-md-4 g-mb-30 g-mb-0--md">
-                           <article class="u-block-hover"> <img
-                              class="w-100 u-block-hover__main--zoom-v1 g-mb-minus-8"
-                              src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x850/img3.jpg"
-                              alt="Image Description">
-                           <div class="g-pos-abs g-bottom-30 g-left-30">
-                              <span class="d-block g-color-black">Collections</span>
-                              <h2 class="h1 mb-0 g-color-black">Men</h2>
-                           </div>
-                           <a class="u-link-v2" href="#"></a> </article>
-                        </div>
-                     </div>
-                  </div> <!-- End Mega Menu --></li> --%>
-               <!-- End Mega Menu Item -->
-
-               
-               <!-- End Mega Menu Item -->
-
-               <!-- Mega Menu Item -->
-               <li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
-                        data-animation-in="fadeIn" data-animation-out="fadeOut"
-                        data-position="right"><a id="mega-menu-label-4"
-                        class="nav-link g-px-0" href="#" aria-haspopup="true"
-                        aria-expanded="false">Catalogue <i
-                           class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-7"></i></a>
-
-                        <!-- Mega Menu -->
-                        <div
-                           class="w-100 hs-mega-menu u-shadow-v11 g-text-transform-none g-font-weight-400 g-brd-top g-brd-primary g-brd-top-2 g-bg-white g-pa-30 g-mt-17 g-mt-7--lg--scrolling"
-                           aria-labelledby="mega-menu-label-5">
-                           <div class="row">
-                              <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-
-                                 <div>
-                                    <h4 class="h5 text-uppercase g-font-weight-600">
-                                       <a href="#" style="text-decoration: none"><span
-                                          style="color: #000000;">NEW</span>
-                                    </h4>
-
-                                    <h4 class="h5 text-uppercase g-font-weight-600">
-                                       <a href="#" style="text-decoration: none"><span
-                                          style="color: #000000;">BEST 100</span>
-                                    </h4>
-                                    <h4 class="h5 text-uppercase g-font-weight-600">
-                                       <a href="#" style="text-decoration: none"><span
-                                          style="color: #000000;">REVIEW 30</span>
-                                    </h4>
-                                 </div>
-                              </div>
-                              <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                                 <h4 class="h5 text-uppercase g-font-weight-600">
-                                    <a href="${contextPath}/top-list/all" style="text-decoration: none"><span
-                                       style="color: #000000;">Top</span>
-                                 </h4>
-                                 <ul class="list-unstyled g-mb-25">
-                                    <li class="g-mb-5"><a class="g-color-main" href="#">New</a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/top-list/tshirt">T-shirt
-                                          &amp; Jackets</a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/top-list/mtmh">맨투맨/후드</a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/top-list/knit">니트</a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/top-list/blouse">블라우스</a>
-                                       <span class="u-label g-bg-primary g-ml-10">New</span></li>
-                                 </ul>
-
-                                 <h4 class="h5 text-uppercase g-font-weight-600">
-                                 <a href="${contextPath}/bottom-list/all" style="text-decoration: none"><span
-                                       style="color: #000000;">Bottom</span></h4>
-                                 <ul class="list-unstyled">
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/bottom-list/spants">short
-                                          pants</a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/bottom-list/lpants">long
-                                          pants</a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/bottom-list/training">training</a></li>
-                                 </ul>
-                              </div>
-
-                              <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                                 <h4 class="h5 text-uppercase g-font-weight-600">
-                                    <a href="${contextPath}/outer-list" style="text-decoration: none"><span
-                                       style="color: #000000;">Outer</span></a>
-                                 </h4>
-                                 <h4 class="h5 text-uppercase g-font-weight-600">
-                                    <a href="${contextPath}/onepiece-list" style="text-decoration: none"><span
-                                       style="color: #000000;">OPS</span></a>
-                                 </h4>
-                                 <h4 class="h5 text-uppercase g-font-weight-600">
-                                    <a href="${contextPath}/shoes-list" style="text-decoration: none"><span
-                                       style="color: #000000;">Shoes</span></a>
-                                 </h4>
-                              </div>
-
-                              <div class="col-sm-6 col-md-3 g-mb-30 g-mb-0--sm">
-                                 <h4 class="h5 text-uppercase g-font-weight-600"><a href="${contextPath}/acc-list/all" style="text-decoration: none"><span
-                                       style="color: #000000;">ACC</span></h4>
-                                 <ul class="list-unstyled g-mb-25">
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/earings">귀걸이</a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/necklaces">목걸이</a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/bracelets">팔찌
-                                    </a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/socks">양말
-                                    </a></li>
-                                    <li class="g-mb-5"><a class="g-color-main" href="${contextPath}/acc-list/belts">벨트</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div> <!-- End Mega Menu --></li>
-               
-               <!-- End Mega Menu Item -->
-
-            </ul>
-         </div>
-         <!-- End Navigation -->
+         
       </div>
       </nav>
    </div>
-   </header>
-   <!-- End Header -->
-
-   <!-- Promo Block -->
    <section
       class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
       data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}'>
@@ -635,6 +454,53 @@
 <!--       </div> -->
    </div>
    </section>
-   <!-- End Promo Block -->
+   
+   </header>
+   <!-- End Header -->
+   <script>
+		$(document).on('ready', function() {
+			$.HSCore.helpers.HSModalMarkup.init('.js-modal-markup');
+
+			$.HSCore.components.HSMarkupCopy.init('.js-copy');
+		});
+	</script>
+
+	<!-- JS Custom -->
+	<script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
+
+	<!-- JS Plugins Init. -->
+	<script>
+		$(document).on('ready', function() {
+			// initialization of rating
+			$.HSCore.components.HSRating.init($('.js-rating'), {
+				spacing : 2
+			});
+
+			// initialization of peity charts
+			$.HSCore.components.HSChart.peity.init($('.js-peity-chart'));
+		});
+
+		$(window).on(
+				'load',
+				function() {
+					// initialization of header
+					$.HSCore.components.HSHeader.init($('#js-header'));
+					$.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+					// initialization of autocomplet
+					$.HSCore.components.HSLocalSearchAutocomplete
+							.init('#autocomplete1');
+
+					// initialization of go to
+					$.HSCore.components.HSGoTo.init('.js-go-to');
+
+					// initialization of HSMegaMenu component
+					$('.js-mega-menu').HSMegaMenu({
+						event : 'hover',
+						pageContainer : $('.container'),
+						breakpoint : 991
+					});
+				});
+	</script>
 </body>
 </html>

@@ -182,17 +182,17 @@
 
 				<hr class="g-brd-gray-light-v4 my-0">
 
-		<div style="width:650px; text-align: center;">
+	
        
        		
        	 	 <input type="hidden" name="BOARD_INDEX" value="${BOARD_INDEX}">
-				<button type="sumbit"	class="btn btn-md u-btn-primary rounded-0" >완료</button>
+				<button type="submit"	class="btn btn-md u-btn-primary rounded-0" >완료</button>
 				<button type="button"
 					class="btn btn-md u-btn-primary rounded-0" onclick="location.href='/shopping/Q_A.do'">취소</button>
 		</form>			
    		 	</div>
 		</div>
-		</div>
+	
 	</section>
 
 	<a class="js-go-to u-go-to-v1" href="#" data-type="fixed"
@@ -275,6 +275,19 @@
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.autocomplete-local-search.js"></script>
 	<script src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
+
+	<script type="text/javascript">
+	function button_event(){
+	if (confirm("정말 삭제합니까?") == true){    //확인
+		location.href = "../Q_A/delete.do?BOARD_INDEX=${view.BOARD_INDEX}";
+    }else{   
+     return;
+    }
+	}
+
+</script>
+
+
 
 	<script>
 		$(document).on('ready', function() {
