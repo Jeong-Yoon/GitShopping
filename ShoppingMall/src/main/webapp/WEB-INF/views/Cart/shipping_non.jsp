@@ -241,7 +241,7 @@ function goto_url(act) {
 
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
-                      <span class="g-color-black g-font-weight-300">$454.00</span>
+                      <span class="g-color-black g-font-weight-300">$454.0</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
