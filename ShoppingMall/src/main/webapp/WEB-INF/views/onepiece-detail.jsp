@@ -127,53 +127,18 @@ function Selected(){
           <div class="col-lg-7">
             <!-- Carousel -->
             <div id="carouselCus1" class="js-carousel g-pt-10 g-mb-10"
-                 data-infinite="true"
-                 data-fade="true"
-                 data-arrows-classes="u-arrow-v1 g-brd-around g-brd-white g-absolute-centered--y g-width-45 g-height-45 g-font-size-14 g-color-white g-color-primary--hover rounded-circle"
-                 data-arrow-left-classes="fa fa-angle-left g-left-40"
-                 data-arrow-right-classes="fa fa-angle-right g-right-40"
-                 data-nav-for="#carouselCus2">
-              <div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
-                <img class="img-fluid w-100" src="${contextPath}/resources/OPS/${onepiecedetail.dto.product_no}_1.jpg" alt="Image Description">
-              </div>
-              <div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
-                <img class="img-fluid w-100" src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x750/img2.jpg" alt="Image Description">
-              </div>
-              <div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
-                <img class="img-fluid w-100" src="${contextPath}/resources/WB0412697/html/assets/img-temp/650x750/img3.jpg" alt="Image Description">
-              </div>
-            </div>
+					data-infinite="true" data-fade="true"
+					data-arrows-classes="u-arrow-v1 g-brd-around g-brd-white g-absolute-centered--y g-width-45 g-height-45 g-font-size-14 g-color-white g-color-primary--hover rounded-circle"
+					data-arrow-left-classes="fa fa-angle-left g-left-40"
+					data-arrow-right-classes="fa fa-angle-right g-right-40">
+					<div class="js-slide g-bg-cover g-bg-black-opacity-0_1--after">
+						<img class="img-fluid2 w-100"
+							src="${contextPath}/resources/product/${onepiecedetail.dto.product_no}_1.jpg"
+							alt="Image Description">
+					</div>
+				</div>
 
-            <div id="carouselCus2" class="js-carousel text-center u-carousel-v3 g-mx-minus-5 g-mb-10"
-                 data-infinite="true"
-                 data-center-mode="true"
-                 data-slides-show="3"
-                 data-is-thumbs="true"
-                 data-nav-for="#carouselCus1">
-              <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img1.jpg" alt="Image Description">
-              </div>
-
-              <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img2.jpg" alt="Image Description">
-              </div>
-
-              <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img3.jpg" alt="Image Description">
-              </div>
-
-              <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img1.jpg" alt="Image Description">
-              </div>
-
-              <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img2.jpg" alt="Image Description">
-              </div>
-
-              <div class="js-slide g-cursor-pointer g-px-5">
-                <img class="img-fluid" src="${contextPath}/resources/WB0412697/html/assets/img-temp/250x170/img3.jpg" alt="Image Description">
-              </div>
-            </div>
+          
             <!-- End Carousel -->
           </div>
 
@@ -568,43 +533,10 @@ function Selected(){
             </div>
           </div>
 
-          <div class="col-md-6 g-bg-size-cover g-min-height-300" data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img1.jpg"></div>
+          <div class="col-md-6 g-bg-size-cover g-min-height-300" data-bg-img-src="${contextPath}/resources/product/${onepiecedetail.dto.product_no}_2.jpg"></div>
         </div>
       </div>
       <!-- End Details -->
-
-      <!-- Craftmanship -->
-      <div class="container-fluid g-px-0">
-        <div class="row no-gutters g-min-height-100vh">
-          <div class="col-md-6 flex-md-unordered align-self-center">
-            <div class="g-width-60x mx-auto g-px-50--lg g-py-100">
-              <span class="d-block g-font-size-12 text-uppercase mb-5">The Craftmanship</span>
-              <h2 class="mb-4">Reimagined Blue Color through New Materials</h2>
-              <p>We believe in redefining classic silhouettes into modern pieces that function for busy people with busy lives. We want to create clothing that people will love and treasure for years to come – to become that trusty go-to you can't live without.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 flex-md-first g-bg-size-cover g-min-height-300" data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img2.jpg"></div>
-        </div>
-      </div>
-      <!-- End Craftmanship -->
-
-      <!-- Caring -->
-      <div class="container-fluid g-px-0">
-        <div class="row no-gutters g-min-height-100vh">
-          <div class="col-md-6 align-self-center">
-            <div class="g-width-60x mx-auto g-px-50--lg g-py-100">
-              <span class="d-block g-font-size-12 text-uppercase mb-5">The Care Guide</span>
-              <h2 class="mb-4">Get the Best out of Unify</h2>
-              <p>Crafted from a water resistant fluid memory fabric to create an elegant draped effect when thrown on, this lightweight shell will take you from season to season and protect you from that unexpected shower.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 g-bg-size-cover g-min-height-300" data-bg-img-src="${contextPath}/resources/WB0412697/html/assets/img-temp/900x900/img3.jpg"></div>
-        </div>
-      </div>
-      <!-- End Caring -->
-
 
       <a class="js-go-to u-go-to-v2" href="#"
          data-type="fixed"
