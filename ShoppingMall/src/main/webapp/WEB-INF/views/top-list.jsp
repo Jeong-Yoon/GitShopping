@@ -57,6 +57,13 @@
 <link rel="stylesheet"
 	href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
 
+<!-- <script> -->
+<!-- function goto_url(act) { 
+<!-- 	  document.top_list.action = act;
+<!-- 	  document.top_list.submit();
+<!-- }	  
+<!-- </script> -->
+
 <script>
 
 var star=0;
@@ -179,7 +186,6 @@ body {margin: 10px; font-size: 13px}
 
 	}
 </script>
-
 </head>
 
 <body>
@@ -264,22 +270,17 @@ body {margin: 10px; font-size: 13px}
 					<!-- End Filters -->
 
 					<!-- Products -->
-
 					<div class="row g-pt-30 g-mb-50">
 						<c:forEach var="row" items="${toplist}">
 							<div class="col-6 col-lg-4 g-mb-30">
 								<!-- Product -->
 								<figure>
 									<div class="g-pos-rel g-mb-20">
-										<a href="${contextPath}/top-detail?product_no=${row.product_no}"><img
-											class="img-fluid" src="${contextPath}/resources/product/${row.product_no}_1.jpg"
+										<a
+											href="${contextPath}/top-detail?product_no=${row.product_no}"><img
+											class="img-fluid"
+											src="${contextPath}/resources/product/${row.product_no}_1.jpg"
 											alt="Image Description"></a>
-										<!-- Ribbon -->
-<!-- 										<figcaption> -->
-<!-- 											<span -->
-<!-- 												class="u-ribbon-v1 g-width-40 g-height-40 g-color-white g-bg-primary g-font-size-11 text-center text-uppercase g-rounded-50x g-top-10 g-left-10 g-px-2 g-py-12">New</span> -->
-<!-- 										</figcaption> -->
-										<!-- End Ribbon -->
 									</div>
 									<div class="media">
 										<!-- Product Info -->
@@ -313,7 +314,6 @@ body {margin: 10px; font-size: 13px}
 						</c:forEach>
 
 					</div>
-
 					<!-- End Products -->
 
 					<hr class="g-mb-60">
@@ -377,7 +377,6 @@ body {margin: 10px; font-size: 13px}
 			<!-- End Content -->
 
 			<!-- Filters -->
-
 
 			<div
 				class="col-md-3 flex-md-first g-brd-right--lg g-brd-gray-light-v4 g-pt-40">
@@ -479,22 +478,25 @@ body {margin: 10px; font-size: 13px}
 
 			<jsp:include page="footer.jsp" flush="false" />
 
-			<a class="js-go-to u-go-to-v2" href="#" data-type="fixed"
-				data-position='{
+		</div>
+	</div>
+
+	<a class="js-go-to u-go-to-v2" href="#" data-type="fixed"
+		data-position='{
            "bottom": 15,
            "right": 15
          }'
-				data-offset-top="400" data-compensation="#js-header"
-				data-show-effect="zoomIn"> <i class="hs-icon hs-icon-arrow-top"></i>
-			</a>
-	</main>
+		data-offset-top="400" data-compensation="#js-header"
+		data-show-effect="zoomIn"> <i class="hs-icon hs-icon-arrow-top"></i>
+	</a> </main>
 
 	<!-- JS Global Compulsory -->
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-	<script src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
+	<script
+		src="${contextPath}/resources/WB0412697/html/assets/vendor/tether.min.js"></script>
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
@@ -519,7 +521,8 @@ body {margin: 10px; font-size: 13px}
 		src="${contextPath}/resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
 	<!-- JS Unify -->
-	<script src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
+	<script
+		src="${contextPath}/resources/WB0412697/html/assets/js/hs.core.js"></script>
 	<script
 		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.header.js"></script>
 	<script
@@ -536,7 +539,8 @@ body {margin: 10px; font-size: 13px}
 		src="${contextPath}/resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
 
 	<!-- JS Customization -->
-	<script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
+	<script
+		src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
 
 	<!-- JS Plugins Init. -->
 	<script>
@@ -571,6 +575,8 @@ body {margin: 10px; font-size: 13px}
 			// initialization of range slider
 			$.HSCore.components.HSSlider.init('#rangeSlider1');
 		});
+		
 	</script>
+
 </body>
 </html>

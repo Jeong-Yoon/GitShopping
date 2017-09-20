@@ -93,7 +93,7 @@
 					<div class="col-auto g-pos-rel g-pb-10 g-pb-0--sm">
 						<ul class="list-inline g-overflow-hidden g-pt-1 g-mx-minus-4 mb-0">
 							<li class="list-inline-item g-mx-4">
-								<c:if test="${msg == 'success'}">
+								<c:if test="${msg == 'success'||not empty sessionScope.m_id}">
 										<h6>${sessionScope.m_id}님&nbsp;&nbsp;</h6>
 									</c:if></li>
 							<c:if test="${empty sessionScope.m_id}">

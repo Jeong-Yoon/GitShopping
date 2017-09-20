@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<c:set var="contextPath" value="<%=request.getContextPath()%>"></c:set>
 <head>
 <!-- Title -->
 <title>E-commerce Checkout Page | Unify - Responsive Website
@@ -103,7 +103,7 @@
 											<tr class="g-brd-bottom g-brd-gray-light-v3">
 												<td class="text-left g-py-25"><img
 													class="d-inline-block g-width-100 mr-4"
-													src="../resources/WB0412697/html/assets/img-temp/150x150/img6.jpg"
+													src="${contextPath}/resources/product/${row.product_no}_1.jpg"
 													alt="Image Description">
 													<div class="d-inline-block align-middle">
 														<h4 class="h6 g-color-black">${row.pro_name}</h4>
@@ -281,10 +281,8 @@
 
 							<button
 								class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4"
-								type="button">영수증 새로고침</button>
-							<button
-								class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4"
-								type="button" data-next-step="#step2">결제 진행하기</button>
+								type="button" onclick="history.go(-1)">이전 페이지로</button>
+							
 
 
 

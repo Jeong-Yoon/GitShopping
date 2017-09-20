@@ -116,7 +116,7 @@
                         <!-- Item-->
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/OUTER/${pro_no}_1.jpg" alt="Image Description">
+                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/product/${pro_no}_1.jpg" alt="Image Description">
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">${pro_name}</h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
