@@ -814,16 +814,8 @@ body {margin: 10px; font-size: 13px}
 
 					<hr>
 
-<<<<<<< HEAD
-
-=======
-					<form name="search" action="../shoes-list/${map.var}">
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 					<form name="search" action="${contextPath}/shoes-list/${map.var}">
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 						<input type="hidden" name="pricerange" value=""> <input
 							type="hidden" name="board_like" value="1">
 
