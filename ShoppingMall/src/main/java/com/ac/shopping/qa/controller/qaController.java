@@ -2,7 +2,9 @@ package com.ac.shopping.qa.controller;
 
 
 
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -73,6 +75,27 @@ public class qaController {
 		      
 		List<qa_dto> list = qaService.listAll(start,end,search_query_option, search_option, search_keyword);		
 		
+		for(int i=0;i<list.size();i++){
+			
+			if(i%5==0){
+				list.get(i).setBOARD_PWD("success");
+			}
+			else if(i%5==1){
+				list.get(i).setBOARD_PWD("danger");
+			}
+			else if(i%5==2){
+				list.get(i).setBOARD_PWD("info");
+			}
+			else if(i%5==3){
+				list.get(i).setBOARD_PWD("warning");
+			}
+			else if(i%5==4){
+				list.get(i).setBOARD_PWD("active");
+			}			
+			
+		}
+		
+		
 		ModelAndView mav = new ModelAndView();
 		
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -83,13 +106,25 @@ public class qaController {
 		map.put("keyword", search_keyword); // 검색키워드
 		map.put("boardPager", boardPager); // 페이징
 		mav.addObject("map", map); // 맵에 저장된 데이터를 mav에 저장
+		
+				
 		mav.setViewName("Q_A/Q_A"); // 뷰를 list.jsp로 설정
 		return mav; 
 		}
 	
 	//게시글 작성화면
 	@RequestMapping(value="/Q_A/write", method=RequestMethod.GET)
-	public String write(){
+	public String write(HttpSession session,HttpServletResponse response) throws IOException{
+		
+		if(session.getAttribute("m_id")==null){
+			
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+
+			out.println("<script>alert('게시글을 등록하려면 로그인이 필요합니다'); history.go(-1);</script>"); 
+			out.flush();			
+		}		
+		
 		return "/Q_A/write"; // write.jsp로 이동
 	}
 	
@@ -97,7 +132,7 @@ public class qaController {
 	@RequestMapping("Q_A/insert.do")
 	public String writeQnA(@ModelAttribute qa_dto vo, HttpSession session) throws Exception{
 		
-		
+		System.out.println("?");
 		System.out.println(vo);
 		String User_id = (String)session.getAttribute("m_id");
 		vo.setBOARD_WRITER(User_id);
