@@ -436,38 +436,38 @@ body {margin: 10px; font-size: 13px}
 
 						<div class="checks small">
 
-							<c:choose>
-								<c:when test="${map.search_method=='price'}">
-									<input type="radio" id="ex_rd2" name="search_method"
-										value="price" checked="checked">
-									<label for="ex_rd2"> 가격으로 검색 </label>
-                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="ex_rd2" name="search_method"
-										value="star">
-									<label for="ex_rd2"> 좋아요로 검색 </label>
-								</c:when>
+<%-- 							<c:choose> --%>
+<%-- 								<c:when test="${map.search_method=='price'}"> --%>
+<!-- 									<input type="radio" id="ex_rd2" name="search_method" -->
+<!-- 										value="price" checked="checked"> -->
+<!-- 									<label for="ex_rd2"> 가격으로 검색 </label> -->
+<!--                      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; -->
+<!--                     <input type="radio" id="ex_rd2" name="search_method" -->
+<!-- 										value="star"> -->
+<!-- 									<label for="ex_rd2"> 좋아요로 검색 </label> -->
+<%-- 								</c:when> --%>
 
-								<c:when test="${map.search_method=='star'}">
-									<input type="radio" id="ex_rd2" name="search_method"
-										value="price">
-									<label for="ex_rd2"> 가격으로 검색 </label>
-                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="ex_rd2" name="search_method"
-										value="star" checked="checked">
-									<label for="ex_rd2"> 좋아요로 검색 </label>
-								</c:when>
+<%-- 								<c:when test="${map.search_method=='star'}"> --%>
+<!-- 									<input type="radio" id="ex_rd2" name="search_method" -->
+<!-- 										value="price"> -->
+<!-- 									<label for="ex_rd2"> 가격으로 검색 </label> -->
+<!--                      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; -->
+<!--                     <input type="radio" id="ex_rd2" name="search_method" -->
+<!-- 										value="star" checked="checked"> -->
+<!-- 									<label for="ex_rd2"> 좋아요로 검색 </label> -->
+<%-- 								</c:when> --%>
 
-								<c:otherwise>
-									<input type="radio" id="ex_rd2" name="search_method"
-										value="price">
-									<label for="ex_rd2"> 가격으로 검색 </label>
-                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="ex_rd2" name="search_method"
-										value="star">
-									<label for="ex_rd2"> 좋아요로 검색 </label>
-								</c:otherwise>
+<%-- 								<c:otherwise> --%>
+<!-- 									<input type="radio" id="ex_rd2" name="search_method" -->
+<!-- 										value="price"> -->
+<!-- 									<label for="ex_rd2"> 가격으로 검색 </label> -->
+<!--                      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; -->
+<!--                     <input type="radio" id="ex_rd2" name="search_method" -->
+<!-- 										value="star"> -->
+<!-- 									<label for="ex_rd2"> 좋아요로 검색 </label> -->
+<%-- 								</c:otherwise> --%>
 
-							</c:choose>
+<%-- 							</c:choose> --%>
 
 						</div>
 
