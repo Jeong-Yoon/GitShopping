@@ -206,7 +206,7 @@
 							<div class="media-body align-self-center">
 								<h3 class="h5 g-font-weight-400"font-family:'NanumGothic', sans-serif;>무료
 									배송</h3>
-								<p class="g-color-gray-dark-v5 mb-0"font-family:'NanumGothic', sans-serif;>5만원
+								<p class="g-color-gray-dark-v5 mb-0"font-family:'NanumGothic', sans-serif;>10만원
 									이상 구입 시 무료배송 쿠폰</p>
 							</div>
 						</div>
