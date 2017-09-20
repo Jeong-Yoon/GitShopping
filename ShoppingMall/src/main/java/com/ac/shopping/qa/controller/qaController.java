@@ -146,8 +146,22 @@ public class qaController {
 	@RequestMapping(value="/Q_A/view",method=RequestMethod.GET)
 	public ModelAndView readd( HttpServletResponse response,@RequestParam("BOARD_INDEX") int BOARD_INDEX ,@RequestParam("BOARD_WRITER") String BOARD_WRITER, HttpSession session)throws Exception{
 		
-		String User_id = (String)session.getAttribute("m_id");
+		int count = 0;
 		ModelAndView mav = new ModelAndView();
+		String User_id="";
+		
+		if(session.getAttribute("m_id")==null){
+			
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+
+			count = 1;
+			out.println("<script>alert('글을 보시려면 로그인이 필요합니다'); history.go(-1);</script>"); 
+			out.flush();
+		}
+		else{
+			User_id = (String)session.getAttribute("m_id");
+		}
 		
 		if(User_id.equals(BOARD_WRITER)) {			
 		
@@ -156,7 +170,7 @@ public class qaController {
 		System.out.println(qaService.read(BOARD_INDEX));
 		
 		}		
-		else {
+		else if((count==0)&&(!User_id.equals(BOARD_WRITER))) {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
 
