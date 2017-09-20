@@ -1,5 +1,6 @@
 package com.ac.shopping.cart.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Service;
 import com.ac.shopping.cart.dao.CartDAO;
 import com.ac.shopping.cart.dao.CartDAOImpl;
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.Non_mem_CartDTO;
+import com.ac.shopping.cart.dto.Non_mem_OrderDTO;
 import com.ac.shopping.cart.dto.OrderDTO;
 
 @Service
@@ -64,6 +67,14 @@ public class CartServiceImpl implements CartService{
 	@Override
 	public void order(String m_id, OrderDTO odto) {
 		cartDao.order(m_id, odto);
+	}
+	
+//	public void nonMem_order(HashMap<String, Object> param) {
+//		cartDao.nonMem_order(param);
+//	}
+	
+	public void nonMem_order(Non_mem_OrderDTO nmodto, List<Non_mem_CartDTO> plist) {
+		cartDao.nonMem_order(nmodto,plist);		
 	}
 
 }

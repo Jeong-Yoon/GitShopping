@@ -11,6 +11,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.Non_mem_CartDTO;
+import com.ac.shopping.cart.dto.Non_mem_OrderDTO;
 import com.ac.shopping.cart.dto.OrderDTO;
 
 @Repository
@@ -137,6 +139,47 @@ public class CartDAOImpl implements CartDAO {
 				sqlSession.insert("cart.re_order",param);
 			}
 		}
+	}
+
+//	public void nonMem_order(HashMap<String, Object> param) {
+//		String order_no = "";
+//
+//		for (int i = 0; i < param..size(); i++) {
+//			
+//			HashMap<String, Object> param = new HashMap<String, Object>();
+//			param.put("clist", clist.get(i));
+//			param.put("odto", odto);
+//			param.put("order_no", order_no);
+//			
+//			if (i == 0) {
+//				sqlSession.insert("cart.order",param);
+//				order_no = (String)param.get("PARM10");
+//			}else{
+//				System.out.println(order_no);
+//				sqlSession.insert("cart.re_order",param);
+//			}
+//		}
+//	}
+
+	public void nonMem_order(Non_mem_OrderDTO nmodto, List<Non_mem_CartDTO> plist) {
+		
+		String order_no = "";
+		for (int i = 0; i < plist.size(); i++) {
+			
+			HashMap<String, Object> param = new HashMap<String, Object>();
+			param.put("nmodto", nmodto);
+			param.put("plist", plist.get(i));
+			param.put("order_no", order_no);
+			
+			if (i == 0) {
+				sqlSession.insert("cart.nonMem_order",param);
+				order_no = (String)param.get("PARM12");
+			}else{
+				System.out.println(order_no);
+				sqlSession.insert("cart.re_nonMem_order",param);
+			}
+		}
+		
 	}
 
 

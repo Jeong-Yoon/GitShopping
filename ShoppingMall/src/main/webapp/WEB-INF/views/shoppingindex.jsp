@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -1348,6 +1349,8 @@
 				</figure>
 				<!-- End Product -->
 			</div>
+=======
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 
 			<div class="js-slide">
 				<!-- Product -->
@@ -1357,7 +1360,6 @@
 							src="resources/WB0412697/html/e-commerce/assets/img-temp/480x700/img6.jpg"
 							alt="Image Description">
 					</div>
-
 					<div class="media">
 						<!-- Product Info -->
 						<div class="d-flex flex-column">
@@ -1370,7 +1372,6 @@
 								class="d-block g-color-black g-font-size-17">$105.99</span>
 						</div>
 						<!-- End Product Info -->
-
 						<!-- Products Icons -->
 						<ul class="list-inline media-body text-right">
 							<li class="list-inline-item align-middle mx-0"><a
@@ -1391,7 +1392,6 @@
 				</figure>
 				<!-- End Product -->
 			</div>
-
 			<div class="js-slide">
 				<!-- Product -->
 				<figure class="g-px-10">
@@ -1399,7 +1399,6 @@
 						<img class="img-fluid"
 							src="resources/WB0412697/html/e-commerce/assets/img-temp/480x700/img7.jpg"
 							alt="Image Description">
-
 						<!-- Ribbon -->
 						<figcaption>
 							<span
@@ -1407,7 +1406,6 @@
 						</figcaption>
 						<!-- End Ribbon -->
 					</div>
-
 					<div class="media">
 						<!-- Product Info -->
 						<div class="d-flex flex-column">
@@ -1420,7 +1418,6 @@
 								class="d-block g-color-black g-font-size-17">$11.00</span>
 						</div>
 						<!-- End Product Info -->
-
 						<!-- Products Icons -->
 						<ul class="list-inline media-body text-right">
 							<li class="list-inline-item align-middle mx-0"><a
@@ -1441,7 +1438,6 @@
 				</figure>
 				<!-- End Product -->
 			</div>
-
 			<div class="js-slide">
 				<!-- Product -->
 				<figure class="g-px-10">
@@ -1450,7 +1446,6 @@
 							src="resources/WB0412697/html/e-commerce/assets/img-temp/480x700/img8.jpg"
 							alt="Image Description">
 					</div>
-
 					<div class="media">
 						<!-- Product Info -->
 						<div class="d-flex flex-column">
@@ -1463,7 +1458,6 @@
 								class="d-block g-color-black g-font-size-17">$34.00</span>
 						</div>
 						<!-- End Product Info -->
-
 						<!-- Products Icons -->
 						<ul class="list-inline media-body text-right">
 							<li class="list-inline-item align-middle mx-0"><a
@@ -1493,7 +1487,6 @@
 			<h2 class="g-color-black mb-4">New Arrivals</h2>
 			<p class="lead"></p>
 		</div>
-
 		<div class="row g-mx-minus-10 g-mb-50">
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
@@ -1506,7 +1499,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1518,7 +1510,6 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Accessories</a>
 						<!-- End Article Info -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$22.00</span>
@@ -1546,7 +1537,6 @@
 				</article>
 				<!-- End Article -->
 			</div>
-
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
 				<article
@@ -1558,7 +1548,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1570,7 +1559,6 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Accessories</a>
 						<!-- End Article Info -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -1598,7 +1586,6 @@
 				</article>
 				<!-- End Article -->
 			</div>
-
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
 				<article
@@ -1610,7 +1597,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1622,7 +1608,6 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Footwear</a>
 						<!-- End Article Info -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -1650,7 +1635,6 @@
 				</article>
 				<!-- End Article -->
 			</div>
-
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
 				<article
@@ -1662,7 +1646,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1674,7 +1657,6 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Footwear</a>
 						<!-- End Article Info -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -1702,7 +1684,6 @@
 				</article>
 				<!-- End Article -->
 			</div>
-
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
 				<article
@@ -1714,7 +1695,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1726,7 +1706,6 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Footwear</a>
 						<!-- End Article Info -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -1754,7 +1733,6 @@
 				</article>
 				<!-- End Article -->
 			</div>
-
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
 				<article
@@ -1766,7 +1744,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1778,7 +1755,6 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Footwear</a>
 						<!-- End Article Info -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -1806,7 +1782,6 @@
 				</article>
 				<!-- End Article -->
 			</div>
-
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
 				<article
@@ -1818,7 +1793,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1830,7 +1804,6 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Hi-Tech</a>
 						<!-- End Article Info -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -1858,7 +1831,6 @@
 				</article>
 				<!-- End Article -->
 			</div>
-
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
 				<article
@@ -1870,7 +1842,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1882,7 +1853,6 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Hi-Tech</a>
 						<!-- End Article Info -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -1910,7 +1880,6 @@
 				</article>
 				<!-- End Article -->
 			</div>
-
 			<div class="col-md-6 col-lg-4 g-px-10">
 				<!-- Article -->
 				<article
@@ -1922,7 +1891,6 @@
 							alt="Image Description">
 					</div>
 					<!-- End Article Image -->
-
 					<!-- Article Info -->
 					<div class="media-body align-self-center">
 						<h4 class="h5 g-mb-7">
@@ -1934,9 +1902,7 @@
 							class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10"
 							href="#">Hi-Tech</a>
 						<!-- End Article Info -->
-
 						<!-- News -->
-
 						<!-- Article Footer -->
 						<footer class="d-flex justify-content-between g-font-size-16">
 							<span class="g-color-black g-line-height-1">$55.00</span>
@@ -1965,7 +1931,6 @@
 				<!-- End Article -->
 			</div>
 		</div>
-
 		<div class="text-center">
 			<a
 				class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25"
@@ -1981,7 +1946,6 @@
 				<div class="row justify-content-start">
 					<div class="col-md-5">
 						<h2 class="h4 mb-4">Products</h2>
-
 						<div class="row">
 							<div class="col-4 g-mb-20">
 								<!-- Links -->
@@ -2004,7 +1968,6 @@
 								</ul>
 								<!-- End Links -->
 							</div>
-
 							<div class="col-4 g-mb-20">
 								<!-- Links -->
 								<ul class="list-unstyled g-font-size-13 mb-0">
@@ -2026,7 +1989,6 @@
 								</ul>
 								<!-- End Links -->
 							</div>
-
 							<div class="col-4 g-mb-20">
 								<!-- Links -->
 								<ul class="list-unstyled g-font-size-13 mb-0">
@@ -2047,10 +2009,8 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-sm-6 col-md-3">
 						<h2 class="h4 mb-4">Brands</h2>
-
 						<div class="row">
 							<div class="col-6 g-mb-20">
 								<!-- Links -->
@@ -2070,7 +2030,6 @@
 								</ul>
 								<!-- End Links -->
 							</div>
-
 							<div class="col-6 g-mb-20">
 								<!-- Links -->
 								<ul class="list-unstyled g-font-size-13 mb-0">
@@ -2091,10 +2050,8 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-sm-5 col-md-3 ml-auto">
 						<h2 class="h4 mb-4">Contacts</h2>
-
 						<!-- Links -->
 						<ul class="list-unstyled g-color-gray-dark-v4 g-font-size-13">
 							<li class="media my-3"><i
@@ -2115,15 +2072,13 @@
 			</div>
 		</div>
 		<!-- End Content -->
-
 		<!-- Copyright -->
 		<div class="container g-pt-50 g-pb-30">
 			<div class="row justify-content-between align-items-center">
 				<div class="col-md-6 g-mb-20">
-					<p class="g-font-size-13 mb-0">2017 Â© Htmlstream. All Rights
+					<p class="g-font-size-13 mb-0">2017 © Htmlstream. All Rights
 						Reserved.</p>
 				</div>
-
 				<div class="col-md-6 text-md-right g-mb-20">
 					<ul class="list-inline g-color-gray-dark-v5 g-font-size-25 mb-0">
 						<li class="list-inline-item g-cursor-pointer mr-1"><i
@@ -2158,7 +2113,6 @@
 		data-offset-top="400" data-compensation="#js-header"
 		data-show-effect="zoomIn"> <i class="hs-icon hs-icon-arrow-top"></i>
 	</a> </main>
-
 	<!-- JS Global Compulsory -->
 	<script
 		src="resources/WB0412697/html/assets/vendor/jquery/jquery.min.js"></script>
@@ -2167,7 +2121,6 @@
 	<script src="resources/WB0412697/html/assets/vendor/tether.min.js"></script>
 	<script
 		src="resources/WB0412697/html/assets/vendor/bootstrap/bootstrap.min.js"></script>
-
 	<!-- JS Implementing Plugins -->
 	<script
 		src="resources/WB0412697/html/assets/vendor/jquery.countdown.min.js"></script>
@@ -2177,16 +2130,13 @@
 		src="resources/WB0412697/html/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
 	<script
 		src="resources/WB0412697/html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-
 	<!-- JS Revolution Slider -->
 	<script
 		src="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
 	<script
 		src="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
-
 	<script
 		src="resources/WB0412697/html/assets/vendor/revolution-slider/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js"></script>
-
 	<script
 		src="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
 	<script
@@ -2205,7 +2155,6 @@
 		src="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 	<script
 		src="resources/WB0412697/html/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
-
 	<!-- JS Unify -->
 	<script src="resources/WB0412697/html/assets/js/hs.core.js"></script>
 	<script
@@ -2221,16 +2170,13 @@
 	<script
 		src="resources/WB0412697/html/assets/js/components/hs.carousel.js"></script>
 	<script src="resources/WB0412697/html/assets/js/components/hs.go-to.js"></script>
-
 	<!-- JS Customization -->
 	<script src="resources/WB0412697/html/assets/js/custom.js"></script>
-
 	<!-- JS Plugins Init. -->
 </body>
 <script>
 	// initialization of revolution slider
 	var tpj = jQuery;
-
 	var revapi1014;
 	tpj(document).ready(function() {
 		if (tpj("#rev_slider_1014_1").revolution == undefined) {
@@ -2312,14 +2258,11 @@
 				}
 			});
 		}
-
 		RsTypewriterAddOn(tpj, revapi1014);
 	});
-
 	$(document).on('ready', function() {
 		// initialization of carousel
 		$.HSCore.components.HSCarousel.init('[class*="js-carousel"]');
-
 		$('#carouselCus1').slick('setOption', 'responsive', [ {
 			breakpoint : 1200,
 			settings : {
@@ -2337,28 +2280,23 @@
 			}
 		} ], true);
 	});
-
 	// initialization of header
 	$.HSCore.components.HSHeader.init($('#js-header'));
 	$.HSCore.helpers.HSHamburgers.init('.hamburger');
-
 	// initialization of HSMegaMenu component
 	$('.js-mega-menu').HSMegaMenu({
 		event : 'hover',
 		pageContainer : $('.container'),
 		breakpoint : 991
 	});
-
 	// initialization of HSDropdown component
 	$.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
 		afterOpen : function() {
 			$(this).find('input[type="search"]').focus();
 		}
 	});
-
 	// initialization of go to
 	$.HSCore.components.HSGoTo.init('.js-go-to');
-
 	// initialization of countdowns
 	var countdowns = $.HSCore.components.HSCountdown.init('.js-countdown', {
 		yearsElSelector : '.js-cd-years',
@@ -2368,7 +2306,6 @@
 		minutesElSelector : '.js-cd-minutes',
 		secondsElSelector : '.js-cd-seconds'
 	});
-
 	$(window).on('load', function() {
 		// initialization of HSScrollBar component
 		$.HSCore.components.HSScrollBar.init($('.js-scrollbar'));

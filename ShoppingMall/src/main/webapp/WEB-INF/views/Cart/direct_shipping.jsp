@@ -56,7 +56,7 @@
 
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
-        <form class="js-validate js-step-form" name="direct_shipping" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
+        <form class="js-validate js-step-form" name="direct_shipping" method="post" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps">
 <input type="hidden" name="pro_no" value="${pro_no}">
 <input type="hidden" name="pro_name" value="${pro_name}">
 <input type="hidden" name="pro_color" value="${pro_color}">

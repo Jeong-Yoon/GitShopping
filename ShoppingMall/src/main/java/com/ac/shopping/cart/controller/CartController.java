@@ -1,5 +1,6 @@
 package com.ac.shopping.cart.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.Non_mem_CartDTO;
 import com.ac.shopping.cart.dto.OrderDTO;
 import com.ac.shopping.cart.service.CartService;
 import com.ac.shopping.cart.service.CartServiceImpl;
@@ -141,5 +143,85 @@ public class CartController {
 		cartService.order(m_id, odto);
 		return "";
 	}
+	
+	@RequestMapping("/cart_delete_non.do")
+	   public String delete_non(@RequestParam String product_No, HttpSession session,HttpServletRequest request) {
+	      System.out.println(product_No);   
+	      
+	      
+	      List<Non_mem_CartDTO> non_mem_pro = new ArrayList<Non_mem_CartDTO>();
+
+	      List<Non_mem_CartDTO> prevNonmem = (List<Non_mem_CartDTO>) session.getAttribute("nmC");
+	      
+	      for(int i=0;i<prevNonmem.size();i++){
+	         
+	         if(prevNonmem.get(i).getProduct_No().equals(request.getParameter("product_No"))){
+	            prevNonmem.remove(i);
+	            break;
+	         }         
+	      }
+	      
+	      if(prevNonmem.size()!=0){
+	      
+	      for(int i=0;i<prevNonmem.size();i++){
+	         
+	         Non_mem_CartDTO pnmC = new Non_mem_CartDTO();
+	         
+	          pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
+	             pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
+	             pnmC.setPro_size(prevNonmem.get(i).getPro_size());
+	             pnmC.setPro_color(prevNonmem.get(i).getPro_color());
+	             pnmC.setPro_price(prevNonmem.get(i).getPro_price());
+	             pnmC.setPro_name(prevNonmem.get(i).getPro_name());
+	             
+	             non_mem_pro.add(pnmC);          
+	      }
+	      }
+	      
+	      session.setAttribute("nmC", non_mem_pro);       
+
+	      return "redirect:/non_mem_Cart";
+	   }
+	
+	@RequestMapping("/cart_update_non.do")
+	   public String update_non(@RequestParam(value = "m_basket_q", required = true) List<String> quantity,HttpSession session,
+	         HttpServletRequest request) {
+	      
+	      List<Non_mem_CartDTO> non_mem_pro = new ArrayList<Non_mem_CartDTO>();
+
+	      List<Non_mem_CartDTO> prevNonmem = (List<Non_mem_CartDTO>) session.getAttribute("nmC");
+	      
+	      System.out.println("?sss");
+	      
+	      for(int i=0;i<prevNonmem.size();i++){
+	         
+	         prevNonmem.get(i).setBasket_Quantity(Integer.parseInt(quantity.get(i)));   
+	      }
+	      
+	      System.out.println("?ssㄴㅇs");
+	      
+	      if(prevNonmem.size()!=0){
+	      
+	      for(int i=0;i<prevNonmem.size();i++){
+	         
+	         Non_mem_CartDTO pnmC = new Non_mem_CartDTO();
+	         
+	          pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
+	             pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
+	             pnmC.setPro_size(prevNonmem.get(i).getPro_size());
+	             pnmC.setPro_color(prevNonmem.get(i).getPro_color());
+	             pnmC.setPro_price(prevNonmem.get(i).getPro_price());
+	             pnmC.setPro_name(prevNonmem.get(i).getPro_name());
+	             
+	             non_mem_pro.add(pnmC);          
+	      }
+	      }
+	      
+	      session.setAttribute("nmC", non_mem_pro);       
+	      
+	      
+	      return "redirect:/non_mem_Cart";
+
+	   }
 
 }

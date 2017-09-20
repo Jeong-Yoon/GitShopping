@@ -503,6 +503,7 @@ public class ProductController {
 				return "";
 			}
 
+<<<<<<< HEAD
 		} else {
 			int identify = 0;
 
@@ -568,6 +569,74 @@ public class ProductController {
 			session.setAttribute("nmC", non_mem_pro);
 
 			return "redirect:/non_mem_Cart";
+=======
+		}else{
+			 int identify=0;
+	         
+	         List<Non_mem_CartDTO> non_mem_pro = new ArrayList<Non_mem_CartDTO>();         
+	         
+	         if(session.getAttribute("nmC") !=null){
+	            
+	            List<Non_mem_CartDTO> prevNonmem = (List<Non_mem_CartDTO>) session.getAttribute("nmC");         
+	         
+	            for(int i=0;i < prevNonmem.size();i++){
+	            
+	               Non_mem_CartDTO pnmC = new Non_mem_CartDTO();
+	               System.out.println("???");
+	               System.out.println("color = "+request.getParameter("select_color"));
+	               pnmC.setProduct_No(prevNonmem.get(i).getProduct_No());
+	               pnmC.setBasket_Quantity(prevNonmem.get(i).getBasket_Quantity());
+	               if (request.getParameter("select_color") != null) {
+	            	   pnmC.setPro_color(prevNonmem.get(i).getPro_color());
+	   			}else{
+	   				pnmC.setPro_color("-");
+	   			}
+	   			if (request.getParameter("pro_size") != "") {
+	   				pnmC.setPro_size(prevNonmem.get(i).getPro_size());
+	   			} else{
+	   				pnmC.setPro_size("FREE");
+	   			}
+	               pnmC.setPro_price(prevNonmem.get(i).getPro_price());
+	               pnmC.setPro_name(prevNonmem.get(i).getPro_name());
+	               if(prevNonmem.get(i).getProduct_No().equals(request.getParameter("product_no"))){
+	                  
+	                  identify =1;
+	                  response.setContentType("text/html; charset=UTF-8");
+	                  PrintWriter out = response.getWriter();
+	                  out.println("<script>alert('이미 담겨져 있는 상품입니다.'); history.go(-1);</script>");
+	                  out.flush();
+	                  out.close();
+	               }               
+	               non_mem_pro.add(pnmC);            
+	            }   
+	         }
+	         
+	         if(identify==0){
+	            Non_mem_CartDTO nmC = new Non_mem_CartDTO();
+	                           
+	            nmC.setProduct_No(request.getParameter("product_no"));         
+	            nmC.setBasket_Quantity(Integer.parseInt(request.getParameter("quantity")));
+	            if (request.getParameter("select_color") != null) {
+	            	nmC.setPro_color(request.getParameter("select_color"));
+	   			}else{
+	   				nmC.setPro_color("-");
+	   			}
+	            System.out.println(request.getParameter("pro_size"));
+	   			if (request.getParameter("pro_size") != "") {
+	   				nmC.setPro_size(request.getParameter("pro_size"));
+	   			} else{
+	   				nmC.setPro_size("FREE");
+	   			}
+	            nmC.setPro_price(Integer.parseInt(request.getParameter("pro_price")));
+	            nmC.setPro_name(request.getParameter("pro_name"));      
+	         
+	            non_mem_pro.add(nmC);
+	         }
+	         
+	         session.setAttribute("nmC", non_mem_pro);   
+	         
+	         return "redirect:/non_mem_Cart";
+>>>>>>> branch 'master' of https://github.com/geunyongkim/GitShopping.git
 		}
 	}
 

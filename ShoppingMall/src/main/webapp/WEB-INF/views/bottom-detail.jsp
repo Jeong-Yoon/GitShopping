@@ -175,13 +175,27 @@
 
 						<!-- Checkbox -->
 						<ul class="list-inline mb-0">
-							<div class="selectbox">
-								<select name="select_color">
-									<c:forEach var="color" items="${bottomdetail.color}">
-										<option>${color}</option>
-									</c:forEach>
-								</select>
-								</div>
+							 <c:choose>
+              <c:when test="${not empty bottomdetail.color}">
+              <div class="selectbox"> 
+              <select name="select_color"> 
+              <option selected>-----</option>
+                <c:forEach var="color" items="${bottomdetail.color}">
+              <option>${color}</option> 
+                </c:forEach>
+              </select> 
+              </div>
+              </c:when>
+              <c:otherwise>
+               <li class="list-inline-item g-mx-15">
+                    <label class="form-check-inline u-check">
+                      <input class="hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radInline2_1" type="text">--
+                      <div class="u-check-icon-checkbox-v4 g-brd-none g-absolute-centered--y g-left-0">
+                      </div>
+                    </label>
+                  </li>
+              </c:otherwise>
+              </c:choose>
 								</ul>
 							</div>
 							<!-- End Colour -->

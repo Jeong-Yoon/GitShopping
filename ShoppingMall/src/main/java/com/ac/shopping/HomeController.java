@@ -22,6 +22,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.shopping.cart.dto.CartDTO;
+import com.ac.shopping.cart.dto.Non_mem_CartDTO;
+import com.ac.shopping.cart.dto.Non_mem_OrderDTO;
+import com.ac.shopping.cart.dto.OrderDTO;
 import com.ac.shopping.cart.service.CartService;
 import com.ac.shopping.cart.service.CartServiceImpl;
 
@@ -119,10 +122,40 @@ public class HomeController {
 	}
 	
 	//비회원
-	@RequestMapping(value = "Cart/shipping_non", method = RequestMethod.GET)
-	public String shipping_non() {		
+	@RequestMapping("/shipping_non")
+	public String shipping_non(HttpSession session,HttpServletRequest request,Model model) {		
+		// 주문자이름 주문자번호 주문자주소 받는사람이름 받는사람번호 받는사람주소 요구사항 pro_no size color quantity 주문번호리턴
+		// 주문번호리턴 pro_no size color quantity 
+//		HashMap<String, Object> param = new HashMap<String, Object>();
+//		List<Non_mem_CartDTO> plist= (List<Non_mem_CartDTO>) session.getAttribute("nmC");
+		int sum = Integer.parseInt(request.getParameter("sum"));
+		System.out.println(request.getParameter("sum"));
+		model.addAttribute("sum", sum);
+//		param.put("plist", plist);
+//		param.put("sum", sum);
+//		mav.setViewName("/Cart/shipping_non");
+//		mav.addObject("param", param);
 		return "Cart/shipping_non";
 	}
+	
+	@RequestMapping("/nonMem_order")
+	public String nonMem_order(HttpSession session, HttpServletRequest request){
+//		HashMap<String, Object> param = new HashMap<String, Object>();
+	Non_mem_OrderDTO nmodto = new Non_mem_OrderDTO();
+	List<Non_mem_CartDTO> plist = (List<Non_mem_CartDTO>) session.getAttribute("nmC");
+	nmodto.setOrder_name(request.getParameter("order_name"));
+	nmodto.setOrder_phone(request.getParameter("order_phone"));
+	nmodto.setOrder_address(request.getParameter("order_address"));
+	nmodto.setReceive_name(request.getParameter("receive_name"));
+	nmodto.setReceive_phone(request.getParameter("receive_phone"));
+	nmodto.setReceive_address(request.getParameter("receive_address"));
+	nmodto.setRequest(request.getParameter("request"));
+//	param.put("nmodto", nmodto);
+//	param.put("plist", plist);
+	cartService.nonMem_order(nmodto,plist);
+	return "";
+	}
+	
 //	
 //	@RequestMapping(value = "/page-signup", method = RequestMethod.GET)
 //	public String pageSignup() {		

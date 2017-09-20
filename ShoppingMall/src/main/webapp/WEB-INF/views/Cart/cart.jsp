@@ -48,14 +48,18 @@
     <!-- CSS Customization -->
 
 
+   <c:set var = "sum" value = "0" />
+   <c:set var = "deliver" value = "0" />
+
     <link rel="stylesheet" href="${contextPath}/resources/WB0412697/html/assets/css/custom.css">
     
     <script>
     function goto_url(act) {
-  	  document.update.action = act;
-  	  document.update.submit();
-  	}
+       document.update.action = act;
+       document.update.submit();
+     }
     </script>
+    
   </head>
 
   <body>
@@ -64,7 +68,7 @@
     
       <!-- Checkout Form -->
       <div class="container g-pt-100 g-pb-70">
-        <form class="js-validate js-step-form" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps" name="update" action="cart_update.do">
+        <form class="js-validate js-step-form" data-progress-id="#stepFormProgress" data-steps-id="#stepFormSteps" name="update">
           <div class="g-mb-100">
             <!-- Step Titles -->
             <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
@@ -134,7 +138,7 @@
                           <td>
                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" name="m_basket_q" type="text" value="${row.basket_Quantity}" readonly>
-                         	 <input type="hidden" name="m_product_no" value="${row.product_No}">
+                             <input type="hidden" name="m_product_no" value="${row.product_No}">
 
                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6">
                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i>
@@ -151,27 +155,27 @@
                         </tr>
                         </c:forEach>
                         </c:when>
-                        <c:when test="${empty sessionScope.m_id }">
+                        <c:when test="${empty sessionScope.m_id}">
                         
                      
                         <c:forEach var="row" items="${sessionScope.nmC}" >
                         <tr class="g-brd-bottom g-brd-gray-light-v3">
                           <td class="text-left g-py-25">
-                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
+                            <img class="d-inline-block g-width-100 mr-4" src="${contextPath}/resources/product/${row.product_No}_1.jpg" alt="Image Description">
 
                             &nbsp; &nbsp; &nbsp; &nbsp;
                             <div class="d-inline-block align-middle">
                               <h4 class="h6 g-color-black">${row.pro_name} </h4>
                               <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
-                                <li>Color: Black</li>
-                                <li>Size: MD</li>
+                                <li>Color: ${row.pro_color}</li>
+                                <li>Size: ${row.pro_size}</li>
                               </ul>
                             </div>
                           </td>
-                          <td class="g-color-gray-dark-v2 g-font-size-13">${row.pro_price} </td>
+                          <td class="g-color-gray-dark-v2 g-font-size-13">&#8361; ${row.pro_price} </td>
                           <td>
                             <div class="js-quantity input-group u-quantity-v1 g-width-80 g-brd-primary--focus">
-                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" value="${row.basket_Quantity}" readonly>
+                              <input class="js-result form-control text-center g-font-size-13 rounded-0 g-pa-0" type="text" name="m_basket_q" value="${row.basket_Quantity}" readonly>
 
                               <div class="input-group-addon d-flex align-items-center g-width-30 g-bg-white g-font-size-12 rounded-0 g-px-5 g-py-6">
                                 <i class="js-plus g-color-gray g-color-primary--hover fa fa-angle-up"></i>
@@ -180,9 +184,10 @@
                             </div>
                           </td>
                           <td class="text-right g-color-black">
-                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">${row.pro_price * row.basket_Quantity}</span>
+                            <span class="g-color-gray-dark-v2 g-font-size-13 mr-4">&#8361; ${row.pro_price * row.basket_Quantity}</span>
+                            <c:set var= "sum" value="${sum + row.pro_price*row.basket_Quantity}"/>
                             <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
-                              <a href="${contextPath}/cart_delete.do?product_No=${row.product_No}"><i class="mt-auto fa fa-trash"></i></a>
+                              <a href="${contextPath}/cart_delete_non.do?product_No=${row.product_No}"><i class="mt-auto fa fa-trash"></i></a>
                             </span>
                           </td>
                         </tr>
@@ -206,82 +211,64 @@
                     <div id="accordion-03" class="mb-4" role="tablist" aria-multiselectable="true">
                       <div id="accordion-03-heading-03" class="g-brd-y g-brd-gray-light-v2 py-3" role="tab">
                         <h5 class="g-font-weight-400 g-font-size-default mb-0">
-                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">배송료 : ${map.deliveryFee }
-                            <span class="ml-3 fa fa-angle-down"></span></a>
+                          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#accordion-03-body-03" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-03">배송료 : 
+                        <c:choose>
+                        <c:when test="${not empty sessionScope.m_id}">
+                          ${map.deliveryFee }
+                        </c:when>
+                        <c:when test="${sum >=100000}">
+                         0
+                         </c:when>
+                         <c:otherwise>
+                         1500
+                         <c:set var= "deliver" value="1500"/>
+                        </c:otherwise>
+                        </c:choose>
+                           </a>
                         </h5>
-                      </div>
-
-                      <div id="accordion-03-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-03-heading-03">
-                        <div class="g-py-15">
-                          <ul class="list-unstyled mb-3">
-                            <!-- Product -->
-                            <li class="d-flex justify-content-start">
-                              <img class="g-width-100 g-height-100 mr-3" src="resources/WB0412697/html/assets/img-temp/150x150/img6.jpg" alt="Image Description">
-                              <div class="d-block">
-                                <h4 class="h6 g-color-black">Sneaker</h4>
-                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Black</li>
-                                  <li>Size: MD</li>
-                                  <li>수량: 1</li>
-                                </ul>
-                                <span class="d-block g-color-black g-font-weight-400">&#8361; 87.00</span>
-                              </div>
-                            </li>
-                            <!-- End Product -->
-
-                            <!-- Product -->
-                            <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img3.jpg" alt="Image Description">
-                              <div class="d-block">
-                                <h4 class="h6 g-color-black">Chukka Shoes</h4>
-                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Black</li>
-                                  <li>Size: MD</li>
-                                  <li>수량: 2</li>
-                                </ul>
-                                <span class="d-block g-color-black g-font-weight-400"> &#8361; 160.00</span>
-                              </div>
-                            </li>
-                            <!-- End Product -->
-
-                            <!-- Product -->
-                            <li class="d-flex justify-content-start g-brd-top g-brd-gray-light-v3 pt-4 mt-4">
-                              <img class="g-width-100 g-height-100 mr-3" src="${contextPath}/resources/WB0412697/html/assets/img-temp/150x150/img7.jpg" alt="Image Description">
-                              <div class="d-block">
-                                <h4 class="h6 g-color-black">Desk Clock</h4>
-                                <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_4 mb-1">
-                                  <li>색상: Brown Wood</li>
-                                  <li>Type: Desk</li>
-                                  <li>수량: 1</li>
-                                </ul>
-                                <span class="d-block g-color-black g-font-weight-400">&#8361; 47.00</span>
-                              </div>
-                            </li>
-                            <!-- End Product -->
-                          </ul>
-                        </div>
-                      </div>
+                      </div>                    
 
                     </div>
                     <!-- End Accordion -->
-                    
+                     
                     
                     <div class="d-flex justify-content-between mb-2">
                       <span class="g-color-black">Subtotal</span>
-                      <span class="g-color-black g-font-weight-300">&#8361; ${map.sumMoney}</span>
+                      
+                     <c:choose>
+                     <c:when test="${not empty sessionScope.m_id}">
+                     <span class="g-color-black g-font-weight-300">&#8361; ${map.sumMoney}</span>
+                     </c:when>
+                     <c:otherwise>
+                     <c:out value="${sum}"/>
+                     </c:otherwise>
+                     </c:choose>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="g-color-black">Order Total</span>
+                     <c:choose>
+                     <c:when test="${not empty sessionScope.m_id}">
                       <span class="g-color-black g-font-weight-300">&#8361; ${map.allSum}</span>
+                     </c:when>
+                     <c:otherwise>
+                      <c:out value="${sum+deliver}"/>
+                     </c:otherwise>
+                     </c:choose>
+                     <input type="hidden" name="sum" value="${sum}">
                     </div>
                   </div>
                   <!-- End Summary -->
 
-                  <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="submit">수정</button>
+                  <c:choose>
+                  <c:when test="${not empty sessionScope.m_id}">
+                  <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button" onclick="goto_url('cart_update.do')">수정</button>
                   <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="goto_url('shipping')">결제 진행하기</button>
-
-                  
-
+                  </c:when>
+                  <c:otherwise>
+                  <button class="btn btn-block u-btn-outline-black g-brd-gray-light-v1 g-bg-black--hover g-font-size-13 text-uppercase g-py-15 mb-4" type="button" onclick="goto_url('cart_update_non.do')">수정</button>
+                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button" data-next-step="#step2" onclick="goto_url('shipping_non')">결제 진행하기</button>
+                  </c:otherwise>
+                  </c:choose>
                   
                 </div>
               </div>
@@ -349,8 +336,6 @@
 
 
     <!-- JS Customization -->
-
-    <script src="resources/WB0412697/html/assets/js/custom.js"></script>
 
     <script src="${contextPath}/resources/WB0412697/html/assets/js/custom.js"></script>
 

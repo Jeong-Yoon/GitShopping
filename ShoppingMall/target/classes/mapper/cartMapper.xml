@@ -92,7 +92,37 @@ where
     
     </insert>
 
-
+ <insert id="nonMem_order" statementType="CALLABLE" parameterType="hashmap">
+        {
+            CALL NONM_ORDER(
+                #{nmodto.order_name},
+                #{nmodto.order_phone},
+                #{nmodto.order_address},
+                #{nmodto.receive_name},
+                #{nmodto.receive_phone},
+                #{nmodto.receive_address},
+                #{nmodto.request},
+                #{plist.product_No},
+                #{plist.pro_size},
+                #{plist.pro_color},
+                #{plist.basket_Quantity},
+                #{PARM12, mode=OUT, jdbcType=VARCHAR, javaType=String}          
+            )
+        }
+    </insert>
+    
+    <insert id="re_nonMem_order">
+    {
+     CALL NONM_REORDER(
+                #{order_no},
+                #{plist.product_No},
+                #{plist.pro_size},
+                #{plist.pro_color},
+                #{plist.basket_Quantity}
+            )
+    }
+    
+    </insert>
 
 
 </mapper>
