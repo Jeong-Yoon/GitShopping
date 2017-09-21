@@ -237,7 +237,7 @@
                       &#8361; 
                      <c:choose>
                      <c:when test="${not empty sessionScope.m_id}">
-                     <span class="g-color-black g-font-weight-300">&#8361; ${map.sumMoney}</span>
+                     <span class="g-color-black g-font-weight-300">${map.sumMoney}</span>
                      </c:when>
                      <c:otherwise>
                      <c:out value="${sum}"/>
@@ -249,7 +249,7 @@
                      &#8361; 
                      <c:choose>
                      <c:when test="${not empty sessionScope.m_id}">
-                      <span class="g-color-black g-font-weight-300">&#8361; ${map.allSum}</span>
+                      <span class="g-color-black g-font-weight-300">${map.allSum}</span>
                      </c:when>
                      <c:otherwise>
                       <c:out value="${sum+deliver}"/>
