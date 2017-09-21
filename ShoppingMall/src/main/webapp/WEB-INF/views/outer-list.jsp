@@ -292,7 +292,7 @@ body {margin: 10px; font-size: 13px}
 							<a class="u-link-v5 g-color-black g-color-primary--hover"
 								href="${contextPath}/outer-detail?product_no=${list.product_no}"> ${list.pro_name} </a>
 						</h4>
-						<span class="d-block g-color-black g-font-size-17">${list.pro_price}</span>
+						<span class="d-block g-color-black g-font-size-17">&#8361; ${list.pro_price}</span>
 					</div>
 					<!-- End Product Info -->
 

@@ -284,7 +284,7 @@ body {margin: 10px; font-size: 13px}
 													href="${contextPath}/acc-detail?product_no=${row.product_no}">
 													${row.pro_name} </a>
 											</h4>
-											<span class="d-block g-color-black g-font-size-17">${row.pro_price}</span>
+											<span class="d-block g-color-black g-font-size-17">&#8361; ${row.pro_price}</span>
 										</div>
 
 										<!-- End Product Info -->

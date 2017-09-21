@@ -345,13 +345,13 @@
 									class="hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-py-7 g-mt-22 g-mt-12--lg--scrolling"
 									id="nav-submenu--pages" aria-labelledby="nav-link--pages">
 									<li class="dropdown-item"><a class="nav-link"
-										href="http://localhost:7070/shopping/Q_A.do">Q & A</a></li>
+										href="Q_A.do">Q & A</a></li>
 									<li class="dropdown-item"><a class="nav-link"
-										href="http://localhost:7070/shopping/review">Review</a></li>
+										href="review">Review</a></li>
 									<li class="dropdown-item"><a class="nav-link"
-										href="http://localhost:7070/shopping/page-login">Login</a></li>
+										href="page-login">Login</a></li>
 									<li class="dropdown-item"><a class="nav-link"
-										href="http://localhost:7070/shopping/sign_Up">Signup</a></li>
+										href="sign_Up">Signup</a></li>
 								</ul> <!-- End Submenu -->
 							</li>
 
@@ -1146,20 +1146,20 @@
 						<!-- End Product Info -->
 
 						<!-- Products Icons -->
-						<ul class="list-inline media-body text-right">
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Cart" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-finance-100 u-line-icon-pro"></i>
-							</a></li>
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Wishlist" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-medical-022 u-line-icon-pro"></i>
-							</a></li>
-						</ul>
+<!-- 						<ul class="list-inline media-body text-right"> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Cart" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Wishlist" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<!-- End Products Icons -->
 					</div>
 				</figure>
@@ -1190,20 +1190,20 @@
 						<!-- End Product Info -->
 
 						<!-- Products Icons -->
-						<ul class="list-inline media-body text-right">
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Cart" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-finance-100 u-line-icon-pro"></i>
-							</a></li>
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Wishlist" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-medical-022 u-line-icon-pro"></i>
-							</a></li>
-						</ul>
+<!-- 						<ul class="list-inline media-body text-right"> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Cart" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Wishlist" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<!-- End Products Icons -->
 					</div>
 				</figure>
@@ -1240,20 +1240,20 @@
 						<!-- End Product Info -->
 
 						<!-- Products Icons -->
-						<ul class="list-inline media-body text-right">
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Cart" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-finance-100 u-line-icon-pro"></i>
-							</a></li>
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Wishlist" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-medical-022 u-line-icon-pro"></i>
-							</a></li>
-						</ul>
+<!-- 						<ul class="list-inline media-body text-right"> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Cart" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Wishlist" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<!-- End Products Icons -->
 					</div>
 				</figure>
@@ -1283,20 +1283,20 @@
 						<!-- End Product Info -->
 
 						<!-- Products Icons -->
-						<ul class="list-inline media-body text-right">
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Cart" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-finance-100 u-line-icon-pro"></i>
-							</a></li>
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Wishlist" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-medical-022 u-line-icon-pro"></i>
-							</a></li>
-						</ul>
+<!-- 						<ul class="list-inline media-body text-right"> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Cart" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Wishlist" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<!-- End Products Icons -->
 					</div>
 				</figure>
@@ -1334,20 +1334,20 @@
 						<!-- End Product Info -->
 
 						<!-- Products Icons -->
-						<ul class="list-inline media-body text-right">
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Cart" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-finance-100 u-line-icon-pro"></i>
-							</a></li>
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Wishlist" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-medical-022 u-line-icon-pro"></i>
-							</a></li>
-						</ul>
+<!-- 						<ul class="list-inline media-body text-right"> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Cart" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Wishlist" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<!-- End Products Icons -->
 					</div>
 				</figure>
@@ -1375,20 +1375,20 @@
 						</div>
 						<!-- End Product Info -->
 						<!-- Products Icons -->
-						<ul class="list-inline media-body text-right">
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Cart" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-finance-100 u-line-icon-pro"></i>
-							</a></li>
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Wishlist" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-medical-022 u-line-icon-pro"></i>
-							</a></li>
-						</ul>
+<!-- 						<ul class="list-inline media-body text-right"> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Cart" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Wishlist" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<!-- End Products Icons -->
 					</div>
 				</figure>
@@ -1421,20 +1421,20 @@
 						</div>
 						<!-- End Product Info -->
 						<!-- Products Icons -->
-						<ul class="list-inline media-body text-right">
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Cart" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-finance-100 u-line-icon-pro"></i>
-							</a></li>
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Wishlist" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-medical-022 u-line-icon-pro"></i>
-							</a></li>
-						</ul>
+<!-- 						<ul class="list-inline media-body text-right"> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Cart" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Wishlist" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<!-- End Products Icons -->
 					</div>
 				</figure>
@@ -1461,20 +1461,20 @@
 						</div>
 						<!-- End Product Info -->
 						<!-- Products Icons -->
-						<ul class="list-inline media-body text-right">
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Cart" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-finance-100 u-line-icon-pro"></i>
-							</a></li>
-							<li class="list-inline-item align-middle mx-0"><a
-								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle"
-								href="#" title="Add to Wishlist" data-toggle="tooltip"
-								data-placement="top"> <i
-									class="icon-medical-022 u-line-icon-pro"></i>
-							</a></li>
-						</ul>
+<!-- 						<ul class="list-inline media-body text-right"> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Cart" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-finance-100 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="list-inline-item align-middle mx-0"><a -->
+<!-- 								class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" -->
+<!-- 								href="#" title="Add to Wishlist" data-toggle="tooltip" -->
+<!-- 								data-placement="top"> <i -->
+<!-- 									class="icon-medical-022 u-line-icon-pro"></i> -->
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<!-- End Products Icons -->
 					</div>
 				</figure>
