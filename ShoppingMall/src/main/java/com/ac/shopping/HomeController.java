@@ -74,12 +74,12 @@ public class HomeController {
 		String pro_color;
 		String pro_size;
 		String pro_quantity = request.getParameter("quantity");
-		if (request.getParameter("select_color") != "") {
+		if (request.getParameter("select_color") != "" && request.getParameter("select_color") != null) {
 			pro_color = request.getParameter("select_color");
 		}else{
 			pro_color = "-";
 		}
-		if (request.getParameter("pro_size") != "") {
+		if (request.getParameter("pro_size") != "" && request.getParameter("pro_size") != null) {
 			pro_size = request.getParameter("pro_size");
 		} else{
 			pro_size = "FREE";
