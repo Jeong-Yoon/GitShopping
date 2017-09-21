@@ -161,13 +161,20 @@
                         href="">MY PAGE</a></li>
                      </c:if>
                      <li class="list-inline-item g-mx-4">|</li>
+                      <c:if test="${not empty sessionScope.m_id}">
+                         <li class="list-inline-item g-mx-4"><a
+                        class="g-color-white g-color-primary--hover g-text-underline--none--hover"
+                        href="/shopping/cart_list.do">CART</a></li>
+                           </c:if>
+                  <c:if test="${empty sessionScope.m_id}">
                      <li class="list-inline-item g-mx-4"><a
                         class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-                        href="*">CART</a></li>
-                  <li class="list-inline-item g-mx-4">|</li>
-                  <li class="list-inline-item g-mx-4"><a
-                     class="g-color-white g-color-primary--hover g-text-underline--none--hover"
-                     href="#">FAQ</a></li>
+                        href="/shopping/non_mem_Cart">CART</a></li>
+                  </c:if>
+<!--                   <li class="list-inline-item g-mx-4">|</li> -->
+<!--                   <li class="list-inline-item g-mx-4"><a -->
+<!--                      class="g-color-white g-color-primary--hover g-text-underline--none--hover" -->
+<!--                      href="#">FAQ</a></li> -->
                </ul>
             </div>
 

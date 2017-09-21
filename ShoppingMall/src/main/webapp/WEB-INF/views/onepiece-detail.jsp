@@ -155,7 +155,7 @@ function Selected(){
               <!-- Price -->
               <div class="g-mb-30">
                 <h2 class="g-color-gray-dark-v5 g-font-weight-400 g-font-size-12 text-uppercase mb-2">Price</h2>
-                <span class="g-color-black g-font-weight-500 g-font-size-30 mr-2">${onepiecedetail.dto.pro_price}</span>
+                <span class="g-color-black g-font-weight-500 g-font-size-30 mr-2">&#8361; ${onepiecedetail.dto.pro_price}</span>
 <!--                 <s class="g-color-gray-dark-v4 g-font-weight-500 g-font-size-16">$101.00</s> -->
               </div>
               <!-- End Price -->
